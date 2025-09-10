@@ -1,4 +1,4 @@
-import {Header, Footer} from "../../components/index"
+import {Header, Footer} from "@/components"
 import { Outlet } from "react-router"
 
 const RootLayout = () => {
