@@ -42,7 +42,7 @@ const Sheet: React.FC<SheetProps> = ({
         <Button
           label={triggerLabel}
           icon={triggerIcon}
-          className={`${triggerClasses}`}
+          className={`${triggerClasses} md:hidden`}
           variant="default"
         />
       </SheetTrigger>
