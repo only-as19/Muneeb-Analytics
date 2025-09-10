@@ -13,8 +13,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isDisabled?: boolean;
   customClasses?: string;
   iconDirection?: "left" | "right";
-  onclick: (parameter?: any) => void;
-  icon: ReactNode;
+  onclick?: (parameter?: any) => void;
+  icon?: ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
