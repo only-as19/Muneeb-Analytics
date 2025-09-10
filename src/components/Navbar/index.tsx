@@ -18,7 +18,7 @@ const Navbar = () => {
         className=" max-w-26"
         />
 
-        <NavigationMenu viewport={false}>
+        <NavigationMenu viewport={false} className="hidden md:block">
           <NavigationMenuList>
             {navLinks.map(Item=> (
               <NavigationMenuItem key={Item.label}>
@@ -49,8 +49,8 @@ const Navbar = () => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <div>
-          <Button label="Projects" variant="default"/>
+        <div className="hidden md:block">
+          <Button label="Contact Us" variant="default"/>
         </div>
       </div>
     </header>

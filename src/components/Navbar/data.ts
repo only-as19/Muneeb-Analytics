@@ -39,16 +39,16 @@ export const navLinks: INavLinks[] = [
           "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving.",
       },
       {
-        link: "/services/predictive-analytics",
-        label: "Predictive Analytics (Python & ML)",
-        description:
-          "Leverage advanced models to forecast trends, identify patterns, and make confident data-driven decisions.",
-      },
-      {
         link: "/services/tableau-dashboards",
         label: "Automated Dashboards in Tableau",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
+      },
+      {
+        link: "/services/predictive-analytics",
+        label: "Predictive Analytics (Python & ML)",
+        description:
+          "Leverage advanced models to forecast trends, identify patterns, and make confident data-driven decisions.",
       },
       {
         link: "/services/statistical-analysis",
@@ -59,27 +59,26 @@ export const navLinks: INavLinks[] = [
     ],
   },
   {
-    link: "/projects",
-    label: "Projects",
+    link: "/portfolio",
+    label: "Portfolio",
+    children: [
+      {
+        link:"/caseStudy",
+        label:"Case Studies",
+        description: "Real world success stories"
+      }
+    ]
   },
   {
     link: "/blogs",
     label: "Blogs",
-    children: [
-      {
-        link: "/services/end-to-end-analytics",
-        label: "End-to-End Data Analytics Solutions",
-        description:
-          "From raw data to actionable insights, complete analytics solutions tailored to your business needs.",
-      }
-    ]
   },
   {
     link: "/testimonials",
     label: "Testimonials",
   },
   {
-    link: "/contact",
-    label: "Contact",
+    link: "/freeDemo",
+    label: "Request a free Demo",
   },
 ];
