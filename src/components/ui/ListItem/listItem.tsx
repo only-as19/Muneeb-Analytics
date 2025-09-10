@@ -18,8 +18,8 @@ const ListItem: React.FC<IListItem> = ({
   return (
     <NavigationMenuLink asChild>
       <Link to={href} className={`${customClass}`}>
-        <h1>{title}</h1>
-        {description && <p>{description}</p>}
+        <h1 className="font-medium">{title}</h1>
+        {description && <p className="text-muted-foreground">{description}</p>}
       </Link>
     </NavigationMenuLink>
   );

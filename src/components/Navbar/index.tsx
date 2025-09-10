@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 import { logo, navLinks } from "./data"
 import {NavigationMenu,
@@ -13,13 +12,13 @@ import { ListItem,Button } from "@/components"
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-amber-100">
-      <div className="px-5">
+    <header className="w-full shadow">
+      <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics"
-        className="w-20"
+        className=" max-w-26"
         />
 
-        <NavigationMenu>
+        <NavigationMenu viewport={false}>
           <NavigationMenuList>
             {navLinks.map(Item=> (
               <NavigationMenuItem key={Item.label}>
@@ -29,7 +28,7 @@ const Navbar = () => {
                     {Item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul>
+                    <ul className="grid grid-cols-2 md:w-md lg:w-3xl lg:grid-cols-2">
                       {Item.children.map(child=>(
                         <li key={child.label}>
                           <ListItem href={child.link} title={child.label} description={child.description}/>
@@ -51,7 +50,7 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
         <div>
-          <Button label="Contact Us" variant="default"/>
+          <Button label="Projects" variant="default"/>
         </div>
       </div>
     </header>
