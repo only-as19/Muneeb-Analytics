@@ -1,10 +1,10 @@
-import {Header, Footer} from "@/components"
+import {Nav,Footer} from "@/components"
 import { Outlet } from "react-router"
 
 const RootLayout = () => {
   return (
     <div>
-        <Header />
+        <Nav />
         <Outlet/>
         <Footer/>
     </div>

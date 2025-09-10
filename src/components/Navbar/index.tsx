@@ -1,8 +1,10 @@
 const Navbar = () => {
   return (
-    <div>
-      Navbar
-    </div>
+    <header className="w-full bg-amber-100">
+      <div>
+        <img src={} alt="" />
+      </div>
+    </header>
   )
 }
 
