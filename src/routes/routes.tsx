@@ -1,5 +1,5 @@
 import Rootlayout from "@/layouts"
-import { Landing, Blogs, Contact, Projects, Services, Testinomials } from "@/pages"
+import { Landing} from "@/pages"
 import type { RouteObject } from "react-router-dom"
 
 const routes:RouteObject [] = [

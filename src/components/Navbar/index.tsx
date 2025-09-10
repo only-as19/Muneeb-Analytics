@@ -11,6 +11,7 @@ import {
 } from "@/lib";
 import { ListItem, Button, Sheet } from "@/components";
 import { TextAlignEnd } from "lucide-react";
+import { Button as IButton } from "@/lib";
 
 const Navbar = () => {
   return (
@@ -56,6 +57,7 @@ const Navbar = () => {
         <div>
           <Sheet
             triggerIcon={<TextAlignEnd />}
+            triggerClasses="max-w-24"
             sheetHeader={{
               headerTitle: "Muneeb Analytic",
               headerImage: logo,
@@ -66,12 +68,14 @@ const Navbar = () => {
               buttonLabel: "Contact Us",
             }}
           >
-            <div>
+            <div className="flex flex-col gap-y-2 p-2">
               {navLinks.map((item) => (
-                <div key={item.label} >
-                  <Link to={item.link}>
+                <div key={item.label}>
+                  <IButton className="w-full" variant="link">
+                    <Link to={item.link}>
                     {item.label}
                   </Link>
+                  </IButton>
                 </div>
               ))}
             </div>

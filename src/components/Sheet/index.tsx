@@ -53,7 +53,7 @@ const Sheet: React.FC<SheetProps> = ({
             <img
               src={sheetHeader.headerImage}
               alt="Muneeb Analytic"
-              className={`${sheetHeader.headerImageClasses}`}
+              className={`${sheetHeader.headerImageClasses} w-full max-w-24`}
             />
           )}
           {sheetHeader.headerDescription && (
