@@ -1,6 +1,6 @@
-export { default as logo } from "@/assets/images/logo.png";
+export { default as logo } from "@/assets/images/logo-white.png";
 import type { ReactNode } from "react";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, } from "lucide-react";
 
 interface Service {
   label: string;
@@ -35,11 +35,11 @@ export const services: Service[] = [
   },
   {
     link: "/services/tableau-dashboards",
-    label: "Automated Dashboards in Tableau",
+    label: "Dashboards in Tableau",
   },
   {
     link: "/services/powerbi-dashboards",
-    label: "Automated Dashboards in Power BI",
+    label: "Dashboards in Power BI",
   },
   {
     link: "/services/corporate-trainings",
