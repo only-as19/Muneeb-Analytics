@@ -15,7 +15,7 @@ import { Button as IButton } from "@/lib";
 
 const Navbar = () => {
   return (
-    <header className="w-full shadow">
+    <header className="w-full shadow font-roboto">
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
 
@@ -70,12 +70,11 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-y-2 p-2">
               {navLinks.map((item) => (
-                <div key={item.label}>
-                  <IButton className="w-full" variant="link">
-                    <Link to={item.link}>
+                <div key={item.label} className="flex">
+                    <Link to={item.link} className="font-semibold text-base px-4 py-1">
                     {item.label}
                   </Link>
-                  </IButton>
+                  
                 </div>
               ))}
             </div>

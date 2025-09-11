@@ -46,9 +46,9 @@ const Sheet: React.FC<SheetProps> = ({
           variant="default"
         />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="text-primary">
         <SheetHeader>
-          <SheetTitle>{sheetHeader.headerTitle}</SheetTitle>
+          <SheetTitle className={sheetHeader.showHeaderTitle ? "block":"hidden"}>{sheetHeader.headerTitle}</SheetTitle>
           {sheetHeader.headerImage && (
             <img
               src={sheetHeader.headerImage}
@@ -69,7 +69,7 @@ const Sheet: React.FC<SheetProps> = ({
             />
           )}
           <SheetClose asChild>
-            <Button variant="outline" label="Close" />
+            <Button variant="outline" label="Close" customClasses="border-dark-secondary"/>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
