@@ -153,6 +153,8 @@
 
   /* Fonts */
   --font-roboto: "Roboto", sans-serif;
+
+  --color-bg-dark-hover: #1A1A2B;
 }
 @layer base {
   * {

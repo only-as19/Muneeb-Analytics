@@ -11,7 +11,6 @@ import {
 } from "@/lib";
 import { ListItem, Button, Sheet } from "@/components";
 import { TextAlignEnd } from "lucide-react";
-import { Button as IButton } from "@/lib";
 
 const Navbar = () => {
   return (
