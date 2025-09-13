@@ -14,7 +14,7 @@ import { TextAlignEnd } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="w-full shadow font-roboto">
+    <header className="w-full shadow-2xl font-roboto">
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
 

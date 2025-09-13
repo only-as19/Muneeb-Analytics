@@ -153,7 +153,8 @@
 
   /* Fonts */
   --font-roboto: "Roboto", sans-serif;
-
+  /* Custom colors */
+  --color-bg-hero:#F8FAFB;
   --color-bg-dark-hover: #1A1A2B;
 }
 @layer base {

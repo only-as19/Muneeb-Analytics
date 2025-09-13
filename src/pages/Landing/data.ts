@@ -1,1 +1,1 @@
-export {default as hero_img} from "@/assets/images/landing/hero.jpg"
+export {default as hero_img} from "@/assets/images/landing/transparent_image.png"
