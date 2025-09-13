@@ -1,7 +1,10 @@
-const Landing = () => {
+import type React from "react"
+import { Hero } from "./Sections"
+
+const Landing:React.FC = () => {
   return (
     <div>
-        Landing
+        <Hero/>
     </div>
   )
 }
