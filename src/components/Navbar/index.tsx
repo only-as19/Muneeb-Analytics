@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
 
-        <NavigationMenu viewport={false} className="hidden md:block">
+        <NavigationMenu viewport={false} className="hidden md:block relative z-50">
           <NavigationMenuList>
             {navLinks.map((Item) => (
               <NavigationMenuItem key={Item.label}>
