@@ -37,15 +37,16 @@ const About: React.FC = () => {
   return (
     <section className="p-5 max-h-screen min-h-96 flex-col items-center justify-center bg-primary text-zinc-300">
       <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center">About</h2>
+        
         <div className="flex flex-col gap-y-6 md:flex-row">
-          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center p-5 md:leading-7">
-            <p>
+          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 p-5 md:leading-7 ">
+          <h2 className="text-3xl md:text-5xl font-bold text-center md:text-left">About Muneeb Analytics</h2>
+            <p className="text-sm md:text-base">
               With expertise in Power BI, Tableau, Excel, SQL, and Python, we
               design dashboards and analytics solutions that help businesses
               track performance, cut costs, and discover new opportunities.
             </p>
-            <p>
+            <p className="text-sm md:text-base">
               Our focus is simple: clarity, accuracy, and results. Whether you
               need to understand your customers, optimize operations, or boost
               profitability, we deliver solutions that empower you to make
