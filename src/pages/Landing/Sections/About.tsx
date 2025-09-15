@@ -61,8 +61,8 @@ const About: React.FC = () => {
         <div className="grid grid-cols-3">
             {statsData.map(stat=>(
                 <div key={stat.label}
-                className="p-1 rounded-sm shadow-primary text-center flex flex-col items-center justify-between gap-y-1">
-                    <p className="text-3xl font-bold text-[#EBF4F6]">{stat.value}</p>
+                className="p-1 rounded-sm shadow-primary text-center flex flex-col items-center justify-between gap-y-1 group">
+                    <p className="text-3xl font-bold text-[#EBF4F6] group-hover:text-[#E8B904]">{stat.value}</p>
                     <p className="text-zinc-400 text-sm">{stat.label}</p>
                 </div>
             ))}
