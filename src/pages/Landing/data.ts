@@ -7,7 +7,7 @@ type StatItem = {
 };
 
 export const statsData: StatItem[] = [
-  { label: "Dashboards Delivered", value: 300 },
+  { label: "Dashboards Delivered", value: "300+" },
   { label: "Avg Rating", value: 4.9 },
   { label: "Satisfied Customers", value: "100+" },
 ];

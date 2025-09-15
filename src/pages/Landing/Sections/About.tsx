@@ -13,6 +13,7 @@ const About: React.FC = () => {
     controls: true,
     responsive: true,
     fluid: true,
+    aspectRatio: "16:9",
     sources: [
       {
         src: "https://ik.imagekit.io/pdata3016/Muneeb%20Analytics/About.mp4/ik-master.m3u8?updatedAt=1757845483686&tr=sr-240_360_480_720_1080",
@@ -34,11 +35,11 @@ const About: React.FC = () => {
   };
 
   return (
-    <section>
-      <div>
-        <h2>About</h2>
-        <div>
-          <div>
+    <section className="p-5 max-h-screen min-h-96 flex-col items-center justify-center bg-primary text-zinc-300">
+      <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-center">About</h2>
+        <div className="flex flex-col gap-y-6 md:flex-row">
+          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center p-5 md:leading-7">
             <p>
               With expertise in Power BI, Tableau, Excel, SQL, and Python, we
               design dashboards and analytics solutions that help businesses
@@ -51,15 +52,18 @@ const About: React.FC = () => {
               confident decisions.
             </p>
           </div>
-          <div>
-            <Video options={videoJsOptions} onReady={handlePlayerReady} />
+          <div className="md:w-1/2 flex justify-center items-center" >
+            <div className="w-full md:max-w-4/5">
+              <Video options={videoJsOptions} onReady={handlePlayerReady} />
+            </div>
           </div>
         </div>
-        <div>
+        <div className="grid grid-cols-3">
             {statsData.map(stat=>(
-                <div key={stat.label}>
-                    <p>{stat.label}</p>
-                    <p>{stat.value}</p>
+                <div key={stat.label}
+                className="p-1 rounded-sm shadow-primary text-center flex flex-col items-center justify-between gap-y-1">
+                    <p className="text-3xl font-bold text-[#EBF4F6]">{stat.value}</p>
+                    <p className="text-zinc-400 text-sm">{stat.label}</p>
                 </div>
             ))}
         </div>
