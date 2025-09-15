@@ -13,7 +13,7 @@ const Hero:React.FC = () => {
         />
         <div className="flex flex-col gap-y-4">
             <h1 className="text-3xl font-bold text-primary tracking-tight md:text-6xl md:max-w-xl">Turn Your Data Into Decisions</h1>
-            <p className="text-muted-foreground text-sm max-w-xl hidden md:block">We design interactive dashboards and analytics solutions that transform raw data into clear business insights. Your numbers become decisions, and decisions fuel growth.</p>
+            <p className="text-muted-foreground text-sm max-w-xl">We design interactive dashboards and analytics solutions that transform raw data into clear business insights. Your numbers become decisions, and decisions fuel growth.</p>
             <div className="flex items-center justify-center space-x-3 md:justify-start">
                 <Button label="Request a Free Demo"
                 customClasses="md:py-5"
