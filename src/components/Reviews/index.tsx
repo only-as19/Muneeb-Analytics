@@ -2,17 +2,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { reviews } from "./data";
-import {SiFiverr} from "react-icons/si"
+import { SiFiverr } from "react-icons/si";
 import Rating from "../Rating";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Button } from "../ui";
 
-const Reviews = ()=> {
-  const navigate = useNavigate()
+const Reviews = () => {
+  const navigate = useNavigate();
   return (
-      <section className="h-screen">
-        <h1>Trusted by Professionals Like You</h1>
-        <Swiper
+    <section className="h-screen">
+      <h1>Trusted by Professionals Like You</h1>
+      <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -38,18 +38,23 @@ const Reviews = ()=> {
         <SwiperSlide>
           <div>
             <div>
-              <p>{reviews[0].name} <span>{reviews[0].country}</span></p>
+              <p>
+                {reviews[0].name} <span>{reviews[0].country}</span>
+              </p>
               <Rating />
             </div>
-              <p>{reviews[0].feedback}</p>
-              <div>
-                <Button label="Read on Fiverr"/>
-              </div>
+            <p>{reviews[0].feedback}</p>
+            <div>
+              <Button
+                label="Read on "
+                icon={<SiFiverr size={24} className="!w-10 !h-10  text-[#1DBF73]" />}
+              />
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
-      </section>
+    </section>
   );
-}
+};
 
-export default Reviews
+export default Reviews;
