@@ -1,6 +1,6 @@
 import type React from "react"
 import { Hero,About } from "./Sections"
-import { Review } from "@/components"
+import { Review,CTA } from "@/components"
 
 const Landing:React.FC = () => {
   return (
@@ -8,6 +8,7 @@ const Landing:React.FC = () => {
         <Hero/>
         <About/>
         <Review/>
+        <CTA/>
     </div>
   )
 }

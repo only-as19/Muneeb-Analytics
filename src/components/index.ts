@@ -4,5 +4,6 @@ export {default as Sheet} from "./Sheet/index"
 export {default as VideoJS} from "./Video/index"
 export { default as Review } from "./Reviews/index";
 export { default as Rating } from "./Rating/index";
+export { default as CTA } from "./CTA/index";
 
 export * from "./ui"

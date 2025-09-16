@@ -1,0 +1,1 @@
+export {default as cta_img} from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg"
