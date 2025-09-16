@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Put bullets below the slider */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Ensure 3D neighbors aren’t clipped */
+.swiper {
+  overflow: visible; /* default is hidden */
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

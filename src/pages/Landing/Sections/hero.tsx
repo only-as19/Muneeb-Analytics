@@ -7,7 +7,7 @@ const Hero:React.FC = () => {
 
     const navigate = useNavigate()
   return (
-    <section className="bg-bg-hero max-h-screen min-h-96 p-5 flex flex-col gap-y-5 items-center md:justify-between md:flex-row md:px-28">
+    <section className="bg-bg-hero min-h-screen p-5 flex flex-col gap-y-5 items-center md:justify-between md:flex-row md:px-28">
         <img src={hero_img} alt="" 
         className="w-100 md:min-w-120 rounded-xl drop-shadow-xl object-cover md:order-2 "
         />
