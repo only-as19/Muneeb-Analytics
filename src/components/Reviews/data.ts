@@ -13,13 +13,13 @@ export const reviews: Review[] = [
   },
   {
     name: "Chris Percival",
-    country: "USA",
+    country: "United State",
     feedback:
       "Muneeeb was excellent to work with. Very knowledgeable, patient, and timely. Supported me in SQL which pivoted to also supporting me in by generating leads for my business. The leads were very targeted, and way beyond what I expected in terms of being warm / hot which resulted in a significant increase in my conversion rate. Highly recommended!!!",
   },
   {
     name: "Ahmad",
-    country: "USA",
+    country: "United State",
     feedback:
       "I am an HR Product Owner for an educational institute in Silicon Valley. I find Muneeb to be extremely knowledgeable and a true Subject Matter Expert when it comes to the PowerBI tool. He has great communication skills and works with high integrity. I have done several gigs with him and will continue to do so in the future as well. Highly Recommended!",
   },
@@ -31,7 +31,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Waziha",
-    country: "USA",
+    country: "United State",
     feedback:
       "Muneeb explained Power BI concepts clearly and made learning easy. He broke down complex ideas into simple steps and used examples that helped me understand visualizations and reporting. He was patient, approachable, and always ready to answer questions. Highly recommend!",
   },
@@ -43,7 +43,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Andy Parkin",
-    country: "USA",
+    country: "United State",
     feedback:
       "An exceptional professional who is great to work with and certainly will be again in the near future. Muneeb is highly recommended !!!!!",
   },
@@ -55,7 +55,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Saeed",
-    country: "USA",
+    country: "United State",
     feedback:
       "Muneeb did an outstanding job! He was professional, fast, and delivered exactly what I asked for. Highly recommended and I will definitely work with him again!",
   },
@@ -85,19 +85,19 @@ export const reviews: Review[] = [
   },
   {
     name: "Rachel",
-    country: "USA",
+    country: "United State",
     feedback:
       "Professional, responsive, and delivered exceptional results. Thank you for your hard work!",
   },
   {
     name: "Opeyemi",
-    country: "USA",
+    country: "United State",
     feedback:
       "Muneeb went above and beyond, he is such a good sport, he was calm and explained in an understanding manner. I will always work with him as he is a good tutor with a good spirit. I will recommend him any day any time.",
   },
   {
     name: "Frances Downey",
-    country: "USA",
+    country: "United State",
     feedback:
       "Awesome to work with and awesome work! The video chats really help dial in my project. Highly recommend!",
   },
@@ -109,7 +109,7 @@ export const reviews: Review[] = [
   },
   {
     name: "Antonio",
-    country: "USA",
+    country: "United State",
     feedback:
       "Great understanding of complicated task, will use again.",
   },
