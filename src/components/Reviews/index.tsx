@@ -1,14 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import "swiper/swiper-bundle.css"
-
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import { reviews } from "./data";
 
 export default function App() {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
+        effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         coverflowEffect={{
@@ -22,27 +21,19 @@ export default function App() {
         modules={[EffectCoverflow, Pagination]}
         className="w-full"
         breakpoints={{
-          0:{
-            slidesPerView:1
+          0: {
+            slidesPerView: 1,
           },
-          768:{
-            slidesPerView:2
-          }
+          768: {
+            slidesPerView: 2,
+          },
         }}
       >
-        <SwiperSlide className=''>
-          <div className='h-36 w-36'>Asad</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='h-36 w-36'>Asad</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='h-36 w-36'>Asad</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='h-36 w-36'>Asad</div>
-        </SwiperSlide>
-       
+        {reviews.map(review=>(
+          <SwiperSlide>
+            
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
