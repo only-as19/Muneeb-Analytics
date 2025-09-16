@@ -3,5 +3,6 @@ export {default as Footer} from "./Footer/index"
 export {default as Sheet} from "./Sheet/index"
 export {default as VideoJS} from "./Video/index"
 export { default as Review } from "./Reviews/index";
+export { default as Rating } from "./Rating/index";
 
 export * from "./ui"

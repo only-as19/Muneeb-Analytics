@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { reviews } from "./data";
-
+import {SiFiverr} from "react-icons/si"
+import Rating from "../Rating";
 export default function App() {
   return (
     <>
@@ -29,11 +30,13 @@ export default function App() {
           },
         }}
       >
-        {reviews.map(review=>(
-          <SwiperSlide>
-            
-          </SwiperSlide>
-        ))}
+        <SwiperSlide>
+          <div>
+            <div>
+              <Rating/>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
