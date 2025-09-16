@@ -6,7 +6,7 @@ const Rating:React.FC = () => {
       {[...Array(5)].map((_, index)=>{
         return (
            
-                <FaStar key={index} color="yellow"/>
+                <FaStar key={index} color="#f7a031"/>
             
         )
       })}
