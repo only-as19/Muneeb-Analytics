@@ -41,7 +41,7 @@ const Reviews = () => {
           }}
         >
           {reviews.map((review) => (
-            <SwiperSlide className="!w-96 !h-82">
+            <SwiperSlide className="md:!w-96 !h-82">
               <div className="flex flex-col gap-y-2 text-accent p-4  bg-primary rounded-md shadow-primary h-full w-full">
                 <div className="flex items-center justify-between">
                   <p className="text-xl font-semibold">
@@ -52,7 +52,7 @@ const Reviews = () => {
                   </p>
                   <Rating />
                 </div>
-                <p className="">{review.feedback}</p>
+                <p className="text-sm md:text-base leading-6 md:leading-5">{review.feedback}</p>
                 <div>
                   <Link to="#" className="flex items-center gap-x-1 font-bold">
                     Read on <SiFiverr size={40} color="#00b22d" />
