@@ -1,10 +1,5 @@
+const services: React.FC = () => {
+  return <div>Services</div>;
+};
 
-const services:React.FC = () => {
-  return (
-    <div>
-      Services
-    </div>
-  )
-}
-
-export default services
+export default services;

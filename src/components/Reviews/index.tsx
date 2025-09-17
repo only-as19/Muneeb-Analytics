@@ -52,7 +52,9 @@ const Reviews = () => {
                   </p>
                   <Rating />
                 </div>
-                <p className="text-sm md:text-base leading-6 md:leading-5">{review.feedback}</p>
+                <p className="text-sm md:text-base leading-6 md:leading-5">
+                  {review.feedback}
+                </p>
                 <div>
                   <Link to="#" className="flex items-center gap-x-1 font-bold">
                     Read on <SiFiverr size={40} color="#00b22d" />
