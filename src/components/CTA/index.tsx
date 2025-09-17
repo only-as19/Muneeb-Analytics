@@ -11,8 +11,8 @@ const CTA:React.FC = () => {
                 className="w-full h-full object-cover"/>
             </div>
             <div className="mt-4 flex flex-col gap-y-4 ">
-                <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight">Let&apos;s create more tools and ideas that brings us together.</h2>
-                <p className="font-light text-gray-300" >Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+                <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight">Empowering Businesses to Turn Data Into Growth</h2>
+                <p className="font-normal text-gray-300" >Unlock the full potential of your data with our professional analytics solutions. From interactive dashboards to actionable insights, we help you make smarter, faster, and more confident business decisions.</p>
                 <div className="text-primary flex gap-x-3">
                     <Button label="Request a free demo" customClasses="md:py-5" variant="outline" onClick={()=>navigate("/freeDemo")}/>
                     <Button label="Schedule a call" customClasses="bg-secondary-foreground hover:bg-destructive md:py-5"/>
