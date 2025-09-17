@@ -1,5 +1,5 @@
 import type React from "react"
-import { Hero,About } from "./Sections"
+import { Hero,About,Services } from "./Sections"
 import { Review,CTA } from "@/components"
 
 const Landing:React.FC = () => {
@@ -9,6 +9,7 @@ const Landing:React.FC = () => {
         <About/>
         <Review/>
         <CTA/>
+        <Services/>
     </div>
   )
 }
