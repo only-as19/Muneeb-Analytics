@@ -1,6 +1,8 @@
 export { default as logo } from "@/assets/images/logo-white.png";
 import type { ReactNode } from "react";
-import { Linkedin, Mail, } from "lucide-react";
+import { SiFiverr,SiLinkedin } from "react-icons/si";
+import { IoMdMail } from "react-icons/io";
+import { IoCallSharp } from "react-icons/io5";
 
 interface Service {
   label: string;
@@ -34,13 +36,14 @@ export const services: Service[] = [
     label: "End-to-End Data Analytics Solutions",
   },
   {
-    link: "/services/tableau-dashboards",
-    label: "Dashboards in Tableau",
+    link: "/services/powerbi-dashboards",
+    label: "Power BI Dashboards & Reports",
   },
   {
-    link: "/services/powerbi-dashboards",
-    label: "Dashboards in Power BI",
+    link: "/services/tableau-dashboards",
+    label: "Tableau Dashboards & Reports",
   },
+  
   {
     link: "/services/corporate-trainings",
     label: "Corporate Trainings",
@@ -79,7 +82,7 @@ export const Tools:tools[]=[
 
 export const footerSection:FooterSection[]=[
   {
-    title: "Naviagtion",
+    title: "Pages",
     links:[
       {
         label:"Home",
@@ -101,12 +104,25 @@ export const SocialLinks:socialLinks[]=[
     {
         link:"",
         label:"LinkedIn",
-        icon:<Linkedin/>
+        icon:<SiLinkedin size={25}/>
     },
     {
       link:"",
-      label:"E-mail",
-      icon:<Mail/>
+      label:"Fiverr",
+      icon:<SiFiverr size={50}/>
     }
 
+]
+
+export const Contacts:socialLinks[]=[
+  {
+    link:"12345678910",
+    label:"Contact",
+    icon:<IoCallSharp size={20}/>
+  },
+  {
+    link:"info@muneebanalytics.com",
+    label:"Email",
+    icon:<IoMdMail size={20}/>
+  }
 ]

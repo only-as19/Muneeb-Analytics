@@ -1,4 +1,4 @@
-import { logo, SocialLinks, Tools, footerSection, services } from "./data";
+import { logo, SocialLinks, Tools, footerSection, services,Contacts } from "./data";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,14 +9,25 @@ const Footer = () => {
           <img src={logo} alt="Muneeb Analytics" 
           className="w-full max-w-24"
           />
-          <p className="md:mb-auto">Welcome to Muneeb Analyitc</p>
+          <p className="md:mb-auto">Turning Data Into Decisions That Drive Growth</p>
           <div className="mt-4">
-            <ul className="flex gap-x-4 items center text-cyan-600">
+            <ul className="flex gap-x-4 items-center">
               {SocialLinks.map((social) => (
                 <li key={social.label}>
                   <Link to={social.link}>{social.icon}</Link>
                 </li>
             ))}
+            </ul>
+            <ul className="flex flex-col gap-y-4 mt-4">
+              {Contacts.map(contact=>(
+                <li key={contact.label}>
+                  <a href={`mailto:${contact.link}`}
+                  className="flex gap-x-3 group"
+                  >
+                    {contact.icon} <span className="group-hover:text-cyan-500">{contact.link}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -28,7 +28,7 @@ export const navLinks: INavLinks[] = [
       },
       {
         link: "/services/powerbi-dashboards",
-        label: "Automated Dashboards in Power BI",
+        label: "Automated Power BI Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
@@ -40,7 +40,7 @@ export const navLinks: INavLinks[] = [
       },
       {
         link: "/services/tableau-dashboards",
-        label: "Automated Dashboards in Tableau",
+        label: "Automated Tableau Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
