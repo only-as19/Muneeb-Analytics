@@ -14,8 +14,8 @@ import {
 } from "@/lib";
 import { card_image } from "../data";
 import SwipperButtons from "@/components/Swiper Button";
-
 import { ArrowLeft, ArrowRight } from "lucide-react";
+
 const Service: React.FC = () => {
   return (
     <section className="bg-primary p-5 min-h-96">
@@ -28,6 +28,7 @@ const Service: React.FC = () => {
           pagination={true}
           // slidesPerView={2}
           loop={true}
+          className="service-swiper"
         >
           <SwiperSlide>
             <Card className="p-0 overflow-hidden gap-y-4">
@@ -55,7 +56,9 @@ const Service: React.FC = () => {
           <SwiperSlide>
             <Card className="p-0 overflow-hidden gap-y-4">
               <CardHeader className="p-0">
-                <img src={card_image} alt="" className="h-full w-full" />
+                <img src={card_image}
+                 alt="" 
+                 className="h-full w-full" />
               </CardHeader>
               <CardContent>
                 <CardTitle>

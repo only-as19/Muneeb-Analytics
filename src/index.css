@@ -13,7 +13,9 @@
   overflow: visible; /* default is hidden */
 }
 
-
+.service-swiper .swiper-pagination-bullet-active{
+  @apply bg-white;
+}
 
 @custom-variant dark (&:is(.dark *));
 
