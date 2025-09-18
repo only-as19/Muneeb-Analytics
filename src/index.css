@@ -16,6 +16,9 @@
 .service-swiper .swiper-pagination-bullet-active{
   @apply bg-white;
 }
+.service-swiper .swiper-pagination-bullet{
+  @apply bg-secondary;
+}
 
 @custom-variant dark (&:is(.dark *));
 
