@@ -1,49 +1,51 @@
-import { useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Button } from "@/components";
-import {Card,
+import {
+  Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardAction,
   CardDescription,
-  CardContent}
-  from "@/lib"
-import { card_image } from "../data"; 
+  CardContent,
+} from "@/lib";
+import { card_image } from "../data";
 import { useNavigate } from "react-router-dom";
+
 const Service: React.FC = () => {
-  const [swiper, setSwiper] = useState<any>(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section className="bg-primary p-5">
       <div>
-        <h1 className="text-white text-3xl text-center mb-8 font-bold">Services I offer</h1>
+        <h1 className="text-white text-3xl text-center mb-8 font-bold">
+          Services I offer
+        </h1>
         <Swiper
           modules={[Navigation]}
           // slidesPerView={2}
           loop={true}
-          onSwiper={setSwiper}
         >
           <SwiperSlide>
             <Card className="p-0 overflow-hidden gap-y-4">
               <CardHeader className="p-0">
-                <img src={card_image} alt=""
-                className="h-full w-full"
-                />
+                <img src={card_image} alt="" className="h-full w-full" />
               </CardHeader>
               <CardContent>
                 <CardTitle>
-                  <h1 className="text-3xl font-bold text-primary mb-2">Automated Power BI Dashboards & Reports</h1>
+                  <h1 className="text-3xl font-bold text-primary mb-2">
+                    Automated Power BI Dashboards & Reports
+                  </h1>
                 </CardTitle>
                 <CardDescription>
-                  Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.
+                  Interactive and dynamic dashboards that update automatically,
+                  giving you real-time business visibility.
                 </CardDescription>
               </CardContent>
               <CardFooter className="pb-5">
-                <Button label="Check Details"/>
+                <Button label="Check Details" />
               </CardFooter>
             </Card>
           </SwiperSlide>
@@ -57,19 +59,18 @@ const Service: React.FC = () => {
                   <h1>Automated Power BI Dashboards & Reports</h1>
                 </CardTitle>
                 <CardDescription>
-                  Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.
+                  Interactive and dynamic dashboards that update automatically,
+                  giving you real-time business visibility.
                 </CardDescription>
               </CardContent>
               <CardFooter>
                 <CardAction>
-                  <Button label="Check Details" onClick={()=> navigate}/>
+                  <Button label="Check Details" onClick={() => navigate} />
                 </CardAction>
               </CardFooter>
             </Card>
           </SwiperSlide>
         </Swiper>
-        <Button label="Prev" onClick={() => swiper?.slidePrev()} />
-        <Button label="Prev" onClick={() => swiper?.slideNext()} />
       </div>
     </section>
   );
