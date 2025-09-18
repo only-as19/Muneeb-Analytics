@@ -86,6 +86,19 @@ const Service: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="pointer-events-none absolute inset-y-0 left-0 right-0 px-2 z-10 hidden md:flex items-center justify-between">
+            <Button
+              icon={<ArrowLeft className="!w-5 !h-5" />}
+              className="service-prev pointer-events-auto relative -left-20"
+              onClick={()=> swiper?.slidePrev()}
+            />
+            <Button
+              icon={<ArrowRight className="!w-5 !h-5" />}
+              className="service-next pointer-events-auto relative -right-20"
+              onClick={()=> swiper?.slideNext()}
+            />
+          </div>
+          
         </div>
       </div>
     </motion.section>
