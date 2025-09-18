@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation,Pagination } from "swiper/modules";
 import { Button } from "@/components";
 import {
   Card,
@@ -14,21 +14,22 @@ import {
 } from "@/lib";
 import { card_image } from "../data";
 import { useNavigate } from "react-router-dom";
-
+import SwipperButtons from "@/components/Swiper Button";
 import { useSwiper } from "swiper/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 const Service: React.FC = () => {
   const navigate = useNavigate();
-  const swiper = useSwiper()
+  const swiper = useSwiper();
 
   return (
-    <section className="bg-primary p-5">
+    <section className="bg-primary p-5 min-h-96">
       <div>
         <h1 className="text-white text-3xl text-center mb-8 font-bold">
           Services I offer
         </h1>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation,Pagination]}
+          pagination={true}
           // slidesPerView={2}
           loop={true}
         >
@@ -78,23 +79,11 @@ const Service: React.FC = () => {
               </CardFooter>
             </Card>
           </SwiperSlide>
-          {/* <SwipperButtons
-            icon={{
-              btn1: <ArrowLeft/>,
-              btn2: <ArrowRight/>,
-            }}
-            variant={{
-              btn1: "secondary",
-              btn2: "secondary",
-            }}
-            className="flex justify-start gap-x-3 mt-4"
-          /> */}
-          <div>
-          <Button icon={<ArrowLeft/>} onClick={()=> swiper.slidePrev()}/>
-          <Button icon={<ArrowRight/>} onClick={()=> swiper.slideNext()}/>
-        </div>
+          <div className="hidden">
+            <SwipperButtons icon={<ArrowLeft className="!w-5 !h-5"/>} className="!w-10 !h-10" />
+            <SwipperButtons icon={<ArrowRight className="!w-5 !h-5"/>} className="!w-10 !h-10" />
+          </div>
         </Swiper>
-        
       </div>
     </section>
   );
