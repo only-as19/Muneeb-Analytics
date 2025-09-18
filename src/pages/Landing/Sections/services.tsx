@@ -15,8 +15,12 @@ import {
 import { card_image } from "../data";
 import { useNavigate } from "react-router-dom";
 
+import { useSwiper } from "swiper/react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 const Service: React.FC = () => {
   const navigate = useNavigate();
+  const swiper = useSwiper()
+
   return (
     <section className="bg-primary p-5">
       <div>
@@ -45,32 +49,52 @@ const Service: React.FC = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter className="pb-5">
-                <Button label="Check Details" />
+                <CardAction>
+                  <Button label="Check Details" />
+                </CardAction>
               </CardFooter>
             </Card>
           </SwiperSlide>
           <SwiperSlide>
-            <Card>
-              <CardHeader>
-                <img src={card_image} alt="" />
+            <Card className="p-0 overflow-hidden gap-y-4">
+              <CardHeader className="p-0">
+                <img src={card_image} alt="" className="h-full w-full" />
               </CardHeader>
               <CardContent>
                 <CardTitle>
-                  <h1>Automated Power BI Dashboards & Reports</h1>
+                  <h1 className="text-3xl font-bold text-primary mb-2">
+                    Automated Power BI Dashboards & Reports
+                  </h1>
                 </CardTitle>
                 <CardDescription>
                   Interactive and dynamic dashboards that update automatically,
                   giving you real-time business visibility.
                 </CardDescription>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pb-5">
                 <CardAction>
-                  <Button label="Check Details" onClick={() => navigate} />
+                  <Button label="Check Details" />
                 </CardAction>
               </CardFooter>
             </Card>
           </SwiperSlide>
+          {/* <SwipperButtons
+            icon={{
+              btn1: <ArrowLeft/>,
+              btn2: <ArrowRight/>,
+            }}
+            variant={{
+              btn1: "secondary",
+              btn2: "secondary",
+            }}
+            className="flex justify-start gap-x-3 mt-4"
+          /> */}
+          <div>
+          <Button icon={<ArrowLeft/>} onClick={()=> swiper.slidePrev()}/>
+          <Button icon={<ArrowRight/>} onClick={()=> swiper.slideNext()}/>
+        </div>
         </Swiper>
+        
       </div>
     </section>
   );
