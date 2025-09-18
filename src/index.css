@@ -20,6 +20,8 @@
   @apply bg-secondary;
 }
 
+
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

@@ -15,6 +15,7 @@ import {
 import { card_image } from "../data";
 import SwipperButtons from "@/components/Swiper Button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Services } from "../data";
 
 const Service: React.FC = () => {
   return (
@@ -30,54 +31,30 @@ const Service: React.FC = () => {
           loop={true}
           className="service-swiper"
         >
-          <SwiperSlide>
+          {Services.map(service=>(
+            <SwiperSlide>
             <Card className="p-0 overflow-hidden gap-y-4">
               <CardHeader className="p-0">
-                <img src={card_image} alt="" className="h-full w-full" />
+                <img src={card_image} alt={service.label} className="h-full w-full" />
               </CardHeader>
               <CardContent>
                 <CardTitle>
                   <h1 className="text-3xl font-bold text-primary mb-2">
-                    Automated Power BI Dashboards & Reports
+                    {service.label}
                   </h1>
                 </CardTitle>
-                <CardDescription>
-                  Interactive and dynamic dashboards that update automatically,
-                  giving you real-time business visibility.
+                <CardDescription className="text-destructive">
+                  {service.description}
                 </CardDescription>
               </CardContent>
-              <CardFooter className="pb-5">
+              <CardFooter className="pb-5 mt-auto">
                 <CardAction>
                   <Button label="Check Details" />
                 </CardAction>
               </CardFooter>
             </Card>
           </SwiperSlide>
-          <SwiperSlide>
-            <Card className="p-0 overflow-hidden gap-y-4">
-              <CardHeader className="p-0">
-                <img src={card_image}
-                 alt="" 
-                 className="h-full w-full" />
-              </CardHeader>
-              <CardContent>
-                <CardTitle>
-                  <h1 className="text-3xl font-bold text-primary mb-2">
-                    Automated Power BI Dashboards & Reports
-                  </h1>
-                </CardTitle>
-                <CardDescription>
-                  Interactive and dynamic dashboards that update automatically,
-                  giving you real-time business visibility.
-                </CardDescription>
-              </CardContent>
-              <CardFooter className="pb-5">
-                <CardAction>
-                  <Button label="Check Details" />
-                </CardAction>
-              </CardFooter>
-            </Card>
-          </SwiperSlide>
+          ))}
           <div className="hidden">
             <SwipperButtons
               icon={<ArrowLeft className="!w-5 !h-5" />}
