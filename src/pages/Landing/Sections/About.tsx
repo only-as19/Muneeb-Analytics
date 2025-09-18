@@ -35,7 +35,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="p-5 min-h-96 flex-col items-center justify-center bg-primary text-zinc-300">
+    <section className="px-5 min-h-96 flex-col items-center justify-center bg-primary text-zinc-300 py-20">
       <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-6 md:flex-row">
           <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 px-5 md:leading-7 ">
