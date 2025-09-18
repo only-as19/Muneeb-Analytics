@@ -1,5 +1,6 @@
 export { default as hero_img } from "@/assets/images/landing/transparent_image.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
+export {default as card_image} from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg"
 
 type StatItem = {
   label: string;
