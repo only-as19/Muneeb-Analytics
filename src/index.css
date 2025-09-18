@@ -13,6 +13,11 @@
   overflow: visible; /* default is hidden */
 }
 
+.service-swiper,
+.service-swiper .swiper {
+  overflow: visible;
+}
+
 .service-swiper .swiper-pagination-bullet {
   @apply bg-secondary md:bg-destructive; /* default red, turn purple at md and above */
 }
