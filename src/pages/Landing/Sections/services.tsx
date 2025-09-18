@@ -18,8 +18,9 @@ const Service: React.FC = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const navigate = useNavigate()
   return (
-    <section>
+    <section className="bg-primary p-5">
       <div>
+        <h1 className="text-white text-3xl text-center mb-8 font-bold">Services I offer</h1>
         <Swiper
           modules={[Navigation]}
           // slidesPerView={2}
@@ -27,19 +28,21 @@ const Service: React.FC = () => {
           onSwiper={setSwiper}
         >
           <SwiperSlide>
-            <Card>
-              <CardHeader>
-                <img src={card_image} alt="" />
+            <Card className="p-0 overflow-hidden gap-y-4">
+              <CardHeader className="p-0">
+                <img src={card_image} alt=""
+                className="h-full w-full"
+                />
               </CardHeader>
               <CardContent>
                 <CardTitle>
-                  <h1>Automated Power BI Dashboards & Reports</h1>
+                  <h1 className="text-3xl font-bold text-primary mb-2">Automated Power BI Dashboards & Reports</h1>
                 </CardTitle>
                 <CardDescription>
                   Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.
                 </CardDescription>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pb-5">
                 <Button label="Check Details"/>
               </CardFooter>
             </Card>
