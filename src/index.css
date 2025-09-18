@@ -13,16 +13,27 @@
   overflow: visible; /* default is hidden */
 }
 
-.service-swiper .swiper-pagination-bullet-active{
-  @apply bg-white;
-}
-.service-swiper .swiper-pagination-bullet{
-  @apply bg-secondary;
+.service-swiper .swiper-pagination-bullet {
+  @apply bg-secondary md:bg-destructive; /* default red, turn purple at md and above */
 }
 
-.service-swiper .swiper-wrapper { align-items: stretch; }
-.service-swiper .swiper-slide { height: auto !important; display: flex; }
-.service-swiper .swiper-slide > * { height: 100%; width: 100%; }
+.service-swiper .swiper-pagination-bullet-active {
+  @apply bg-white md:bg-primary; /* blue on mobile, white from md up */
+}
+
+.service-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.service-swiper .swiper-slide {
+  height: auto !important;
+  display: flex;
+  @apply rounded-xl;
+}
+
+.service-swiper .swiper-slide > * {
+  height: 100%;
+  width: 100%;
+}
 
 @custom-variant dark (&:is(.dark *));
 

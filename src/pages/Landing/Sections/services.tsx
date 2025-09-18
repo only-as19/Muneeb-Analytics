@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Button } from "@/components";
 import {
   Card,
@@ -19,17 +19,31 @@ import { Services } from "../data";
 
 const Service: React.FC = () => {
   return (
-    <section className="bg-primary p-5 min-h-96">
-      <div>
-        <h1 className="text-white text-3xl text-center mb-8 font-bold">
+    <section className="p-5 min-h-screen bg-primary md:bg-bg-secondary ">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-white md:text-primary  text-3xl text-center mb-8 font-bold md:text-4xl">
           Services I offer
         </h1>
         <Swiper
-          modules={[Navigation, Pagination]}
-          pagination={true}
-          // slidesPerView={2}
+        effect="fade"
+          modules={[Navigation, Pagination, Autoplay]}
+          pagination={{clickable:true}}
+          spaceBetween={30}
+          speed={1200}
+          grabCursor={true}
+          breakpoints={{
+            0:{
+              slidesPerView:1
+            },
+            768:{
+              slidesPerView:3
+            }
+          }}  
           loop={true}
-          className="service-swiper"
+          autoplay={{
+            delay:2000
+          }}
+          className="service-swiper "
         >
           {Services.map(service=>(
             <SwiperSlide>
@@ -49,7 +63,9 @@ const Service: React.FC = () => {
               </CardContent>
               <CardFooter className="pb-5 mt-auto">
                 <CardAction>
-                  <Button label="Check Details" />
+                  <Button label="Check Details"
+                  className="cursor-pointer"
+                  />
                 </CardAction>
               </CardFooter>
             </Card>

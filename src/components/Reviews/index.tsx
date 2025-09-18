@@ -30,7 +30,7 @@ const Reviews = () => {
           effect="coverflow"
           loop
           grabCursor
-          centeredSlides
+          centeredSlides={true}
           slidesPerView="auto"
           coverflowEffect={{
             rotate: 50,
