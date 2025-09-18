@@ -17,12 +17,18 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Services } from "../data";
 import { useState } from "react";
 import type { Swiper as SwiprtType } from "swiper";
-
+import { motion } from "motion/react";
 
 const Service: React.FC = () => {
-  const [swiper,setSwiper] = useState<SwiprtType | null>(null)
+  const [swiper, setSwiper] = useState<SwiprtType | null>(null);
+
   return (
-    <section className="relative p-5 min-h-screen bg-primary md:bg-bg-secondary">
+    <motion.section
+      className="relative p-5 min-h-screen bg-primary md:bg-bg-secondary"
+      viewport={{ amount: 0.4, once: false }}
+      onViewportEnter={() => swiper?.autoplay.start()}
+      onViewportLeave={() => swiper?.autoplay.stop()}
+    >
       <div className="max-w-6xl mx-auto">
         <h1 className="text-white md:text-primary text-3xl text-center mb-8 font-bold md:text-4xl">
           Services I offer
@@ -42,9 +48,9 @@ const Service: React.FC = () => {
             breakpoints={{
               0: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024:{
-                slidesPerView:3
-              }
+              1024: {
+                slidesPerView: 3,
+              },
             }}
           >
             {Services.map((service) => (
@@ -69,7 +75,10 @@ const Service: React.FC = () => {
                   </CardContent>
                   <CardFooter className="pb-5 mt-auto">
                     <CardAction>
-                      <Button label="Check Details" className="cursor-pointer" />
+                      <Button
+                        label="Check Details"
+                        className="cursor-pointer"
+                      />
                     </CardAction>
                   </CardFooter>
                 </Card>
@@ -80,17 +89,17 @@ const Service: React.FC = () => {
             <Button
               icon={<ArrowLeft className="!w-5 !h-5" />}
               className="service-prev pointer-events-auto relative -left-20"
-              onClick={()=> swiper?.slidePrev()}
+              onClick={() => swiper?.slidePrev()}
             />
             <Button
               icon={<ArrowRight className="!w-5 !h-5" />}
               className="service-next pointer-events-auto relative -right-20"
-              onClick={()=> swiper?.slideNext()}
+              onClick={() => swiper?.slideNext()}
             />
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
