@@ -17,41 +17,41 @@ export const navLinks: INavLinks[] = [
     label: "Home",
   },
   {
-    link: "/services",
+    link: "#",
     label: "Services",
     children: [
       {
-        link: "/services/end-to-end-analytics",
+        link: "end-to-end-analytics",
         label: "End-to-End Data Analytics Solutions",
         description:
           "From raw data to actionable insights, complete analytics solutions tailored to your business needs.",
       },
       {
-        link: "/services/powerbi-dashboards",
+        link: "powerbi-dashboards",
         label: "Automated Power BI Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
       {
-        link: "/services/corporate-trainings",
+        link: "corporate-trainings",
         label: "Corporate Trainings",
         description:
           "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving.",
       },
       {
-        link: "/services/tableau-dashboards",
+        link: "tableau-dashboards",
         label: "Automated Tableau Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
       {
-        link: "/services/predictive-analytics",
+        link: "predictive-analytics",
         label: "Predictive Analytics (Python & ML)",
         description:
           "Leverage advanced models to forecast trends, identify patterns, and make confident data-driven decisions.",
       },
       {
-        link: "/services/statistical-analysis",
+        link: "statistical-analysis",
         label: "Statistical & Exploratory Data Analysis",
         description:
           "In-depth analysis to uncover hidden insights, validate assumptions, and support strategic decision-making.",

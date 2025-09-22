@@ -67,12 +67,11 @@ const Service: React.FC = () => {
                   >
                     <img
                       loading="lazy"
-                      src={service.link || FALLBACK}
+                      src={service.img || FALLBACK}
                       alt={service.label}
-                      /* Absolutely position to fill header frame */
                       className="absolute inset-0 h-full w-full object-cover block"
                       onError={(e) => {
-                        // fallback if an image fails (prevents tiny broken-icon)
+                        
                         (e.currentTarget as HTMLImageElement).src = FALLBACK;
                       }}
                     />

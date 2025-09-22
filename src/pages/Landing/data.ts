@@ -11,6 +11,7 @@ interface service {
   label: string;
   description: string;
   link?:string
+  img?:string
 }
 
 export const Services: service[] = [
@@ -18,36 +19,42 @@ export const Services: service[] = [
     label: "Automated Power BI Dashboards & Reports",
     description:
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
-      link: "https://ik.imagekit.io/pdata3016/Services/Power%20BI%20Dashboard%20&%20report.jpg?updatedAt=1758440250629"
+      img: "https://ik.imagekit.io/pdata3016/Services/Power%20BI%20Dashboard%20&%20report.jpg?updatedAt=1758440250629",
+      link: "powerbi-dashboards",
   },
   {
     label: "Automated Tableau Dashboards & Reports",
     description:
       "Unlock real-time insights across sales, finance, marketing, HR, supply chain, and operations with fully automated Tableau dashboards. Designed for clarity and speed, our reports update instantly so you can track performance, identify trends, and make confident decisions without manual effort.",
-      link: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard%20&%20report.jpg?updatedAt=1758440250688"
+      img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard%20&%20report.jpg?updatedAt=1758440250688",
+      link: "tableau-dashboards",
   },
   {
     label: "Corporate Trainings",
     description:
       "Empower your teams with customized training in Power BI, SQL, Python, and data analytics. Our hands-on sessions are designed to build practical skills, improve problem-solving, and help professionals turn data into smarter business decisions.",
-      link: "https://ik.imagekit.io/pdata3016/Services/Corporate%20Trainings.jpg?updatedAt=1758440250910"
+      img: "https://ik.imagekit.io/pdata3016/Services/Corporate%20Trainings.jpg?updatedAt=1758440250910",
+      link: "corporate-trainings",
   },
   {
     label: "Predictive Analytics (Python & ML)",
     description:
       "Stay ahead of the curve with predictive models that forecast trends, uncover patterns, and anticipate customer behavior. Using Python and machine learning, we deliver actionable insights that help you minimize risks, optimize strategies, and make smarter business decisions.",
-      link: "https://ik.imagekit.io/pdata3016/Services/Predicive%20analysis.jpg?updatedAt=1758440250382"
+      img: "https://ik.imagekit.io/pdata3016/Services/Predicive%20analysis.jpg?updatedAt=1758440250382",
+      link: "predictive-analytics",
   },
   {
     label: "Statistical & Exploratory Data Analysis",
     description:
       "Discover hidden patterns and validate key assumptions through deep statistical and exploratory analysis. We help you uncover meaningful insights, reduce uncertainty, and guide smarter strategies for long-term business growth.",
-      link: "https://ik.imagekit.io/pdata3016/Services/Statistical%20analysis.jpg?updatedAt=1758440250570"
+      img: "https://ik.imagekit.io/pdata3016/Services/Statistical%20analysis.jpg?updatedAt=1758440250570",
+      link: "statistical-analysis",
   },
   {
     label: "End-to-End Data Analytics Solutions",
     description:
       "Turn raw data into actionable insights with complete analytics solutions designed for your business. From data integration and cleaning to dashboards, advanced analysis and reporting, we manage the entire process so you can focus on growth.",
+      link: "end-to-end-analytics",
   },
 ];
 
