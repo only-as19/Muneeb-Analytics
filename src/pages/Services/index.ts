@@ -1,0 +1,1 @@
+export {default as ServiceHero} from "./Sections/service-hero-section"
