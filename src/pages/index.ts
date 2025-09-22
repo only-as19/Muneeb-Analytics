@@ -1,5 +1,5 @@
 export {default as Landing} from "./Landing/page"
-export {default as Services} from "./Services/page"
+export {default as Services} from "./Landing/Service Details/page"
 export {default as Projects} from "./Projects/page"
 export {default as Contact} from "./Contact/page"
 export {default as Blogs} from "./Blogs/page"

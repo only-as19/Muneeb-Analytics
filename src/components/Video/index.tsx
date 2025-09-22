@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "jb-videojs-hls-quality-selector";
-import "videojs-contrib-quality-levels";
+import "jb-videojs-hls-quality-selector"; // Only keep this one
 
 type VideoJsPlayer = ReturnType<typeof videojs>;
 type VideoJsPlayerOptions = Parameters<typeof videojs>[1];

@@ -8,6 +8,8 @@ interface INavLinks {
     link: string;
     label: string;
     description?: string;
+    id?:string
+    
   }[];
 }
 
@@ -21,36 +23,42 @@ export const navLinks: INavLinks[] = [
     label: "Services",
     children: [
       {
+        id:"1",
         link: "end-to-end-analytics",
         label: "End-to-End Data Analytics Solutions",
         description:
           "From raw data to actionable insights, complete analytics solutions tailored to your business needs.",
       },
       {
+        id:"2",
         link: "powerbi-dashboards",
         label: "Automated Power BI Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
       {
+        id:"3",
         link: "corporate-trainings",
         label: "Corporate Trainings",
         description:
           "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving.",
       },
       {
+        id:"4",
         link: "tableau-dashboards",
         label: "Automated Tableau Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
       {
+        id:"5",
         link: "predictive-analytics",
         label: "Predictive Analytics (Python & ML)",
         description:
           "Leverage advanced models to forecast trends, identify patterns, and make confident data-driven decisions.",
       },
       {
+        id:"6",
         link: "statistical-analysis",
         label: "Statistical & Exploratory Data Analysis",
         description:

@@ -1,11 +1,16 @@
-import Rootlayout from "@/layouts"
-import { Landing} from "@/pages"
+import {RootLayout,LandingLayout} from "@/layouts"
+import { Landing, Services} from "@/pages"
+import ServiceDetail from "@/pages/Landing/Service Details/page"
 import type { RouteObject } from "react-router-dom"
+
+
+
+
 
 const routes:RouteObject [] = [
     {
         path:"/",
-        element: <Rootlayout/>,
+        element: <RootLayout/>,
         children:[
             {
                 path:"*",
@@ -14,9 +19,13 @@ const routes:RouteObject [] = [
             {
                 path:"/",
                 element:<Landing/>
+            },
+            {
+                path:"/:serviceId",
+                element:<ServiceDetail/>
             }
         ]
-    }
+    },
 ]
 
 

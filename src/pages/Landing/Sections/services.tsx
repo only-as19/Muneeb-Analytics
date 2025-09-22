@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { motion } from "motion/react";
-
+import {useNavigate } from "react-router-dom";
 import { Button } from "@/components";
 import {
   Card,
@@ -19,12 +19,9 @@ import {
 import { Services } from "../data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const FALLBACK =
-  "https://ik.imagekit.io/placeholder/placeholder.jpg?tr=w-1200,h-675,fo-auto,q-80";
-
 const Service: React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-
+  const navigate =  useNavigate()
   return (
     <motion.section
       className="relative p-5 min-h-screen bg-primary md:bg-bg-secondary flex items-center"
@@ -67,13 +64,10 @@ const Service: React.FC = () => {
                   >
                     <img
                       loading="lazy"
-                      src={service.img || FALLBACK}
+                      src={service.img}
                       alt={service.label}
                       className="absolute inset-0 h-full w-full object-cover block"
-                      onError={(e) => {
-                        
-                        (e.currentTarget as HTMLImageElement).src = FALLBACK;
-                      }}
+                      
                     />
                   </CardHeader>
 
@@ -90,7 +84,9 @@ const Service: React.FC = () => {
 
                   <CardFooter className="mt-auto pb-5">
                     <CardAction>
-                      <Button label="Check Details" className="cursor-pointer" />
+                      <Button label="Check Details" className="cursor-pointer" 
+                      onClick={()=> navigate(`${service.link}`)}
+                      />
                     </CardAction>
                   </CardFooter>
                 </Card>
