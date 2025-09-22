@@ -154,7 +154,7 @@ export const Services: service[] = [
       description:
         "Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making.",
       details: [
-        "1–2 Data sources (Excel, CSV)",
+        "1-2 Data sources (Excel, CSV)",
         "Basic data cleaning & formatting",
         "Up to 4 KPIs and 4 charts",
         "Interactive/animated visuals",
@@ -170,10 +170,10 @@ export const Services: service[] = [
       description:
         "Best for growing businesses that need multi-source reporting and department-level insights with automation.",
       details: [
-        "2–4 Data sources (Excel, CSV, SQL, APIs)",
+        "2-4 Data sources (Excel, CSV, SQL, APIs)",
         "Medium Complex data cleaning & transformation",
-        "2–3 interactive dashboard pages",
-        "Up to 10 KPIs and 8–10 charts",
+        "2-3 interactive dashboard pages",
+        "Up to 10 KPIs and 8-10 charts",
         "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
         "Automated data refresh setup",
         "1-on-1 walkthrough or training session",
@@ -187,9 +187,9 @@ export const Services: service[] = [
       description:
         "Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation.",
       details: [
-        "3–7 Data sources (Excel, CSV, SQL, APIs)",
+        "3-7 Data sources (Excel, CSV, SQL, APIs)",
         "Complex data cleaning & transformation",
-        "5–6 interactive dashboard pages",
+        "5-6 interactive dashboard pages",
         "Up to 20 KPIs 20 charts",
         "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
         "Automated data refresh setup",
