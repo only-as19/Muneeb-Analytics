@@ -1,5 +1,4 @@
-import { Landing } from "@/pages";
-
+import { Landing } from "@/pages"
 
 const LandingLayout = () => {
   return (

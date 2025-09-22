@@ -1,10 +1,7 @@
-import {RootLayout,LandingLayout} from "@/layouts"
-import { Landing, Services} from "@/pages"
+import {RootLayout} from "@/layouts"
+import { Landing } from "@/pages"
 import ServiceDetail from "@/pages/Landing/Service Details/page"
 import type { RouteObject } from "react-router-dom"
-
-
-
 
 
 const routes:RouteObject [] = [
