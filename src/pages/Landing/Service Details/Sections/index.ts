@@ -1,1 +1,1 @@
-// export {default as ServiceHero} from "./service-hero-section"
+export {default as ServiceHero} from "./service-hero-section"

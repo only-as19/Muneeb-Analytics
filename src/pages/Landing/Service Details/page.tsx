@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { Services } from "../data"
-// import { ServiceHero } from "./Sections" 
+import { ServiceHero } from "./Sections" 
 
 const ServiceDetail = () => {
   const {serviceId} = useParams()
@@ -11,7 +11,7 @@ const ServiceDetail = () => {
   }
   return (
     <div>
-        {/* <ServiceHero /> */}
+        <ServiceHero />
     </div>
   )
 }
