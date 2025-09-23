@@ -22,26 +22,27 @@ const WhatsIncluded = () => {
       )
     }
   return (
-    <section>
-        <div>
-            <div>
-                <h1>{heading?.title}</h1>
-                <p>{heading?.description}</p>
+    <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
+        <div className="flex flex-col gap-y-5">
+            <div className="text-center">
+                <h1 className="text-3xl font-bold uppercase mb-2">{heading?.title}</h1>
+                <p className="text-muted-foreground">{heading?.description}</p>
             </div>
             {
               include && (
-                <div>
-              <div>
+                <div className="shadow-primary drop-shadow-xl">
+              <div className={`bg-primary text-white flex flex-col gap-y px-3 py-6 `}>
                 {include?.map((data,i)=> 
-                  <div key={i}>
-                    <Button label={data.title} 
-                    onClick={()=> setActiveIndex(i)}
-                    />
+                  <div key={i}
+                  className={`p-2 ${activeIndex === i && "bg-cyan-500"} rounded-xs py-3 px-3`}
+                  >
+                    <p>{data.title}</p>
                   </div>
                 )}
                 </div> 
-                <div>
-                  <p>{include[activeIndex]?.description}</p>  
+                <div className="bg-white px-3 py-6 mb-4">
+                  <h1 className="text-2xl font-bold">{include[activeIndex]?.title}</h1>
+                  <p className="text-muted-foreground">{include[activeIndex]?.description}</p>  
                 </div> 
             </div>
               )

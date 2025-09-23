@@ -8,7 +8,7 @@ const ServiceHero: React.FC = () => {
   if (!hero) return <p>Service not found</p>;
 
   return (
-    <section className="md:min-h-screen min-h-96 bg-bg-secondary p-5 flex flex-col justify-center items-center">
+    <section className="md:min-h-screen min-h-96 bg-bg-secondary p-5 flex flex-col justify-center items-center ">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-12">
         <div className="md:w-1/2">
           <h1 className="text-3xl md:text-5xl font-bold text-primary mb-2">
