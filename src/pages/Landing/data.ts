@@ -36,6 +36,7 @@ interface PricingPlan {
 
 interface Details {
   hero: Hero;
+  whatsIncludedHeading:SectionItem;
   whatsIncluded: SectionItem[];
   businessBenefits: SectionItem[];
   howItWorks: StepItem[];
@@ -66,6 +67,12 @@ export const Services: service[] = [
     description:
       "Turn raw data into powerful insights with fully automated dashboards designed for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a complete view of your organization in real time so you can track performance, uncover opportunities, and make smarter decisions with confidence.",
   },
+
+  whatsIncludedHeading:{
+    title:"What's Included",
+    description:"Our Power BI service covers the complete reporting journey, ensuring that every step of your data lifecycle is managed with care and expertise."
+  },
+
   whatsIncluded: [
     {
       title: "Automated Data Integration",
