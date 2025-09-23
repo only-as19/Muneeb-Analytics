@@ -23,7 +23,19 @@ const ServiceHero:React.FC = () => {
         <Button label="Pricing List" variant="outline" className=""/>
         </div>
         </div>
-        
+        <div className="grid grid-cols-3 gap-x-2 ">
+                  {statsData.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="px-1 py-4 rounded-sm shadow-primary text-center flex flex-col items-center justify-between gap-y-1 group bg-accent/10"
+                    >
+                      <p className="text-3xl font-bold text-[#EBF4F6] md:text-5xl group-hover:text-[#E8B904]">
+                        {stat.value}
+                      </p>
+                      <p className="text-zinc-400 text-sm">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
       </div>
     </section>
   );
