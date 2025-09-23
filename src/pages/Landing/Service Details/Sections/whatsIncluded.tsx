@@ -14,7 +14,7 @@ const WhatsIncluded = () => {
     if(!serviceContent){
       return (
         <section>
-          <div>
+          <div className="">
             <h1>Service not Found</h1>
             <p>Please check the URL or browse our services.</p>
           </div>
@@ -23,14 +23,14 @@ const WhatsIncluded = () => {
     }
   return (
     <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
-        <div className="flex flex-col gap-y-5">
-            <div className="text-center">
+        <div className="flex flex-col gap-y-5 max-w-6xl mx-auto">
+            <div className="text-center md:w-4xl mx-auto">
                 <h1 className="text-3xl font-bold uppercase mb-2">{heading?.title}</h1>
                 <p className="text-muted-foreground">{heading?.description}</p>
             </div>
             {
               include && (
-                <div className="shadow-primary drop-shadow-xl">
+                <div className="shadow-primary drop-shadow-xl md:grid md:grid-cols-2 items-stretch">
               <div className={`bg-primary text-white flex flex-col gap-y px-3 py-6 `}>
                 {include?.map((data,i)=> 
                   <div key={i}
@@ -40,7 +40,7 @@ const WhatsIncluded = () => {
                   </div>
                 )}
                 </div> 
-                <div className="bg-white px-3 py-6 mb-4">
+                <div className="bg-white px-3 py-6 mb-4 h-full">
                   <h1 className="text-2xl font-bold">{include[activeIndex]?.title}</h1>
                   <p className="text-muted-foreground">{include[activeIndex]?.description}</p>  
                 </div> 
