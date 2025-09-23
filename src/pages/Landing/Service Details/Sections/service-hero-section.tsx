@@ -4,7 +4,7 @@ import { Services, statsData } from "../../data";
 const ServiceHero: React.FC = () => {
   const { serviceId } = useParams();
   const serviceContent = Services.find((service) => service.link === serviceId);
-  const hero = serviceContent?.powerbi?.hero;
+  const hero = serviceContent?.details?.hero;
   if (!hero) return <p>Service not found</p>;
 
   return (

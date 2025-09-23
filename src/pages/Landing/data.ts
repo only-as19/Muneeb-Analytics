@@ -34,7 +34,7 @@ interface PricingPlan {
   revisions: string;
 }
 
-interface PowerBIData {
+interface Details {
   hero: Hero;
   whatsIncluded: SectionItem[];
   businessBenefits: SectionItem[];
@@ -48,7 +48,7 @@ interface service {
   link?:string
   img?:string
   id:string
-  powerbi?: PowerBIData
+  details?: Details
 }
 
 export const Services: service[] = [
@@ -59,7 +59,7 @@ export const Services: service[] = [
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
       img: "https://ik.imagekit.io/pdata3016/Services/Power%20BI%20Dashboard%20&%20report.jpg?updatedAt=1758440250629",
       link: "powerbi-dashboards",
-      powerbi:{
+      details:{
   hero: {
     title: "Automated Power BI Dashboard & report",
     subtitle: "Unlock Real-Time Business Intelligence",
