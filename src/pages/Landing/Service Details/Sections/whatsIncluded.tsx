@@ -1,6 +1,5 @@
 import { useParams } from "react-router";
 import { Services} from "../../data";
-import { Button } from "@/components";
 import { useState } from "react";
 
 const WhatsIncluded = () => {
@@ -25,7 +24,7 @@ const WhatsIncluded = () => {
     <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
         <div className="flex flex-col gap-y-5 max-w-6xl mx-auto">
             <div className="text-center md:w-4xl mx-auto">
-                <h1 className="text-3xl font-bold uppercase mb-2">{heading?.title}</h1>
+                <h1 className="text-3xl md:text-4xl font-bold uppercase mb-2">{heading?.title}</h1>
                 <p className="text-muted-foreground">{heading?.description}</p>
             </div>
             {
@@ -35,6 +34,7 @@ const WhatsIncluded = () => {
                 {include?.map((data,i)=> 
                   <div key={i}
                   className={`p-2 ${activeIndex === i && "bg-cyan-500"} rounded-xs py-3 px-3`}
+                  onClick={()=> setActiveIndex(i)}
                   >
                     <p>{data.title}</p>
                   </div>
