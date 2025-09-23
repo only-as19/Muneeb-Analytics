@@ -1,8 +1,11 @@
 import { useParams } from "react-router";
 import { Services} from "../../data";
 import { Button } from "@/components";
+import { useState } from "react";
 
 const WhatsIncluded = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
     const { serviceId } = useParams();
     const serviceContent = Services.find((service) => service.link === serviceId);
     const heading = serviceContent && serviceContent.details?.whatsIncludedHeading
@@ -25,20 +28,24 @@ const WhatsIncluded = () => {
                 <h1>{heading?.title}</h1>
                 <p>{heading?.description}</p>
             </div>
-            <div>
+            {
+              include && (
+                <div>
               <div>
                 {include?.map((data,i)=> 
                   <div key={i}>
-                    <Button label={data.title} />
+                    <Button label={data.title} 
+                    onClick={()=> setActiveIndex(i)}
+                    />
                   </div>
                 )}
                 </div> 
                 <div>
-                  {include?.map(data=>(
-                    data.description
-                  ))}  
+                  <p>{include[activeIndex]?.description}</p>  
                 </div> 
             </div>
+              )
+            }
         </div>
     </section>
   )
