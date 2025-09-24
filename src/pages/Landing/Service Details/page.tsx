@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { Services } from "../data"
 import { ServiceHero,WhatsIncluded } from "./Sections" 
+import { CTA } from "@/components"
 
 const ServiceDetail = () => {
   const {serviceId} = useParams()
