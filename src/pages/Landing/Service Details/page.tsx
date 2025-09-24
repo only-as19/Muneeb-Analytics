@@ -14,6 +14,7 @@ const ServiceDetail = () => {
     <div>
         <ServiceHero />
         <WhatsIncluded />
+        <CTA />
     </div>
   )
 }
