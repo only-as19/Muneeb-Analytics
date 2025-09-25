@@ -230,12 +230,13 @@ export const Services: service[] = [
       link: "tableau-dashboards",
   },
   {
-    id:"3",
+    
     label: "Corporate Trainings",
     description:
       "Empower your teams with customized training in Power BI, SQL, Python, and data analytics. Our hands-on sessions are designed to build practical skills, improve problem-solving, and help professionals turn data into smarter business decisions.",
       img: "https://ik.imagekit.io/pdata3016/Services/Corporate%20Trainings.jpg?updatedAt=1758440250910",
       link: "corporate-trainings",
+      id:"3",
   },
   {
     id:"4",
