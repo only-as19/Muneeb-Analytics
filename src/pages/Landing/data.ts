@@ -21,7 +21,7 @@ type SectionItem = {
 };
 
 type StepItem = {
-  step: string;
+  title: string;
   description: string;
 };
 
@@ -36,19 +36,15 @@ interface PricingPlan {
   revisions: string;
 }
 
-interface CourseTitle {
-  title: string;
-  description: string;
-}
 
 interface ServiceContentItem {
-  section: "whatsIncluded" | "businessBenefits" | "howItWorks";
+  title:string,
+  description:string;
   items: SectionItem[] | StepItem[];
 }
 
 interface Details {
   hero: Hero;
-  courseTitles: CourseTitle[];
   serviceContent: ServiceContentItem[];
   pricing: PricingPlan[];
 }
@@ -78,28 +74,11 @@ export const Services: Service[] = [
         description:
           "Turn raw data into powerful insights with fully automated dashboards designed for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a complete view of your organization in real time so you can track performance, uncover opportunities, and make smarter decisions with confidence.",
       },
-
-      courseTitles: [
-        {
-          title: "What's Included",
-          description:
-            "Our Power BI service covers the complete reporting journey, ensuring that every step of your data lifecycle is managed with care and expertise.",
-        },
-        {
-          title: "Smarter, Faster, and Scalable Business Insights",
-          description:
-            "Transform the way your business uses data. Save time with automated reporting, improve accuracy with a single source of truth, and empower every department with real-time insights. Our scalable dashboards grow with your organization, ensuring smarter decisions at every stage.",
-        },
-        {
-          title: "How It Works: From Data to Decisions",
-          description:
-            "Our process ensures a smooth journey from discovery to delivery. We start by understanding your goals, then prepare and connect your data, design user-friendly dashboards, and set up automation for real-time accuracy. Finally, we deliver the solution with hands-on training and ongoing support, so your team is equipped to make smarter decisions with confidence.",
-        },
-      ],
-
       serviceContent: [
         {
-          section: "whatsIncluded",
+           title: "What's Included",
+          description:
+            "Our Power BI service covers the complete reporting journey, ensuring that every step of your data lifecycle is managed with care and expertise.",
           items: [
             {
               title: "Automated Data Integration",
@@ -129,7 +108,9 @@ export const Services: Service[] = [
           ],
         },
         {
-          section: "businessBenefits",
+          title: "Business Benefits",
+          description:
+            "Transform the way your business uses data. Save time with automated reporting, improve accuracy with a single source of truth, and empower every department with real-time insights. Our scalable dashboards grow with your organization, ensuring smarter decisions at every stage.",
           items: [
             {
               title: "Save Time and Resources",
@@ -159,30 +140,32 @@ export const Services: Service[] = [
           ],
         },
         {
-          section: "howItWorks",
+          title: "Process",
+          description:
+            "Our process ensures a smooth journey from discovery to delivery. We start by understanding your goals, then prepare and connect your data, design user-friendly dashboards, and set up automation for real-time accuracy. Finally, we deliver the solution with hands-on training and ongoing support, so your team is equipped to make smarter decisions with confidence.",
           items: [
             {
-              step: "Consultation and Discovery",
+              title: "Consultation and Discovery",
               description:
                 "We begin with an in-depth discussion to understand your goals, KPIs, and challenges, ensuring the solution is aligned with your business objectives.",
             },
             {
-              step: "Data Preparation",
+              title: "Data Preparation",
               description:
                 "Our team connects your data sources, cleans and structures the information, and prepares it for meaningful analysis.",
             },
             {
-              step: "Dashboard Development",
+              title: "Dashboard Development",
               description:
                 "We design interactive dashboards that combine usability with strong visual storytelling, making insights accessible to everyone.",
             },
             {
-              step: "Automation Setup",
+              title: "Automation Setup",
               description:
                 "Automated refresh schedules are configured so your dashboards always present the most current data.",
             },
             {
-              step: "Delivery and Training",
+              title: "Delivery and Training",
               description:
                 "We deliver the final solution, train your team to use it effectively, and provide ongoing support when needed.",
             },

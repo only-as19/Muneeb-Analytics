@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@layer components{
+  .square-list{
+    list-style: square;
+  }
+}
+
 /* Put bullets below the slider */
 .swiper-pagination {
   position: relative !important;
@@ -58,7 +64,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.35 0.05 250);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: oklch(0.35 0.03 200);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
