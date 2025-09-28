@@ -34,14 +34,14 @@ const WhatsIncluded = () => {
         {include && (
           <div className="bg-white relative shadow-primary drop-shadow-xl md:flex ">
             <div
-              className={`relative bottom-6 bg-primary text-white px-3 py-6 shadow-primary shadow-2xl basis-4/12`}
+              className={`relative md:bottom-6 bg-primary text-white px-3 py-6 shadow-primary shadow-2xl basis-4/12`}
             >
               {include?.map((data, i) => (
                 <div
                   key={i}
                   className={`p-2 ${
                     activeIndex === i && "bg-cyan-500"
-                  } rounded-xs py-3 px-3 relative left-6`}
+                  } rounded-xs py-3 px-3 relative md:left-6`}
                   onClick={() => setActiveIndex(i)}
                 >
                   <p className={`uppercase`}>{data.title}</p>
