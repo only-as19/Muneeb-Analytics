@@ -1,6 +1,16 @@
 export { default as hero_img } from "@/assets/images/landing/transparent_image.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
+import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
+import type { ReactNode } from "react";
+
+export type Feature = {
+  id: string;
+  title: string;
+  description: string;
+  emoji: string;
+  icon: ReactNode
+};
 
 type StatItem = {
   label: string;
@@ -34,10 +44,9 @@ interface PricingPlan {
   revisions: string;
 }
 
-
 interface ServiceContentItem {
-  title:string,
-  description:string;
+  title: string;
+  description: string;
   items: SectionItem[] | StepItem[];
 }
 
@@ -56,7 +65,6 @@ interface Service {
   details?: Details;
 }
 
-
 export const Services: Service[] = [
   {
     id: "1",
@@ -74,7 +82,7 @@ export const Services: Service[] = [
       },
       serviceContent: [
         {
-           title: "What's Included",
+          title: "What's Included",
           description:
             "Our Power BI service covers the complete reporting journey, ensuring that every step of your data lifecycle is managed with care and expertise.",
           items: [
@@ -283,4 +291,54 @@ export const statsData: StatItem[] = [
   { label: "Dashboards Delivered", value: "300+" },
   { label: "Avg Rating", value: 4.9 },
   { label: "Satisfied Customers", value: "100+" },
+];
+
+export const features: Feature[] = [
+  {
+    id: "risk-free",
+    title: "Risk-Free Guarantee",
+    description:
+      "Full refund if you're not satisfied within the first 14 days.",
+    emoji: "💵",
+    icon: <Shield/>,
+  },
+  {
+    id: "fast-setup",
+    title: "1-Week Setup",
+    description:
+      "Rapid Power BI deployment and onboarding tailored to your data sources.",
+    emoji: "⚡",
+    icon: <Zap/>,
+  },
+  {
+    id: "enterprise-security",
+    title: "Enterprise Security",
+    description: "Your dashboards protected with role-based access.",
+    emoji: "🔒",
+    icon: <Lock/>,
+  },
+  {
+    id: "unlimited-revisions",
+    title: "Unlimited Revisions",
+    description:
+      "We refine visuals, KPIs, and layouts until your dashboards meet every need.",
+    emoji: "🎯",
+    icon: <Target/>,
+  },
+  {
+    id: "expert-support",
+    title: "Expert Support",
+    description:
+      "Direct access to a Power BI specialist for guidance and troubleshooting.",
+    emoji: "📞",
+    icon: <Phone />,
+  },
+  {
+    id: "scalable-growth",
+    title: "Scalable Growth",
+    description:
+      "Dashboards designed to expand seamlessly as your business and data evolve.",
+    emoji: "  📈",
+    icon: <TrendingUp/>,
+  },
 ];
