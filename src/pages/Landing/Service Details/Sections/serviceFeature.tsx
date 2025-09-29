@@ -2,7 +2,7 @@ import { features } from "../../data";
 const ServiceFeature: React.FC = () => {
   return (
     <section className="p-5 min-h-96 bg-bg-secondary text-primary flex flex-col justify-center items-center">
-      <div className="max-w-6xl mx-auto grid gap-y-4">
+      <div className="max-w-6xl mx-auto grid gap-y-4 md:grid-cols-3 md:gap-x-6 md:gap-y-6">
         {features.map((feature, index) => (
           <div key={index}
           className="bg-white shadow-primary shadow-2xl px-6 py-8 rounded-md flex flex-col gap-y-4"
