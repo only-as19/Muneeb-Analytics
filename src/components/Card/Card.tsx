@@ -1,9 +1,37 @@
+import type { ReactNode } from "react"
 
 
-const Card = () => {
+
+interface cardProps {
+  className?: string,
+  icon: ReactNode,
+  title:string,
+  description:string,
+  metrices:{
+    metricTitle:string,
+    metriceLabel:string
+  },
+  
+}
+
+const Card:React.FC<cardProps> = ({className = "", icon, title, metrices, description}) => {
   return (
-    <div>
-      
+    <div 
+    className={`${className}`}
+    >
+      <div>
+        <div>
+          {icon}
+        </div>
+        <div>
+          <h1>{metrices.metricTitle}</h1>
+          <span>{metrices.metriceLabel}</span>
+        </div>
+        <div>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
+      </div>
     </div>
   )
 }
