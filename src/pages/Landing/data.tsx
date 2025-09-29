@@ -8,7 +8,7 @@ export type Feature = {
   id: string;
   title: string;
   description: string;
-  emoji: string;
+  color: string;
   icon: ReactNode
 };
 
@@ -299,7 +299,7 @@ export const features: Feature[] = [
     title: "Risk-Free Guarantee",
     description:
       "Full refund if you're not satisfied within the first 14 days.",
-    emoji: "💵",
+    color: "#10b981",
     icon: <Shield/>,
   },
   {
@@ -307,14 +307,14 @@ export const features: Feature[] = [
     title: "1-Week Setup",
     description:
       "Rapid Power BI deployment and onboarding tailored to your data sources.",
-    emoji: "⚡",
+    color: "#3b82f6",
     icon: <Zap/>,
   },
   {
     id: "enterprise-security",
     title: "Enterprise Security",
     description: "Your dashboards protected with role-based access.",
-    emoji: "🔒",
+    color: "#06b6d4",
     icon: <Lock/>,
   },
   {
@@ -322,7 +322,7 @@ export const features: Feature[] = [
     title: "Unlimited Revisions",
     description:
       "We refine visuals, KPIs, and layouts until your dashboards meet every need.",
-    emoji: "🎯",
+    color: "#10b981",
     icon: <Target/>,
   },
   {
@@ -330,7 +330,7 @@ export const features: Feature[] = [
     title: "Expert Support",
     description:
       "Direct access to a Power BI specialist for guidance and troubleshooting.",
-    emoji: "📞",
+    color: "#2a6aee",
     icon: <Phone />,
   },
   {
@@ -338,7 +338,7 @@ export const features: Feature[] = [
     title: "Scalable Growth",
     description:
       "Dashboards designed to expand seamlessly as your business and data evolve.",
-    emoji: "  📈",
+    color: "#0795b6",
     icon: <TrendingUp/>,
   },
 ];
