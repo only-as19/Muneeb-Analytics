@@ -6,6 +6,5 @@ export { default as Review } from "./Reviews/index";
 export { default as Rating } from "./Rating/index";
 export { default as CTA } from "./CTA/index";
 export { default as SwiperButton } from "./Swiper Button/index";
-export { default as Card } from "./Card/Card";
 
 export * from "./ui"

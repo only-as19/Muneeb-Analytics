@@ -5,12 +5,12 @@ import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
 import type { ReactNode } from "react";
 
 export type Feature = {
-  metrices:string,
-  metricesLabel:string,
+  metrices: string;
+  metricesLabel: string;
   title: string;
   description: string;
   color: string;
-  icon: ReactNode
+  icon: ReactNode;
 };
 
 type StatItem = {
@@ -302,7 +302,7 @@ export const features: Feature[] = [
     description:
       "Full refund if you're not satisfied within the first 14 days.",
     color: "#10b981",
-    icon: <Shield/>,
+    icon: <Shield />,
   },
   {
     metrices: "7 Days",
@@ -311,7 +311,7 @@ export const features: Feature[] = [
     description:
       "Rapid Power BI deployment and onboarding tailored to your data sources.",
     color: "#3b82f6",
-    icon: <Zap/>,
+    icon: <Zap />,
   },
   {
     metrices: "99.9%",
@@ -319,7 +319,7 @@ export const features: Feature[] = [
     title: "Enterprise Security",
     description: "Your dashboards protected with role-based access.",
     color: "#06b6d4",
-    icon: <Lock/>,
+    icon: <Lock />,
   },
   {
     metrices: "∞",
@@ -328,7 +328,7 @@ export const features: Feature[] = [
     description:
       "We refine visuals, KPIs, and layouts until your dashboards meet every need.",
     color: "#10b981",
-    icon: <Target/>,
+    icon: <Target />,
   },
   {
     metrices: "24/7",
@@ -346,6 +346,6 @@ export const features: Feature[] = [
     description:
       "Dashboards designed to expand seamlessly as your business and data evolve.",
     color: "#0795b6",
-    icon: <TrendingUp/>,
+    icon: <TrendingUp />,
   },
 ];
