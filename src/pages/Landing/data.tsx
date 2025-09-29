@@ -5,7 +5,8 @@ import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
 import type { ReactNode } from "react";
 
 export type Feature = {
-  id: string;
+  metrices:string,
+  metricesLabel:string,
   title: string;
   description: string;
   color: string;
@@ -295,7 +296,8 @@ export const statsData: StatItem[] = [
 
 export const features: Feature[] = [
   {
-    id: "risk-free",
+    metrices: "14 Days",
+    metricesLabel: "Guarantee",
     title: "Risk-Free Guarantee",
     description:
       "Full refund if you're not satisfied within the first 14 days.",
@@ -303,7 +305,8 @@ export const features: Feature[] = [
     icon: <Shield/>,
   },
   {
-    id: "fast-setup",
+    metrices: "7 Days",
+    metricesLabel: "Setup",
     title: "1-Week Setup",
     description:
       "Rapid Power BI deployment and onboarding tailored to your data sources.",
@@ -311,14 +314,16 @@ export const features: Feature[] = [
     icon: <Zap/>,
   },
   {
-    id: "enterprise-security",
+    metrices: "99.9%",
+    metricesLabel: "Secure",
     title: "Enterprise Security",
     description: "Your dashboards protected with role-based access.",
     color: "#06b6d4",
     icon: <Lock/>,
   },
   {
-    id: "unlimited-revisions",
+    metrices: "∞",
+    metricesLabel: "Revision",
     title: "Unlimited Revisions",
     description:
       "We refine visuals, KPIs, and layouts until your dashboards meet every need.",
@@ -326,7 +331,8 @@ export const features: Feature[] = [
     icon: <Target/>,
   },
   {
-    id: "expert-support",
+    metrices: "24/7",
+    metricesLabel: "Support",
     title: "Expert Support",
     description:
       "Direct access to a Power BI specialist for guidance and troubleshooting.",
@@ -334,7 +340,8 @@ export const features: Feature[] = [
     icon: <Phone />,
   },
   {
-    id: "scalable-growth",
+    metrices: "∞",
+    metricesLabel: "Growth",
     title: "Scalable Growth",
     description:
       "Dashboards designed to expand seamlessly as your business and data evolve.",

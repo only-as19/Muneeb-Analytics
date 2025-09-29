@@ -4,11 +4,11 @@ import type { ReactNode } from "react"
 
 interface cardProps {
   className?: string,
-  icon: ReactNode,
+  icon?: ReactNode,
   title:string,
   description:string,
-  metrices:{
-    metricTitle:string,
+  metrices?:{
+    metriceTitle:string,
     metriceLabel:string
   },
   
@@ -24,8 +24,8 @@ const Card:React.FC<cardProps> = ({className = "", icon, title, metrices, descri
           {icon}
         </div>
         <div>
-          <h1>{metrices.metricTitle}</h1>
-          <span>{metrices.metriceLabel}</span>
+          <h1>{metrices?.metriceTitle}</h1>
+          <span>{metrices?.metriceLabel}</span>
         </div>
         <div>
           <h1>{title}</h1>

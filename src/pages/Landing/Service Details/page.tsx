@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { Services } from "../data"
-import { ServiceHero,WhatsIncluded } from "./Sections" 
+import { ServiceHero,WhatsIncluded, Features } from "./Sections" 
 import { CTA } from "@/components"
 
 const ServiceDetail = () => {
@@ -15,6 +15,7 @@ const ServiceDetail = () => {
         <ServiceHero />
         <WhatsIncluded />
         <CTA />
+        <Features/>
     </div>
   )
 }
