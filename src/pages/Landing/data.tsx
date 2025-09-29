@@ -349,3 +349,56 @@ export const features: Feature[] = [
     icon: <TrendingUp />,
   },
 ];
+
+export const Pricing = [
+  {
+    name:"Basic",
+    price:"400",
+    description:"Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
+    feature:[
+      "1-2 Data sources (Excel,CSV)",
+      "BAsic data cleaning & formatting",
+      "Up to 4 KPIs and 4 charts",
+      "Iteractive/animated visuals",
+      "1 interactive dashboard",
+      "Quick walkthrough or usage guide"
+    ],
+    delivery:"7 days",
+    revesion: "Unlimited",
+    isPopular: false
+  },
+  {
+    name:"Standard",
+    price:"800",
+    description:"Best for growing businesses that need multi-source reporting and department-level insights with automation",
+    feature:[
+      "2-4 Data sources (Excel, CSV, SQL, APIs)",
+      "Medium Complex data cleaning & transformation",
+      "2-3 interactive dashboard pages",
+      "Up to 10 KPIs and 8-10 charts",
+      "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
+      "Automated data refresh setup",
+      "1-on-1 walkthrough or training session"
+    ],
+    delivery:"14 days",
+    revesion: "Unlimited"
+    ,isPopular: true
+  },
+  {
+    name:"Premium",
+    price:"1500",
+    description:"Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation",
+    feature:[
+      "3-7 Data sources (Excel, CSV, SQL, APIs)",
+      "Complex data cleaning & transformation",
+      "5-6 interactive dashboard pages",
+      "Up to 20 KPIs 20 charts",
+      "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
+      "Automated data refresh setup",
+      "1-on-1 walkthrough or training session"
+    ],
+    delivery:"30 days",
+    revesion: "Unlimited",
+    isPopular: false
+  },
+];
