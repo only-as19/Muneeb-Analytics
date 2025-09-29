@@ -350,7 +350,7 @@ export const features: Feature[] = [
   },
 ];
 
-export const Pricing = [
+export const PricingData = [
   {
     name:"Basic",
     price:"400",

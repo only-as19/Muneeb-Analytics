@@ -10,45 +10,47 @@ import type { ReactNode } from "react";
 import { Button } from "../ui";
 
 interface cardProps {
-  price: string;
-  name: string;
+  cardHeader: {
+    price: string;
+    name: string;
+    description: string;
+  };
   isPopular?: boolean;
   children: ReactNode;
   className?: string;
-  description: string;
-  buttonLabel: string;
-  buttonVariant:"link" | "default" | "outline" | "secondary" | "destructive" | "ghost"
+  footer: {
+    buttonLabel: string;
+    buttonVariant:
+      | "link"
+      | "default"
+      | "outline"
+      | "secondary"
+      | "destructive"
+      | "ghost";
+  };
 }
 
 const Card: React.FC<cardProps> = ({
-  price,
-  name,
+  cardHeader,
   isPopular,
   children,
   className,
-  description,
-  buttonLabel,
-  buttonVariant = "default"
+  footer,
 }) => {
   return (
     <PricingCard className={`${className}`}>
       <CardHeader>
         <div>
-          <CardTitle>{name}</CardTitle>
-          {isPopular && (
-            <span>Most Popular</span>
-          )}
+          <CardTitle>{cardHeader.name}</CardTitle>
+          {isPopular && <span>Most Popular</span>}
         </div>
-        <h1>{price}</h1>
-        <CardDescription>{description}</CardDescription>
+        <h1>{cardHeader.price}</h1>
+        <CardDescription>{cardHeader.description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        {children}
-      </CardContent>
+      <CardContent>{children}</CardContent>
       <CardFooter>
-          <Button label={buttonLabel} variant={buttonVariant}/>
+        <Button label={footer.buttonLabel} variant={footer.buttonVariant} />
       </CardFooter>
-      
     </PricingCard>
   );
 };
