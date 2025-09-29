@@ -7,8 +7,8 @@ const Landing:React.FC = () => {
     <div>
         <Hero/>
         <About/>
-        <Review/>
         <Services/>
+        <Review/>
         <CTA/>
     </div>
   )
