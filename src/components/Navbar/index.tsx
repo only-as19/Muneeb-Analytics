@@ -8,9 +8,12 @@ import {
   NavigationMenuTrigger,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
 } from "@/lib";
 import { ListItem, Button, Sheet } from "@/components";
-import { TextAlignEnd } from "lucide-react";
+import { TextAlignEnd, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -18,7 +21,10 @@ const Navbar = () => {
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
 
-        <NavigationMenu viewport={false} className="hidden md:block relative z-50">
+        <NavigationMenu
+          viewport={false}
+          className="hidden md:block relative z-50"
+        >
           <NavigationMenuList>
             {navLinks.map((Item) => (
               <NavigationMenuItem key={Item.label}>
@@ -68,14 +74,44 @@ const Navbar = () => {
             }}
           >
             <div className="flex flex-col gap-y-2 p-2">
-              {navLinks.map((item) => (
-                <div key={item.label} className="flex">
-                    <Link to={item.link} className="font-semibold text-base px-4 py-1">
+              {navLinks.map((item) =>
+                item.children?.length ? (
+                  <Collapsible key={item.label} className="w-full">
+                    <CollapsibleTrigger asChild>
+                      <Button
+                        customClasses="group text-normal font-semibold hover:bg-transparent"
+                        icon={
+                          <span>
+                            <ChevronDown className="transition-transform group-data-[state=open]:rotate-180" />
+                          </span>
+                        }
+                        label={item.label}
+                        variant="ghost"
+                      />
+                    </CollapsibleTrigger>
+
+                    <CollapsibleContent className="mt-1 space-y-1 border-l pl-6">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.link}
+                          className="block py-1 text-sm hover:underline"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </CollapsibleContent>
+                  </Collapsible>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.link}
+                    className="px-4 py-2 font-semibold text-base"
+                  >
                     {item.label}
                   </Link>
-                  
-                </div>
-              ))}
+                )
+              )}
             </div>
           </Sheet>
           <div className="hidden md:block">
