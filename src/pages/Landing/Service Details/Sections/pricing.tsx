@@ -1,12 +1,13 @@
 import { PricingData} from "../../data"
 import { PricingCard } from "@/components"
 import { FaCheckCircle } from "react-icons/fa";
+import { Clock3, RefreshCcw } from "lucide-react";
 
 
 
 const Pricing:React.FC = () => {
   return (
-    <section>
+    <section className="p-5 min-h-screen flex flex-col  items-center bg-secondary">
         <div>
             <div>
                 <h1>Lorem ipsum dolor sit.</h1>
@@ -20,7 +21,9 @@ const Pricing:React.FC = () => {
                     cardHeader={{
                         name:pricing.name,
                         price:pricing.price,
-                        description:pricing.description
+                        description:pricing.description,
+                        delivery:<><Clock3/> <span>{pricing.delivery}</span> </>,
+                        revesion:<><RefreshCcw/> <span>{pricing.revesion}</span> </>
                     }}
                     footer={{
                         buttonLabel:"Contact",

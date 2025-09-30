@@ -14,6 +14,8 @@ interface cardProps {
     price: string;
     name: string;
     description: string;
+    delivery:ReactNode
+    revesion:ReactNode
   };
   isPopular?: boolean;
   children: ReactNode;
@@ -46,6 +48,10 @@ const Card: React.FC<cardProps> = ({
         </div>
         <h1>{cardHeader.price}</h1>
         <CardDescription>{cardHeader.description}</CardDescription>
+        <div>
+          <span>{cardHeader.delivery}</span>
+          <span>{cardHeader.revesion}</span>
+        </div>
       </CardHeader>
       <CardContent>{children}</CardContent>
       <CardFooter>
