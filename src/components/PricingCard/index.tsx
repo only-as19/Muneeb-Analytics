@@ -14,8 +14,8 @@ interface cardProps {
     price: string;
     name: string;
     description: string;
-    delivery:ReactNode
-    revesion:ReactNode
+    delivery: ReactNode;
+    revesion: ReactNode;
   };
   isPopular?: boolean;
   children: ReactNode;
@@ -41,21 +41,25 @@ const Card: React.FC<cardProps> = ({
 }) => {
   return (
     <PricingCard className={`${className}`}>
-      <CardHeader>
-        <div>
-          <CardTitle>{cardHeader.name}</CardTitle>
-          {isPopular && <span>Most Popular</span>}
+      <CardHeader className="gap-y-4">
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-2xl">{cardHeader.name}</CardTitle>
+          {isPopular && <span className="px-3 py-1 rounded-4xl shadow">Most Popular</span>}
         </div>
-        <h1>{cardHeader.price}</h1>
+        <h1 className="text-5xl">${cardHeader.price}</h1>
         <CardDescription>{cardHeader.description}</CardDescription>
-        <div>
-          <span>{cardHeader.delivery}</span>
-          <span>{cardHeader.revesion}</span>
+        <div className="flex gap-x-6 items-center">
+          <span className="flex items-center gap-x-2 font-bold text-sm">{cardHeader.delivery}</span>
+          <span className="flex items-center gap-x-2 font-bold text-sm">{cardHeader.revesion}</span>
         </div>
       </CardHeader>
       <CardContent>{children}</CardContent>
       <CardFooter>
-        <Button label={footer.buttonLabel} variant={footer.buttonVariant} />
+        <Button
+          label={footer.buttonLabel}
+          variant={footer.buttonVariant}
+          customClasses="w-full shadow cursor-pointer"
+        />
       </CardFooter>
     </PricingCard>
   );
