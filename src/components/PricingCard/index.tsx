@@ -40,14 +40,14 @@ const Card: React.FC<cardProps> = ({
   footer,
 }) => {
   return (
-    <PricingCard className={`${className}`}>
+    <PricingCard className={`${className} ${isPopular && "bg-primary text-secondary md:scale-y-110"} shadow-primary shadow-2xl`}>
       <CardHeader className="gap-y-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-2xl">{cardHeader.name}</CardTitle>
-          {isPopular && <span className="px-3 py-1 rounded-4xl shadow">Most Popular</span>}
+          {isPopular && <span className=" px-2 py-1 rounded-3xl shadow-white text-sm bg-secondary shadow-lg text-foreground ">Most Popular</span>}
         </div>
-        <h1 className="text-5xl">${cardHeader.price}</h1>
-        <CardDescription>{cardHeader.description}</CardDescription>
+        <h1 className="text-4xl">${cardHeader.price}</h1>
+        <CardDescription className={`${isPopular && "text-secondary/75"}`}>{cardHeader.description}</CardDescription>
         <div className="flex gap-x-6 items-center">
           <span className="flex items-center gap-x-2 font-bold text-sm">{cardHeader.delivery}</span>
           <span className="flex items-center gap-x-2 font-bold text-sm">{cardHeader.revesion}</span>
@@ -57,8 +57,8 @@ const Card: React.FC<cardProps> = ({
       <CardFooter className="mt-auto">
         <Button
           label={footer.buttonLabel}
-          variant={footer.buttonVariant}
-          customClasses="w-full shadow cursor-pointer"
+           variant={isPopular ? "secondary" : footer.buttonVariant}
+          customClasses={`w-full shadow cursor-pointer md:p-3 ${isPopular && "text-foreground"}`}
         />
       </CardFooter>
     </PricingCard>

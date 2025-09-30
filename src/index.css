@@ -5,8 +5,13 @@
   .square-list{
     list-style: square;
   }
+
+  
 }
 
+.standard{
+  background: linear-gradient(45deg, #053345 55%,#053345 64%,#053345 69%,#7db9e8 100%);
+}
 /* Put bullets below the slider */
 .swiper-pagination {
   position: relative !important;

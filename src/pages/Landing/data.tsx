@@ -365,7 +365,8 @@ export const PricingData = [
     ],
     delivery:"7 days",
     revesion: "Unlimited",
-    isPopular: false
+    isPopular: false,
+    bg:"bg-scondary"
   },
   {
     name:"Standard",
@@ -382,7 +383,9 @@ export const PricingData = [
     ],
     delivery:"14 days",
     revesion: "Unlimited"
-    ,isPopular: true
+    ,isPopular: true,
+    bg:"standard"
+
   },
   {
     name:"Premium",
@@ -399,6 +402,8 @@ export const PricingData = [
     ],
     delivery:"30 days",
     revesion: "Unlimited",
-    isPopular: false
+    isPopular: false,
+    bg:"premium"
+
   },
 ];

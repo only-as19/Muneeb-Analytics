@@ -4,8 +4,8 @@ import { Clock3, RefreshCcw, CircleCheckBig } from "lucide-react";
 
 const Pricing: React.FC = () => {
   return (
-    <section className="p-5 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
-      <div className="max-w-6xl mx-auto flex flex-col gap-y-4">
+    <section className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
+      <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4 md:text-5xl">Lorem ipsum dolor sit.</h1>
           <p className="text-muted-foreground">
@@ -18,6 +18,7 @@ const Pricing: React.FC = () => {
         <div className="grid md:grid-cols-3 md:gap-x-3 gap-y-4">
           {PricingData.map((pricing) => (
             <PricingCard
+            className={`${pricing.bg}`}
               key={pricing.name}
               cardHeader={{
                 name: pricing.name,
