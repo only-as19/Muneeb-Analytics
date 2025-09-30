@@ -1,25 +1,24 @@
 import { PricingData } from "../../data";
 import { PricingCard } from "@/components";
-import { Clock3, RefreshCcw,CircleCheckBig } from "lucide-react";
+import { Clock3, RefreshCcw, CircleCheckBig } from "lucide-react";
 
 const Pricing: React.FC = () => {
   return (
     <section className="p-5 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
-      <div>
-        <div>
-          <h1>Lorem ipsum dolor sit.</h1>
-          <p>
+      <div className="max-w-6xl mx-auto flex flex-col gap-y-4">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold mb-4 md:text-5xl">Lorem ipsum dolor sit.</h1>
+          <p className="text-muted-foreground">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
             necessitatibus hic quas? Minus accusamus vitae cum autem, expedita
             qui illo error quas blanditiis officiis, quibusdam assumenda eum
             voluptas dolores explicabo?
           </p>
         </div>
-      </div>
-      <div>
-        {PricingData.map((pricing) => (
-          <div key={pricing.name}>
+        <div className="grid md:grid-cols-3 md:gap-x-3 gap-y-4">
+          {PricingData.map((pricing) => (
             <PricingCard
+              key={pricing.name}
               cardHeader={{
                 name: pricing.name,
                 price: pricing.price,
@@ -59,17 +58,16 @@ const Pricing: React.FC = () => {
                 </div>
                 <ul className="flex flex-col gap-y-3">
                   {pricing.feature.map((list, index) => (
-                    <li key={index}
-                    className="flex items-start gap-x-3"
-                    >
-                      <CircleCheckBig size={20} className=" shrink-0" /> <span className="text-sm">{list}</span>
+                    <li key={index} className="flex items-start gap-x-3">
+                      <CircleCheckBig size={20} className=" shrink-0" />{" "}
+                      <span className="text-sm">{list}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </PricingCard>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

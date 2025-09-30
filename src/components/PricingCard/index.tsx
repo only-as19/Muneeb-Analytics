@@ -54,7 +54,7 @@ const Card: React.FC<cardProps> = ({
         </div>
       </CardHeader>
       <CardContent>{children}</CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button
           label={footer.buttonLabel}
           variant={footer.buttonVariant}
