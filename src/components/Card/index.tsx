@@ -17,8 +17,8 @@ interface cardProps{
     cardTitle: string,
     cardDescription: string,
     footer:{
-        buttonLabel: string,
-        footerLink: string
+        buttonLabel:string
+        buttonLink:string
     }
 }
 
@@ -45,13 +45,15 @@ const Card:React.FC<cardProps> = ({
                       rounded-b-none
                     "
                   >
-                    <img
+                    {headerImg && (
+                        <img
                       loading="lazy"
                       src={headerImg}
                       alt={cardTitle}
                       className="absolute inset-0 h-full w-full object-cover block"
-                      
                     />
+                    )}
+                    
                   </CardHeader>
 
                   <CardContent className="flex-1">
@@ -69,7 +71,7 @@ const Card:React.FC<cardProps> = ({
                   <CardFooter className="mt-auto pb-5 flex flex-end">
                     <CardAction className="w-full ml-auto">
                       <Button label={footer.buttonLabel} customClasses="w-full cursor-pointer" 
-                      onClick={()=> navigate(`${footer.footerLink}`)}
+                      onClick={()=> navigate(`${footer.buttonLink}`)}
                       />
                     </CardAction>
                   </CardFooter>

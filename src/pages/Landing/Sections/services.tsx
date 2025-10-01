@@ -5,24 +5,14 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { motion } from "motion/react";
-import {useNavigate } from "react-router-dom";
 import { Button } from "@/components";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardAction,
-  CardDescription,
-  CardContent,
-} from "@/lib";
 import { Services } from "../data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import {Card} from "@/components";
 
-const Service: React.FC = () => {
+const Service:React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-  const navigate =  useNavigate()
-  return (
+  return(
     <motion.section
       className="relative p-5 min-h-screen bg-primary md:bg-secondary flex items-center"
       viewport={{ amount: 0.4, once: false }}
@@ -53,44 +43,16 @@ const Service: React.FC = () => {
           >
             {Services.map((service) => (
               <SwiperSlide key={service.label} className="flex">
-                <Card className="h-full w-full overflow-hidden rounded p-0 gap-y-4">
-                  <CardHeader
-                    className="
-                      p-0 relative overflow-hidden shrink-0
-                      w-full h-56 md:h-50   /* set the SAME height for all images */
-                      rounded-b-none
-                    "
-                  >
-                    <img
-                      loading="lazy"
-                      src={service.img}
-                      alt={service.label}
-                      className="absolute inset-0 h-full w-full object-cover block"
-                      
-                    />
-                  </CardHeader>
-
-                  <CardContent className="flex-1">
-                    <CardTitle>
-                      <h2 className="line-clamp-1 text-xl font-semibold text-primary mb-2">
-                        {service.label}
-                      </h2>
-                    </CardTitle>
-                    <CardDescription className="line-clamp-2 text-destructive">
-                      {service.description}
-                    </CardDescription>
-                    <div>
-                      
-                    </div>
-                  </CardContent>
-
-                  <CardFooter className="mt-auto pb-5 flex flex-end">
-                    <CardAction className="w-full ml-auto">
-                      <Button label="Check Details" customClasses="w-full cursor-pointer" 
-                      onClick={()=> navigate(`${service.link}`)}
-                      />
-                    </CardAction>
-                  </CardFooter>
+                <Card
+                headerImg={service.img || ""}
+                cardTitle={service.label}
+                cardDescription={service.description}
+                footer={{
+                  buttonLabel: "Check Details",
+                  buttonLink:service.link || ""
+                }}
+                >
+                  New Data will be uploaded Here
                 </Card>
               </SwiperSlide>
             ))}
