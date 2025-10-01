@@ -38,7 +38,7 @@ const About: React.FC = () => {
     <section className="px-5 min-h-96 flex-col items-center justify-center bg-primary text-zinc-300 py-20">
       <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-6 md:flex-row">
-          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 px-5 md:leading-7 ">
+          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 md:leading-7 ">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center md:text-left">
               About Muneeb Analytics
             </h2>
@@ -54,7 +54,7 @@ const About: React.FC = () => {
               confident decisions.
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-center items-center">
+          <div className="md:w-1/2 flex justify-end items-center">
             <div className="w-full md:max-w-4/5">
               <Video options={videoJsOptions} onReady={handlePlayerReady} />
             </div>
