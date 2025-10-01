@@ -30,7 +30,7 @@ const Service: React.FC = () => {
       onViewportLeave={() => swiper?.autoplay.stop()}
     >
       <div className="md:max-w-6xl mx-auto w-full">
-        <h1 className="text-white md:text-primary text-3xl text-center mb-8 font-bold md:text-4xl">
+        <h1 className="uppercase text-white md:text-primary text-3xl text-center mb-8 font-bold md:text-4xl">
           Services I offer
         </h1>
 
@@ -53,12 +53,11 @@ const Service: React.FC = () => {
           >
             {Services.map((service) => (
               <SwiperSlide key={service.label} className="flex">
-                <Card className="h-full w-full overflow-hidden rounded-2xl p-0">
-                  {/* --- IMAGE: equal size on every card --- */}
+                <Card className="h-full w-full overflow-hidden rounded p-0 gap-y-4">
                   <CardHeader
                     className="
                       p-0 relative overflow-hidden shrink-0
-                      w-full h-56 md:h-64   /* set the SAME height for all images */
+                      w-full h-56 md:h-50   /* set the SAME height for all images */
                       rounded-b-none
                     "
                   >
@@ -73,18 +72,21 @@ const Service: React.FC = () => {
 
                   <CardContent className="flex-1">
                     <CardTitle>
-                      <h2 className="text-2xl font-bold text-primary mb-2">
+                      <h2 className="line-clamp-1 text-xl font-semibold text-primary mb-2">
                         {service.label}
                       </h2>
                     </CardTitle>
                     <CardDescription className="line-clamp-2 text-destructive">
                       {service.description}
                     </CardDescription>
+                    <div>
+                      
+                    </div>
                   </CardContent>
 
                   <CardFooter className="mt-auto pb-5 flex flex-end">
-                    <CardAction className="ml-auto">
-                      <Button label="Check Details" customClasses="cursor-pointer" 
+                    <CardAction className="w-full ml-auto">
+                      <Button label="Check Details" customClasses="w-full cursor-pointer" 
                       onClick={()=> navigate(`${service.link}`)}
                       />
                     </CardAction>
@@ -93,8 +95,6 @@ const Service: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* External nav buttons */}
           <div className="pointer-events-none absolute inset-y-0 left-0 right-0 px-2 z-10 hidden md:flex items-center justify-between">
             <Button
               icon={<ArrowLeft className="!w-5 !h-5" />}

@@ -69,7 +69,7 @@ interface Service {
 export const Services: Service[] = [
   {
     id: "1",
-    label: "Automated Power BI Dashboards & Reports",
+    label: "Power BI Dashboards & Reports",
     description:
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
     img: "https://ik.imagekit.io/pdata3016/Services/Power%20BI%20Dashboard%20&%20report.jpg?updatedAt=1758440250629",
@@ -249,7 +249,7 @@ export const Services: Service[] = [
   },
   {
     id: "2",
-    label: "Automated Tableau Dashboards & Reports",
+    label: "Tableau Dashboards & Reports",
     description:
       "Unlock real-time insights across sales, finance, marketing, HR, supply chain, and operations with fully automated Tableau dashboards. Designed for clarity and speed, our reports update instantly so you can track performance, identify trends, and make confident decisions without manual effort.",
     img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard%20&%20report.jpg?updatedAt=1758440250688",
