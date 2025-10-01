@@ -42,7 +42,7 @@ const Reviews = () => {
         >
           {reviews.map((review) => (
             <SwiperSlide className="md:!w-96 !h-82">
-              <div className="flex flex-col gap-y-2 text-accent p-4  bg-primary rounded-md shadow-primary h-full w-full">
+              <div className="flex flex-col gap-y-2 text-accent p-4 special-gradiant rounded-md shadow-primary shadow-xl h-full w-full">
                 <div className="flex items-center justify-between">
                   <p className="text-xl font-semibold">
                     {review.name}{" "}

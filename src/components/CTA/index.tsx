@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom"
 const CTA:React.FC = () => {
     const navigate = useNavigate()
   return (
-    <section className="bg-secondary min-h-100 px-5 flex flex-col items-center justify-center py-10">
-        <div className="items-center  max-w-6xl py-8 px-4text-accent rounded-md md:grid md:grid-cols-2 space gap-x-8 mx-auto md:py-12 md:px-6">
+    <section className="bg-secondary min-h-100 p-5 flex flex-col items-center justify-center">
+        <div className="items-center  max-w-6xl py-8 rounded-md md:grid md:grid-cols-2 space gap-x-8 mx-auto md:py-6 md:px-6">
             <div className="">
                 <img src={cta_img} alt="" 
                 className="w-full h-full object-cover"/>
