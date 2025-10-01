@@ -1,17 +1,21 @@
-import { FaStar,FaStarHalf,FaRegStar } from "react-icons/fa";
+import type { color } from "motion/react";
+import { FaStar,FaStarHalfAlt,FaRegStar } from "react-icons/fa";
 interface prop{
   star:number,
   review?:number
+  size?:string | number,
+  className?:string
+  rating?:number
 }
 
-const Rating: React.FC<prop> = ({star,review}) => {
+const Rating: React.FC<prop> = ({rating,star,review,size,className}) => {
 
   const ratingStar = Array.from({length:5}, (_,index) =>{
-    let number = index + 0.5
+    let number = index + 0.25
     return (
       <span key={index}>
         {
-          star >= index + 1 ? <FaStar color="orange" /> : star >= number ? <FaStarHalf/> : <FaRegStar/>
+          star >= index + 1 ? <FaStar color="orange" size={size} className={`${className}`}/> : star > number ? <FaStarHalfAlt color="orange" stroke="orange" size={size} className={`${className}`}/> : <FaRegStar size={size} className={`${className}`} color="orange"/>
         }
       </span>
     )
@@ -19,8 +23,9 @@ const Rating: React.FC<prop> = ({star,review}) => {
 
   return (
     <div className="flex items-center">
+      <span className="text-[#8B4309] font-semibold font-sm mr-1">{rating}</span>
       {ratingStar}
-      {review && <span>{review}</span>}
+      {review && <span className="text-muted-foreground text-xs ml-1">({review})</span>}
     </div>
   );
 };

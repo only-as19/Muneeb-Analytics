@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components";
 import { Services } from "../data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import {Card} from "@/components";
+import {Card, Rating} from "@/components";
 
 const Service:React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -52,7 +52,9 @@ const Service:React.FC = () => {
                   buttonLink:service.link || ""
                 }}
                 >
-                  New Data will be uploaded Here
+                  <div>
+                    <Rating rating={4.5} star={4.3} size={15} review={40}/>
+                  </div>
                 </Card>
               </SwiperSlide>
             ))}
