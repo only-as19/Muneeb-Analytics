@@ -24,7 +24,7 @@ const Service: React.FC = () => {
   const navigate =  useNavigate()
   return (
     <motion.section
-      className="relative p-5 min-h-screen bg-primary md:bg-bg-secondary flex items-center"
+      className="relative p-5 min-h-screen bg-primary md:bg-secondary flex items-center"
       viewport={{ amount: 0.4, once: false }}
       onViewportEnter={() => swiper?.autoplay.start()}
       onViewportLeave={() => swiper?.autoplay.stop()}
@@ -77,14 +77,14 @@ const Service: React.FC = () => {
                         {service.label}
                       </h2>
                     </CardTitle>
-                    <CardDescription className="text-destructive">
+                    <CardDescription className="line-clamp-2 text-destructive">
                       {service.description}
                     </CardDescription>
                   </CardContent>
 
-                  <CardFooter className="mt-auto pb-5">
-                    <CardAction>
-                      <Button label="Check Details" className="cursor-pointer" 
+                  <CardFooter className="mt-auto pb-5 flex flex-end">
+                    <CardAction className="ml-auto">
+                      <Button label="Check Details" customClasses="cursor-pointer" 
                       onClick={()=> navigate(`${service.link}`)}
                       />
                     </CardAction>
