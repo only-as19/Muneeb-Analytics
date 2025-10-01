@@ -43,15 +43,10 @@ const About: React.FC = () => {
               About Muneeb Analytics
             </h2>
             <p className="text-sm ">
-              With expertise in Power BI, Tableau, Excel, SQL, and Python, we
-              design dashboards and analytics solutions that help businesses
-              track performance, cut costs, and discover new opportunities.
+              At Muneeb Analytics, we turn complex data into simple stories that help businesses grow. Using tools like Power BI, Tableau, Excel, SQL and Python, we build dashboards and reports that make it easy to track performance, cut costs, and spot new opportunities.
             </p>
             <p className="text-sm">
-              Our focus is simple: clarity, accuracy, and results. Whether you
-              need to understand your customers, optimize operations, or boost
-              profitability, we deliver solutions that empower you to make
-              confident decisions.
+              Our goal is clear&#58; give you insights you can trust and act on. Whether you want to understand your customers better, run your operations more smoothly, or increase profits, we create solutions that help you make smart, confident decisions.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-end items-center">
