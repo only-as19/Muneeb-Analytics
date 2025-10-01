@@ -35,14 +35,14 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="px-5 min-h-96 flex-col items-center justify-center bg-primary text-zinc-300 py-20">
+    <section className="px-5 min-h-96 flex-col items-center justify-center text-muted-foreground py-20">
       <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-6 md:flex-row">
-          <div className="text-zinc-300 text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 md:leading-7 ">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center md:text-left">
+          <div className="text-center md:w-1/2 md:text-left flex flex-col justify-center gap-y-4 md:leading-7 ">
+            <h2 className="text-foreground text-3xl md:text-4xl font-bold text-center md:text-left">
               About Muneeb Analytics
             </h2>
-            <p className="text-sm ">
+            <p className="text-sm text-muted-foreground ">
               At Muneeb Analytics, we turn complex data into simple stories that help businesses grow. Using tools like Power BI, Tableau, Excel, SQL and Python, we build dashboards and reports that make it easy to track performance, cut costs, and spot new opportunities.
             </p>
             <p className="text-sm">
@@ -59,12 +59,12 @@ const About: React.FC = () => {
           {statsData.map((stat) => (
             <div
               key={stat.label}
-              className="px-1 py-4 rounded-sm shadow-primary text-center flex flex-col items-center justify-between gap-y-1 group bg-accent/10"
+              className="px-1 py-4 rounded-sm shadow-primary shadow-xl text-center flex flex-col items-center justify-between gap-y-1 group bg-accent"
             >
-              <p className="text-3xl font-bold text-[#EBF4F6] md:text-5xl group-hover:text-[#E8B904]">
+              <p className="text-3xl font-bold text-foreground md:text-5xl group-hover:text-cyan-500">
                 {stat.value}
               </p>
-              <p className="text-zinc-400 text-sm">{stat.label}</p>
+              <p className="text-sm">{stat.label}</p>
             </div>
           ))}
         </div>

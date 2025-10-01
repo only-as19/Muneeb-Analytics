@@ -14,16 +14,18 @@ const Service: React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   return (
     <motion.section
-      className="relative p-5 min-h-screen bg-secondary flex items-center font-roboto shadow-2xl shadow-primary"
+      className="relative p-5 min-h-screen flex items-center"
       viewport={{ amount: 0.4, once: false }}
       onViewportEnter={() => swiper?.autoplay.start()}
       onViewportLeave={() => swiper?.autoplay.stop()}
     >
       <div className="md:max-w-6xl mx-auto w-full">
-        <h1 className="uppercase text-foreground text-3xl text-center mb-8 font-bold md:text-4xl">
+        <div className="mb-8 text-center">
+          <h1 className="uppercase text-foreground text-3xl font-bold md:text-4xl mb-4">
           Services I offer
         </h1>
-
+        <p className="text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cupiditate exercitationem qui obcaecati, aspernatur atque magni voluptates non molestiae fuga, deleniti possimus totam numquam culpa cumque. Excepturi voluptas ex aspernatur.</p>
+        </div>
         <div className="relative">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -42,7 +44,7 @@ const Service: React.FC = () => {
             }}
           >
             {Services.map((service) => (
-              <SwiperSlide key={service.label} className="flex">
+              <SwiperSlide key={service.label} className="flex shadow-xl">
                 <Card
                   headerImg={service.img || ""}
                   cardTitle={service.label}
