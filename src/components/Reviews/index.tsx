@@ -50,7 +50,7 @@ const Reviews = () => {
                       {review.country}
                     </span>
                   </p>
-                  <Rating />
+                  <Rating star={review.star} />
                 </div>
                 <p className="text-sm md:text-base leading-6 md:leading-5">
                   {review.feedback}
