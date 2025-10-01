@@ -32,7 +32,7 @@ const Navbar = () => {
                   <>
                     <NavigationMenuTrigger>{Item.label}</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid grid-cols-2 md:w-md lg:w-3xl lg:grid-cols-2">
+                      <ul className={Item.children.length === 1 ? "grid grid-cols-1 w-3xs p-4 gap-3":"grid grid-cols-2 md:w-md lg:w-3xl p-4 gap-3"}>
                         {Item.children.map((child) => (
                           <li key={child.label}>
                             <ListItem
