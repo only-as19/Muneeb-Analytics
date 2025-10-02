@@ -32,21 +32,21 @@ export const navLinks: INavLinks[] = [
       {
         id:"2",
         link: "powerbi-dashboards",
-        label: "Automated Power BI Dashboards & Reports",
+        label: "Power BI Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },
       {
         id:"3",
         link: "corporate-trainings",
-        label: "Corporate Trainings",
+        label: "Data analytics Training",
         description:
           "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving.",
       },
       {
         id:"4",
         link: "tableau-dashboards",
-        label: "Automated Tableau Dashboards & Reports",
+        label: "Tableau Dashboards & Reports",
         description:
           "Interactive and dynamic dashboards that update automatically, giving you real-time business visibility.",
       },

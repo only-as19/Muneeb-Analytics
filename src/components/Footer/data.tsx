@@ -46,7 +46,7 @@ export const services: Service[] = [
   
   {
     link: "/services/corporate-trainings",
-    label: "Corporate Trainings",
+    label: "Data analytics Training",
   },
 
   {
