@@ -1,4 +1,4 @@
-import type { color } from "motion/react";
+
 import { FaStar,FaStarHalfAlt,FaRegStar } from "react-icons/fa";
 interface prop{
   star:number,
