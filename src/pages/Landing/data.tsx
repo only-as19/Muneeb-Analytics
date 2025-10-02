@@ -384,7 +384,7 @@ export const PricingData = [
     delivery:"14 days",
     revesion: "Unlimited"
     ,isPopular: true,
-    bg:"standard"
+    bg:"gradient"
 
   },
   {
