@@ -20,7 +20,7 @@ const Pricing: React.FC = () => {
           </p>
         </div>
         <div className="md:hidden">
-          <div className="mb-4 grid grid-cols-3 bg-white text-secondary p-2 rounded-full">
+          <div className="mb-4 grid grid-cols-3 border-1 border-foreground/20 bg-white text-secondary p-2 rounded-full">
             {PricingData.map((price) => (
               <Button label={price.name}
               variant="ghost"
