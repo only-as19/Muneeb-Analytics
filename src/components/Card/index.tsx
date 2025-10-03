@@ -53,7 +53,7 @@ const Card: React.FC<cardProps> = ({
       </CardHeader>
       <CardContent className="flex-1">
         <CardTitle>
-          <h2 className="line-clamp-1 text-xl font-semibold text-primary mb-2">
+          <h2 className="text-xl font-semibold text-primary mb-2">
             {cardTitle}
           </h2>
         </CardTitle>
