@@ -1,6 +1,6 @@
 import { PricingData } from "../../data";
 import { PricingCard, Button } from "@/components";
-import { Clock3, RefreshCcw, CircleCheckBig } from "lucide-react";
+import { Clock3, RefreshCcw, Check} from "lucide-react";
 import { useState } from "react";
 
 const Pricing: React.FC = () => {
@@ -64,7 +64,7 @@ const Pricing: React.FC = () => {
                         <span className="w-1 h-1 rounded-full bg-gray-500"></span>
                         <div className="flex-1 border-t border-gray-600 mx-2"></div>
                       </div>
-                      <span className="px-3 text-xs uppercase tracking-widest text-gray-400">
+                      <span className={`${pricing.isPopular && "text-secondary"} px-3 text-xs uppercase tracking-widest text-gray-400`}>
                         Features
                       </span>
                       <div className="flex items-center flex-1">
@@ -75,7 +75,7 @@ const Pricing: React.FC = () => {
                     <ul className="flex flex-col gap-y-3">
                       {pricing.feature.map((list, index) => (
                         <li key={index} className="flex items-start gap-x-3">
-                          <CircleCheckBig size={20} className=" shrink-0" />{" "}
+                          <Check size={20} className=" shrink-0" />{" "}
                           <span className="text-sm">{list}</span>
                         </li>
                       ))}
@@ -117,21 +117,21 @@ const Pricing: React.FC = () => {
               <div className="flex flex-col gap-y-4">
                 <div className="flex items-center justify-center">
                   <div className="flex items-center flex-1">
-                    <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                    <div className="flex-1 border-t border-gray-600 mx-2"></div>
+                    <span className={` ${pricing.isPopular && "bg-secondary"} w-1 h-1 rounded-full bg-gray-500`}></span>
+                    <div className={`${pricing.isPopular && "border-secondary"} flex-1 border-t border-gray-600 mx-2`}></div>
                   </div>
-                  <span className="px-3 text-xs uppercase tracking-widest text-gray-400">
+                  <span className={`${pricing.isPopular && "text-secondary"} px-3 text-xs uppercase tracking-widest text-gray-400`}>
                     Features
                   </span>
                   <div className="flex items-center flex-1">
-                    <div className="flex-1 border-t border-gray-600 mx-2"></div>
-                    <span className="w-1 h-1 rounded-full bg-gray-500"></span>
+                    <div className={`${pricing.isPopular && "border-secondary"} flex-1 border-t border-gray-600 mx-2`}></div>
+                    <span className={` ${pricing.isPopular && "bg-secondary"} w-1 h-1 rounded-full bg-gray-500`}></span>
                   </div>
                 </div>
                 <ul className="flex flex-col gap-y-3">
                   {pricing.feature.map((list, index) => (
                     <li key={index} className="flex items-start gap-x-3">
-                      <CircleCheckBig size={20} className=" shrink-0" />{" "}
+                      <Check size={20} className=" shrink-0" />{" "}
                       <span className="text-sm">{list}</span>
                     </li>
                   ))}

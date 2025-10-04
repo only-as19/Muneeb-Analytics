@@ -44,7 +44,7 @@ const Card: React.FC<cardProps> = ({
       <CardHeader className="gap-y-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-2xl">{cardHeader.name}</CardTitle>
-          {isPopular && <span className=" px-2 py-1 rounded-3xl shadow-white text-sm bg-secondary shadow-lg text-foreground ">Most Popular</span>}
+          {isPopular && <span className=" px-2 py-1 rounded-sm text-sm font-semibold bg-secondary text-foreground shadow-secondary shadow-2xl">Most Popular</span>}
         </div>
         <h1 className="text-4xl">${cardHeader.price}</h1>
         <CardDescription className={`${isPopular && "text-secondary/75"}`}>{cardHeader.description}</CardDescription>

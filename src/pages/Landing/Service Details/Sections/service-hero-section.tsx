@@ -11,7 +11,7 @@ const ServiceHero: React.FC = () => {
     <section className="md:min-h-screen min-h-96 bg-bg-secondary p-5 flex flex-col justify-center items-center ">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-12">
         <div className="md:w-1/2">
-          <h1 className="text-3xl md:text-5xl font-bold text-primary mb-2">
+          <h1 className="text-3xl md:text-5xl font-bold mb-2">
             {hero.title}
           </h1>
           <h3 className="text-xl md:text-2xl mb-1">{hero.subtitle}</h3>

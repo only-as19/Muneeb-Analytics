@@ -76,7 +76,7 @@ export const Services: Service[] = [
     link: "powerbi-dashboards",
     details: {
       hero: {
-        title: "Automated Power BI Dashboard & report",
+        title: "Power BI Dashboard & report",
         subtitle: "Unlock Real-Time Business Intelligence",
         description:
           "Turn raw data into powerful insights with fully automated dashboards designed for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a complete view of your organization in real time so you can track performance, uncover opportunities, and make smarter decisions with confidence.",
@@ -357,7 +357,7 @@ export const PricingData = [
     description:"Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
     feature:[
       "1-2 Data sources (Excel,CSV)",
-      "BAsic data cleaning & formatting",
+      "Basic data cleaning & formatting",
       "Up to 4 KPIs and 4 charts",
       "Iteractive/animated visuals",
       "1 interactive dashboard",
@@ -384,7 +384,7 @@ export const PricingData = [
     delivery:"14 days",
     revesion: "Unlimited"
     ,isPopular: true,
-    bg:"gradient"
+    bg:"special-gradiant"
 
   },
   {
@@ -394,7 +394,7 @@ export const PricingData = [
     feature:[
       "3-7 Data sources (Excel, CSV, SQL, APIs)",
       "Complex data cleaning & transformation",
-      "5-6 interactive dashboard pages",
+      "3-4 interactive dashboard pages",
       "Up to 20 KPIs 20 charts",
       "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
       "Automated data refresh setup",
