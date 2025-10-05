@@ -40,11 +40,11 @@ interface PricingPlan {
   name: PricingPlanName;
   price: number | string | null;
   description: string;
-  feature:string[]
+  feature: string[];
   delivery: string;
   revesion: string;
-  isPopular: boolean,
-  bg: string
+  isPopular: boolean;
+  bg: string;
 }
 
 interface ServiceContentItem {
@@ -184,60 +184,61 @@ export const Services: Service[] = [
 
       pricing: [
         {
-    name:"Basic",
-    price:"400",
-    description:"Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
-    feature:[
-      "1-2 Data sources (Excel,CSV)",
-      "Basic data cleaning & formatting",
-      "Up to 4 KPIs and 4 charts",
-      "Iteractive/animated visuals",
-      "1 interactive dashboard",
-      "Quick walkthrough or usage guide"
-    ],
-    delivery:"7 days",
-    revesion: "Unlimited",
-    isPopular: false,
-    bg:"bg-scondary"
-  },
-  {
-    name:"Standard",
-    price:"800",
-    description:"Best for growing businesses that need multi-source reporting and department-level insights with automation",
-    feature:[
-      "2-4 Data sources (Excel, CSV, SQL, APIs)",
-      "Medium Complex data cleaning & transformation",
-      "2-3 interactive dashboard pages",
-      "Up to 10 KPIs and 8-10 charts",
-      "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
-      "Automated data refresh setup",
-      "1-on-1 walkthrough or training session"
-    ],
-    delivery:"14 days",
-    revesion: "Unlimited"
-    ,isPopular: true,
-    bg:"special-gradiant"
-
-  },
-  {
-    name:"Premium",
-    price:"1500",
-    description:"Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation",
-    feature:[
-      "3-7 Data sources (Excel, CSV, SQL, APIs)",
-      "Complex data cleaning & transformation",
-      "3-4 interactive dashboard pages",
-      "Up to 20 KPIs 20 charts",
-      "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
-      "Automated data refresh setup",
-      "1-on-1 walkthrough or training session"
-    ],
-    delivery:"30 days",
-    revesion: "Unlimited",
-    isPopular: false,
-    bg:"premium"
-
-  },
+          name: "Basic",
+          price: "400",
+          description:
+            "Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
+          feature: [
+            "1-2 Data sources (Excel,CSV)",
+            "Basic data cleaning & formatting",
+            "Up to 4 KPIs and 4 charts",
+            "Iteractive/animated visuals",
+            "1 interactive dashboard",
+            "Quick walkthrough or usage guide",
+          ],
+          delivery: "7 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Standard",
+          price: "800",
+          description:
+            "Best for growing businesses that need multi-source reporting and department-level insights with automation",
+          feature: [
+            "2-4 Data sources (Excel, CSV, SQL, APIs)",
+            "Medium Complex data cleaning & transformation",
+            "2-3 interactive dashboard pages",
+            "Up to 10 KPIs and 8-10 charts",
+            "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
+            "Automated data refresh setup",
+            "1-on-1 walkthrough or training session",
+          ],
+          delivery: "14 days",
+          revesion: "Unlimited",
+          isPopular: true,
+          bg: "special-gradiant",
+        },
+        {
+          name: "Premium",
+          price: "1500",
+          description:
+            "Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation",
+          feature: [
+            "3-7 Data sources (Excel, CSV, SQL, APIs)",
+            "Complex data cleaning & transformation",
+            "3-4 interactive dashboard pages",
+            "Up to 20 KPIs 20 charts",
+            "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
+            "Automated data refresh setup",
+            "1-on-1 walkthrough or training session",
+          ],
+          delivery: "30 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "premium",
+        },
         {
           name: "Custom",
           price: null,
@@ -250,611 +251,611 @@ export const Services: Service[] = [
           ],
           delivery: "As agreed",
           revesion: "As agreed",
-          isPopular:false,
-          bg:"secondary"
+          isPopular: false,
+          bg: "secondary",
         },
       ],
     },
   },
   {
-  id: "2",
-  label: "End to End Data Analytics Solutions",
-  description:
-    "Turn raw, scattered data into strategic business intelligence with our comprehensive end to end analytics solutions. From data strategy and integration to visualization and AI-driven insights, we help you build a scalable, automated, and insight-rich ecosystem that empowers smarter decisions across every department.",
-  img: "https://ik.imagekit.io/pdata3016/Services/End%20to%20End%20Data%20Analytics.jpg?updatedAt=1758440250629",
-  link: "end-to-end-analytics",
-  details: {
-    hero: {
-      title: "End to End Data Analytics Solutions",
-      subtitle: "Unlock the Power of Data Driven Transformation",
-      description:
-        "Transform your organization into a data-driven powerhouse. Our end-to-end analytics services cover every stage of the data lifecycle — from strategy and integration to visualization and AI insights — creating a scalable and automated ecosystem for smarter, faster decisions.",
-    },
-    serviceContent: [
-      {
-        title: "What's Included",
+    id: "2",
+    label: "End to End Data Analytics Solutions",
+    description:
+      "Turn raw, scattered data into strategic business intelligence with our comprehensive end to end analytics solutions. From data strategy and integration to visualization and AI-driven insights, we help you build a scalable, automated, and insight-rich ecosystem that empowers smarter decisions across every department.",
+    img: "https://ik.imagekit.io/pdata3016/Services/End%20to%20End%20Data%20Analytics.jpg?updatedAt=1758440250629",
+    link: "end-to-end-analytics",
+    details: {
+      hero: {
+        title: "End to End Data Analytics Solutions",
+        subtitle: "Unlock the Power of Data Driven Transformation",
         description:
-          "Our end-to-end analytics service covers the entire data lifecycle — from collection and storage to analysis and automation — ensuring your organization gains lasting value from its data.",
-        items: [
-          {
-            title: "Data Strategy & Architecture",
-            description:
-              "We assess your data maturity and business goals to create a tailored analytics roadmap and architecture that ensures long-term scalability and aligns with your objectives.",
-          },
-          {
-            title: "Data Integration & Warehousing",
-            description:
-              "We unify your diverse data sources — CRMs, ERPs, APIs, databases, and cloud platforms — into a single warehouse such as Snowflake, BigQuery, or Azure Synapse for seamless data access.",
-          },
-          {
-            title: "Data Cleaning & Transformation",
-            description:
-              "Using robust ETL pipelines, we cleanse, normalize, and model your data to maintain accuracy and consistency, preparing it for meaningful analysis.",
-          },
-          {
-            title: "Business Intelligence & Visualization",
-            description:
-              "We create interactive dashboards and analytical reports using Power BI, Tableau, or Looker, providing real-time insights through visually compelling interfaces.",
-          },
-          {
-            title: "Advanced Analytics & AI",
-            description:
-              "Leverage predictive forecasting, segmentation, and machine learning models to uncover hidden trends, opportunities, and risks across your business operations.",
-          },
-          {
-            title: "Automation & Monitoring",
-            description:
-              "Automated refreshes, alerts, and monitoring systems keep your analytics environment up-to-date and efficient — no manual effort required.",
-          },
-          {
-            title: "Training & Support",
-            description:
-              "We provide user training and ongoing support to ensure your teams can maintain, scale, and interpret analytics independently and confidently.",
-          },
-        ],
+          "Transform your organization into a data-driven powerhouse. Our end-to-end analytics services cover every stage of the data lifecycle — from strategy and integration to visualization and AI insights — creating a scalable and automated ecosystem for smarter, faster decisions.",
       },
-      {
-        title: "Business Benefits",
-        description:
-          "Our analytics framework is built to empower organizations with real-time insights, streamlined workflows, and future-ready infrastructure. Experience the advantages of data-driven decision-making at every level.",
-        items: [
-          {
-            title: "Centralized Intelligence",
-            description:
-              "Unify all your data sources into one connected ecosystem — your single source of truth for business decisions.",
-          },
-          {
-            title: "Smarter, Faster Decisions",
-            description:
-              "Enable real-time, insight-driven decisions backed by reliable, automated analytics across all departments.",
-          },
-          {
-            title: "Cost & Time Efficiency",
-            description:
-              "Automate reporting and reduce manual data handling to save hours and operational costs.",
-          },
-          {
-            title: "Future-Ready Infrastructure",
-            description:
-              "Build scalable, cloud-optimized solutions that adapt and grow with your organization's needs.",
-          },
-          {
-            title: "Data-Driven Culture",
-            description:
-              "Empower every department — from sales and finance to HR and operations — to make data-backed decisions confidently.",
-          },
-        ],
-      },
-      {
-        title: "Process",
-        description:
-          "Our process ensures seamless implementation from discovery to delivery. Each step is designed for clarity, automation, and measurable impact, helping you gain maximum value from your data investment.",
-        items: [
-          {
-            title: "Consultation & Discovery",
-            description:
-              "We begin with workshops to understand your goals, KPIs, challenges, and existing data systems.",
-          },
-          {
-            title: "Architecture & Integration",
-            description:
-              "We design and implement the ideal architecture, connecting all data sources into one unified platform.",
-          },
-          {
-            title: "Data Preparation & Modeling",
-            description:
-              "Your data is cleaned, structured, and modeled to ensure accuracy and analytical readiness.",
-          },
-          {
-            title: "Visualization & Insight Development",
-            description:
-              "We craft dashboards and reports that tell a visual story and support informed business decisions.",
-          },
-          {
-            title: "Automation & Optimization",
-            description:
-              "Your system is equipped with automated refreshes, alerting, and monitoring for effortless performance.",
-          },
-          {
-            title: "Delivery & Enablement",
-            description:
-              "We deliver the final solution, train your teams, and provide ongoing optimization and support.",
-          },
-        ],
-      },
-    ],
+      serviceContent: [
+        {
+          title: "What's Included",
+          description:
+            "Our end-to-end analytics service covers the entire data lifecycle — from collection and storage to analysis and automation — ensuring your organization gains lasting value from its data.",
+          items: [
+            {
+              title: "Data Strategy & Architecture",
+              description:
+                "We assess your data maturity and business goals to create a tailored analytics roadmap and architecture that ensures long-term scalability and aligns with your objectives.",
+            },
+            {
+              title: "Data Integration & Warehousing",
+              description:
+                "We unify your diverse data sources — CRMs, ERPs, APIs, databases, and cloud platforms — into a single warehouse such as Snowflake, BigQuery, or Azure Synapse for seamless data access.",
+            },
+            {
+              title: "Data Cleaning & Transformation",
+              description:
+                "Using robust ETL pipelines, we cleanse, normalize, and model your data to maintain accuracy and consistency, preparing it for meaningful analysis.",
+            },
+            {
+              title: "Business Intelligence & Visualization",
+              description:
+                "We create interactive dashboards and analytical reports using Power BI, Tableau, or Looker, providing real-time insights through visually compelling interfaces.",
+            },
+            {
+              title: "Advanced Analytics & AI",
+              description:
+                "Leverage predictive forecasting, segmentation, and machine learning models to uncover hidden trends, opportunities, and risks across your business operations.",
+            },
+            {
+              title: "Automation & Monitoring",
+              description:
+                "Automated refreshes, alerts, and monitoring systems keep your analytics environment up-to-date and efficient — no manual effort required.",
+            },
+            {
+              title: "Training & Support",
+              description:
+                "We provide user training and ongoing support to ensure your teams can maintain, scale, and interpret analytics independently and confidently.",
+            },
+          ],
+        },
+        {
+          title: "Business Benefits",
+          description:
+            "Our analytics framework is built to empower organizations with real-time insights, streamlined workflows, and future-ready infrastructure. Experience the advantages of data-driven decision-making at every level.",
+          items: [
+            {
+              title: "Centralized Intelligence",
+              description:
+                "Unify all your data sources into one connected ecosystem — your single source of truth for business decisions.",
+            },
+            {
+              title: "Smarter, Faster Decisions",
+              description:
+                "Enable real-time, insight-driven decisions backed by reliable, automated analytics across all departments.",
+            },
+            {
+              title: "Cost & Time Efficiency",
+              description:
+                "Automate reporting and reduce manual data handling to save hours and operational costs.",
+            },
+            {
+              title: "Future-Ready Infrastructure",
+              description:
+                "Build scalable, cloud-optimized solutions that adapt and grow with your organization's needs.",
+            },
+            {
+              title: "Data-Driven Culture",
+              description:
+                "Empower every department — from sales and finance to HR and operations — to make data-backed decisions confidently.",
+            },
+          ],
+        },
+        {
+          title: "Process",
+          description:
+            "Our process ensures seamless implementation from discovery to delivery. Each step is designed for clarity, automation, and measurable impact, helping you gain maximum value from your data investment.",
+          items: [
+            {
+              title: "Consultation & Discovery",
+              description:
+                "We begin with workshops to understand your goals, KPIs, challenges, and existing data systems.",
+            },
+            {
+              title: "Architecture & Integration",
+              description:
+                "We design and implement the ideal architecture, connecting all data sources into one unified platform.",
+            },
+            {
+              title: "Data Preparation & Modeling",
+              description:
+                "Your data is cleaned, structured, and modeled to ensure accuracy and analytical readiness.",
+            },
+            {
+              title: "Visualization & Insight Development",
+              description:
+                "We craft dashboards and reports that tell a visual story and support informed business decisions.",
+            },
+            {
+              title: "Automation & Optimization",
+              description:
+                "Your system is equipped with automated refreshes, alerting, and monitoring for effortless performance.",
+            },
+            {
+              title: "Delivery & Enablement",
+              description:
+                "We deliver the final solution, train your teams, and provide ongoing optimization and support.",
+            },
+          ],
+        },
+      ],
 
-    pricing: [
-      {
-        name: "Basic",
-        price: "800",
-        description:
-          "Ideal for small teams getting started with analytics automation and streamlined data visualization.",
-        feature: [
-          "1-3 Data sources (Excel, CSV, SQL)",
-          "Basic ETL & data cleaning",
-          "1-2 dashboards with core KPIs",
-          "Automated refresh setup",
-          "Quick usage guide",
-        ],
-        delivery: "10 days",
-        revesion: "Unlimited",
-        isPopular: true,
-        bg: "special-gradiant",
-      },
-      {
-        name: "Standard",
-        price: "1500-2500",
-        description:
-          "Perfect for mid-size businesses needing cross-department analytics, automation, and predictive insights.",
-        feature: [
-          "3-6 Data sources (SQL, APIs, CRMs)",
-          "Moderate data transformation",
-          "2-4 analytical dashboards",
-          "Up to 15 KPIs and metrics",
-          "Predictive trend reports",
-          "1-on-1 training session",
-        ],
-        delivery: "20 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-scondary",
-      },
-      {
-        name: "Premium",
-        price: "3000-6000",
-        description:
-          "Built for enterprises requiring advanced analytics, machine learning, and large-scale automation.",
-        feature: [
-          "5-10 Data sources (SQL, APIs, CRMs, Cloud)",
-          "Complex data modeling & automation",
-          "Machine learning & predictive forecasting",
-          "5-6 interactive dashboards",
-          "Custom KPIs for all departments",
-          "Ongoing optimization support",
-        ],
-        delivery: "30-45 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "premium",
-      },
-      {
-        name: "Custom",
-        price: "Contact for Quote",
-        description:
-          "A fully tailored analytics solution aligned with your unique business goals, infrastructure, and growth strategy.",
-        feature: [
-          "Custom architecture & data pipeline design",
-          "Unlimited data sources and integrations",
-          "Tailored dashboards for each department",
-          "Dedicated analytics consultant",
-          "Full training & long-term support",
-        ],
-        delivery: "Flexible",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-dark",
-      },
-    ],
-  },
-},
-{
-  id: "3",
-  label: "Predictive Analytics (Python & Machine Learning)",
-  description:
-    "Harness Python, statistics, and machine learning to uncover patterns, predict trends, and optimize decision-making. Move from reactive insights to proactive strategy with models tailored to your data and goals.",
-  img: "https://ik.imagekit.io/pdata3016/Services/Predictive%20Analytics.jpg",
-  link: "predictive-analytics-ml",
-  details: {
-    hero: {
-      title: "Predictive Analytics (Python & Machine Learning)",
-      subtitle: "Forecast the Future with Data-Driven Precision",
-      description:
-        "From data preparation and feature engineering to model development, validation, deployment, and an interactive front-end—our predictive analytics services deliver accurate, actionable forecasts that scale with your business.",
+      pricing: [
+        {
+          name: "Basic",
+          price: "800",
+          description:
+            "Ideal for small teams getting started with analytics automation and streamlined data visualization.",
+          feature: [
+            "1-3 Data sources (Excel, CSV, SQL)",
+            "Basic ETL & data cleaning",
+            "1-2 dashboards with core KPIs",
+            "Automated refresh setup",
+            "Quick usage guide",
+          ],
+          delivery: "10 days",
+          revesion: "Unlimited",
+          isPopular: true,
+          bg: "special-gradiant",
+        },
+        {
+          name: "Standard",
+          price: "1500-2500",
+          description:
+            "Perfect for mid-size businesses needing cross-department analytics, automation, and predictive insights.",
+          feature: [
+            "3-6 Data sources (SQL, APIs, CRMs)",
+            "Moderate data transformation",
+            "2-4 analytical dashboards",
+            "Up to 15 KPIs and metrics",
+            "Predictive trend reports",
+            "1-on-1 training session",
+          ],
+          delivery: "20 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Premium",
+          price: "3000-6000",
+          description:
+            "Built for enterprises requiring advanced analytics, machine learning, and large-scale automation.",
+          feature: [
+            "5-10 Data sources (SQL, APIs, CRMs, Cloud)",
+            "Complex data modeling & automation",
+            "Machine learning & predictive forecasting",
+            "5-6 interactive dashboards",
+            "Custom KPIs for all departments",
+            "Ongoing optimization support",
+          ],
+          delivery: "30-45 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "premium",
+        },
+        // {
+        //   name: "Custom",
+        //   price: "Contact for Quote",
+        //   description:
+        //     "A fully tailored analytics solution aligned with your unique business goals, infrastructure, and growth strategy.",
+        //   feature: [
+        //     "Custom architecture & data pipeline design",
+        //     "Unlimited data sources and integrations",
+        //     "Tailored dashboards for each department",
+        //     "Dedicated analytics consultant",
+        //     "Full training & long-term support",
+        //   ],
+        //   delivery: "Flexible",
+        //   revesion: "Unlimited",
+        //   isPopular: false,
+        //   bg: "bg-dark",
+        // },
+      ],
     },
-    serviceContent: [
-      {
-        title: "What's Included",
-        description:
-          "We cover every stage of the machine learning workflow—ensuring reliable predictions, transparent evaluation, and smooth delivery.",
-        items: [
-          {
-            title: "Exploratory Data Analysis (EDA)",
-            description:
-              "Profile datasets to surface trends, correlations, seasonality, and data gaps that shape model design.",
-          },
-          {
-            title: "Feature Engineering & Data Preparation",
-            description:
-              "Clean, transform, and engineer features to boost model signal and ensure robust, reliable predictions.",
-          },
-          {
-            title: "Model Development (Python & ML Frameworks)",
-            description:
-              "Build and train models with Scikit-learn, TensorFlow, and XGBoost for use cases like demand forecasting, churn prediction, and opportunity scoring.",
-          },
-          {
-            title: "Model Evaluation & Optimization",
-            description:
-              "Validate with cross-validation and hyperparameter tuning. Report metrics such as R², RMSE, F1-score, Precision, and Recall.",
-          },
-          {
-            title: "Front-End Interface Development",
-            description:
-              "Ship a lightweight app (Streamlit or Flask) so users can input parameters, view predictions, and visualize results in the browser—no coding required.",
-          },
-          {
-            title: "Model Maintenance & Support",
-            description:
-              "Post-delivery support and retraining guidance to keep models accurate as new data arrives.",
-          },
-        ],
-      },
-      {
-        title: "Business Benefits",
-        description:
-          "Make confident, evidence-based decisions across the organization with proactive insights.",
-        items: [
-          {
-            title: "Smarter Forecasting",
-            description:
-              "Predict sales, demand, and customer behavior with confidence to plan ahead.",
-          },
-          {
-            title: "Data-Driven Optimization",
-            description:
-              "Streamline operations, allocate resources efficiently, and reduce uncertainty.",
-          },
-          {
-            title: "Risk Mitigation",
-            description:
-              "Detect anomalies early, anticipate challenges, and take preventive action.",
-          },
-          {
-            title: "Custom Machine Learning Solutions",
-            description:
-              "Models tailored to your data and business logic for maximum impact.",
-          },
-          {
-            title: "Interactive Model Access",
-            description:
-              "Non-technical users can explore predictions via simple, web-based interfaces.",
-          },
-        ],
-      },
-      {
-        title: "Process",
-        description:
-          "A clear, outcome-focused ML delivery lifecycle from scoping to enablement.",
-        items: [
-          {
-            title: "Consultation & Use Case Definition",
-            description:
-              "Define goals, success metrics, and available data sources.",
-          },
-          {
-            title: "Data Preparation",
-            description:
-              "Clean, merge, and structure data for accurate modeling.",
-          },
-          {
-            title: "Model Design & Development",
-            description:
-              "Build, train, and tune models with advanced ML frameworks.",
-          },
-          {
-            title: "Testing & Validation",
-            description:
-              "Evaluate on holdout/test data with transparent metrics.",
-          },
-          {
-            title: "Interface Creation & Delivery",
-            description:
-              "Deploy an interactive front end to run predictions and view results.",
-          },
-          {
-            title: "Training & Support",
-            description:
-              "Documentation and hands-on guidance to operate and maintain models.",
-          },
-        ],
-      },
-    ],
-
-    pricing: [
-      {
-        name: "Basic",
-        price: "1000",
-        description:
-          "Ideal for small teams exploring a first predictive use case with a simple interface and clear insights.",
-        feature: [
-          "One predictive use case (e.g., sales or churn)",
-          "Clean & structured data (up to 100K rows)",
-          "Regression or Classification model",
-          "Simple front-end interface",
-          "Model summary & insights report",
-          "Quick usage walkthrough",
-        ],
-        delivery: "10 days",
-        revesion: "Unlimited",
-        isPopular: true,
-        bg: "special-gradiant",
-      },
-      {
-        name: "Standard",
-        price: "2000-3500",
-        description:
-          "Best for growing businesses needing customized models, richer features, and interactive visualization.",
-        feature: [
-          "1-2 predictive use cases",
-          "Feature engineering & optimization",
-          "Multiple algorithms (Regression, Random Forest, XGBoost)",
-          "Interactive front-end with visualizations",
-          "Evaluation report with charts & metrics",
-          "Training session included",
-        ],
-        delivery: "20 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-scondary",
-      },
-      {
-        name: "Premium",
-        price: "4000–6000",
-        description:
-          "For enterprises needing advanced algorithms, automation, and production-ready delivery.",
-        feature: [
-          "2-4 predictive models across departments",
-          "Advanced algorithms (Time Series, Ensemble Models)",
-          "Automated retraining workflow",
-          "Custom front-end with inputs and live visuals",
-          "Detailed docs & ongoing optimization support",
-        ],
-        delivery: "30-45 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "premium",
-      },
-      {
-        name: "Custom",
-        price: "Contact for Quote",
-        description:
-          "A tailored predictive platform or multi-model environment with scalable architecture and UX.",
-        feature: [
-          "Custom use cases and architecture",
-          "Unlimited integrations and data sources",
-          "Department-specific apps & dashboards",
-          "Dedicated ML consultant",
-          "Full training & long-term support",
-        ],
-        delivery: "Flexible",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-dark",
-      },
-    ],
   },
-},
-{
-  id: "4",
-  label: "Statistical and Exploratory Data Analysis",
-  description:
-    "Uncover patterns, relationships, and anomalies within your data through comprehensive statistical and exploratory data analysis. Gain clarity and direction before investing in advanced analytics or predictive modeling.",
-  img: "https://ik.imagekit.io/pdata3016/Services/Statistical%20and%20EDA.jpg",
-  link: "statistical-eda",
-  details: {
-    hero: {
-      title: "Statistical and Exploratory Data Analysis",
-      subtitle: "Understand Your Data, Uncover Opportunities",
-      description:
-        "Every data-driven journey begins with understanding the story behind your numbers. Our Statistical and Exploratory Data Analysis (EDA) service helps organizations uncover hidden insights, relationships, and data quality issues—empowering smarter, evidence-based decisions.",
+  {
+    id: "3",
+    label: "Predictive Analytics (Python & Machine Learning)",
+    description:
+      "Harness Python, statistics, and machine learning to uncover patterns, predict trends, and optimize decision-making. Move from reactive insights to proactive strategy with models tailored to your data and goals.",
+    img: "https://ik.imagekit.io/pdata3016/Services/Predictive%20Analytics.jpg",
+    link: "predictive-analytics",
+    details: {
+      hero: {
+        title: "Predictive Analytics (Python & Machine Learning)",
+        subtitle: "Forecast the Future with Data-Driven Precision",
+        description:
+          "From data preparation and feature engineering to model development, validation, deployment, and an interactive front-end—our predictive analytics services deliver accurate, actionable forecasts that scale with your business.",
+      },
+      serviceContent: [
+        {
+          title: "What's Included",
+          description:
+            "We cover every stage of the machine learning workflow—ensuring reliable predictions, transparent evaluation, and smooth delivery.",
+          items: [
+            {
+              title: "Exploratory Data Analysis (EDA)",
+              description:
+                "Profile datasets to surface trends, correlations, seasonality, and data gaps that shape model design.",
+            },
+            {
+              title: "Feature Engineering & Data Preparation",
+              description:
+                "Clean, transform, and engineer features to boost model signal and ensure robust, reliable predictions.",
+            },
+            {
+              title: "Model Development (Python & ML Frameworks)",
+              description:
+                "Build and train models with Scikit-learn, TensorFlow, and XGBoost for use cases like demand forecasting, churn prediction, and opportunity scoring.",
+            },
+            {
+              title: "Model Evaluation & Optimization",
+              description:
+                "Validate with cross-validation and hyperparameter tuning. Report metrics such as R², RMSE, F1-score, Precision, and Recall.",
+            },
+            {
+              title: "Front-End Interface Development",
+              description:
+                "Ship a lightweight app (Streamlit or Flask) so users can input parameters, view predictions, and visualize results in the browser—no coding required.",
+            },
+            {
+              title: "Model Maintenance & Support",
+              description:
+                "Post-delivery support and retraining guidance to keep models accurate as new data arrives.",
+            },
+          ],
+        },
+        {
+          title: "Business Benefits",
+          description:
+            "Make confident, evidence-based decisions across the organization with proactive insights.",
+          items: [
+            {
+              title: "Smarter Forecasting",
+              description:
+                "Predict sales, demand, and customer behavior with confidence to plan ahead.",
+            },
+            {
+              title: "Data-Driven Optimization",
+              description:
+                "Streamline operations, allocate resources efficiently, and reduce uncertainty.",
+            },
+            {
+              title: "Risk Mitigation",
+              description:
+                "Detect anomalies early, anticipate challenges, and take preventive action.",
+            },
+            {
+              title: "Custom Machine Learning Solutions",
+              description:
+                "Models tailored to your data and business logic for maximum impact.",
+            },
+            {
+              title: "Interactive Model Access",
+              description:
+                "Non-technical users can explore predictions via simple, web-based interfaces.",
+            },
+          ],
+        },
+        {
+          title: "Process",
+          description:
+            "A clear, outcome-focused ML delivery lifecycle from scoping to enablement.",
+          items: [
+            {
+              title: "Consultation & Use Case Definition",
+              description:
+                "Define goals, success metrics, and available data sources.",
+            },
+            {
+              title: "Data Preparation",
+              description:
+                "Clean, merge, and structure data for accurate modeling.",
+            },
+            {
+              title: "Model Design & Development",
+              description:
+                "Build, train, and tune models with advanced ML frameworks.",
+            },
+            {
+              title: "Testing & Validation",
+              description:
+                "Evaluate on holdout/test data with transparent metrics.",
+            },
+            {
+              title: "Interface Creation & Delivery",
+              description:
+                "Deploy an interactive front end to run predictions and view results.",
+            },
+            {
+              title: "Training & Support",
+              description:
+                "Documentation and hands-on guidance to operate and maintain models.",
+            },
+          ],
+        },
+      ],
+
+      pricing: [
+        {
+          name: "Basic",
+          price: "1000",
+          description:
+            "Ideal for small teams exploring a first predictive use case with a simple interface and clear insights.",
+          feature: [
+            "One predictive use case (e.g., sales or churn)",
+            "Clean & structured data (up to 100K rows)",
+            "Regression or Classification model",
+            "Simple front-end interface",
+            "Model summary & insights report",
+            "Quick usage walkthrough",
+          ],
+          delivery: "10 days",
+          revesion: "Unlimited",
+          isPopular: true,
+          bg: "special-gradiant",
+        },
+        {
+          name: "Standard",
+          price: "2000-3500",
+          description:
+            "Best for growing businesses needing customized models, richer features, and interactive visualization.",
+          feature: [
+            "1-2 predictive use cases",
+            "Feature engineering & optimization",
+            "Multiple algorithms (Regression, Random Forest, XGBoost)",
+            "Interactive front-end with visualizations",
+            "Evaluation report with charts & metrics",
+            "Training session included",
+          ],
+          delivery: "20 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Premium",
+          price: "4000-6000",
+          description:
+            "For enterprises needing advanced algorithms, automation, and production-ready delivery.",
+          feature: [
+            "2-4 predictive models across departments",
+            "Advanced algorithms (Time Series, Ensemble Models)",
+            "Automated retraining workflow",
+            "Custom front-end with inputs and live visuals",
+            "Detailed docs & ongoing optimization support",
+          ],
+          delivery: "30-45 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "premium",
+        },
+        // {
+        //   name: "Custom",
+        //   price: "Contact for Quote",
+        //   description:
+        //     "A tailored predictive platform or multi-model environment with scalable architecture and UX.",
+        //   feature: [
+        //     "Custom use cases and architecture",
+        //     "Unlimited integrations and data sources",
+        //     "Department-specific apps & dashboards",
+        //     "Dedicated ML consultant",
+        //     "Full training & long-term support",
+        //   ],
+        //   delivery: "Flexible",
+        //   revesion: "Unlimited",
+        //   isPopular: false,
+        //   bg: "bg-dark",
+        // },
+      ],
     },
-    serviceContent: [
-      {
-        title: "What's Included",
-        description:
-          "Our EDA service is designed to extract maximum insight from your datasets, ensuring business decisions are grounded in accuracy and evidence.",
-        items: [
-          {
-            title: "Data Profiling & Assessment",
-            description:
-              "We examine your data's structure, completeness, and consistency to detect missing values, gaps, and inconsistencies.",
-          },
-          {
-            title: "Descriptive Statistics",
-            description:
-              "We summarize key metrics such as mean, median, variance, and distribution patterns to reveal the overall behavior of your data.",
-          },
-          {
-            title: "Data Visualization",
-            description:
-              "Using Python (Matplotlib, Seaborn, Plotly) or R, we build clear, interactive visuals that highlight correlations, outliers, and distribution patterns.",
-          },
-          {
-            title: "Correlation & Trend Analysis",
-            description:
-              "We identify relationships between variables using statistical measures, scatter plots, and heatmaps to highlight performance drivers.",
-          },
-          {
-            title: "Hypothesis Testing & Statistical Inference",
-            description:
-              "We perform t-tests, chi-square tests, and ANOVA to validate assumptions and provide confidence-backed insights.",
-          },
-          {
-            title: "Feature Relationships & Segment Analysis",
-            description:
-              "We explore variable importance and segment-level insights, revealing trends by customer group, product, or region.",
-          },
-          {
-            title: "Comprehensive Summary Report",
-            description:
-              "You'll receive a full analytical report including visuals, interpretations, and actionable recommendations tailored to your business goals.",
-          },
-        ],
-      },
-      {
-        title: "Business Benefits",
-        description:
-          "Our EDA service provides clarity, direction, and confidence in your data-driven initiatives—laying the foundation for advanced analytics and predictive modeling.",
-        items: [
-          {
-            title: "Informed Decision-Making",
-            description:
-              "Understand your data deeply before moving to modeling or automation.",
-          },
-          {
-            title: "Improved Data Quality",
-            description:
-              "Detect and correct missing values or inconsistencies early to ensure reliable outcomes.",
-          },
-          {
-            title: "Clarity on Key Drivers",
-            description:
-              "Pinpoint the most impactful variables and metrics influencing your business results.",
-          },
-          {
-            title: "Foundation for Predictive Analytics",
-            description:
-              "Establish a statistical baseline that strengthens future forecasting and machine learning initiatives.",
-          },
-          {
-            title: "Actionable Insights",
-            description:
-              "Translate raw numbers into meaningful narratives that drive strategy and innovation.",
-          },
-        ],
-      },
-      {
-        title: "Process",
-        description:
-          "A structured, insight-focused workflow ensures your data is explored, analyzed, and visualized efficiently and effectively.",
-        items: [
-          {
-            title: "Consultation & Data Review",
-            description:
-              "We start with a discovery session to understand your data sources, goals, and analytical needs.",
-          },
-          {
-            title: "Data Cleaning & Preparation",
-            description:
-              "Your data is standardized, validated, and formatted for consistent and accurate analysis.",
-          },
-          {
-            title: "Exploratory & Statistical Analysis",
-            description:
-              "Comprehensive descriptive and inferential analysis uncovers relationships and trends.",
-          },
-          {
-            title: "Visualization & Storytelling",
-            description:
-              "We visualize findings through intuitive dashboards and charts for easy interpretation.",
-          },
-          {
-            title: "Report & Recommendations",
-            description:
-              "We deliver a full EDA report with detailed insights, interpretations, and business recommendations.",
-          },
-          {
-            title: "Optional Presentation",
-            description:
-              "We can walk your team through findings, ensuring complete understanding and actionable clarity.",
-          },
-        ],
-      },
-    ],
-
-    pricing: [
-      {
-        name: "Basic",
-        price: "500",
-        description:
-          "Ideal for startups or small teams exploring their datasets for the first time.",
-        feature: [
-          "1 dataset (up to 100K rows)",
-          "Basic descriptive statistics",
-          "3-5 visualizations (distribution & trend plots)",
-          "Summary report in PDF/Word format",
-          "Quick walkthrough session",
-        ],
-        delivery: "7 days",
-        revesion: "Unlimited",
-        isPopular: true,
-        bg: "special-gradiant",
-      },
-      {
-        name: "Standard",
-        price: "900",
-        description:
-          "Perfect for businesses seeking deeper statistical analysis and richer data visualization.",
-        feature: [
-          "Multiple datasets (2-3)",
-          "Correlation and hypothesis testing",
-          "8-10 visualizations (heatmaps, trend lines, comparative analysis)",
-          "Statistical summary report with insights",
-          "Optional presentation session",
-        ],
-        delivery: "14 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-scondary",
-      },
-      {
-        name: "Premium",
-        price: "2000-3000",
-        description:
-          "Comprehensive EDA for enterprises needing advanced statistical methods and executive reporting.",
-        feature: [
-          "3-6 datasets across departments",
-          "Advanced statistical testing (ANOVA, regression, segment analysis)",
-          "12-15 visuals with custom formatting",
-          "Executive-level report with actionable insights",
-          "Optional presentation & recommendations meeting",
-        ],
-        delivery: "21-30 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "premium",
-      },
-      {
-        name: "Custom",
-        price: "Contact for Quote",
-        description:
-          "Need deeper statistical modeling or time series analysis? We’ll build a custom EDA solution tailored to your business goals.",
-        feature: [
-          "Custom statistical analysis or time series modeling",
-          "Unlimited datasets and integrations",
-          "Tailored dashboards & visualizations",
-          "Dedicated data science consultant",
-          "Full training & support package",
-        ],
-        delivery: "Flexible",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-dark",
-      },
-    ],
   },
-},
+  {
+    id: "4",
+    label: "Statistical and Exploratory Data Analysis",
+    description:
+      "Uncover patterns, relationships, and anomalies within your data through comprehensive statistical and exploratory data analysis. Gain clarity and direction before investing in advanced analytics or predictive modeling.",
+    img: "https://ik.imagekit.io/pdata3016/Services/Statistical%20and%20EDA.jpg",
+    link: "statistical-analysis",
+    details: {
+      hero: {
+        title: "Statistical and Exploratory Data Analysis",
+        subtitle: "Understand Your Data, Uncover Opportunities",
+        description:
+          "Every data-driven journey begins with understanding the story behind your numbers. Our Statistical and Exploratory Data Analysis (EDA) service helps organizations uncover hidden insights, relationships, and data quality issues—empowering smarter, evidence-based decisions.",
+      },
+      serviceContent: [
+        {
+          title: "What's Included",
+          description:
+            "Our EDA service is designed to extract maximum insight from your datasets, ensuring business decisions are grounded in accuracy and evidence.",
+          items: [
+            {
+              title: "Data Profiling & Assessment",
+              description:
+                "We examine your data's structure, completeness, and consistency to detect missing values, gaps, and inconsistencies.",
+            },
+            {
+              title: "Descriptive Statistics",
+              description:
+                "We summarize key metrics such as mean, median, variance, and distribution patterns to reveal the overall behavior of your data.",
+            },
+            {
+              title: "Data Visualization",
+              description:
+                "Using Python (Matplotlib, Seaborn, Plotly) or R, we build clear, interactive visuals that highlight correlations, outliers, and distribution patterns.",
+            },
+            {
+              title: "Correlation & Trend Analysis",
+              description:
+                "We identify relationships between variables using statistical measures, scatter plots, and heatmaps to highlight performance drivers.",
+            },
+            {
+              title: "Hypothesis Testing & Statistical Inference",
+              description:
+                "We perform t-tests, chi-square tests, and ANOVA to validate assumptions and provide confidence-backed insights.",
+            },
+            {
+              title: "Feature Relationships & Segment Analysis",
+              description:
+                "We explore variable importance and segment-level insights, revealing trends by customer group, product, or region.",
+            },
+            {
+              title: "Comprehensive Summary Report",
+              description:
+                "You'll receive a full analytical report including visuals, interpretations, and actionable recommendations tailored to your business goals.",
+            },
+          ],
+        },
+        {
+          title: "Business Benefits",
+          description:
+            "Our EDA service provides clarity, direction, and confidence in your data-driven initiatives—laying the foundation for advanced analytics and predictive modeling.",
+          items: [
+            {
+              title: "Informed Decision-Making",
+              description:
+                "Understand your data deeply before moving to modeling or automation.",
+            },
+            {
+              title: "Improved Data Quality",
+              description:
+                "Detect and correct missing values or inconsistencies early to ensure reliable outcomes.",
+            },
+            {
+              title: "Clarity on Key Drivers",
+              description:
+                "Pinpoint the most impactful variables and metrics influencing your business results.",
+            },
+            {
+              title: "Foundation for Predictive Analytics",
+              description:
+                "Establish a statistical baseline that strengthens future forecasting and machine learning initiatives.",
+            },
+            {
+              title: "Actionable Insights",
+              description:
+                "Translate raw numbers into meaningful narratives that drive strategy and innovation.",
+            },
+          ],
+        },
+        {
+          title: "Process",
+          description:
+            "A structured, insight-focused workflow ensures your data is explored, analyzed, and visualized efficiently and effectively.",
+          items: [
+            {
+              title: "Consultation & Data Review",
+              description:
+                "We start with a discovery session to understand your data sources, goals, and analytical needs.",
+            },
+            {
+              title: "Data Cleaning & Preparation",
+              description:
+                "Your data is standardized, validated, and formatted for consistent and accurate analysis.",
+            },
+            {
+              title: "Exploratory & Statistical Analysis",
+              description:
+                "Comprehensive descriptive and inferential analysis uncovers relationships and trends.",
+            },
+            {
+              title: "Visualization & Storytelling",
+              description:
+                "We visualize findings through intuitive dashboards and charts for easy interpretation.",
+            },
+            {
+              title: "Report & Recommendations",
+              description:
+                "We deliver a full EDA report with detailed insights, interpretations, and business recommendations.",
+            },
+            {
+              title: "Optional Presentation",
+              description:
+                "We can walk your team through findings, ensuring complete understanding and actionable clarity.",
+            },
+          ],
+        },
+      ],
+
+      pricing: [
+        {
+          name: "Basic",
+          price: "500",
+          description:
+            "Ideal for startups or small teams exploring their datasets for the first time.",
+          feature: [
+            "1 dataset (up to 100K rows)",
+            "Basic descriptive statistics",
+            "3-5 visualizations (distribution & trend plots)",
+            "Summary report in PDF/Word format",
+            "Quick walkthrough session",
+          ],
+          delivery: "7 days",
+          revesion: "Unlimited",
+          isPopular: true,
+          bg: "special-gradiant",
+        },
+        {
+          name: "Standard",
+          price: "900",
+          description:
+            "Perfect for businesses seeking deeper statistical analysis and richer data visualization.",
+          feature: [
+            "Multiple datasets (2-3)",
+            "Correlation and hypothesis testing",
+            "8-10 visualizations (heatmaps, trend lines, comparative analysis)",
+            "Statistical summary report with insights",
+            "Optional presentation session",
+          ],
+          delivery: "14 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Premium",
+          price: "2000-3000",
+          description:
+            "Comprehensive EDA for enterprises needing advanced statistical methods and executive reporting.",
+          feature: [
+            "3-6 datasets across departments",
+            "Advanced statistical testing (ANOVA, regression, segment analysis)",
+            "12-15 visuals with custom formatting",
+            "Executive-level report with actionable insights",
+            "Optional presentation & recommendations meeting",
+          ],
+          delivery: "21-30 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "premium",
+        },
+        // {
+        //   name: "Custom",
+        //   price: "Contact for Quote",
+        //   description:
+        //     "Need deeper statistical modeling or time series analysis? We’ll build a custom EDA solution tailored to your business goals.",
+        //   feature: [
+        //     "Custom statistical analysis or time series modeling",
+        //     "Unlimited datasets and integrations",
+        //     "Tailored dashboards & visualizations",
+        //     "Dedicated data science consultant",
+        //     "Full training & support package",
+        //   ],
+        //   delivery: "Flexible",
+        //   revesion: "Unlimited",
+        //   isPopular: false,
+        //   bg: "bg-dark",
+        // },
+      ],
+    },
+  },
 ];
 
 export const statsData: StatItem[] = [
@@ -916,63 +917,5 @@ export const features: Feature[] = [
       "Dashboards designed to expand seamlessly as your business and data evolve.",
     color: "#0795b6",
     icon: <TrendingUp />,
-  },
-];
-
-export const PricingData = [
-  {
-    name:"Basic",
-    price:"400",
-    description:"Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
-    feature:[
-      "1-2 Data sources (Excel,CSV)",
-      "Basic data cleaning & formatting",
-      "Up to 4 KPIs and 4 charts",
-      "Iteractive/animated visuals",
-      "1 interactive dashboard",
-      "Quick walkthrough or usage guide"
-    ],
-    delivery:"7 days",
-    revesion: "Unlimited",
-    isPopular: false,
-    bg:"bg-scondary"
-  },
-  {
-    name:"Standard",
-    price:"800",
-    description:"Best for growing businesses that need multi-source reporting and department-level insights with automation",
-    feature:[
-      "2-4 Data sources (Excel, CSV, SQL, APIs)",
-      "Medium Complex data cleaning & transformation",
-      "2-3 interactive dashboard pages",
-      "Up to 10 KPIs and 8-10 charts",
-      "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
-      "Automated data refresh setup",
-      "1-on-1 walkthrough or training session"
-    ],
-    delivery:"14 days",
-    revesion: "Unlimited"
-    ,isPopular: true,
-    bg:"special-gradiant"
-
-  },
-  {
-    name:"Premium",
-    price:"1500",
-    description:"Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation",
-    feature:[
-      "3-7 Data sources (Excel, CSV, SQL, APIs)",
-      "Complex data cleaning & transformation",
-      "3-4 interactive dashboard pages",
-      "Up to 20 KPIs 20 charts",
-      "Department-level analysis (Sales, Finance, Marketing, HR, Operations and more)",
-      "Automated data refresh setup",
-      "1-on-1 walkthrough or training session"
-    ],
-    delivery:"30 days",
-    revesion: "Unlimited",
-    isPopular: false,
-    bg:"premium"
-
   },
 ];

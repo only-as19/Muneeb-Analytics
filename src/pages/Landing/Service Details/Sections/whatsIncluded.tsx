@@ -26,7 +26,7 @@ const WhatsIncluded = () => {
             What We Offer and how we deliver 
           </h1>
           <p className="text-muted-foreground">
-           Discover what we provide, the benefits you’ll gain, and how we deliver results. 
+           Discover what we provide, the benefits you'll gain, and how we deliver results. 
           </p>
         </div>
         {include && (
@@ -56,13 +56,6 @@ const WhatsIncluded = () => {
               <div className="flex flex-col gap-y-4">
                 <ul>
                 {include[activeIndex].items.map((content, index) => (
-                  // <div key={index} className="">
-
-                  //   {/* <h2 className="text-xl font-semibold text-zinc-500">
-                  //     {content.title}
-                  //   </h2>
-                  //   <p className="">{content.description}</p> */}
-                  // </div>
                   <li key={index} className="square-list marker:font-bold marker:text-2xl"><span className="text-xl font-semibold text-gray-500">{content.title}:</span>
                   <span className="text-muted-foreground"> {content.description}</span>
                   </li>
