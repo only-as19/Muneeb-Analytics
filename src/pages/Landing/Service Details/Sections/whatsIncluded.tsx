@@ -23,12 +23,10 @@ const WhatsIncluded = () => {
       <div className="flex flex-col gap-y-10 max-w-6xl mx-auto ">
         <div className="text-center md:w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold uppercase mb-2">
-            Lorem ipsum dolor sit.
+            What We Offer and how we deliver 
           </h1>
           <p className="text-muted-foreground">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem vitae dolores esse excepturi placeat earum atque
-            natus, iure alias accusamus.
+           Discover what we provide, the benefits you’ll gain, and how we deliver results. 
           </p>
         </div>
         {include && (
