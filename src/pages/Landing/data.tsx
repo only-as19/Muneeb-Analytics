@@ -856,6 +856,198 @@ export const Services: Service[] = [
       ],
     },
   },
+  {
+  id: "5",
+  label: "Tableau Dashboards & Reports",
+  description:
+    "Transform your data into real-time, interactive Tableau dashboards that empower smarter, faster decisions across every department.",
+  img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
+  link: "tableau-dashboards",
+  details: {
+    hero: {
+      title: "Automated Tableau Dashboards & Reports",
+      subtitle: "Unlock Real-Time Business Intelligence",
+      description:
+        "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
+    },
+
+    serviceContent: [
+      {
+        title: "What's Included",
+        description:
+          "Our Tableau service covers every step of the analytics journey — from connecting your data sources to automating updates and enabling secure collaboration.",
+        items: [
+          {
+            title: "Automated Data Integration",
+            description:
+              "We connect Tableau seamlessly to your existing data sources such as Excel, SQL databases, cloud platforms, and enterprise systems — keeping your dashboards updated automatically.",
+          },
+          {
+            title: "Data Transformation and Cleaning",
+            description:
+              "Using Tableau Prep and advanced data modeling, we clean and standardize your data to ensure consistent and reliable insights.",
+          },
+          {
+            title: "Interactive Dashboards and Reports",
+            description:
+              "Dashboards feature drill-downs, filters, and intuitive visuals, helping decision-makers explore insights and uncover opportunities quickly.",
+          },
+          {
+            title: "Custom KPIs and Metrics",
+            description:
+              "We design dashboards around KPIs that truly matter — sales performance, financial ratios, HR benchmarks, and marketing ROI — giving every department clarity and focus.",
+          },
+          {
+            title: "Secure Sharing and Collaboration",
+            description:
+              "Using Tableau Server or Tableau Online, your dashboards are securely shared with role-based permissions, enabling teamwork without compromising data security.",
+          },
+        ],
+      },
+      {
+        title: "Business Benefits",
+        description:
+          "Tableau dashboards deliver measurable value by transforming how your organization collects, visualizes, and acts on data.",
+        items: [
+          {
+            title: "Save Time and Resources",
+            description:
+              "Automated reporting eliminates manual work and frees your team to focus on strategy, not spreadsheets.",
+          },
+          {
+            title: "Enhance Decision-Making",
+            description:
+              "Accurate and real-time insights ensure faster, smarter business decisions across all levels.",
+          },
+          {
+            title: "Clarity Across Departments",
+            description:
+              "Every department — from Sales and Finance to HR and Operations — gains clear, accessible metrics in one platform.",
+          },
+          {
+            title: "Improved Accuracy and Reliability",
+            description:
+              "Centralized dashboards eliminate data discrepancies and ensure a single, trusted source of truth.",
+          },
+          {
+            title: "Scalable Solutions",
+            description:
+              "Our Tableau dashboards scale with your business, adapting easily to new data sources and organizational growth.",
+          },
+        ],
+      },
+      {
+        title: "How It Works",
+        description:
+          "Our end-to-end process ensures smooth delivery, automation, and lasting value from your Tableau environment.",
+        items: [
+          {
+            title: "Consultation and Discovery",
+            description:
+              "We start with an in-depth discussion to understand your goals, KPIs, and data challenges to build a solution that fits perfectly.",
+          },
+          {
+            title: "Data Preparation",
+            description:
+              "Our team connects, blends, and structures your data to ensure consistency and analytical readiness.",
+          },
+          {
+            title: "Dashboard Development",
+            description:
+              "We craft interactive, visually compelling dashboards that combine usability and clear storytelling.",
+          },
+          {
+            title: "Automation Setup",
+            description:
+              "We configure automated refresh schedules so your dashboards always present the latest data — hands-free.",
+          },
+          {
+            title: "Delivery and Training",
+            description:
+              "We finalize the dashboards, provide user training, and remain available for ongoing support and optimization.",
+          },
+        ],
+      },
+    ],
+
+    pricing: [
+      {
+        name: "Basic",
+        price: "400",
+        description:
+          "Perfect for individuals or small teams who need a clean, actionable dashboard to track performance and visualize trends.",
+        feature: [
+          "1–2 Data sources (Excel, CSV)",
+          "Basic data cleaning and formatting",
+          "Up to 4 KPIs and 4 charts",
+          "Interactive/animated visuals",
+          "1 interactive page dashboard",
+          "Quick walkthrough or usage guide",
+        ],
+        delivery: "7 days",
+        revesion: "Unlimited",
+        isPopular: true,
+        bg: "special-gradiant",
+      },
+      {
+        name: "Standard",
+        price: "800–1200",
+        description:
+          "Best for growing businesses needing multi-source reporting and department-level insights with automation.",
+        feature: [
+          "2–4 Data sources (Excel, CSV, SQL, APIs)",
+          "Medium complex data cleaning and transformation",
+          "2–3 interactive dashboard pages",
+          "Up to 10 KPIs and 8–10 charts",
+          "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
+          "Automated data refresh setup",
+          "1-on-1 walkthrough or training session",
+        ],
+        delivery: "14 days",
+        revesion: "Unlimited",
+        isPopular: false,
+        bg: "bg-scondary",
+      },
+      {
+        name: "Premium",
+        price: "1500–2000",
+        description:
+          "Designed for enterprises that require advanced KPIs, automation, and cross-department performance dashboards.",
+        feature: [
+          "3–7 Data sources (Excel, CSV, SQL, APIs)",
+          "Complex data cleaning and transformation",
+          "5–6 interactive dashboard pages",
+          "Up to 20 KPIs and 20 charts",
+          "Enterprise-level reporting and automation",
+          "Department-level analysis (Sales, Finance, HR, Marketing, and more)",
+          "1-on-1 walkthrough or training session",
+        ],
+        delivery: "30 days",
+        revesion: "Unlimited",
+        isPopular: false,
+        bg: "premium",
+      },
+      {
+        name: "Custom",
+        price: "Contact for Quote",
+        description:
+          "Not sure which package fits your needs? We’ll design a fully customized Tableau solution aligned with your goals and budget.",
+        feature: [
+          "Custom architecture and design",
+          "Unlimited data sources and integrations",
+          "Tailored dashboards and KPIs",
+          "Dedicated support and optimization",
+          "Comprehensive team training",
+        ],
+        delivery: "Flexible",
+        revesion: "Unlimited",
+        isPopular: false,
+        bg: "bg-dark",
+      },
+    ],
+  },
+},
+
 ];
 
 export const statsData: StatItem[] = [
