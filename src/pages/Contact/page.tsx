@@ -1,3 +1,5 @@
+import {ContactForm} from "./section"
+
 const Contact = () => {
   return (
     <section>
@@ -5,7 +7,8 @@ const Contact = () => {
         <h1 className="text-3xl md font-bold">Contact us</h1>
         <p className="text-muted-foreground text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur cum dolores quod! Necessitatibus animi quos, eius accusantium eum vel.</p>
       </div>
-      
+      <ContactForm />
+
     </section>
   )
 }
