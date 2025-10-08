@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logo, navLinks } from "./data";
 import {
   NavigationMenu,
@@ -16,6 +16,8 @@ import { ListItem, Button, Sheet } from "@/components";
 import { TextAlignEnd, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="w-full shadow-2xl font-roboto">
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
@@ -32,7 +34,13 @@ const Navbar = () => {
                   <>
                     <NavigationMenuTrigger>{Item.label}</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className={Item.children.length === 1 ? "grid grid-cols-1 w-3xs p-4 gap-3":"grid grid-cols-2 md:w-md lg:w-3xl p-4 gap-3"}>
+                      <ul
+                        className={
+                          Item.children.length === 1
+                            ? "grid grid-cols-1 w-3xs p-4 gap-3"
+                            : "grid grid-cols-2 md:w-md lg:w-3xl p-4 gap-3"
+                        }
+                      >
                         {Item.children.map((child) => (
                           <li key={child.label}>
                             <ListItem
@@ -115,7 +123,11 @@ const Navbar = () => {
             </div>
           </Sheet>
           <div className="hidden md:block">
-            <Button label="Contact Us" variant="default" />
+            <Button
+              label="Contact Us"
+              variant="default"
+              onClick={() => navigate("/contact")}
+            />
           </div>
         </div>
       </div>

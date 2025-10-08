@@ -1,8 +1,14 @@
 import {RootLayout} from "@/layouts"
-import { Landing } from "@/pages"
+import { Landing, Contact } from "@/pages"
 import ServiceDetail from "@/pages/Landing/Service Details/page"
 import type { RouteObject } from "react-router-dom"
 
+const contactRoute:RouteObject[] = [
+    {
+        path:"contact",
+        element: <Contact />
+    }
+]
 
 const routes:RouteObject [] = [
     {
@@ -20,7 +26,8 @@ const routes:RouteObject [] = [
             {
                 path:"/:serviceId",
                 element:<ServiceDetail/>
-            }
+            },
+            ...contactRoute
         ]
     },
 ]
