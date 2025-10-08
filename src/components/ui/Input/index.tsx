@@ -36,6 +36,7 @@ const Input:React.FC<TInput> = ({
         placeholder={placeholder}
         onChange={onChange}
         className={`${customClass}`}
+        {...rest}
       />
       {button && (
         <Button 
