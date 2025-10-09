@@ -8,6 +8,7 @@ interface TInput extends Omit<InputHTMLAttributes<HTMLInputElement>,'type'>{
     value?: string;
     InputType?:string;
     customClass?: string;
+    isRequired?:boolean;
     button?:{
         buttonLabel?:string;
         buttonVariant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
@@ -25,15 +26,14 @@ const Input:React.FC<TInput> = ({
     name,
     placeholder,
     onChange,
+    isRequired,
     ...rest
 }) => {
   return (
     <div className={`flex ${label ? "grid" : "flex"} grid-col-1 w-full items-center gap-1`}>
         {label && <label htmlFor={name}
-        className="font-semibold">{label}</label>}
-        <div>
-          
-        </div>
+        className="font-semibold">{label}{isRequired && (<span className="text-red-500">*</span>)}</label>}
+        
       <ShadCnInput
         name={name}
         type={InputType}

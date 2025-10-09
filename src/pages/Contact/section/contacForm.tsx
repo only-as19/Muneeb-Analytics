@@ -39,16 +39,19 @@ const ContacForm = () => {
                     label="Name"
                     placeholder="Enter your name"
                     customClass="w-full"
+                    isRequired={true}
                     />
                     <Input 
                     InputType="number"
                     label="Number"
                     placeholder="Enter your Number"
+                    isRequired={true}
                     />
                     <Input 
                     InputType="email"
                     label="Email Address"
                     placeholder="Enter your Email"
+                    isRequired={true}
                     />
                     <Input 
                     InputType="text"
@@ -75,6 +78,7 @@ const ContacForm = () => {
                     InputType="text"
                     label="Budget"
                     placeholder="Enter your Budget"
+                    isRequired={true}
                     />
                     <div className="flex flex-col gap-y-2 md:col-span-2">
                         <label
