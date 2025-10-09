@@ -1,4 +1,5 @@
 import {ContactForm} from "./section"
+import { FAQ } from "@/components"
 
 const Contact = () => {
   return (
@@ -8,7 +9,7 @@ const Contact = () => {
         <p className="text-muted-foreground text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur cum dolores quod! Necessitatibus animi quos, eius accusantium eum vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, consequatur?</p>
       </div>
       <ContactForm />
-
+      <FAQ/>
     </section>
   )
 }
