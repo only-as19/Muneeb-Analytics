@@ -77,7 +77,7 @@ const ContacForm = () => {
                     <Input 
                     InputType="text"
                     label="Budget"
-                    placeholder="Enter your Budget"
+                    placeholder="What's your Budget"
                     isRequired={true}
                     />
                     <div className="flex flex-col gap-y-2 md:col-span-2">
