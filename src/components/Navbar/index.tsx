@@ -79,6 +79,7 @@ const Navbar = () => {
             }}
             sheetFooter={{
               buttonLabel: "Contact Us",
+              onClick: ()=> navigate("/contact")
             }}
           >
             <div className="flex flex-col gap-y-2 p-2">
