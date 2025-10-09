@@ -1,5 +1,6 @@
 import { Button, Input } from "@/components"
-import { CircleArrowOutUpRight } from 'lucide-react';const ContacForm = () => {
+import { CircleArrowOutUpRight } from 'lucide-react';
+const ContacForm = () => {
   return (
     <section className="min-h-screen p-5 bg-white">
         <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-y-4 md:gap-x-4">
@@ -45,9 +46,12 @@ import { CircleArrowOutUpRight } from 'lucide-react';const ContacForm = () => {
                         <label 
                         className="font-semibold"
                         htmlFor="service">Service</label>
-                        <select name="service">
-                            <option value="" disabled>Services</option>
-                            <option value="1">Service1</option>
+                        <select name="service"
+                        className="p-1.5 border-muted-foreground/20 shadow-xs rounded-sm border"
+                        >
+                            <option
+                            className="p-2"
+                            value="1">Service</option>
                             <option value="2">Service2</option>
                             <option value="3">Service3</option>
                         </select>
@@ -57,7 +61,7 @@ import { CircleArrowOutUpRight } from 'lucide-react';const ContacForm = () => {
                     label="Budget"
                     placeholder="Enter your Budget"
                     />
-                    <div className="flex flex-col gap-y-2 col-span-2">
+                    <div className="flex flex-col gap-y-2 md:col-span-2">
                         <label
                         className="font-semibold"
                         htmlFor="message">Message</label>
