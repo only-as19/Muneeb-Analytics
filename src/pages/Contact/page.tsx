@@ -1,4 +1,4 @@
-import {ContactForm} from "./section"
+import {ContactForm,Info} from "./section"
 import { FAQ } from "@/components"
 
 const Contact = () => {
@@ -10,6 +10,7 @@ const Contact = () => {
       </div>
       <ContactForm />
       <FAQ/>
+      <Info/>
     </section>
   )
 }
