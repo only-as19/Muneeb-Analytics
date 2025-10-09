@@ -29,7 +29,7 @@ export const contactOptions: ContactOption[] = [
     id: "fiverr",
     title: "Hire Us on Fiverr",
     description: "Get professional help through our Fiverr services — fast and reliable.",
-    icon: <SiFiverr/>,
+    icon: <SiFiverr size={40}/>,
     link: "https://www.fiverr.com/yourusername",
   },
 ];
