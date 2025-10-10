@@ -1,11 +1,32 @@
 import { Button, Input, Select  } from "@/components"
 import { CircleArrowOutUpRight } from 'lucide-react';
 import countriesRaw from "world-countries";
+import {useFormik} from "formik"
+import { number } from "motion/react";
 const ContacForm = () => {
+
+    const initialValues = {
+        name:"",
+        email:"",
+        number:"",
+        company:"",
+        service:"",
+        location:"",
+        country:"",
+        budget:"",
+        message:""
+    }
 
     const countries = countriesRaw.map(country=>(
         {label:country.name.common ,value:country.cca3}
     )).sort((a,b)=>a.label.localeCompare(b.label))
+
+    const {values, handleBlur, handleChange, handleSubmit} = useFormik({
+        initialValues,
+        onSubmit : (values) => {
+            console.log(values)
+        }
+    })
 
   return (
     <section className="min-h-screen p-5 bg-white">
@@ -32,60 +53,94 @@ const ContacForm = () => {
                     <Button label="xyz"/>
                 </div>
             </div>
-                <form className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6">
+                <form className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6" onSubmit={handleSubmit}>
                     <Input
                     InputType="text"
                     label="Name"
                     placeholder="Enter your name"
                     customClass="w-full"
                     isRequired={true}
+                    id="name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
                     />
                     <Input 
                     InputType="number"
                     label="Number"
                     placeholder="Enter your Number"
                     isRequired={true}
+                    name="number"
+                    id="number"
+                    value={values.number}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     />
                     <Input 
                     InputType="email"
                     label="Email Address"
                     placeholder="Enter your Email"
                     isRequired={true}
+                    name="email"
+                    id="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     />
                     <Input 
                     InputType="text"
                     label="Company Name"
                     placeholder="Company (optional)"
+                    name="company"
+                    id="company"
+                    value={values.company}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     />
-                    <Select
+                    <Select 
+                    id="service"
                     label="Services"
                     placeholder="Services you interested"
                     groupLabel="services"
                     options={[
                         {label:"service1",value:"service1"},
                         {label:"service2",value:"service2"},
-                        {label:"service3",value:"service2"}
+                        {label:"service3",value:"service3"}
                     ]}
+                    value={values.service}
+                    onChange={handleChange}
                     />
                     <Select
                     label="Location"
                     placeholder="Select location"
                     groupLabel="All countries"
                     options={countries}
+                    id="location"
+                    value={values.country}
+                    onChange={handleChange}
                     />
                     <Input 
                     InputType="text"
                     label="Budget"
                     placeholder="What's your Budget"
                     isRequired={true}
+                    name="budget"
+                    id="budget"
+                    value={values.budget}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     />
                     <div className="flex flex-col gap-y-2 md:col-span-2">
                         <label
                         className="font-semibold"
                         htmlFor="message">Message</label>
                         <textarea 
+                        id="message"
                         className="h-20 w-full border-2 rounded p-2 text-sm"
                         name="message"
+                        value={values.message}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         ></textarea>
                     </div>
                     <Button type="submit" label="Send Email" className="md:col-span-2"/>

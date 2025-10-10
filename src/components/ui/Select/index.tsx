@@ -33,7 +33,7 @@ const Select:React.FC<selectProps> = ({
 }) => {
   return (
     <div className={`${className}`}>
-      {label && <label className="font-semibold">{label}</label>}
+      {label && <label htmlFor={id} className="font-semibold">{label}</label>}
     <ShadcnSelect
     
     value={value}
