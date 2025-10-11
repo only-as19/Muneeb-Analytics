@@ -16,16 +16,18 @@ const ContacForm = () => {
   };
 
   const countries = countriesRaw
-    .map((country) => ({ label: country.name.common, value: country.cca3 }))
+    .map((country) => ({ label: country.name.common, value: country.name.common}))
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit, setFieldValue, setFieldTouched } = useFormik({
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit, setFieldValue, setFieldTouched} = useFormik({
     initialValues,
     validationSchema: FormValidations,
-    onSubmit: (values) => {
+    onSubmit: (values, actions) => {
       console.log(values);
+      actions.resetForm()
     },
   });
+  console.log(errors)
 
   return (
     <section className="min-h-screen p-5 bg-white">
