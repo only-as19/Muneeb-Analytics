@@ -11,7 +11,6 @@ const ContacForm = () => {
     company: "",
     service: "",
     location: "",
-    country: "",
     budget: "",
     message: "",
   };
@@ -20,7 +19,7 @@ const ContacForm = () => {
     .map((country) => ({ label: country.name.common, value: country.cca3 }))
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const { values, handleBlur, handleChange, handleSubmit } = useFormik({
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit, setFieldValue, setFieldTouched } = useFormik({
     initialValues,
     validationSchema: FormValidations,
     onSubmit: (values) => {
@@ -70,7 +69,8 @@ const ContacForm = () => {
             className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6"
             onSubmit={handleSubmit}
           >
-            <Input
+            <div>
+              <Input
               InputType="text"
               label="Name"
               placeholder="Enter your name"
@@ -81,6 +81,9 @@ const ContacForm = () => {
               value={values.name}
               onChange={handleChange}
             />
+            {touched.name && errors.name ? <p className="text-xs pl-5 text-red-600">{errors.name}</p> : null}
+            </div>
+            <div>
             <Input
               InputType="number"
               label="Number"
@@ -92,6 +95,11 @@ const ContacForm = () => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
+            {touched.number && errors.number ? <p className="text-xs pl-5 text-red-600">{errors.number}</p> : null}
+            </div>
+            
+            <div>
+
             <Input
               InputType="email"
               label="Email Address"
@@ -102,7 +110,11 @@ const ContacForm = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-            />
+              />
+              {touched.email && errors.email ? <p className="text-xs pl-5 text-red-600">{errors.email}</p> : null}
+              </div>
+              <div>
+
             <Input
               InputType="text"
               label="Company Name"
@@ -112,7 +124,10 @@ const ContacForm = () => {
               value={values.company}
               onChange={handleChange}
               onBlur={handleBlur}
-            />
+              />
+              </div>
+              <div>
+
             <Select
               id="service"
               label="Services"
@@ -124,17 +139,31 @@ const ContacForm = () => {
                 { label: "service3", value: "service3" },
               ]}
               value={values.service}
-              onChange={handleChange}
-            />
+              onChange={(v: string) => {
+                setFieldValue("service", v);
+                setFieldTouched("service", true, false);
+              }}
+              />
+              {touched.service && errors.service ? <p className="text-xs pl-5 text-red-600">{errors.service}</p> : null}
+              </div>
+              <div>
+
             <Select
               label="Location"
               placeholder="Select location"
               groupLabel="All countries"
               options={countries}
               id="location"
-              value={values.country}
-              onChange={handleChange}
-            />
+              value={values.location}
+              onChange={(v: string) => {
+                setFieldValue("location", v);
+                setFieldTouched("location", true, false);
+              }}
+              />
+              {touched.location && errors.location ? <p className="text-xs pl-5 text-red-600">{errors.location}</p> : null}
+              </div>
+              <div>
+
             <Input
               InputType="text"
               label="Budget"
@@ -145,7 +174,9 @@ const ContacForm = () => {
               value={values.budget}
               onChange={handleChange}
               onBlur={handleBlur}
-            />
+              />
+              {touched.budget && errors.budget ? <p className="text-xs pl-5 text-red-600">{errors.budget}</p> : null}
+              </div>
             <div className="flex flex-col gap-y-2 md:col-span-2">
               <label className="font-semibold" htmlFor="message">
                 Message
@@ -158,6 +189,8 @@ const ContacForm = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               ></textarea>
+              {touched.message && errors.message 
+              ? <p className="text-xs pl-5 text-red-600">{errors.message}</p> : null}
             </div>
             <Button
               type="submit"

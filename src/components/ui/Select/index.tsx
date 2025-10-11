@@ -54,7 +54,7 @@ const Select:React.FC<selectProps> = ({
         </SelectGroup>
       </SelectContent>
     </ShadcnSelect>
-    </div>
+      </div>
   );
 };
 
