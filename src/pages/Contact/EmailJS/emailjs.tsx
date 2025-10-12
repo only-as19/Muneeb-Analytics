@@ -17,7 +17,12 @@ interface sendEmailProps {
 
 export const sendEmail = async (values: sendEmailProps) => {
   try {
-    const res = await emailjs.send(serviceId, templateId, values, {
+    const autoReplyParams = {
+      ...values,
+      company_name: "Muneeb Anakytics",
+      to_mail: "hellohello51981@gmail.com",
+    };
+    const res = await emailjs.send(serviceId, templateId, autoReplyParams, {
       publicKey,
     });
     return {
