@@ -3,6 +3,7 @@ import { CircleArrowOutUpRight } from "lucide-react";
 import countriesRaw from "world-countries";
 import { useFormik } from "formik";
 import { FormValidations } from "@/Schema";
+import { sendEmail } from "../EmailJS/emailjs";
 const ContacForm = () => {
   const initialValues = {
     name: "",
@@ -16,18 +17,38 @@ const ContacForm = () => {
   };
 
   const countries = countriesRaw
-    .map((country) => ({ label: country.name.common, value: country.name.common}))
+    .map((country) => ({
+      label: country.name.common,
+      value: country.name.common,
+    }))
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit, setFieldValue, setFieldTouched} = useFormik({
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+    setFieldTouched,
+  } = useFormik({
     initialValues,
     validationSchema: FormValidations,
-    onSubmit: (values, actions) => {
+    onSubmit: async (values, actions) => {
+      const response = await sendEmail(values);
+      if (response.success) {
+        console.log("Email sent successfully");
+        actions.resetForm();
+      } else {
+        console.error("Failed to send email", response.error);
+      }
+
       console.log(values);
-      actions.resetForm()
+      actions.resetForm();
     },
   });
-  console.log(errors)
+  console.log(errors);
 
   return (
     <section className="min-h-screen p-5 bg-white">
@@ -73,112 +94,119 @@ const ContacForm = () => {
           >
             <div>
               <Input
-              InputType="text"
-              label="Name"
-              placeholder="Enter your name"
-              customClass="w-full"
-              isRequired={true}
-              id="name"
-              name="name"
-              value={values.name}
-              onChange={handleChange}
-            />
-            {touched.name && errors.name ? <p className="text-xs pl-5 text-red-600">{errors.name}</p> : null}
+                InputType="text"
+                label="Name"
+                placeholder="Enter your name"
+                customClass="w-full"
+                isRequired={true}
+                id="name"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+              />
+              {touched.name && errors.name ? (
+                <p className="text-xs pl-5 text-red-600">{errors.name}</p>
+              ) : null}
             </div>
             <div>
-            <Input
-              InputType="number"
-              label="Number"
-              placeholder="Enter your Number"
-              isRequired={true}
-              name="number"
-              id="number"
-              value={values.number}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            {touched.number && errors.number ? <p className="text-xs pl-5 text-red-600">{errors.number}</p> : null}
+              <Input
+                InputType="number"
+                label="Number"
+                placeholder="Enter your Number"
+                isRequired={true}
+                name="number"
+                id="number"
+                value={values.number}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {touched.number && errors.number ? (
+                <p className="text-xs pl-5 text-red-600">{errors.number}</p>
+              ) : null}
             </div>
-            
+
             <div>
-
-            <Input
-              InputType="email"
-              label="Email Address"
-              placeholder="Enter your Email"
-              isRequired={true}
-              name="email"
-              id="email"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              <Input
+                InputType="email"
+                label="Email Address"
+                placeholder="Enter your Email"
+                isRequired={true}
+                name="email"
+                id="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
-              {touched.email && errors.email ? <p className="text-xs pl-5 text-red-600">{errors.email}</p> : null}
-              </div>
-              <div>
-
-            <Input
-              InputType="text"
-              label="Company Name"
-              placeholder="Company (optional)"
-              name="company"
-              id="company"
-              value={values.company}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              {touched.email && errors.email ? (
+                <p className="text-xs pl-5 text-red-600">{errors.email}</p>
+              ) : null}
+            </div>
+            <div>
+              <Input
+                InputType="text"
+                label="Company Name"
+                placeholder="Company (optional)"
+                name="company"
+                id="company"
+                value={values.company}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
-              </div>
-              <div>
-
-            <Select
-              id="service"
-              label="Services"
-              placeholder="Services you interested"
-              groupLabel="services"
-              options={[
-                { label: "service1", value: "service1" },
-                { label: "service2", value: "service2" },
-                { label: "service3", value: "service3" },
-              ]}
-              value={values.service}
-              onChange={(v: string) => {
-                setFieldValue("service", v);
-                setFieldTouched("service", true, false);
-              }}
+            </div>
+            <div>
+              <Select
+                id="service"
+                label="Services"
+                placeholder="Services you interested"
+                groupLabel="services"
+                options={[
+                  { label: "service1", value: "service1" },
+                  { label: "service2", value: "service2" },
+                  { label: "service3", value: "service3" },
+                ]}
+                value={values.service}
+                onChange={(v: string) => {
+                  setFieldValue("service", v);
+                  setFieldTouched("service", true, false);
+                }}
               />
-              {touched.service && errors.service ? <p className="text-xs pl-5 text-red-600">{errors.service}</p> : null}
-              </div>
-              <div>
-
-            <Select
-              label="Location"
-              placeholder="Select location"
-              groupLabel="All countries"
-              options={countries}
-              id="location"
-              value={values.location}
-              onChange={(v: string) => {
-                setFieldValue("location", v);
-                setFieldTouched("location", true, false);
-              }}
+              {touched.service && errors.service ? (
+                <p className="text-xs pl-5 text-red-600">{errors.service}</p>
+              ) : null}
+            </div>
+            <div>
+              <Select
+                label="Location"
+                placeholder="Select location"
+                groupLabel="All countries"
+                options={countries}
+                id="location"
+                value={values.location}
+                onChange={(v: string) => {
+                  setFieldValue("location", v);
+                  setFieldTouched("location", true, false);
+                }}
               />
-              {touched.location && errors.location ? <p className="text-xs pl-5 text-red-600">{errors.location}</p> : null}
-              </div>
-              <div>
-
-            <Input
-              InputType="text"
-              label="Budget"
-              placeholder="What's your Budget"
-              isRequired={true}
-              name="budget"
-              id="budget"
-              value={values.budget}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              {touched.location && errors.location ? (
+                <p className="text-xs pl-5 text-red-600">{errors.location}</p>
+              ) : null}
+            </div>
+            <div>
+              <Input
+                InputType="text"
+                label="Budget"
+                placeholder="What's your Budget"
+                isRequired={true}
+                name="budget"
+                id="budget"
+                value={values.budget}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
-              {touched.budget && errors.budget ? <p className="text-xs pl-5 text-red-600">{errors.budget}</p> : null}
-              </div>
+              {touched.budget && errors.budget ? (
+                <p className="text-xs pl-5 text-red-600">{errors.budget}</p>
+              ) : null}
+            </div>
             <div className="flex flex-col gap-y-2 md:col-span-2">
               <label className="font-semibold" htmlFor="message">
                 Message
@@ -191,8 +219,9 @@ const ContacForm = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               ></textarea>
-              {touched.message && errors.message 
-              ? <p className="text-xs pl-5 text-red-600">{errors.message}</p> : null}
+              {touched.message && errors.message ? (
+                <p className="text-xs pl-5 text-red-600">{errors.message}</p>
+              ) : null}
             </div>
             <Button
               type="submit"
