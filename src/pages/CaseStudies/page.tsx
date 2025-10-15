@@ -1,9 +1,12 @@
+import { Title } from "./Sections";
+
 const CaseStudy = () => {
   return (
     <main>
-        CaseStudy
-    </main>
+    <Title/>
+  </main>
   )
-}
+  
+};
 
-export default CaseStudy
+export default CaseStudy;

@@ -26,7 +26,7 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "cs-d2h-001",
+    id: "cs-001",
     company: "Day to Day Hypermarket",
     title: "Power BI Centralized Analytics for Profitability & Operational Efficiency",
     overview:
