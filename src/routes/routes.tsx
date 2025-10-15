@@ -13,7 +13,12 @@ const contactRoute:RouteObject[] = [
 const ProjectsRoute:RouteObject[]=[
     {
         path: "caseStudy",
-        element: <Projects/>
+        element: <Projects/>,
+        children:[
+           {
+            path:":caseId"
+           } 
+        ]
     }
 ]
 
