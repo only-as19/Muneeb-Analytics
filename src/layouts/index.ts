@@ -1,2 +1,2 @@
-export {default as LandingLayout} from "./landingLayout"
+export {default as ProjectsLayout} from "./ProjectsLayout"
 export {default as RootLayout} from "./RootLayout"
