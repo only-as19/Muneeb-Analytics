@@ -1,9 +1,13 @@
+import Case from "@/assets/images/Case.svg"
+import type { ReactNode } from "react";
+
 // Types
 export interface CaseStudy {
   id: string;
   company: string;
   title: string;
   overview: string;
+  image: string;
   problemStatement: {
     bullets: string[];
   };
@@ -27,6 +31,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: "cs-001",
+    image: Case,
     company: "Day to Day Hypermarket",
     title: "Power BI Centralized Analytics for Profitability & Operational Efficiency",
     overview:

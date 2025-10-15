@@ -5,9 +5,17 @@ const Title = () => {
     const {caseId} = useParams()
     const caseData = caseStudies.find(data=> data.id === caseId)
     return(
-    <div>
-      {caseData?.title}
-    </div>
+    <section>
+        <div>
+            <div>
+                <h1>{caseData?.title}</h1>
+            <p>{caseData?.overview}</p>
+            </div>
+            <div>
+                <img src={caseData?.image} alt="" />
+            </div>
+        </div>
+    </section>
   )
 }
 
