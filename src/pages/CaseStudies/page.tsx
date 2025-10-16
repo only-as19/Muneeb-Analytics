@@ -1,10 +1,10 @@
-import { Title, MainContent } from "./Sections";
+import { Title, Challanges } from "./Sections";
 
 const CaseStudy = () => {
   return (
     <main>
     <Title/>
-    <MainContent/>
+    <Challanges />
   </main>
   )
   
