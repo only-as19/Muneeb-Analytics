@@ -8,13 +8,14 @@ export interface CaseStudy {
   overview: string;
   image: string;
   problemStatement: {
-    bullets: string[];
+    heading: string;
+    subheading: string;
+    problems: { title: string; description: string }[]
   };
   solution: {
-    interactiveDashboards: string[];
-    profitabilityAndComparativeAnalysis: string[];
-    automationAndScalability: string[];
-    dataIntegrationAndModeling: string[];
+    heading: string;
+    subheading: string;
+    sections: { title: string; details: string[] }[];
     summary: string;
   };
   benefits: {
@@ -36,31 +37,70 @@ export const caseStudies: CaseStudy[] = [
     overview:
       "Day to Day Hypermarket is a rapidly growing e-commerce platform offering electronics, furniture, office supplies, and cosmetics. After two years of strong sales and brand growth, the company shifted focus to profitability and operational efficiency to ensure sustainable growth while strengthening market position and customer value.",
     problemStatement: {
-      bullets: [
-        "Profitability Blind Spots: No clear view of which categories, products, or regions drove profits versus those eroding margins.",
-        "Sales Trends & Seasonality: Lack of reliable trend analysis to detect seasonality shifts, demand peaks, or declining categories.",
-        "Product Lifecycle Monitoring: Underperforming or declining products stayed too long in the catalog; high-margin products weren’t always prioritized.",
-        "Comparative Analysis Gaps: Difficulty comparing YoY performance across departments, regions, or product lines.",
-        "Data Fragmentation & Manual Reporting: Sales and inventory data scattered across Excel, CSVs, and databases; manual, inconsistent, and outdated reports delayed decisions and lacked a single source of truth.",
-      ],
+       heading: "THE CHALLENGE",
+  subheading:
+    "HP faced several difficulties when implementing its rewards program globally, such as:",
+  problems: [
+    {
+      title: "Profitability Blind Spots",
+      description:
+        "No clear view of which categories, products, or regions drove profits versus those eroding margins.",
+    },
+    {
+      title: "Sales Trends & Seasonality",
+      description:
+        "Lack of reliable trend analysis to detect seasonality shifts, demand peaks, or declining categories.",
+    },
+    {
+      title: "Product Lifecycle Monitoring",
+      description:
+        "Underperforming or declining products stayed too long in the catalog; high-margin products weren't always prioritized.",
+    },
+    {
+      title: "Comparative Analysis Gaps",
+      description:
+        "Difficulty comparing YoY performance across departments, regions, or product lines.",
+    },
+    {
+      title: "Data Fragmentation & Manual Reporting",
+      description:
+        "Sales and inventory data scattered across Excel, CSVs, and databases; manual, inconsistent, and outdated reports delayed decisions and lacked a single source of truth.",
+    },
+  ],
     },
     solution: {
-      interactiveDashboards: [
+       heading: "THE SOLUTION",
+  subheading: "How we addressed the challenges faced by HP:",
+  sections: [
+    {
+      title: "Interactive Dashboards",
+      details: [
         "Unified dashboard covering sales, profit, and inventory performance across regions, categories, and products.",
-        "Drill-down capabilities to move from high-level overviews to detailed analysis.",
-      ],
-      profitabilityAndComparativeAnalysis: [
+        "Drill-down capabilities to move from high-level overviews to detailed analysis."
+      ]
+    },
+    {
+      title: "Profitability and Comparative Analysis",
+      details: [
         "Measures for profit margins, YoY growth, and category-wise performance.",
-        "Visuals highlighting underperforming products, top profit drivers (Pareto 80/20), and regional trends.",
-      ],
-      automationAndScalability: [
+        "Visuals highlighting underperforming products, top profit drivers (Pareto 80/20), and regional trends."
+      ]
+    },
+    {
+      title: "Automation and Scalability",
+      details: [
         "Automated data refresh eliminated manual Excel reporting and ensured real-time insights.",
-        "Scalable model enabling new products, categories, or regions to be added without rework.",
-      ],
-      dataIntegrationAndModeling: [
+        "Scalable model enabling new products, categories, or regions to be added without rework."
+      ]
+    },
+    {
+      title: "Data Integration and Modeling",
+      details: [
         "Consolidated Excel, CSV, and database sources into a single, structured Power BI model.",
-        "Robust relationships between sales, inventory, product, and regional data to ensure accuracy and consistency.",
-      ],
+        "Robust relationships between sales, inventory, product, and regional data to ensure accuracy and consistency."
+      ]
+    }
+  ],
       summary:
         "A centralized Power BI analytics solution transformed fragmented data into actionable insights and replaced manual reporting with a single source of truth.",
     },
