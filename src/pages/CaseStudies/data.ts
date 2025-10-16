@@ -1,5 +1,4 @@
 import Case from "@/assets/images/Case.svg"
-import type { ReactNode } from "react";
 
 // Types
 export interface CaseStudy {
