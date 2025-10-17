@@ -13,9 +13,9 @@ const Solution = () => {
         <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold text-center">{solution?.heading}</h1>
             <p className="text-muted-foreground text-center mb-8">{solution?.subheading}</p>
-            <div className="flex flex-col items-center gap-y-10">
+            <div className="flex flex-col items-center gap-y-10 md:flex-row md:gap-x-8">
                 <img src={solution?.images} alt={solution?.heading} 
-                className="order-2"
+                className="order-2 md:max-w-120"
                 />
                 <div className="flex flex-col gap-y-3">
                     {solution?.sections.map((data, i)=>(
