@@ -9,22 +9,26 @@ const Solution = () => {
     const solution = caseData?.solution
 
   return (
-    <section>
-        <div>
-            <h1>{solution?.heading}</h1>
-            <p>{solution?.subheading}</p>
-            <div>
-                <img src={solution?.images} alt={solution?.heading} />
-                <div>
+    <section className="p-5 min-h-screen flex justify-center items-center bg-secondary text-primary">
+        <div className="max-w-6xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold text-center">{solution?.heading}</h1>
+            <p className="text-muted-foreground text-center mb-8">{solution?.subheading}</p>
+            <div className="flex flex-col items-center gap-y-10">
+                <img src={solution?.images} alt={solution?.heading} 
+                className="order-2"
+                />
+                <div className="flex flex-col gap-y-3">
                     {solution?.sections.map((data, i)=>(
                         <div key={i}>
-                            <div>
-                                <MdSwipeRightAlt/>
-                                <h3>{data.title}</h3>
+                            <div className="flex items-center gap-x-4">
+                                <MdSwipeRightAlt className="h-6 w-6"/>
+                                <h4 className="font-bold text-lg">{data.title}</h4>
                             </div>
                             <ul>
                                 {data.details.map((detail, i)=>(
-                                    <li key={i}>{detail}</li>
+                                    <li
+                                    className="text-muted-foreground"
+                                    key={i}>{detail}</li>
                                 ))}
                             </ul>
                         </div>
