@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { Services } from "../../data";
 import { useState } from "react";
 
@@ -8,16 +8,6 @@ const WhatsIncluded = () => {
   const { serviceId } = useParams();
   const serviceContent = Services.find((service) => service.link === serviceId);
   const include = serviceContent && serviceContent.details?.serviceContent;
-  if (!serviceContent) {
-    return (
-      <section>
-        <div className="">
-          <h1>Service not Found</h1>
-          <p>Please check the URL or browse our services.</p>
-        </div>
-      </section>
-    );
-  }
   return (
     <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
       <div className="flex flex-col gap-y-10 max-w-6xl mx-auto ">

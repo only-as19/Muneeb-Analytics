@@ -1,5 +1,5 @@
 import { RootLayout, ProjectsLayout } from "@/layouts";
-import { Landing, Contact, Projects, CaseStudy } from "@/pages";
+import { Landing, Contact, Projects, CaseStudy, Error } from "@/pages";
 import ServiceDetail from "@/pages/Landing/Service Details/page";
 import type { RouteObject } from "react-router-dom";
 
@@ -37,11 +37,8 @@ const routes: RouteObject[] = [
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <Error/>,
     children: [
-      {
-        path: "*",
-        element: "Error",
-      },
       {
         path: "/",
         element: <Landing />,

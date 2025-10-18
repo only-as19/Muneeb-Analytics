@@ -1,11 +1,11 @@
 import { Button } from "@/components";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { Services, statsData } from "../../data";
 const ServiceHero: React.FC = () => {
   const { serviceId } = useParams();
   const serviceContent = Services.find((service) => service.link === serviceId);
   const hero = serviceContent?.details?.hero;
-  if (!hero) return <p>Service not found</p>;
+  if (!hero) return <p className="text-center">No title Mentioned</p>;
 
   return (
     <section className="md:min-h-screen min-h-96 bg-bg-secondary p-5 flex flex-col justify-center items-center ">

@@ -9,13 +9,6 @@ const Pricing: React.FC = () => {
   const thisService = Services.find((service) => service.link === serviceId);
   const pricingData = thisService?.details?.pricing ?? [];
   const [active, setActive] = useState(pricingData[0].name);
-  if (!thisService || pricingData.length === 0) {
-    return <p>No pricing data found for this service.</p>;
-  }
-
-  if (!pricingData) {
-    return null;
-  }
   return (
     <section className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
