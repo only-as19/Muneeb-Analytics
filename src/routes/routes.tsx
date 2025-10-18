@@ -2,33 +2,24 @@ import { RootLayout, ProjectsLayout } from "@/layouts";
 import { Landing, Contact, Projects, CaseStudy, Error } from "@/pages";
 import ServiceDetail from "@/pages/Landing/Service Details/page";
 import type { RouteObject } from "react-router-dom";
-
 const contactRoute: RouteObject[] = [
   {
     path: "contact",
     element: <RootLayout />,
-    children: [
-      { index: true, element: <Contact /> },
-    ],
+    children: [{ index: true, element: <Contact /> }],
   },
 ];
-
-// ✅ Minimal change: wrap caseStudy with a parent that has only errorElement
 const ProjectsRoute: RouteObject[] = [
   {
     path: "caseStudy",
-    errorElement: <Error />,              // catches errors and shows full-screen
+    element: <ProjectsLayout />,
+    errorElement: <Error />,
     children: [
-      {
-        element: <ProjectsLayout />,      // layout renders only when no error
-        children: [
-          { index: true, element: <Projects /> }// ✅ FIX: was "caseStudy:caseId"
-        ],
-      },
+      { index: true, element: <Projects /> },
+      { path: ":caseId", element: <CaseStudy /> },
     ],
   },
 ];
-
 const routes: RouteObject[] = [
   {
     path: "/",
@@ -44,4 +35,4 @@ const routes: RouteObject[] = [
   ...ProjectsRoute,
 ];
 
-export default routes;
+export default routes
