@@ -11,7 +11,7 @@ const Title = () => {
             <div className="md:mr-10">
                 <h1 className="text-3xl md:text-4xl font-bold">{caseData?.title}</h1>
             <p className="text-muted-foreground mt-2">{caseData?.overview}</p>
-            <p className="text-sm font-bold text-muted-foreground mt-1">Company: <span>{caseData?.company}</span></p>
+            <p className="text-sm font-bold text-muted-foreground mt-1"><span>{caseData?.company}</span></p>
             </div>
         </div>
     </section>

@@ -1,4 +1,3 @@
-import type React from "react"
 import { Hero,About,Services } from "./Sections"
 import { Review,CTA } from "@/components"
 

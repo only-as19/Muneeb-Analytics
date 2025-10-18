@@ -20,13 +20,14 @@ const ProjectsRoute: RouteObject[] = [
   {
     path: "caseStudy",
     element: <ProjectsLayout />,
+    errorElement:<Error/>,
     children: [
       {
         index: true,
         element: <Projects />,
       },
       {
-        path: ":caseId",
+        path: "caseStudy:caseId",
         element: <CaseStudy />,
       },
     ],
@@ -39,6 +40,10 @@ const routes: RouteObject[] = [
     element: <RootLayout />,
     errorElement: <Error/>,
     children: [
+      {
+        path: "*",
+        element:<Error/>
+      },
       {
         path: "/",
         element: <Landing />,

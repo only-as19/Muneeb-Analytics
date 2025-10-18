@@ -1,7 +1,6 @@
 import { Title, Challanges, Solution } from "./Sections";
-
 import {CTA} from "@/components";
-const CaseStudy = () => {
+const CaseStudy:React.FC = () => {
   return (
     <main>
     <Title/>
