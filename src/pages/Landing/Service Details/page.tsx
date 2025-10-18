@@ -8,7 +8,6 @@ const ServiceDetail = () => {
         <WhatsIncluded />
         <Features/>
         <Pricing />
-        <CTA />
     </div>
   )
 }
