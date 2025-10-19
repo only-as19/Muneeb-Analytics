@@ -23,10 +23,13 @@ export interface CaseStudy {
     summary: string;
   };
   benefits: {
+    title:string
     bullets: {
+      title:string;
       bullet: string;
     }[];
     outcomes: {
+      subtext:string;
       results: {
         title: string;
         description: string;
@@ -116,21 +119,26 @@ export const caseStudies: CaseStudy[] = [
         "A centralized Power BI analytics solution transformed fragmented data into actionable insights and replaced manual reporting with a single source of truth.",
     },
     benefits: {
+      title: "Benefits",
       bullets: [
         {
+          title: "Profit Visibility",
           bullet:
             "Leadership can compare profit across products, categories, and regions; monitor sales and margin trends; and perform YoY% analysis.",
         },
         {
+          title: "Demand Intelligence",
           bullet:
             "Dashboards highlight underperforming areas, top-margin products, and seasonal demand patterns for better stock planning and marketing.",
         },
         {
+          title :"Faster Decisions",
           bullet:
             "Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.",
         },
       ],
       outcomes: {
+        subtext: "Results",
         results: [
           { title: "5%", description: "overallProfitIncreasePercent" },
           { title: "6 months", description: "timeframeMonths" },
