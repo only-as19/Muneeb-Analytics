@@ -1,4 +1,4 @@
-import { Title, Challanges, Solution } from "./Sections";
+import { Title, Challanges, Solution, Benefits } from "./Sections";
 import {CTA} from "@/components";
 const CaseStudy:React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const CaseStudy:React.FC = () => {
     <Challanges/>
     <Solution/>
     <CTA/>
+    <Benefits/>
   </main>
   )
   
