@@ -23,10 +23,14 @@ export interface CaseStudy {
     summary: string;
   };
   benefits: {
-    bullets: string[];
+    bullets: {
+      bullet: string;
+    }[];
     outcomes: {
-      overallProfitIncreasePercent: number;
-      timeframeMonths: number;
+      results: {
+        title: string;
+        description: string;
+      }[];
       comparisonBasis: string;
     };
   };
@@ -45,7 +49,7 @@ export const caseStudies: CaseStudy[] = [
       heading: "THE CHALLENGE",
       subheading:
         "HP faced several difficulties when implementing its rewards program globally, such as:",
-        images: Challange,
+      images: Challange,
       problems: [
         {
           title: "Profitability Blind Spots",
@@ -113,13 +117,24 @@ export const caseStudies: CaseStudy[] = [
     },
     benefits: {
       bullets: [
-        "Leadership can compare profit across products, categories, and regions; monitor sales and margin trends; and perform YoY% analysis.",
-        "Dashboards highlight underperforming areas, top-margin products, and seasonal demand patterns for better stock planning and marketing.",
-        "Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.",
+        {
+          bullet:
+            "Leadership can compare profit across products, categories, and regions; monitor sales and margin trends; and perform YoY% analysis.",
+        },
+        {
+          bullet:
+            "Dashboards highlight underperforming areas, top-margin products, and seasonal demand patterns for better stock planning and marketing.",
+        },
+        {
+          bullet:
+            "Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.",
+        },
       ],
       outcomes: {
-        overallProfitIncreasePercent: 5,
-        timeframeMonths: 6,
+        results: [
+          { title: "5%", description: "overallProfitIncreasePercent" },
+          { title: "6 months", description: "timeframeMonths" },
+        ],
         comparisonBasis:
           "Compared to the previous period after implementation.",
       },
