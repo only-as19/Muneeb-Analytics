@@ -6,8 +6,8 @@ const CaseStudy:React.FC = () => {
     <Title/>
     <Challanges/>
     <Solution/>
-    <CTA/>
     <Benefits/>
+    <CTA/>
   </main>
   )
   

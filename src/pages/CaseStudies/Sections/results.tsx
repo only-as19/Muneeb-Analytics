@@ -6,12 +6,13 @@ const Results:React.FC = () => {
   const caseData = caseStudies.find((data) => data.id === caseId)
   const outcome = caseData?.benefits.outcomes
   return (
-    <div>
-        <p>{outcome?.subtext}</p>
-        <h4>{outcome?.comparisonBasis}</h4>
-      {outcome?.results.map(data=>(
+    <div className="mt-8 flex flex-col justify-center text-center">
+        <p><span className="px-2 py-1 border-2 text-xs rounded-full border-primary tracking-wider">{outcome?.subtext}</span></p>
+        <h4 className="text-muted-foreground my-4">{outcome?.comparisonBasis}</h4>
+      <div className="grid grid-cols-2 gap-x-2">
+        {outcome?.results.map(data=>(
         <div key={data.title}>
-            <Card>
+            <Card className="hover:shadow-xl">
                 <CardContent>
                     <CardTitle>{data.title}</CardTitle>
                     <CardDescription>{data.description}</CardDescription>
@@ -19,6 +20,7 @@ const Results:React.FC = () => {
             </Card>
         </div>
       ))}
+      </div>
     </div>
   )
 }
