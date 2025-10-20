@@ -1,7 +1,7 @@
 import { caseStudies } from "../data"
 import { useParams } from "react-router"
 import { Card, CardContent, CardDescription, CardTitle,} from "@/lib";
-import { Car } from "lucide-react";
+import Results from "./results";
 const Benefits = () => {
   const { caseId } = useParams();
   const caseData = caseStudies.find((data) => data.id === caseId)
@@ -21,6 +21,7 @@ const Benefits = () => {
                 ))}
                 
             </div>
+            <Results/>
         </div>
     </section>
   )
