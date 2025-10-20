@@ -136,6 +136,11 @@ export const caseStudies: CaseStudy[] = [
           bullet:
             "Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.",
         },
+        {
+          title :"Faster Decisions",
+          bullet:
+            "Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.",
+        },
       ],
       outcomes: {
         subtext: "Results",

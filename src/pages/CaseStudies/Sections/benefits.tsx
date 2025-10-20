@@ -1,30 +1,32 @@
-import { caseStudies } from "../data"
-import { useParams } from "react-router"
-import { Card, CardContent, CardDescription, CardTitle,} from "@/lib";
+import { caseStudies } from "../data";
+import { useParams } from "react-router";
+import { TiArrowRightThick } from "react-icons/ti";
 import Results from "./results";
 const Benefits = () => {
   const { caseId } = useParams();
-  const caseData = caseStudies.find((data) => data.id === caseId)
-  const benefit = caseData?.benefits
+  const caseData = caseStudies.find((data) => data.id === caseId);
+  const benefit = caseData?.benefits;
   return (
-    <section className="min-h-screen p-5 felx flex-col items-center justify-center">
-        <div className="max-w-6xl mx-auto">
-<Results/>
-            <h1 className="text-3xl text-center font-bold mb-8 mt-4">{benefit?.title}</h1>
-            <div className=" grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 gap-y-6 place-items-center">
-                {benefit?.bullets.map(data=> (
-                    <Card className="hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="text-center">
-                        <CardTitle className="mb-2">{data.title}</CardTitle>
-                        <CardDescription>{data.bullet}</CardDescription>
-                    </CardContent>
-                </Card>
-                ))}
-                
+    <section className=" pb-10 min-h-96 px-5 felx flex-col items-center justify-center text-primary">
+      <div className="max-w-6xl mx-auto">
+        <Results />
+        <h1 className="text-3xl text-center font-bold mb-8 mt-4">
+          {benefit?.title}
+        </h1>
+        <div className=" grid md:grid-cols-2 md:gap-x-4 gap-y-6 place-items-center">
+          {benefit?.bullets.map((data) => (
+            <div key={data.title}>
+              <div className="flex gap-x-4 items-center">
+                <TiArrowRightThick />
+                <h2 className="text-xl font-bold">{data.title}</h2>
+              </div>
+              <p className="text-muted-foreground">{data.bullet}</p>
             </div>
-                </div>
+          ))}
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Benefits
+export default Benefits;
