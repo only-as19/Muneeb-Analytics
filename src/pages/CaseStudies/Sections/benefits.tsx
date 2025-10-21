@@ -9,7 +9,6 @@ const Benefits = () => {
   return (
     <section className=" pb-10 min-h-96 px-5 felx flex-col items-center justify-center text-primary">
       <div className="max-w-6xl mx-auto">
-        <Results />
         <h1 className="text-3xl text-center font-bold mb-8 mt-4">
           {benefit?.title}
         </h1>
@@ -24,6 +23,7 @@ const Benefits = () => {
             </div>
           ))}
         </div>
+          <Results />
       </div>
     </section>
   );
