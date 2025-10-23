@@ -1,5 +1,5 @@
 import { RootLayout, ProjectsLayout } from "@/layouts";
-import { Landing, Contact, Projects, CaseStudy, Error } from "@/pages";
+import { Landing, Contact, Projects, CaseStudy, Error, Blogs } from "@/pages";
 import ServiceDetail from "@/pages/Landing/Service Details/page";
 import type { RouteObject } from "react-router-dom";
 
@@ -23,6 +23,10 @@ const routes: RouteObject[] = [
        {
         path:"contact",
         element: <Contact/>
+       },
+       {
+        path: "blogs",
+        element: <Blogs/>
        }
     ],
   },
