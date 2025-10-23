@@ -1,8 +1,14 @@
-const Blogs = () => {
+import BlogTitle from "./BlogTitle"
+import BlogList from "./BlogsList"
+
+const Blogs:React.FC = () => {
   return (
-    <div>
-        Blogs
-    </div>
+    <section>
+      <div>
+        <BlogTitle/>
+        <BlogList/>
+      </div>
+    </section>
   )
 }
 
