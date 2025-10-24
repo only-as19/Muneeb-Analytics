@@ -1,8 +1,8 @@
 const BlogsList:React.FC = () => {
   return (
-    <section>
-        List
-    </section>
+    <div>
+      
+    </div>
   )
 }
 
