@@ -1,5 +1,5 @@
 import { blogs } from "@/pages/Blogs/data";
-import { useContext, createContext } from "react";
+import {createContext } from "react";
 
 interface BlogsContextType {
   blogs: typeof blogs;
@@ -7,7 +7,7 @@ interface BlogsContextType {
 
 const BlogsContext = createContext<BlogsContextType | undefined>(undefined);
 
-export function BlogsProvider({ children }: { children: React.ReactNode }) {
+function BlogsProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <BlogsContext.Provider value={{ blogs}}>
@@ -15,3 +15,5 @@ export function BlogsProvider({ children }: { children: React.ReactNode }) {
     </BlogsContext.Provider>
   );
 }
+
+export {BlogsContext, BlogsProvider}
