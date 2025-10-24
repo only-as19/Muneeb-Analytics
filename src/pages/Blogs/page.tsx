@@ -1,15 +1,15 @@
-import BlogTitle from "./BlogTitle"
-import BlogList from "./BlogsList"
+import BlogTitle from "./BlogTitle";
+import BlogList from "./BlogsList";
 
-const Blogs:React.FC = () => {
+const Blogs: React.FC = () => {
   return (
-    <section>
-      <div>
-        <BlogTitle/>
-        <BlogList/>
+    <section className="">
+      <div className="">
+        <BlogTitle />
+        <BlogList />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Blogs
+export default Blogs;
