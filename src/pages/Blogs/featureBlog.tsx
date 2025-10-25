@@ -23,7 +23,7 @@ const FeatureBlog: React.FC<featureBlogType> = ({ featureBlog }) => {
   return (
     <article>
       <Card className="group pt-0 overflow-hidden special-gradiant text-white md:flex-row md:pb-0 items-stretch md:gap-x-4">
-        <CardHeader className="relative p-0 overflow-hidden h-80 md:w-1/2 md:h-auto shrink-0">
+        <CardHeader className="relative p-0 overflow-hidden h-60 md:w-1/2 md:h-auto shrink-0">
           <img
             src={featureBlog.image}
             alt={featureBlog.title}
@@ -36,7 +36,7 @@ const FeatureBlog: React.FC<featureBlogType> = ({ featureBlog }) => {
             </span>
           </div>
         </CardHeader>
-        <CardContent className="py-10">
+        <CardContent className="md:py-10">
           <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-emerald-300 text-sm font-semibold rounded-full mb-4 w-fit">{featureBlog.category}</span>
           <CardTitle className="text-2xl md:text-4xl font-bold mb-4 leading-tight group-hover:text-emerald-300 transition-colors">{featureBlog.title}</CardTitle>
           <CardDescription className="text-secondartext-lg mb-4 leading-relaxed line-clamp-3 md:text-lg">{featureBlog.description}</CardDescription>
@@ -56,7 +56,7 @@ const FeatureBlog: React.FC<featureBlogType> = ({ featureBlog }) => {
               iconDirection="right"
               variant="link"
               onClick={() => naviagte(`blogs/${featureBlog.slug}`)}
-              className="ml-auto text-auto group-hover:text-base text-xs uppercase"
+              className="ml-auto text-auto group-hover:text-base text-xs uppercase cursor-pointer"
             />
           </CardFooter>
         </CardContent>
