@@ -10,10 +10,8 @@ const FeatureBlog:React.FC<featureBlogType> = ({featureBlog}) => {
   return (
     <article>
         <Card
+        headerImg={featureBlog.image}
         cardTitle={featureBlog.title}
-        footer={{
-            
-        }}
         >
 
         </Card>
