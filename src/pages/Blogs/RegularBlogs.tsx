@@ -12,7 +12,7 @@ interface RegualrBlogsType{
 const RegularBlogs:React.FC<RegualrBlogsType> = ({regularBlogs}) => {
   return (
 
-    <article className="grid gap-y-8 pt-20">
+    <article className="grid md:grid-cols-2 md:gap-x-8 lg:grid-cols-3 gap-y-8 pt-20">
       {regularBlogs.map(({id, title, description, category, date, image, readingTime})=>(
         <Card key={id}
         cardTitle={title}
