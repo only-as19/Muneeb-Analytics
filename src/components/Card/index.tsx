@@ -53,7 +53,11 @@ const Card: React.FC<cardProps> = ({
             className="group-hover:scale-110 transition-transform duration-300 absolute inset-0 h-full w-full object-cover block"
             alt={cardTitle}
           />
-        {type && ( <span>{type}</span> )}
+        {type && ( <div className="absolute text-white top-3 left-3">
+                    <span className="inline-flex items-center gap-x-2 px-4 py-2 bg-primary text-white text-sm font-bold rounded-md shadow-lg">
+                      {type}
+                    </span>
+                  </div> )}
       </CardHeader>
       )}
       
