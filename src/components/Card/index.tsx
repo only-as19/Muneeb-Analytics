@@ -11,11 +11,12 @@ import type { ReactNode } from "react";
 import { Button } from "@/components";
 import { useNavigate } from "react-router";
 interface cardProps {
-  headerImg: string;
-  children: ReactNode;
+  headerImg?: string;
+  children?: ReactNode;
   className?: string;
   cardTitle: string;
-  cardDescription: string;
+  cardDescription?: string;
+  type?: string;
   footer: {
     buttonLabel?: string;
     buttonLink: string;
@@ -32,6 +33,7 @@ const Card: React.FC<cardProps> = ({
   cardTitle,
   cardDescription,
   footer,
+  type,
   ...props
 }) => {
   const navigate = useNavigate();
@@ -52,6 +54,7 @@ const Card: React.FC<cardProps> = ({
         )}
       </CardHeader>
       <CardContent className="flex-1">
+        {type && ( <span>{type}</span> )}
         <CardTitle>
           <h2 className="text-xl font-semibold text-primary mb-2">
             {cardTitle}
