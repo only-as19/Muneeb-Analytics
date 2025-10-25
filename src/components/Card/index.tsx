@@ -17,9 +17,9 @@ interface cardProps {
   cardTitle: string;
   cardDescription?: string;
   type?: string;
-  footer: {
+  footer?: {
     buttonLabel?: string;
-    buttonLink: string;
+    buttonLink?: string;
     btnClass?:string
     icon?:ReactNode
     variant?:"ghost" | "link" | "outline" | "default" | "secondary" | "destructive"
@@ -68,11 +68,11 @@ const Card: React.FC<cardProps> = ({
       <CardFooter className="mt-auto pb-5 flex flex-end">
         <CardAction className="ml-auto">
           <Button
-          variant={footer.variant}
-          icon={footer.icon}
-          label={footer.buttonLabel}
+          variant={footer?.variant}
+          icon={footer?.icon}
+          label={footer?.buttonLabel}
           customClasses={`${footer} cursor-pointer`}
-          onClick={() => navigate(`${footer.buttonLink}`)}
+          onClick={() => navigate(`${footer?.buttonLink}`)}
           />
         </CardAction>
       </CardFooter>

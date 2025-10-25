@@ -27,7 +27,7 @@ const BlogsList: React.FC = () => {
           <BlogsNotFound />
         ) : (
           <div>
-            {featureBlog && <FeatureBlog />}
+            {featureBlog && <FeatureBlog featureBlog={featureBlog}/>}
             <div>{regularBlogs && <RegularBlogs />}</div>
           </div>
         )}
