@@ -15,6 +15,7 @@ const BlogsList: React.FC = () => {
       : blogs.filter((blog) => blog.category === category);
   const featureBlog = filteredBlogs[0];
   const regularBlogs = filteredBlogs.slice(1);
+  console.log(regularBlogs)
   return (
     <div>
       <div className="p-5 max-w-7xl mx-auto relative -mt-8 z-50 pointer-events-auto">
@@ -28,7 +29,7 @@ const BlogsList: React.FC = () => {
         ) : (
           <div>
             {featureBlog && <FeatureBlog featureBlog={featureBlog}/>}
-            <div>{regularBlogs && <RegularBlogs />}</div>
+            <div>{regularBlogs && <RegularBlogs regularBlogs={regularBlogs} />}</div>
           </div>
         )}
       </div>

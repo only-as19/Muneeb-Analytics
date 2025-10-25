@@ -53,11 +53,11 @@ const Card: React.FC<cardProps> = ({
             className="group-hover:scale-110 transition-transform duration-300 absolute inset-0 h-full w-full object-cover block"
             alt={cardTitle}
           />
+        {type && ( <span>{type}</span> )}
       </CardHeader>
       )}
       
       <CardContent className="flex-1">
-        {type && ( <span>{type}</span> )}
         <CardTitle>
           <h2 className={`${titleClass} text-xl font-semibold text-primary mb-2`}>
             {cardTitle}
@@ -75,7 +75,7 @@ const Card: React.FC<cardProps> = ({
           variant={footer.variant}
           icon={footer.icon}
           label={footer.buttonLabel}
-          customClasses={`${footer} cursor-pointer`}
+          customClasses={`${footer.btnClass} cursor-pointer`}
           onClick={() => navigate(`${footer.buttonLink}`)}
           />
         </CardAction>
