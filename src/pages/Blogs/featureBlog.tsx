@@ -55,7 +55,7 @@ const FeatureBlog: React.FC<featureBlogType> = ({ featureBlog }) => {
               icon={<FaArrowRightLong />}
               iconDirection="right"
               variant="link"
-              onClick={() => naviagte(`blogs/${featureBlog.slug}`)}
+              onClick={() => naviagte(featureBlog.slug)}
               className="ml-auto text-auto group-hover:text-base text-xs uppercase cursor-pointer"
             />
           </CardFooter>

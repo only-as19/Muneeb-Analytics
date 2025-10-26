@@ -13,7 +13,7 @@ const RegularBlogs:React.FC<RegualrBlogsType> = ({regularBlogs}) => {
   return (
 
     <article className="grid md:grid-cols-2 md:gap-x-8 lg:grid-cols-3 gap-y-8 pt-20">
-      {regularBlogs.map(({id, title, description, category, date, image, readingTime})=>(
+      {regularBlogs.map(({id, title, description, category, date, image, readingTime,slug})=>(
         <Card key={id}
         cardTitle={title}
         headerImg={image}
@@ -23,7 +23,8 @@ const RegularBlogs:React.FC<RegualrBlogsType> = ({regularBlogs}) => {
           buttonLabel: "Read more",
           variant: "link",
           icon: <FaArrowRightLong/>,
-          btnClass: "uppercase items-center flex"
+          btnClass: "uppercase items-center flex",
+          buttonLink: `${slug}`
         }}
         >
           <div className="flex items-center gap-x-4 text-sm mt-4">
