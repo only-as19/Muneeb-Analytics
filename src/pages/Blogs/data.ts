@@ -1,5 +1,6 @@
 export interface Content{
   introduction: string,
+  title: string
   sections:{
     heading: string,
     body: string
@@ -34,6 +35,7 @@ export const blogs: BlogData[] = [
     readingTime: 8,
     relatedIds: ["b003", "b002"],
     content:{
+    title: "Introduction",
     introduction:"The landscape of web development is evolving at an unprecedented pace. As we move through 2025, new technologies, frameworks, and methodologies are emerging that fundamentally change how we approach building for the web. This article explores the key trends that are shaping the future of our industry.",
   sections: [
     {
