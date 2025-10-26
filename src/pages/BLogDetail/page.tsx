@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useBlogs } from "@/Hooks";
 import { MdDateRange, MdAccessTime } from "react-icons/md";
+import BlogContent from "./sections/content";
 
 const BlogDetail: React.FC = () => {
 
   const { slug } = useParams();
   const { getBlogBySlug } = useBlogs();
   const blog = slug ? getBlogBySlug(slug) : undefined;
-
+  const content = blog?.content
   return (
     <main className="p-5">
         <div>
@@ -29,6 +30,9 @@ const BlogDetail: React.FC = () => {
               className="w-full h-[400px] object-cover"
             />
           </div>
+        )}
+        {blog?.content && (
+          <BlogContent content={content}/>
         )}
         </div>
     </main>

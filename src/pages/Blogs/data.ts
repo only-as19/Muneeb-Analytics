@@ -1,4 +1,4 @@
-interface Content{
+export interface Content{
   introduction: string,
   sections:{
     heading: string,
