@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { useBlogs } from "@/Hooks";
 import { MdDateRange, MdAccessTime } from "react-icons/md";
 import BlogContent from "./sections/content";
+import { DropdownMenuSeparator } from "@/lib";
+import { IoIosPricetags } from "react-icons/io";
+
 
 const BlogDetail: React.FC = () => {
 
@@ -34,6 +37,19 @@ const BlogDetail: React.FC = () => {
         {blog?.content && (
           <BlogContent content={content}/>
         )}
+        <DropdownMenuSeparator className="mt-4"/>
+       
+          <div className="flex flex-wrap items-center gap-3 py-8">
+            <IoIosPricetags className="w-5 h-5 text-slate-500" />
+            {blog?.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm hover:bg-slate-200 transition-colors cursor-pointer"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
     </main>
   )
