@@ -9,17 +9,19 @@ const BlogDetail: React.FC = () => {
   const blog = slug ? getBlogBySlug(slug) : undefined;
 
   return (
-    <main>
+    <main className="p-5">
         <div>
-            <div>
-                <span>{blog?.category}</span>
-                <h1>{blog?.title}</h1>
-                <p>{blog?.description}</p>
-                <div>
-                    <p><MdDateRange/> <span>{blog?.date}</span></p>
-                    <p><MdAccessTime/> <span>{blog?.readingTime}</span></p>
+            <div className="mb-20">
+                <span className="px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">{blog?.category}</span>
+                <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 my-6 leading-tight">{blog?.title}</h1>
+                <p className="text-xl text-slate-600 mb-8 leading-relaxed">{blog?.description}</p>
+                <div className="flex gap-x-3 font-bold text-muted-foreground">
+                    <p className="flex items-center gap-x-2"><MdDateRange/> <span>{blog?.date}</span></p>
+                    <p className="flex items-center gap-x-2"><MdAccessTime/> <span>{blog?.readingTime} min read</span></p>
                 </div>
             </div>
+
+        
         </div>
     </main>
   )
