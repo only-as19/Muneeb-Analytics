@@ -1,3 +1,11 @@
+interface Content{
+  introduction: string,
+  sections:{
+    heading: string,
+    body: string
+  }[]
+}
+
 export interface BlogData {
   id: string;
   title: string;
@@ -9,6 +17,7 @@ export interface BlogData {
   date: string;
   readingTime: number;
   relatedIds: string[];
+  content?: Content
 }
 
 export const blogs: BlogData[] = [
@@ -24,6 +33,36 @@ export const blogs: BlogData[] = [
     date: "2025-06-12",
     readingTime: 8,
     relatedIds: ["b003", "b002"],
+    content:{
+    introduction:"The landscape of web development is evolving at an unprecedented pace. As we move through 2025, new technologies, frameworks, and methodologies are emerging that fundamentally change how we approach building for the web. This article explores the key trends that are shaping the future of our industry.",
+  sections: [
+    {
+      heading: "AI-Powered Development Tools",
+      body:
+        "Artificial intelligence has moved from being a buzzword to an essential part of the modern developer's toolkit. AI-powered code assistants are now capable of understanding context, suggesting entire functions, and even debugging complex issues in real-time.\n\nWhat makes this particularly exciting is not that AI is replacing developers, but rather that it's amplifying our capabilities. We can now focus on solving higher-level problems while AI handles the repetitive tasks and boilerplate code.",
+    },
+    {
+      heading: "Edge Computing and Distributed Architectures",
+      body:
+        "The shift toward edge computing represents one of the most significant architectural changes in recent years. By processing data closer to where it's generated, we can dramatically reduce latency and improve user experiences globally.\n\nEdge functions and distributed databases are becoming the norm rather than the exception. This paradigm shift requires us to think differently about data consistency, state management, and application architecture.",
+    },
+    {
+      heading: "Performance as a Priority",
+      body:
+        "With Core Web Vitals and user experience metrics becoming increasingly important for SEO and user retention, performance is no longer optional. Modern frameworks are being built with performance in mind from the ground up.\n\nTechniques like island architecture, resumability, and fine-grained reactivity are pushing the boundaries of what's possible. We're seeing initial page loads measured in milliseconds rather than seconds.",
+    },
+    {
+      heading: "The Rise of Type-Safe Full-Stack Development",
+      body:
+        "End-to-end type safety is becoming the standard for professional web development. Tools that provide type safety from database to frontend are gaining massive adoption, reducing bugs and improving developer experience.\n\nThis trend represents a maturation of the JavaScript ecosystem, bringing the benefits of static typing to the entire stack while maintaining the flexibility that made JavaScript popular in the first place.",
+    },
+    {
+      heading: "WebAssembly and Beyond",
+      body:
+        "WebAssembly is opening doors that were previously closed to web developers. From running complex computations in the browser to porting entire applications from other languages, WASM is expanding what's possible on the web platform.\n\nWe're seeing everything from video editing tools to 3D modeling software running smoothly in the browser, demonstrating the incredible potential of this technology.",
+    },
+  ],
+}
   },
   {
     id: "b002",
