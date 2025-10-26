@@ -10,9 +10,9 @@ const BlogDetail: React.FC = () => {
   const blog = slug ? getBlogBySlug(slug) : undefined;
   const content = blog?.content
   return (
-    <main className="p-5">
-        <div>
-            <div className="mb-20">
+    <main className="p-5 min-h-screen">
+        <div className="w-7xl mx-auto">
+            <div className="mb-20 md:py-12">
                 <span className="px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">{blog?.category}</span>
                 <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 my-6 leading-tight">{blog?.title}</h1>
                 <p className="text-xl text-slate-600 mb-8 leading-relaxed">{blog?.description}</p>
