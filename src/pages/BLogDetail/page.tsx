@@ -21,7 +21,15 @@ const BlogDetail: React.FC = () => {
                 </div>
             </div>
 
-        
+        {blog?.image && (
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={blog.image}
+              alt={blog.title}
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+        )}
         </div>
     </main>
   )
