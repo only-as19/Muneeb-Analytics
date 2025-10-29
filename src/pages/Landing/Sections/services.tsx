@@ -9,6 +9,7 @@ import { Button } from "@/components";
 import { Services } from "../data";
 import { ArrowLeft, ArrowRight, Video, TrendingUp } from "lucide-react";
 import { Card, Rating } from "@/components";
+import { Motion } from "@/Framer";
 
 const Service: React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -21,10 +22,14 @@ const Service: React.FC = () => {
     >
       <div className="md:max-w-6xl mx-auto w-full">
         <div className="mb-8 text-center">
-          <h1 className="uppercase text-foreground text-3xl font-bold md:text-4xl mb-4">
+          <Motion>
+            <h1 className="uppercase text-foreground text-3xl font-bold md:text-4xl mb-4">
           Services I offer
         </h1>
-        <p className="text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cupiditate exercitationem qui obcaecati, aspernatur atque magni voluptates non molestiae fuga, deleniti possimus totam numquam culpa cumque. Excepturi voluptas ex aspernatur.</p>
+          </Motion>
+       <Motion>
+         <p className="text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cupiditate exercitationem qui obcaecati, aspernatur atque magni voluptates non molestiae fuga, deleniti possimus totam numquam culpa cumque. Excepturi voluptas ex aspernatur.</p>
+       </Motion>
         </div>
         <div className="relative">
           <Swiper
