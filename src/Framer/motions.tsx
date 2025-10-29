@@ -1,13 +1,13 @@
 import type { ReactNode } from "react"
 import { motion, useInView, inView, useAnimation } from "motion/react"
 import { useRef, useEffect } from "react"
-interface divProps{
+interface MotionProps{
 children:ReactNode
 width?: "fit-content" | "100%"
 className?: string
 }
 
-const Motion:React.FC<divProps> = ({children, width = "fit-content", className }) => {
+const Motion:React.FC<MotionProps> = ({children, width = "fit-content", className }) => {
 const ref = useRef(null)
 const mainContrtols = useAnimation()
 const isInview = useInView(ref, {once:true})
@@ -34,4 +34,19 @@ useEffect(()=>{
   )
 }
 
-export default Motion
+const CardMotion: React.FC<MotionProps> = ({ children, className = ""}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay:0.5, ease: "easeOut" }}
+      className={`w-full ${className}`}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+
+export {Motion, CardMotion}

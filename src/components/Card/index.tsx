@@ -10,6 +10,8 @@ import {
 import type { ReactNode } from "react";
 import { Button } from "@/components";
 import { useNavigate } from "react-router";
+import { CardMotion } from "@/Framer";
+
 interface cardProps {
   headerImg?: string;
   children?: ReactNode;
@@ -41,6 +43,9 @@ const Card: React.FC<cardProps> = ({
   const navigate = useNavigate();
 
   return (
+    <CardMotion>
+
+    
     <ShadcnCard
       className={`group ${className} h-full w-full overflow-hidden rounded p-0 gap-y-4`}
       {...props}
@@ -86,6 +91,7 @@ const Card: React.FC<cardProps> = ({
       </CardFooter>
       )}
     </ShadcnCard>
+    </CardMotion>
   );
 };
 

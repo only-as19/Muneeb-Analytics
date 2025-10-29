@@ -1,1 +1,1 @@
-export {default as Motion } from "./motions"
+export * from "./motions"
