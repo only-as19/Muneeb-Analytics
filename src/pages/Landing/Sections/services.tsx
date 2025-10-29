@@ -63,22 +63,30 @@ const Service: React.FC = () => {
                 >
                   <div className="flex flex-col gap-y-1 mt-1">
                     <div className="flex items-center justify-between">
-                      <Rating rating={4.5} star={4.3} size={15} review={40} />
-                      <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded">
+                     <Motion>
+                       <Rating rating={4.5} star={4.3} size={15} review={40} />
+                     </Motion>
+                      <Motion>
+                        <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded">
                         Top rated
                       </span>
+                      </Motion>
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold">
+                     <Motion>
+                       <span className="text-lg font-semibold">
                         From $400-$800
                       </span>
-                      <p className="text-sm">
+                     </Motion>
+                     <Motion>
+                       <p className="text-sm">
                         Duration
                         <span className="block text-xs text-muted-foreground">
                           7-30 Days
                         </span>
                       </p>
+                     </Motion>
                     </div>
                     <p className="flex items-center gap-x-2 text-muted-foreground text-sm">
                       <Video size={20} /> Offer video consultaion
