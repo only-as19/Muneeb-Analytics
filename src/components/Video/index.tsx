@@ -113,28 +113,3 @@ const Video: React.FC<VideoProps> = ({
 };
 
 export default Video;
-
-// TESTING EXAMPLES - Try these to verify setup:
-/*
-// Test 1: Simple MP4 (should always work)
-<Video 
-  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-  type="video/mp4"
-  controls={true}
-/>
-
-// Test 2: HLS stream (tests HLS support)
-<Video 
-  src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
-  type="application/x-mpegURL"
-  controls={true}
-/>
-
-// Test 3: Your ImageKit video
-<Video 
-  src="YOUR_IMAGEKIT_URL.m3u8"
-  type="application/x-mpegURL"
-  controls={true}
-  poster="YOUR_POSTER_URL"
-/>
-*/
