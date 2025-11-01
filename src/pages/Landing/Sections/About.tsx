@@ -1,39 +1,8 @@
 import React from "react";
-import videojs from "video.js";
 import Video from "@/components/Video";
-type VideoJsPlayer = ReturnType<typeof videojs>;
-type VideoJsPlayerOptions = Parameters<typeof videojs>[1];
 import { statsData } from "../data";
 import { Motion } from "@/Framer";
 const About: React.FC = () => {
-  const playerRef = React.useRef<VideoJsPlayer | null>(null);
-
-  const videoJsOptions: VideoJsPlayerOptions = {
-    autoplay: false,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    aspectRatio: "16:9",
-    sources: [
-      {
-        src: "https://ik.imagekit.io/pdata3016/Muneeb%20Analytics/About.mp4/ik-master.m3u8?updatedAt=1757845483686&tr=sr-240_360_480_720_1080",
-        type: "application/x-mpegURL",
-      },
-    ],
-  };
-
-  const handlePlayerReady = (player: VideoJsPlayer) => {
-    playerRef.current = player;
-
-    player.on("waiting", () => {
-      console.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      console.log("player will dispose");
-    });
-  };
-
   return (
     <section className="px-5 min-h-96 flex-col items-center justify-center text-muted-foreground py-20 special-gradiant">
       <div className="max-w-5xl mx-auto flex flex-col gap-y-4">
@@ -65,7 +34,11 @@ const About: React.FC = () => {
           <div className="md:w-1/2 flex justify-end items-center">
             <div className="w-full md:max-w-4/5">
               <Motion>
-                <Video src="https://ik.imagekit.io/pdata3016/Muneeb%20Analytics/About.mp4/ik-master.m3u8?updatedAt=1757845483686&tr=sr-240_360_480_720_1"  />
+                <Video 
+  src="https://ik.imagekit.io/pdata3016/Muneeb%20Analytics/About.mp4/ik-master.m3u8?updatedAt=1757845483686&tr=sr-240_360_480_720_1080"
+  type="application/x-mpegURL"
+  controls={true}
+/>
               </Motion>
             </div>
           </div>

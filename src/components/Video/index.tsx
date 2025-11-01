@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "jb-videojs-hls-quality-selector";
+
+// Import HLS support (built into video.js 8+)
+import "@videojs/http-streaming";
 
 type VideoJsPlayer = ReturnType<typeof videojs>;
 
@@ -36,10 +38,13 @@ const Video: React.FC<VideoProps> = ({
   const playerRef = useRef<VideoJsPlayer | null>(null);
 
   useEffect(() => {
-    if (!videoRef.current || playerRef.current) return;
+    if (!videoRef.current) return;
+
+    // Don't reinitialize if player already exists
+    if (playerRef.current) return;
 
     const videoElement = document.createElement("video-js");
-    videoElement.classList.add("vjs-big-play-centered", "video-js");
+    videoElement.classList.add("vjs-big-play-centered");
     videoRef.current.appendChild(videoElement);
 
     const options = {
@@ -51,7 +56,20 @@ const Video: React.FC<VideoProps> = ({
       fluid: true,
       aspectRatio,
       language,
-      sources: [{ src, type }],
+      html5: {
+        vhs: {
+          overrideNative: true,
+        },
+        nativeVideoTracks: false,
+        nativeAudioTracks: false,
+        nativeTextTracks: false,
+      },
+      sources: [
+        {
+          src,
+          type,
+        },
+      ],
       ...(poster && { poster }),
       controlBar: {
         volumePanel: {
@@ -60,27 +78,35 @@ const Video: React.FC<VideoProps> = ({
       },
     };
 
-    const player = (playerRef.current = videojs(videoElement, options, () => {
-      videojs.log("player is ready");
-      onReady?.(player);
-    }));
+    const player = videojs(videoElement, options, function () {
+      console.log("Player is ready");
+      onReady?.(this);
+    });
 
-    player.ready(() => {
-      if (type === "application/x-mpegURL" && (player as any).hlsQualitySelector) {
-        (player as any).hlsQualitySelector({
-          displayCurrentQuality: true,
-        });
-      }
+    playerRef.current = player;
+
+    // Error handling
+    player.on("error", () => {
+      const error = player.error();
+      console.error("Video.js Error:", error);
+      console.error("Error details:", {
+        code: error?.code,
+        message: error?.message,
+        src: src,
+        type: type,
+      });
     });
 
     return () => {
-      playerRef.current?.dispose();
-      playerRef.current = null;
+      if (playerRef.current) {
+        playerRef.current.dispose();
+        playerRef.current = null;
+      }
     };
-  }, [src, type, autoplay, controls, loop, muted, aspectRatio, poster, language, inlineVolume]);
+  }, [src, type, autoplay, controls, loop, muted, aspectRatio, poster, language, inlineVolume, onReady]);
 
   return (
-    <div data-vjs-player>
+    <div data-vjs-player style={{ width: "100%", maxWidth: "100%" }}>
       <div ref={videoRef} />
     </div>
   );
@@ -88,18 +114,27 @@ const Video: React.FC<VideoProps> = ({
 
 export default Video;
 
-// Example usage:
+// TESTING EXAMPLES - Try these to verify setup:
 /*
+// Test 1: Simple MP4 (should always work)
 <Video 
-  src="https://example.com/video.m3u8"
-  autoplay={false}
+  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  type="video/mp4"
   controls={true}
-  loop={false}
-  muted={false}
-  aspectRatio="16:9"
-  poster="https://example.com/poster.jpg"
-  language="en"
-  inlineVolume={false}
-  onReady={(player) => console.log("Ready!", player)}
+/>
+
+// Test 2: HLS stream (tests HLS support)
+<Video 
+  src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+  type="application/x-mpegURL"
+  controls={true}
+/>
+
+// Test 3: Your ImageKit video
+<Video 
+  src="YOUR_IMAGEKIT_URL.m3u8"
+  type="application/x-mpegURL"
+  controls={true}
+  poster="YOUR_POSTER_URL"
 />
 */
