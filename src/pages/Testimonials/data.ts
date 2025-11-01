@@ -1,4 +1,4 @@
-interface ClientProject {
+export interface ClientProject {
   clientName: string;
   position: string;
   company?: string;
@@ -7,6 +7,7 @@ interface ClientProject {
   projectDuration: string;
   myRole: string;
   src: string;
+  location: string;
 }
 
 export interface Testimonial {
@@ -16,7 +17,7 @@ export interface Testimonial {
   date: string
 }
 
-export const projects: ClientProject[] = [
+export const testimonialsVideos: ClientProject[] = [
   {
     clientName: "Chris",
     position: "Founder & CEO",
@@ -24,16 +25,18 @@ export const projects: ClientProject[] = [
     website: "https://percivalpallets.com/",
     rating: 5,
     projectDuration: "1+ year",
+    location: "United States",
     myRole: "Data Systems & Analytics Manager",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Chris.mp4?updatedAt=1761976479658&tr=sr-240_360_480_720_1080"
+    src: "https://ik.imagekit.io/pdata3016/Testimonails/Chris.mp4/ik-master.m3u8?updatedAt=1761976479658&tr=sr-240_360_480_720_1080"
   },
   {
     clientName: "Charvaiy",
     position: "Lead Logistics & Supply Chain Analyst",
     rating: 5,
     projectDuration: "6 months",
+    location: "United States",
     myRole: "Supply Chain Data Analytics Expert",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
+    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4/ik-master.m3u8?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
   },
   {
     clientName: "OLA",
@@ -41,9 +44,10 @@ export const projects: ClientProject[] = [
     company: "Bigchampphotography",
     website: "https://bigchampsphotographs.com/",
     rating: 5,
+    location: "United States",
     projectDuration: "6 months",
     myRole: "Data Analytics Consultant",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
+    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4/ik-master.m3u8?/ik-master.m3u8?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
   }
 ];
 
