@@ -1,17 +1,37 @@
 import React, { useEffect, useRef } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "jb-videojs-hls-quality-selector"; // Only keep this one
+import "jb-videojs-hls-quality-selector";
 
 type VideoJsPlayer = ReturnType<typeof videojs>;
-type VideoJsPlayerOptions = Parameters<typeof videojs>[1];
 
-type Props = {
-  options: VideoJsPlayerOptions;
+type VideoProps = {
+  src: string;
+  type?: string;
+  autoplay?: boolean;
+  controls?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  aspectRatio?: string;
+  poster?: string;
+  language?: string;
+  inlineVolume?: boolean;
   onReady?: (player: VideoJsPlayer) => void;
 };
 
-const Video: React.FC<Props> = ({ options, onReady }) => {
+const Video: React.FC<VideoProps> = ({
+  src,
+  type = "application/x-mpegURL",
+  autoplay = false,
+  controls = true,
+  loop = false,
+  muted = false,
+  aspectRatio = "16:9",
+  poster,
+  language = "en",
+  inlineVolume = false,
+  onReady,
+}) => {
   const videoRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<VideoJsPlayer | null>(null);
 
@@ -22,23 +42,42 @@ const Video: React.FC<Props> = ({ options, onReady }) => {
     videoElement.classList.add("vjs-big-play-centered", "video-js");
     videoRef.current.appendChild(videoElement);
 
+    const options = {
+      autoplay,
+      controls,
+      loop,
+      muted,
+      responsive: true,
+      fluid: true,
+      aspectRatio,
+      language,
+      sources: [{ src, type }],
+      ...(poster && { poster }),
+      controlBar: {
+        volumePanel: {
+          inline: inlineVolume,
+        },
+      },
+    };
+
     const player = (playerRef.current = videojs(videoElement, options, () => {
       videojs.log("player is ready");
       onReady?.(player);
     }));
 
     player.ready(() => {
-      // Initialize the new quality selector plugin
-      (player as any).hlsQualitySelector({
-        displayCurrentQuality: true,
-      });
+      if (type === "application/x-mpegURL" && (player as any).hlsQualitySelector) {
+        (player as any).hlsQualitySelector({
+          displayCurrentQuality: true,
+        });
+      }
     });
 
     return () => {
       playerRef.current?.dispose();
       playerRef.current = null;
     };
-  }, [options, onReady]);
+  }, [src, type, autoplay, controls, loop, muted, aspectRatio, poster, language, inlineVolume]);
 
   return (
     <div data-vjs-player>
@@ -48,3 +87,19 @@ const Video: React.FC<Props> = ({ options, onReady }) => {
 };
 
 export default Video;
+
+// Example usage:
+/*
+<Video 
+  src="https://example.com/video.m3u8"
+  autoplay={false}
+  controls={true}
+  loop={false}
+  muted={false}
+  aspectRatio="16:9"
+  poster="https://example.com/poster.jpg"
+  language="en"
+  inlineVolume={false}
+  onReady={(player) => console.log("Ready!", player)}
+/>
+*/

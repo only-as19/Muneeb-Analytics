@@ -65,7 +65,7 @@ const About: React.FC = () => {
           <div className="md:w-1/2 flex justify-end items-center">
             <div className="w-full md:max-w-4/5">
               <Motion>
-                <Video options={videoJsOptions} onReady={handlePlayerReady} />
+                <Video src="https://ik.imagekit.io/pdata3016/Muneeb%20Analytics/About.mp4/ik-master.m3u8?updatedAt=1757845483686&tr=sr-240_360_480_720_1"  />
               </Motion>
             </div>
           </div>
