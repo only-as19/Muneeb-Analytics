@@ -1,9 +1,13 @@
+import { Title, TestimonialsVideos, Testimonial } from "./Sections";
+
 const Testimonials = () => {
   return (
-    <div>
-        Testimonials
-    </div>
-  )
-}
+    <main>
+      <Title />
+      <TestimonialsVideos />
+      <Testimonial />
+    </main>
+  );
+};
 
-export default Testimonials
+export default Testimonials;
