@@ -2,7 +2,7 @@ import { Title, TestimonialsVideos, Testimonial } from "./Sections";
 const Testimonials = () => {
   return (
     <main>
-      <Title/>
+      <Title />
       <TestimonialsVideos />
       <Testimonial />
     </main>

@@ -20,14 +20,14 @@ const BlogTitle:React.FC<TitleSectionProps> = ({heading,headingSpan,description,
               <span className="text-sm font-semibold text-cyan-200">{slogan}</span>
             </div>
          )}
-        <h1 className="text-3xl sm:text-5xl font-extrabold mb-6 tracking-tight">
+        <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight">
               <span className="bg-gradient-to-r from-white via-emerald-100 to-white bg-clip-text text-transparent">
                 {heading}
               </span>
               <br />
               <span className="text-cyan-500">{headingSpan}</span>
             </h1>
-          <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-light">
+          <p className="text-md sm:text-xl text-slate-300 leading-relaxed font-light">
               {description}
             </p>
         </div>
