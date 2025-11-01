@@ -9,6 +9,13 @@ interface ClientProject {
   src: string;
 }
 
+export interface Testimonial {
+  image: string
+  handle: string
+  name: string
+  date: string
+}
+
 export const projects: ClientProject[] = [
   {
     clientName: "Chris",
@@ -39,3 +46,30 @@ export const projects: ClientProject[] = [
     src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
   }
 ];
+
+export const testimonialsData:Testimonial[] = [
+        {
+            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
+            name: 'Briar Martin',
+            handle: '@neilstellar',
+            date: 'April 20, 2025'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
+            name: 'Avery Johnson',
+            handle: '@averywrites',
+            date: 'May 10, 2025'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
+            name: 'Jordan Lee',
+            handle: '@jordantalks',
+            date: 'June 5, 2025'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
+            name: 'Avery Johnson',
+            handle: '@averywrites',
+            date: 'May 10, 2025'
+        },
+    ];
