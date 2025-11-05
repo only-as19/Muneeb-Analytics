@@ -4,6 +4,7 @@ import { MdDateRange, MdAccessTime } from "react-icons/md";
 import BlogContent from "./sections/content";
 import { DropdownMenuSeparator } from "@/lib";
 import { IoIosPricetags } from "react-icons/io";
+import Error from "../Error/page";
 
 
 const BlogDetail: React.FC = () => {
@@ -12,6 +13,9 @@ const BlogDetail: React.FC = () => {
   const { getBlogBySlug } = useBlogs();
   const blog = slug ? getBlogBySlug(slug) : undefined;
   const content = blog?.content
+  if(!blog){
+    return <Error/>
+  }
   return (
     <main className="p-5 min-h-screen">
         <div className="w-7xl mx-auto">
