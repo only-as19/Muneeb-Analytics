@@ -1,3 +1,11 @@
+
+
+export interface Testimonial {
+  image: string
+  handle: string
+  name: string
+  date: string
+}
 export interface ClientProject {
   clientName: string;
   position: string;
@@ -7,20 +15,15 @@ export interface ClientProject {
   projectDuration: string;
   myRole: string;
   src: string;
+  type?: string;
   location: string;
-  poster:string
-}
-
-export interface Testimonial {
-  image: string
-  handle: string
-  name: string
-  date: string
+  poster: string;
 }
 
 export const testimonialsVideos: ClientProject[] = [
   {
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review1.jpg?updatedAt=1762102789316",
+    // Fixed poster URL - removed invalid transformation
+    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review1.jpg?updatedAt=1762102789316&tr=w-720,q-80",
     clientName: "Chris",
     position: "Founder & CEO",
     company: "Percivalpallets",
@@ -29,20 +32,25 @@ export const testimonialsVideos: ClientProject[] = [
     projectDuration: "1+ year",
     location: "United States",
     myRole: "Data Systems & Analytics Manager",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Chris.mp4/ik-master.m3u8?updatedAt=1761976479658&tr=sr-240_360_480_720_1080"
+    // This URL seems to work based on your structure
+    src: "https://ik.imagekit.io/jz7julfyw/project/1129.mp4",
+    type: "video/mp4"
   },
   {
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/unnamed.jpg?updatedAt=1762103487834",
+    // Fixed poster URL
+    poster: "https://ik.imagekit.io/pdata3016/Testimonails/unnamed.jpg?updatedAt=1762103487834&tr=w-720,q-80",
     clientName: "Charvaiy",
     position: "Lead Logistics & Supply Chain Analyst",
     rating: 5,
     projectDuration: "6 months",
     location: "United States",
     myRole: "Supply Chain Data Analytics Expert",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4/ik-master.m3u8?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
+    src: "https://ik.imagekit.io/jz7julfyw/project/charvaiy.mp4",
+    type: "video/mp4"
   },
   {
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review2.jpg?updatedAt=1762102789312",
+    // Fixed poster URL
+    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review2.jpg?updatedAt=1762102789312&tr=w-720,q-80",
     clientName: "OLA",
     position: "Founder & CEO",
     company: "Bigchampphotography",
@@ -51,7 +59,12 @@ export const testimonialsVideos: ClientProject[] = [
     location: "United States",
     projectDuration: "6 months",
     myRole: "Data Analytics Consultant",
-    src: "https://ik.imagekit.io/pdata3016/Testimonails/Charvaiy.mov/ik-video.mp4/ik-master.m3u8?/ik-master.m3u8?updatedAt=1761976478476&tr=sr-240_360_480_720_1080"
+    // FIXED: Removed space-encoded path and trailing '?'
+    // Option 1: If file is in root Testimonails folder
+    src: "https://ik.imagekit.io/jz7julfyw/project/ola.mp4",
+    // Option 2: If you need to keep the path, properly encode it
+    // src: "https://ik.imagekit.io/pdata3016/Muneeb-Analytics/ola.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080",
+    type: "video/mp4"
   }
 ];
 

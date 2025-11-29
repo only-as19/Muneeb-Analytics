@@ -15,18 +15,18 @@ const About: React.FC = () => {
             </Motion>
             <Motion>
               <p className="text-sm text-secondary ">
-                At Muneeb Analytics, we turn complex data into simple stories
-                that help businesses grow. Using tools like Power BI, Tableau,
-                Excel, SQL and Python, we build dashboards and reports that make
-                it easy to track performance, cut costs, and spot new
+                At Muneeb Analytics, I turn complex data into simple, meaningful
+                stories that help businesses grow. Using tools like Power BI,
+                Tableau, Excel, SQL, and Python, I build dashboards and reports
+                that make it easy to track performance, cut costs, and spot new
                 opportunities.
               </p>
             </Motion>
             <Motion>
               <p className="text-sm text-secondary">
-                Our goal is clear&#58; give you insights you can trust and act
-                on. Whether you want to understand your customers better, run
-                your operations more smoothly, or increase profits, we create
+                My goal is clear: to give you insights you can trust and act on.
+                Whether you want to understand your customers better, run your
+                operations more smoothly, or increase profits, I create
                 solutions that help you make smart, confident decisions.
               </p>
             </Motion>

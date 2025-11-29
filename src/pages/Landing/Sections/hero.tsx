@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <img
         src={hero_img}
         alt=""
-        className="w-100 md:min-w-120 rounded-xl drop-shadow-xl object-cover"
+        className="h-130 md:min-w-120 rounded-xl drop-shadow-xl object-cover"
       />
       </Motion>
       <div className="flex flex-col gap-y-4">
@@ -23,9 +23,7 @@ const Hero: React.FC = () => {
         </Motion>
         <Motion>
           <p className="text-muted-foreground text-sm max-w-xl">
-            We help businesses unlock insights with interactive dashboards and
-            predictive analytics, so your decisions are backed by data, not
-            guesswork
+            I help businesses unlock insights with interactive dashboards and predictive analytics, so your decisions are backed by data, not guesswork.
           </p>
         </Motion>
 

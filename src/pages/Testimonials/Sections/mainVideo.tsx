@@ -1,52 +1,77 @@
 import type { ClientProject } from "../data";
 import Video from "@/components/Video";
 import { Button } from "@/components";
-import { useNavigate } from "react-router";
 import { CiShare1 } from "react-icons/ci";
 import { DropdownMenuSeparator } from "@/lib";
 import { Rating } from "@/components";
+import { GrLocation } from "react-icons/gr";
+
 interface VideoProps {
-  video: ClientProject;
+  videos: ClientProject[];
 }
 
-const MainVideo: React.FC<VideoProps> = ({ video }) => {
-  const navigate = useNavigate();
+const MainVideo: React.FC<VideoProps> = ({ videos }) => {
   return (
-    <div className="grid gap-y-4 md:grid-cols-5 md:gap-x-4">
-      <div className="relative md:col-span-3">
-        <div className="rounded-3xl overflow-hidden shadow-2xl bg-black ">
-          <Video src={video.src} />
-        </div>
-      </div>
-      <div className="bg-primary special-gradiant text-secondary p-5 rounded-3xl md:col-span-2">
-        <h3 className="text-xl font-bold">{video.clientName}</h3>
-        <span className="text-xs">{video.location}</span>
-        <div className="flex items-center">
-          <span className="font-semibold">{video.position}</span>
-          <Button
-            label="percival pallets"
-            icon={<CiShare1 strokeWidth={1} className="!w-5 !h-5"/>}
-            iconDirection="right"
-            onClick={() => navigate(`${video.website}`)}
-            className="text-secondary bg- uppercase cursor-pointer"
-            variant="link"
-          />
-        </div>
-        <p className="pb-4 text-lg text-center">
-          My Role: <span className="font-semibold">{video.myRole}</span>
-        </p>
-        <DropdownMenuSeparator />
-        <div className="flex items-center justify-between">
-          <div className="flex flex-col gap-y-1">
-            <span className="font-semibold">Rating</span>
-            <Rating star={5} />
+    <div className="grid gap-y-6">
+      {videos.map((video) => (
+        <div
+          key={video.clientName}
+          className="bg-secondary p-5 rounded-md flex flex-col lg:flex-row gap-4"
+        >
+          <div className="rounded-2xl overflow-hidden w-full lg:w-2/3">
+            <Video
+              src={video.src}
+              type={video.type || "video/mp4"}
+              poster={video.poster}
+              preload="none"
+              controls
+              aspectRatio="16:9"
+            />
           </div>
-          <div className="flex flex-col gap-y-1">
-            <span className="font-semibold">Duration</span>
-            <span className="font-semibold text-lg">{video.projectDuration}</span>
+          <div className="lg:w-1/3 flex flex-col">
+            <div>
+              <h3 className="text-xl font-bold mb-2">{video.clientName}</h3>
+              <div className="flex justify-between items-center mb-3">
+                <span className="font-semibold text-sm">{video.position}</span>
+                <p className="flex gap-x-2 items-center text-sm">
+                  <GrLocation className="h-4 w-4" />
+                  {video.location}
+                </p>
+              </div>
+
+              {video.website && video.company && (
+                <Button
+                  label={video.company}
+                  icon={<CiShare1 />}
+                  variant="outline"
+                  className="w-full"
+                />
+              )}
+            </div>
+
+            <div>
+              <DropdownMenuSeparator className="my-4" />
+              <p className="font-bold text-center mb-3">About Project</p>
+              <p className="text-sm mb-3">
+                <span className="text-gray-400">My Role:</span>{" "}
+                <span className="font-medium">{video.myRole}</span>
+              </p>
+
+              <div className="flex justify-between items-center">
+                <div>
+                  <span className="text-gray-400 text-xs">Duration</span>
+                  <p className="font-semibold text-sm">{video.projectDuration}</p>
+                </div>
+
+                <div className="text-right">
+                  <span className="text-gray-400 text-xs block mb-1">Rating</span>
+                  <Rating star={video.rating} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

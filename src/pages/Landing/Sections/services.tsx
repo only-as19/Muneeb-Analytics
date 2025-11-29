@@ -20,16 +20,22 @@ const Service: React.FC = () => {
       onViewportEnter={() => swiper?.autoplay.start()}
       onViewportLeave={() => swiper?.autoplay.stop()}
     >
-      <div className="md:max-w-6xl mx-auto w-full">
+      <div className="md:max-w-6xl mx-auto w-full text-primary">
         <div className="mb-8 text-center">
           <Motion>
-            <h1 className="uppercase text-foreground text-3xl font-bold md:text-4xl mb-4">
-          Services I offer
-        </h1>
+            <h1 className="capitalize text-3xl font-bold md:text-4xl mb-4">
+              Services I offer
+            </h1>
           </Motion>
-       <Motion>
-         <p className="text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cupiditate exercitationem qui obcaecati, aspernatur atque magni voluptates non molestiae fuga, deleniti possimus totam numquam culpa cumque. Excepturi voluptas ex aspernatur.</p>
-       </Motion>
+          <Motion>
+            <p className="text-muted-foreground">
+              Empowering organizations and professionals to make smarter,
+              data-driven decisions. From building interactive dashboards to
+              developing predictive models and training your teams, I deliver
+              end-to-end analytics solutions designed to transform data into
+              actionable insights.
+            </p>
+          </Motion>
         </div>
         <div className="relative">
           <Swiper
@@ -56,37 +62,37 @@ const Service: React.FC = () => {
                   cardDescription={service.description}
                   footer={{
                     buttonLink: service.link || "",
-                    icon:<TrendingUp className="!h-6 !w-7"/>,
-                    btnClass:"self-end",
-                    variant:"ghost"
+                    icon: <TrendingUp className="!h-6 !w-7" />,
+                    btnClass: "self-end",
+                    variant: "ghost",
                   }}
                 >
                   <div className="flex flex-col gap-y-1 mt-1">
                     <div className="flex items-center justify-between">
-                     <Motion>
-                       <Rating rating={4.5} star={4.3} size={15} review={40} />
-                     </Motion>
+                      <Motion>
+                        <Rating rating={4.5} star={4.3} size={15} review={40} />
+                      </Motion>
                       <Motion>
                         <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded">
-                        Top rated
-                      </span>
+                          Top rated
+                        </span>
                       </Motion>
                     </div>
 
                     <div className="flex justify-between items-center">
-                     <Motion>
-                       <span className="text-lg font-semibold">
-                        From $400-$800
-                      </span>
-                     </Motion>
-                     <Motion>
-                       <p className="text-sm">
-                        Duration
-                        <span className="block text-xs text-muted-foreground">
-                          7-30 Days
+                      <Motion>
+                        <span className="text-lg font-semibold">
+                          From $400-$800
                         </span>
-                      </p>
-                     </Motion>
+                      </Motion>
+                      <Motion>
+                        <p className="text-sm">
+                          Duration
+                          <span className="block text-xs text-muted-foreground">
+                            7-30 Days
+                          </span>
+                        </p>
+                      </Motion>
                     </div>
                     <p className="flex items-center gap-x-2 text-muted-foreground text-sm">
                       <Video size={20} /> Offer video consultaion

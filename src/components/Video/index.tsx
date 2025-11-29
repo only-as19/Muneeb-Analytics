@@ -1,8 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef} from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-
-// Import HLS support (built into video.js 8+)
 import "@videojs/http-streaming";
 
 type VideoJsPlayer = ReturnType<typeof videojs>;
@@ -19,6 +17,8 @@ type VideoProps = {
   language?: string;
   inlineVolume?: boolean;
   onReady?: (player: VideoJsPlayer) => void;
+  onError?: (error: any) => void;
+  preload?: "auto" | "metadata" | "none";
 };
 
 const Video: React.FC<VideoProps> = ({
@@ -33,77 +33,113 @@ const Video: React.FC<VideoProps> = ({
   language = "en",
   inlineVolume = false,
   onReady,
+  onError,
+  preload = "metadata", // Don't preload entire video
 }) => {
   const videoRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<VideoJsPlayer | null>(null);
+  const onReadyRef = useRef(onReady);
+  const onErrorRef = useRef(onError);
+
+  // Keep callback refs updated without triggering effects
+  useEffect(() => {
+    onReadyRef.current = onReady;
+    onErrorRef.current = onError;
+  });
 
   useEffect(() => {
     if (!videoRef.current) return;
 
-    // Don't reinitialize if player already exists
-    if (playerRef.current) return;
+    // Initialize player only once
+    if (!playerRef.current) {
+      const videoElement = document.createElement("video-js");
+      videoElement.classList.add("vjs-big-play-centered");
+      videoRef.current.appendChild(videoElement);
 
-    const videoElement = document.createElement("video-js");
-    videoElement.classList.add("vjs-big-play-centered");
-    videoRef.current.appendChild(videoElement);
-
-    const options = {
-      autoplay,
-      controls,
-      loop,
-      muted,
-      responsive: true,
-      fluid: true,
-      aspectRatio,
-      language,
-      html5: {
-        vhs: {
-          overrideNative: true,
+      const options = {
+        autoplay,
+        controls,
+        loop,
+        muted,
+        preload,
+        responsive: true,
+        fluid: true,
+        aspectRatio,
+        language,
+        html5: {
+          vhs: {
+            overrideNative: true,
+            enableLowInitialPlaylist: true, // Better for large files
+          },
+          nativeVideoTracks: false,
+          nativeAudioTracks: false,
+          nativeTextTracks: false,
         },
-        nativeVideoTracks: false,
-        nativeAudioTracks: false,
-        nativeTextTracks: false,
-      },
-      sources: [
-        {
-          src,
-          type,
+        sources: [
+          {
+            src,
+            type,
+          },
+        ],
+        ...(poster && { poster }),
+        controlBar: {
+          volumePanel: {
+            inline: inlineVolume,
+          },
         },
-      ],
-      ...(poster && { poster }),
-      controlBar: {
-        volumePanel: {
-          inline: inlineVolume,
-        },
-      },
-    };
+      };
 
-    const player = videojs(videoElement, options, function () {
-      console.log("Player is ready");
-      onReady?.(this);
-    });
-
-    playerRef.current = player;
-
-    // Error handling
-    player.on("error", () => {
-      const error = player.error();
-      console.error("Video.js Error:", error);
-      console.error("Error details:", {
-        code: error?.code,
-        message: error?.message,
-        src: src,
-        type: type,
+      const player = videojs(videoElement, options, function () {
+        console.log("Player is ready");
+        onReadyRef.current?.(this);
       });
-    });
+
+      playerRef.current = player;
+
+      // Error handling
+      player.on("error", () => {
+        const error = player.error();
+        console.error("Video.js Error:", error);
+        console.error("Error details:", {
+          code: error?.code,
+          message: error?.message,
+          src: player.currentSrc(),
+          type: type,
+        });
+        onErrorRef.current?.(error);
+      });
+    }
 
     return () => {
-      if (playerRef.current) {
+      if (playerRef.current && !playerRef.current.isDisposed()) {
         playerRef.current.dispose();
         playerRef.current = null;
       }
     };
-  }, [src, type, autoplay, controls, loop, muted, aspectRatio, poster, language, inlineVolume, onReady]);
+  }, []); // Only initialize once
+
+  // Handle source updates separately
+  useEffect(() => {
+    const player = playerRef.current;
+    if (!player || player.isDisposed()) return;
+
+    // Update source if it changed
+    const currentSrc = player.currentSrc();
+    if (currentSrc !== src) {
+      player.src({ src, type });
+    }
+  }, [src, type]);
+
+  // Handle other prop updates
+  useEffect(() => {
+    const player = playerRef.current;
+    if (!player || player.isDisposed()) return;
+
+    player.autoplay(autoplay);
+    player.loop(loop);
+    player.muted(muted);
+    if (poster) player.poster(poster);
+  }, [autoplay, loop, muted, poster]);
 
   return (
     <div data-vjs-player style={{ width: "100%", maxWidth: "100%" }}>

@@ -15,7 +15,7 @@ const Reviews = () => {
   return (
     <section className="text-primary p-5 font-roboto py-12 md:py-16">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4 md:text-4xl md:mb-8">
+        <h1 className="text-center text-2xl font-bold mb-4 md:text-4xl md:mb-8">
           Trusted by Professionals Like You
         </h1>
         <Swiper
