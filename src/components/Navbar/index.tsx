@@ -88,7 +88,7 @@ const Navbar = () => {
                   <Collapsible key={item.label} className="w-full">
                     <CollapsibleTrigger asChild>
                       <Button
-                        customClasses="group text-normal font-semibold hover:bg-transparent uppercase"
+                        customClasses="group text-normal font-semibold hover:bg-transparent capitalize"
                         icon={
                           <span>
                             <ChevronDown className="transition-transform group-data-[state=open]:rotate-180" />
@@ -115,7 +115,7 @@ const Navbar = () => {
                   <Link
                     key={item.label}
                     to={item.link}
-                    className="uppercase px-4 py-2 font-semibold text-base"
+                    className="capitalize px-4 py-2 font-semibold text-base"
                   >
                     {item.label}
                   </Link>

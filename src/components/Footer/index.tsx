@@ -49,7 +49,7 @@ const Footer = () => {
           <h3 className="font-semibold mb-2">Services</h3>
           <ul className="space-y-1 text-zinc-200">
             {services.map((service) => (
-              <li key={service.label} className="hover:text-cyan-500 uppercase">
+              <li key={service.label} className="hover:text-cyan-500 capitalize">
                 <Link to={service.link}>{service.label}</Link>
               </li>
             ))}
