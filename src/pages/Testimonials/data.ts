@@ -18,12 +18,13 @@ export interface ClientProject {
   type?: string;
   location: string;
   poster: string;
+  about?: string;
 }
 
 export const testimonialsVideos: ClientProject[] = [
   {
     // Fixed poster URL - removed invalid transformation
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review1.jpg?updatedAt=1762102789316&tr=w-720,q-80",
+    poster: "https://ik.imagekit.io/jz7julfyw/project/Chris.png",
     clientName: "Chris",
     position: "Founder & CEO",
     company: "Percivalpallets",
@@ -34,11 +35,12 @@ export const testimonialsVideos: ClientProject[] = [
     myRole: "Data Systems & Analytics Manager",
     // This URL seems to work based on your structure
     src: "https://ik.imagekit.io/jz7julfyw/project/1129.mp4",
-    type: "video/mp4"
+    type: "video/mp4",
+    about: "supplies new and recycled wooden pallets nationwide, offering durable and cost-effective solutions for logistics, storage, and shipping. Their services include pallet removal and eco-friendly recycling, supporting businesses of all sizes with reliable, fast delivery."
   },
   {
     // Fixed poster URL
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/unnamed.jpg?updatedAt=1762103487834&tr=w-720,q-80",
+    poster: "https://ik.imagekit.io/jz7julfyw/project/Charvaiy.png",
     clientName: "Charvaiy",
     position: "Lead Logistics & Supply Chain Analyst",
     rating: 5,
@@ -46,11 +48,12 @@ export const testimonialsVideos: ClientProject[] = [
     location: "United States",
     myRole: "Supply Chain Data Analytics Expert",
     src: "https://ik.imagekit.io/jz7julfyw/project/charvaiy.mp4",
-    type: "video/mp4"
+    type: "video/mp4",
+    about:  "Worked as a Supply Chain Analyst, optimizing inventory management and logistics processes for improved efficiency and cost savings."
   },
   {
     // Fixed poster URL
-    poster: "https://ik.imagekit.io/pdata3016/Testimonails/review2.jpg?updatedAt=1762102789312&tr=w-720,q-80",
+    poster: "https://ik.imagekit.io/jz7julfyw/project/Ola.png",
     clientName: "OLA",
     position: "Founder & CEO",
     company: "Bigchampphotography",
@@ -64,7 +67,8 @@ export const testimonialsVideos: ClientProject[] = [
     src: "https://ik.imagekit.io/jz7julfyw/project/ola.mp4",
     // Option 2: If you need to keep the path, properly encode it
     // src: "https://ik.imagekit.io/pdata3016/Muneeb-Analytics/ola.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080",
-    type: "video/mp4"
+    type: "video/mp4",
+    about: "Provided personalized training in Data Analytics, covering Excel, SQL, Power BI, Statistics, and Python to enhance data-driven decision-making skills."
   }
 ];
 
