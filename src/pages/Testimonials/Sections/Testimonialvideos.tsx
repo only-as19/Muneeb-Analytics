@@ -26,7 +26,7 @@ const MainVideo: React.FC<VideoProps> = ({ videos }) => {
             )}
           </p>
           <h2 className="text-lg font-semibold capitalize">
-            Data systems for a nationwide pallet operation
+            {mainVideo.heading}
           </h2>
           <p className="line-clamp-3 md:line-clamp-none  text-muted-foreground text-sm">
             {mainVideo.website && (
@@ -70,7 +70,7 @@ const MainVideo: React.FC<VideoProps> = ({ videos }) => {
                 )}
               </p>
               <h2 className="text-lg font-semibold capitalize">
-                {video.myRole}
+                {video.heading}
               </h2>
               <p className="line-clamp-3 md:line-clamp-none  text-muted-foreground text-sm">
                 {video.about}

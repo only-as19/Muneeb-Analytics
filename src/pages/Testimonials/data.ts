@@ -17,6 +17,7 @@ export interface ClientProject {
   location: string;
   poster: string;
   about?: string;
+  heading: string;
 }
 
 export interface ReviewItem {
@@ -43,6 +44,7 @@ export const testimonialsVideos: ClientProject[] = [
     type: "video/mp4",
     about:
       "supplies new and recycled wooden pallets nationwide, offering durable and cost-effective solutions for logistics, storage, and shipping. Their services include pallet removal and eco-friendly recycling, supporting businesses of all sizes with reliable, fast delivery.",
+      heading: "Data Solutions for Pallet Operations"
   },
   {
     poster: "https://ik.imagekit.io/jz7julfyw/project/Charvaiy.png",
@@ -56,6 +58,7 @@ export const testimonialsVideos: ClientProject[] = [
     type: "video/mp4",
     about:
       "Worked as a Supply Chain Analyst, optimizing inventory management and logistics processes for improved efficiency and cost savings.",
+      heading: "Data-Driven Supply Chain Improvement"
   },
   {
     poster: "https://ik.imagekit.io/jz7julfyw/project/Ola.png",
@@ -71,41 +74,9 @@ export const testimonialsVideos: ClientProject[] = [
     type: "video/mp4",
     about:
       "Provided personalized training in Data Analytics, covering Excel, SQL, Power BI, Statistics, and Python to enhance data-driven decision-making skills.",
+      heading:"Data Analytics Consultancy"
   },
 ];
-
-export const testimonialsData: Testimonial[] = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
-    name: "Briar Martin",
-    handle: "@neilstellar",
-    date: "April 20, 2025",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-    name: "Avery Johnson",
-    handle: "@averywrites",
-    date: "May 10, 2025",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60",
-    name: "Jordan Lee",
-    handle: "@jordantalks",
-    date: "June 5, 2025",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60",
-    name: "Avery Johnson",
-    handle: "@averywrites",
-    date: "May 10, 2025",
-  },
-];
-
-
 
 export const reviews: ReviewItem[] = [
   {
