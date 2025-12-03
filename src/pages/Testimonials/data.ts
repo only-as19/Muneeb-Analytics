@@ -25,9 +25,9 @@ export const testimonialsVideos: ClientProject[] = [
   {
     // Fixed poster URL - removed invalid transformation
     poster: "https://ik.imagekit.io/jz7julfyw/project/Chris.png",
-    clientName: "Chris",
+    clientName: "Chris Percival",
     position: "Founder & CEO",
-    company: "Percivalpallets",
+    company: "Percival Pallets",
     website: "https://percivalpallets.com/",
     rating: 5,
     projectDuration: "1+ year",
@@ -41,7 +41,7 @@ export const testimonialsVideos: ClientProject[] = [
   {
     // Fixed poster URL
     poster: "https://ik.imagekit.io/jz7julfyw/project/Charvaiy.png",
-    clientName: "Charvaiy",
+    clientName: "Charvaiy Felix",
     position: "Lead Logistics & Supply Chain Analyst",
     rating: 5,
     projectDuration: "6 months",
@@ -54,9 +54,9 @@ export const testimonialsVideos: ClientProject[] = [
   {
     // Fixed poster URL
     poster: "https://ik.imagekit.io/jz7julfyw/project/Ola.png",
-    clientName: "OLA",
+    clientName: "Olasunkanmi Olaitan",
     position: "Founder & CEO",
-    company: "Bigchampphotography",
+    company: "Big Champ Photography",
     website: "https://bigchampsphotographs.com/",
     rating: 5,
     location: "United States",
