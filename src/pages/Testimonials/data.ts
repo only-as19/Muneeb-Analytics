@@ -83,7 +83,7 @@ export const reviews: ReviewItem[] = [
     name: "Letizia De Sario",
     location: "UK",
     rating: 5,
-    role: "Business Intelligence Developer",
+    role: "Intelligence Developer",
     review:
       "Muneeb Nasir DELIVERED top-notch work in data visualization, showcasing exceptional professionalism and keen attention to detail. His in-depth understanding, coupled with quick responsiveness and cooperation, made the collaboration seamless. Highly impressed with his ability to execute complex DAX for Power BI process optimization. I strongly recommend Muneeb! 🙌",
   },

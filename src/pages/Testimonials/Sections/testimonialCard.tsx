@@ -1,6 +1,11 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import type { ReviewItem } from "../data";
+import { SiFiverr } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
+
+import { Link } from "react-router-dom";
+
 interface CardProps {
   card: ReviewItem;
 }
@@ -26,11 +31,17 @@ const TestimonialCard: React.FC<CardProps> = ({ card }) => {
           {card.review}
         </p>
       </div>
-      <div className="mt-2">
+      <div className="mt-2 flex gap-2 justify-between">
         <span className="bg-secondary text-xs px-3 py-1.5 rounded-3xl shadow">
           My role: {card.role}
         </span>
-      </div>
+      
+      <div className="text-xs flex items-center gap-1">
+          <span>Posted on</span>
+          <Link to={"#"}><TbBrandFiverr size={15} className="hover:text-green-500"/></Link>
+
+        </div>
+</div>
     </div>
   );
 };
