@@ -1,7 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import type { ReviewItem } from "../data";
-import { SiFiverr } from "react-icons/si";
 import { TbBrandFiverr } from "react-icons/tb";
 
 import { Link } from "react-router-dom";
