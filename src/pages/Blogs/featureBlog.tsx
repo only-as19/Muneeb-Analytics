@@ -30,16 +30,16 @@ const FeatureBlog: React.FC<featureBlogType> = ({ featureBlog }) => {
             className="object-cover group-hover:scale-110 transition-transform duration-300 h-full w-full absolute inset-0"
           />
           <div className="absolute text-white top-4 left-4">
-            <span className="inline-flex items-center gap-x-2 px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-full shadow-lg">
+            <span className="inline-flex items-center gap-x-2 px-4 py-2 bg-cyan-800 text-cyan-200 text-sm font-bold rounded-full shadow-lg">
               <IoSparklesSharp />
               Featured
             </span>
           </div>
         </CardHeader>
         <CardContent className="md:py-10">
-          <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-emerald-300 text-sm font-semibold rounded-full mb-4 w-fit">{featureBlog.category}</span>
-          <CardTitle className="text-2xl md:text-4xl font-bold mb-4 leading-tight group-hover:text-emerald-300 transition-colors">{featureBlog.title}</CardTitle>
-          <CardDescription className="text-secondartext-lg mb-4 leading-relaxed line-clamp-3 md:text-lg">{featureBlog.description}</CardDescription>
+          <span className="inline-block px-3 py-1 bg-emerald-500/20 backdrop-blur-sm text-cyan-200 text-sm font-semibold rounded-full mb-4 w-fit">{featureBlog.category}</span>
+          <CardTitle className="text-2xl md:text-4xl font-bold mb-4 leading-tight group-hover:text-cyan-200 transition-colors">{featureBlog.title}</CardTitle>
+          <CardDescription className="text-secondary text-lg mb-4 leading-relaxed line-clamp-3 md:text-lg">{featureBlog.description}</CardDescription>
           <div className="flex items-center gap-x-4 text-sm mb-4">
             <p className="flex items-center gap-x-2">
               <MdDateRange /> <span>{featureBlog.date}</span>
