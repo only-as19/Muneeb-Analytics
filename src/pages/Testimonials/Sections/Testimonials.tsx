@@ -6,11 +6,10 @@ const Testimonials: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div>
           <h1 className="text-3xl font-bold text-center md:text-4xl">
-            Don't just take our words
+            Trusted by Clients Around the World
           </h1>
           <p className="text-muted-foreground text-center">
-            Hear what our users say about us. We're always looking for ways to
-            improve. If you have a positive experience with us, leave a review.
+            Clients worldwide rely on my ability to transform complex data into clarity. Their testimonials share how my analytical approach, attention to detail, and business-focused insights helped drive real results.
           </p>
         </div>
         <div>

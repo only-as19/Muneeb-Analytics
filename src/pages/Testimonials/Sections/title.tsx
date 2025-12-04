@@ -7,8 +7,8 @@ const Title:React.FC = () => {
     <div>
       <PageTitle
       heading="The Standard"
-      headingSpan="We Deliver"
-      description="My clients are at the heart of my work. Here&apos;s what they&apos;ve shared about their experience working with me"
+      headingSpan="I Deliver"
+      description="My clients are at the heart of my work. Here&apos;s what they&apos;ve shared about their experience working with me."
       slogan="My Work speaks through them"
       icon= {<BsStars className="!text-cyan-500"/>}
       />
