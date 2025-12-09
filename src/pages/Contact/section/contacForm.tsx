@@ -55,10 +55,11 @@ const ContacForm = () => {
       <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-y-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold md:text-4xl">
-            W&apos;ed love to help
+            Here to Help You Move Forward
           </h1>
           <p className="text-muted-foreground md:mt-2">
-            Reach out and we&apos;ll get in touch within 24 hours
+            Reach out with your questions or project details, we&apos;ll get
+            back to you within 24 hours with clear next steps.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-y-4 md:gap-x-4">
@@ -160,9 +161,34 @@ const ContacForm = () => {
                 placeholder="Services you interested"
                 groupLabel="services"
                 options={[
-                  { label: "service1", value: "service1" },
-                  { label: "service2", value: "service2" },
-                  { label: "service3", value: "service3" },
+                  {
+                    label: "Power BI Dashboards & Reports",
+                    value: "Power BI Dashboards & Reports",
+                  },
+                  {
+                    label: "End to End Data Analytics Solutions",
+                    value: "Analytics Solutions",
+                  },
+                  {
+                    label: "Predictive Analytics (Python & Machine Learning)",
+                    value: "Predictive Analytics",
+                  },
+                  {
+                    label: "Statistical and Exploratory Data Analysis",
+                    value: "tatistical and Exploratory Data Analysis",
+                  },
+                  {
+                    label: "Tableau Dashboards & Reports",
+                    value: "Tableau Dashboards & Reports",
+                  },
+                  {
+                    label: "Data analytics Training",
+                    value: "Data analytics Training",
+                  },
+                  {
+                    label: "Others",
+                    value: "Others",
+                  },
                 ]}
                 value={values.service}
                 onChange={(v: string) => {
