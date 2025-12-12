@@ -63,32 +63,6 @@ const ContacForm = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-y-4 md:gap-x-4">
-          <div className="flex flex-col justify-center items-center p-10 gap-y-2 text-center md:text-left bg-bg-secondary">
-            <h1 className="md:text-4xl text-2xl font-bold">
-              Lorem, ipsum dolor
-            </h1>
-            <p className="text-muted-foreground">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consequuntur sunt veritatis, maiores necessitatibus nulla quidem!
-            </p>
-            <Input
-              InputType="text"
-              placeholder="Enter your request"
-              button={{
-                buttonLabel: "send",
-                buttonVariant: "outline",
-              }}
-              className="bg-white"
-            />
-            <div className="flex items-center gap-x-2">
-              <Button
-                label="Video Meeting Appointment"
-                icon={<CircleArrowOutUpRight className="!h-4 !w-4" />}
-                variant="secondary"
-              />
-              <Button label="xyz" />
-            </div>
-          </div>
           <form
             className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6"
             onSubmit={handleSubmit}
