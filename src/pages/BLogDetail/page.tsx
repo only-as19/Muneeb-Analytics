@@ -18,11 +18,11 @@ const BlogDetail: React.FC = () => {
   }
   return (
     <main className="p-5 min-h-screen text-primary">
-        <div className="w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto">
             <div className="mb-20 md:py-12 special-gradiant px-10 py-8 rounded-2xl text-white">
                 <span className="px-4 py-1.5 bg-cyan-200  text-cyan-800 rounded-full text-sm font-semibold">{blog?.category}</span>
-                <h1 className="text-4xl sm:text-5xl font-bold my-6 leading-tight">{blog?.title}</h1>
-                <p className="text-xl text-white mb-8 leading-relaxed">{blog?.description}</p>
+                <h1 className="text-3xl sm:text-5xl font-bold my-6 leading-tight">{blog?.title}</h1>
+                <p className="md:text-xl text-white mb-8 leading-relaxed">{blog?.description}</p>
                 <div className="flex gap-x-3 font-bold text-white">
                     <p className="flex items-center gap-x-2"><MdDateRange/> <span>{blog?.date}</span></p>
                     <p className="flex items-center gap-x-2"><MdAccessTime/> <span>{blog?.readingTime} min read</span></p>

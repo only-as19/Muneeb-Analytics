@@ -53,7 +53,7 @@ const ContacForm = () => {
     <section className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-y-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold md:text-4xl">
+          <h1 className="text-2xl font-bold md:text-4xl text-primary">
             Here to Help You Move Forward
           </h1>
           <p className="text-muted-foreground md:mt-2">

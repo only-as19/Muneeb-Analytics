@@ -27,13 +27,13 @@ export default function StrategyCallForm() {
   };
 
   return (
-    <div className="min-h-screen px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen px-4 sm:px-6 lg:px-8 text-primary">
       <div className="max-w-6xl mx-auto bg-white p-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+        <h1 className="text-4xl font-bold mb-4 text-center">
           Book a strategy call
         </h1>
         
-        <p className="text-gray-600 mb-8 text-center">
+        <p className="text-muted-foreground mb-8 text-center">
           Prefer a conversation? Schedule a meeting to discuss your project, troubleshoot a problem, or explore how we can work together.
         </p>
 
