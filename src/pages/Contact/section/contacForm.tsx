@@ -1,5 +1,4 @@
 import { Button, Input, Select } from "@/components";
-import StrategyCallForm from "./ArrangeMeeting";
 import countriesRaw from "world-countries";
 import { useFormik } from "formik";
 import { FormValidations } from "@/Schema";
@@ -51,7 +50,7 @@ const ContacForm = () => {
   console.log(errors);
 
   return (
-    <section className="min-h-screen p-5 bg-white">
+    <section className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-y-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold md:text-4xl">
@@ -62,13 +61,13 @@ const ContacForm = () => {
             back to you within 24 hours with clear next steps.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-y-4 md:gap-x-4">
           <form
-            className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6"
+            className="w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6 p-8"
             onSubmit={handleSubmit}
           >
             <div>
               <Input
+              className=""
                 InputType="text"
                 label="Name"
                 placeholder="Enter your name"
@@ -223,13 +222,15 @@ const ContacForm = () => {
                 <p className="text-xs pl-5 text-red-600">{errors.message}</p>
               ) : null}
             </div>
-            <Button
+           <div>
+             <Button
               type="submit"
               label="Send Email"
-              className="md:col-span-2"
+              className=""
             />
+           </div>
           </form>
-        </div>
+        
       </div>
     </section>
   );
