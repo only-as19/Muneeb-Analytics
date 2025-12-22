@@ -21,6 +21,7 @@ export interface CaseStudy {
     images: string;
     sections: { title: string; details: string[] }[];
     summary: string;
+    video?: string;
   };
   benefits: {
     title:string
@@ -85,6 +86,7 @@ export const caseStudies: CaseStudy[] = [
       heading: "THE SOLUTION",
       subheading: "How we addressed the challenges faced by HP:",
       images: Solution,
+      video: "https://ik.imagekit.io/jz7julfyw/project/projectSolution.mp4",
       sections: [
         {
           title: "Interactive Dashboards",
