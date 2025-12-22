@@ -1,11 +1,17 @@
 import { Card } from "@/components";
 import { caseStudies } from "./data";
-import ProjectTitle from "./projectTitle";
+import { PageTitle } from "@/components";
 const Project: React.FC = () => {
   return (
     <section className="bg-secondary text-primary">
       <div className="">
-       <ProjectTitle/>
+       <PageTitle
+       heading="The Journey From Insight"
+       headingSpan="To Impact"
+       description="Dive into expert insights, cutting-edge trends, and thought-provoking
+          ideas that shape the future of technology and design"
+          slogan="Innovation in Motion"
+       />
         <div className="p-5 my-20 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {caseStudies.map((study) => (
             <Card
