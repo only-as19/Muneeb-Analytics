@@ -38,7 +38,7 @@ const Project: React.FC = () => {
               cardDescription={study.overview}
               footer={{
                 buttonLabel: "View full Case study",
-                buttonLink: study.id,
+                buttonLink: study.slug,
               }}
             >
               <div className="flex flex-col gap-2 mt-2">

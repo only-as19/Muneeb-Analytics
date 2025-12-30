@@ -1,14 +1,14 @@
 import { Title, Challanges, Solution, Benefits } from "./Sections";
 import {useParams } from "react-router";
-import { caseStudies } from "./data";
 import Error from "../Error/page";
-
+import { useCaseStudy } from "@/Hooks";
 import {CTA} from "@/components";
 const CaseStudy:React.FC = () => {
 
+    const {getCaseStudyBySlug} = useCaseStudy()
 
-    const { caseId } = useParams();
-    const caseData = caseStudies.find((data) => data.id === caseId);
+    const { slug } = useParams();
+    const caseData = slug ? getCaseStudyBySlug(slug) : undefined
     
     if (!caseData) {
         return <Error />
