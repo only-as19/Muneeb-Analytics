@@ -1,19 +1,35 @@
 import { Card } from "@/components";
-import { caseStudies } from "./data";
-import { PageTitle } from "@/components";
+import { PageTitle,Categories } from "@/components";
+import { useCaseStudy } from "@/Hooks";
+import { useState } from "react";
 const Project: React.FC = () => {
+
+  const {caseStudies, getCategories} = useCaseStudy()
+  const [category,setCategory] = useState("All")
+  const categories = getCategories()
+  const filteredBlogs =
+    category === "All"
+      ? caseStudies
+      : caseStudies.filter((data) => data.category === category);
   return (
     <section className="bg-secondary text-primary">
       <div className="">
        <PageTitle
-       heading="The Journey From Insight"
-       headingSpan="To Impact"
+       heading="Explore Data Analytics"
+       headingSpan="Case Studies"
        description="Dive into expert insights, cutting-edge trends, and thought-provoking
           ideas that shape the future of technology and design"
-          slogan="Innovation in Motion"
+          slogan="My Analytics Work"
        />
-        <div className="p-5 my-20 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-          {caseStudies.map((study) => (
+       <div className="p-5 max-w-7xl mx-auto relative -mt-8 z-50 pointer-events-auto">
+        <Categories
+          categories={categories}
+          setCategory={(cat) => setCategory(cat)}
+          selectedCategory={category}
+        />
+       </div>
+        <div className="p-5 my-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+          {filteredBlogs.map((study) => (
             <Card
             className="bg-transparent shadow-xs"
               key={study.id}
