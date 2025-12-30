@@ -1,5 +1,5 @@
 import { useBlogs } from "@/Hooks";
-import Categories from "./categories";
+import { Categories } from "@/components";
 import { useState } from "react";
 import BlogsNotFound from "./BlogsNotFound";
 import FeatureBlog from "./featureBlog";
