@@ -29,7 +29,7 @@ export const blogs: BlogData[] = [
     slug: "machine-learning-predict-problems-before-they-happen",
     description:
       "Machine learning enables leaders to anticipate risks and act early. This blog explains how predictive insights prevent issues before they escalate.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    image: "https://ik.imagekit.io/jz7julfyw/project/machineLearning.jpg",
     category: "Machine Learning",
     tags: ["machine-learning", "business-strategy", "prediction", "operations", "risk-management"],
     date: "2025-06-15",
@@ -76,7 +76,7 @@ export const blogs: BlogData[] = [
     slug: "why-dashboards-fail-leaders",
     description:
       "Many dashboards fail not because of a lack of data, but because they don’t align with leadership goals. This blog explores why dashboards underperform and how organizations can turn them into powerful decision-making tools.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Dashboard.jpg",
     category: "Dashboard",
     tags: ["dashboards", "decision-making", "business-intelligence", "leadership", "data-strategy"],
     date: "2025-03-18",
@@ -128,7 +128,7 @@ export const blogs: BlogData[] = [
     slug: "why-your-business-needs-clean-well-structured-data",
     description:
       "Clean, reliable data is essential for accurate reporting and confident decision-making. This blog explores why database quality matters.",
-    image: "https://images.unsplash.com/photo-1587202372775-98927f03c3c1",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Database1.jpg",
     category: "Database",
     tags: ["data-quality", "databases", "business-insights", "strategy", "operations"],
     date: "2025-09-11",
@@ -175,7 +175,7 @@ export const blogs: BlogData[] = [
     slug: "why-good-data-visualization-saves-time-and-money",
     description:
       "Strong data visualization reduces confusion, accelerates decision-making, and improves communication across teams. This blog explores why clear visuals offer measurable business value.",
-    image: "https://images.unsplash.com/photo-1551817958-20204d6ab098",
+    image: "https://ik.imagekit.io/jz7julfyw/project/DataVisualization.jpg",
     category: "Data Visualization",
     tags: ["data-visualization", "business-insights", "decision-support", "communication", "analytics"],
     date: "2025-08-05",
@@ -222,7 +222,7 @@ export const blogs: BlogData[] = [
     slug: "role-of-dashboards-in-executive-decision-making",
     description:
       "Dashboards are essential tools for leaders navigating complex decisions. This blog explains how dashboards support strategic clarity, team alignment, and improved business performance.",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Dashboard2.jpg",
     category: "Dashboard",
     tags: ["executive-insights", "dashboards", "kpi", "strategy", "business-leadership"],
     date: "2025-05-11",
@@ -256,7 +256,7 @@ export const blogs: BlogData[] = [
         {
           heading: "Strengthening Communication and Alignment",
           body:
-            "Executive dashboards serve as communication tools that align teams around shared priorities. Leaders can use dashboards to communicate progress, highlight focus areas, and clarify expectations. This consistent visibility promotes alignment across the organization, ensuring everyone understands the company’s direction and performance benchmarks. Dashboards reduce ambiguity and guide the entire organization toward unified goals."
+            "Executive dashboards serve as communication tools that align teams around shared priorities. Leaders can use dashboards to communicate progress, highlight focus areas, and clarify expectations. This consistent visibility promotes alignment across the organization, ensuring everyone understands the company's direction and performance benchmarks. Dashboards reduce ambiguity and guide the entire organization toward unified goals."
         }
       ]
     }
@@ -269,7 +269,7 @@ export const blogs: BlogData[] = [
     slug: "roi-of-machine-learning-for-smbs",
     description:
       "Machine learning delivers measurable financial benefits for SMBs by improving efficiency, forecasting, and customer retention.",
-    image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+    image: "https://ik.imagekit.io/jz7julfyw/project/machineLearning3.jpg",
     category: "Machine Learning",
     tags: ["machine-learning", "roi", "smb", "automation", "growth"],
     date: "2025-07-24",
@@ -316,7 +316,7 @@ export const blogs: BlogData[] = [
     slug: "how-data-quality-impacts-every-business-decision",
     description:
       "Data quality issues create risk, slow decisions, and weaken customer experiences. This blog highlights why clean data is essential.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Database2.jpg",
     category: "Database",
     tags: ["data-quality", "decision-making", "databases", "customer-experience", "leadership"],
     date: "2025-07-21",
@@ -363,7 +363,7 @@ export const blogs: BlogData[] = [
     slug: "what-kpis-really-matter-for-business-growth",
     description:
       "Tracking too many metrics can distract from what truly drives growth. This blog helps leaders identify the KPIs that shape performance, profitability, and long-term business success.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Dashboard.jpg",
     category: "Dashboard",
     tags: ["kpi", "business-growth", "leadership", "analytics", "performance-management"],
     date: "2025-04-27",
@@ -410,7 +410,7 @@ export const blogs: BlogData[] = [
     slug: "communicate-complex-data-to-non-technical-stakeholders",
     description:
       "Communicating insights is just as important as generating them. This blog explores how visualization helps leaders understand complex information quickly and confidently.",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Datavisualization2.jpg",
     category: "Data Visualization",
     tags: ["communication", "data-visualization", "stakeholders", "leadership", "clarity"],
     date: "2025-02-19",
@@ -457,7 +457,7 @@ export const blogs: BlogData[] = [
     slug: "business-case-for-modernizing-data-systems",
     description:
       "Modernizing legacy databases is essential for scalability, security, and innovation.",
-    image: "https://images.unsplash.com/photo-1596495578065-8a349f96c168",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Database2.jpg",
     category: "Database",
     tags: ["modernization", "databases", "infrastructure", "cloud", "strategy"],
     date: "2025-01-03",
@@ -504,7 +504,7 @@ export const blogs: BlogData[] = [
     slug: "dashboards-improve-team-accountability",
     description:
       "Dashboards create transparency, foster responsibility, and align teams with business objectives. This blog explores how dashboards enhance performance culture across organizations.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: "https://ik.imagekit.io/jz7julfyw/project/DAshboard4.jpg",
     category: "Dashboard",
     tags: ["team-performance", "dashboards", "accountability", "business-operations", "leadership"],
     date: "2025-07-19",
@@ -551,7 +551,7 @@ export const blogs: BlogData[] = [
     slug: "identify-opportunities-for-ai-in-your-business",
     description:
       "AI creates value when applied to real business challenges. This blog helps leaders identify where AI can make the biggest impact.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    image: "https://ik.imagekit.io/jz7julfyw/project/machineLEarning4.jpg",
     category: "Machine Learning",
     tags: ["ai", "machine-learning", "business-strategy", "opportunity", "planning"],
     date: "2025-04-18",
@@ -598,7 +598,7 @@ export const blogs: BlogData[] = [
     slug: "what-leaders-should-know-about-data-infrastructure",
     description:
       "Understanding database infrastructure helps leaders make stronger technology decisions.",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Database3.jpg",
     category: "Database",
     tags: ["data-infrastructure", "leadership", "databases", "governance", "security"],
     date: "2025-01-27",
@@ -645,7 +645,7 @@ export const blogs: BlogData[] = [
     slug: "turning-business-goals-into-clear-visual-insights",
     description:
       "When business goals are visualized effectively, teams gain clarity and direction. This blog explains how visualization transforms strategy into understandable insights.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "https://ik.imagekit.io/jz7julfyw/project/DataVisuaization3.jpg",
     category: "Data Visualization",
     tags: ["strategy", "data-visualization", "alignment", "kpi", "business-performance"],
     date: "2025-05-03",
@@ -692,7 +692,7 @@ export const blogs: BlogData[] = [
     slug: "what-leaders-get-wrong-about-machine-learning",
     description:
       "Many misconceptions limit the success of machine learning projects. This blog clarifies what leaders must understand before implementing ML.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+    image: "https://ik.imagekit.io/jz7julfyw/project/machineLearning3.jpg",
     category: "Machine Learning",
     tags: ["machine-learning", "leadership", "misconceptions", "business", "strategy"],
     date: "2025-06-07",
@@ -739,7 +739,7 @@ export const blogs: BlogData[] = [
     slug: "hidden-cost-of-poor-data-communication",
     description:
       "Unclear data communication leads to slow decisions, misalignment, and missed opportunities. This blog explains how visualization strengthens clarity and confidence.",
-    image: "https://images.unsplash.com/photo-1523475472560-d2df97ec485c",
+    image: "https://ik.imagekit.io/jz7julfyw/project/Datavisulization4.png",
     category: "Data Visualization",
     tags: ["communication", "clarity", "data-visualization", "leadership", "decision-making"],
     date: "2025-05-02",
