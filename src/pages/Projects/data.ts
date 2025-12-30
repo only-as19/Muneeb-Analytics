@@ -79,7 +79,7 @@ export const caseStudies: CaseStudy[] = [
     problemStatement: {
       heading: 'THE CHALLENGE',
       subheading: 'Day to Day Hypermarket faced several difficulties in achieving profitability and operational efficiency:',
-      images: 'challange-image-url',
+      images: Challange,
       problems: [
         {
           title: 'Profitability Blind Spots',

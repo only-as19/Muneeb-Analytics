@@ -1,9 +1,10 @@
 import { createContext, type ReactNode } from "react";
 import { caseStudies } from "@/pages/Projects/data";
-
+import type {CaseStudy} from "@/pages/Projects/data"
 interface CaseStudiesContext {
   caseStudies: typeof caseStudies;
   getCategories: () => string[];
+  getCaseStudyBySlug: (slug: string) => CaseStudy | undefined
 }
 
 const CaseStudiesContext = createContext<CaseStudiesContext | undefined>(
@@ -19,10 +20,11 @@ function CaseStudiesProvider({ children }: { children: ReactNode }) {
       ),
     ];
   };
-  const category = getCategories()
-  console.log(category)
+  const getCaseStudyBySlug = (slug: string) => {
+      return caseStudies.find((data) => data.slug === slug);
+    };
   return (
-    <CaseStudiesContext.Provider value={{ caseStudies, getCategories }}>
+    <CaseStudiesContext.Provider value={{ caseStudies, getCategories,getCaseStudyBySlug }}>
       {children}
     </CaseStudiesContext.Provider>
   );
