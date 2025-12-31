@@ -73,117 +73,123 @@ export interface CaseStudy {
 // The case studies data
 export const caseStudies: CaseStudy[] = [
   {
-    Introduction:{
-      id: 'cs-001',
-    title: 'Power BI Centralized Analytics for Profitability & Operational Efficiency',
-    industry: 'E-commerce',
-    category: 'Business Intelligence',
-    overview: 'Day to Day Hypermarket is a rapidly growing e-commerce platform offering electronics, furniture, office supplies, and cosmetics. After two years of strong sales and brand growth, the company shifted focus to profitability and operational efficiency to ensure sustainable growth while strengthening market position and customer value.',
-    impact: '5% profit increase in 6 months',
-    image: Case,
-    slug: 'power-bi-centralized-analytics-profitability',
-    duration:  "3 months"
-    },
-    problemStatement: {
-      heading: 'The challanges',
-      subheading: 'Day to Day Hypermarket faced several difficulties in achieving profitability and operational efficiency:',
-      images: Challange,
-      problems: [
-        {
-          title: 'Profitability Blind Spots',
-          description: 'No clear view of which categories, products, or regions drove profits versus those eroding margins.',
-        },
-        {
-          title: 'Sales Trends & Seasonality',
-          description: 'Lack of reliable trend analysis to detect seasonality shifts, demand peaks, or declining categories.',
-        },
-        {
-          title: 'Product Lifecycle Monitoring',
-          description: 'Underperforming or declining products stayed too long in the catalog; high-margin products weren\'t always prioritized.',
-        },
-        {
-          title: 'Comparative Analysis Gaps',
-          description: 'Difficulty comparing YoY performance across departments, regions, or product lines.',
-        },
-        {
-          title: 'Data Fragmentation & Manual Reporting',
-          description: 'Sales and inventory data scattered across Excel, CSVs, and databases; manual, inconsistent, and outdated reports delayed decisions and lacked a single source of truth.',
-        },
-      ],
-    },
-    solution: {
-      heading: 'The Solution',
-      subheading: 'How we addressed the challenges:',
-      images: Solution,
-      video: 'https://ik.imagekit.io/jz7julfyw/project/projectSolution.mp4',
-      sections: [
-        {
-          title: 'Interactive Dashboards',
-          details: [
-            'Unified dashboard covering sales, profit, and inventory performance across regions, categories, and products.',
-            'Drill-down capabilities to move from high-level overviews to detailed analysis.',
-          ],
-        },
-        {
-          title: 'Profitability and Comparative Analysis',
-          details: [
-            'Measures for profit margins, YoY growth, and category-wise performance.',
-            'Visuals highlighting underperforming products, top profit drivers (Pareto 80/20), and regional trends.',
-          ],
-        },
-        {
-          title: 'Automation and Scalability',
-          details: [
-            'Automated data refresh eliminated manual Excel reporting and ensured real-time insights.',
-            'Scalable model enabling new products, categories, or regions to be added without rework.',
-          ],
-        },
-        {
-          title: 'Data Integration and Modeling',
-          details: [
-            'Consolidated Excel, CSV, and database sources into a single, structured Power BI model.',
-            'Robust relationships between sales, inventory, product, and regional data to ensure accuracy and consistency.',
-          ],
-        },
-      ],
-      summary: 'A centralized Power BI analytics solution transformed fragmented data into actionable insights and replaced manual reporting with a single source of truth.',
-    },
-    benefits: {
-      title: 'The Benefits',
-      bullets: [
-        {
-          title: 'Profit Visibility',
-          bullet: 'Leadership can compare profit across products, categories, and regions; monitor sales and margin trends; and perform YoY% analysis.',
-        },
-        {
-          title: 'Demand Intelligence',
-          bullet: 'Dashboards highlight underperforming areas, top-margin products, and seasonal demand patterns for better stock planning and marketing.',
-        },
-        {
-          title: 'Faster Decisions',
-          bullet: 'Stakeholder meetings now rely on unified insights, accelerating data-backed decisions on pricing, campaigns, and inventory optimization.',
-        },
-        {
-          title: 'Operational Efficiency',
-          bullet: 'Automated reporting saved hours of manual work and ensured data accuracy across teams.',
-        },
-      ],
-      outcomes: {
-        subtext: 'Results',
-        results: [
-          { title: '5%', description: 'Overall Profit Increase' },
-          { title: '6 months', description: 'Implementation Timeframe' },
-        ],
-        comparisonBasis: 'Compared to the previous period after implementation.',
-      },
-    },
+  Introduction:{
+    "id": "cs-001",
+  "title": "IT Support Operations & Service Performance Analytics",
+  "industry": "IT Services & ITSM",
+  "category": "Data Analytics & Visualization",
+  "overview": "The organization provides IT support services through calls, chats, emails, and escalations. As the user base grew, centralized analytics became essential to track performance across all channels, ensure timely resolutions, and maintain customer satisfaction in a high-volume support environment.",
+  "impact": "Faster Issue Resolution",
+  "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+  "slug": "it-support-operations-service-performance-analytics",
+  duration: "3 months"
   },
+  "problemStatement": {
+    "heading": "The challanges",
+    "subheading": "The support organization struggled with data silos and invisible bottlenecks:",
+    "images": "challenge-image-url",
+    "problems": [
+      {
+        "title": "Fragmented Service Data",
+        "description": "Support performance data was scattered across calls, chats, emails, and escalations, preventing a unified view of overall IT service operations."
+      },
+      {
+        "title": "Resolution Time Visibility Gaps",
+        "description": "Tracking average and delayed resolution times across channels required manual effort, making it difficult to identify bottlenecks efficiently."
+      },
+      {
+        "title": "Recurring Issue Identification",
+        "description": "Lack of consolidated insights made it hard to identify recurring customer pain points and frequently reported issues."
+      },
+      {
+        "title": "Escalation Trend Monitoring",
+        "description": "Escalation patterns were not clearly visible, limiting the ability to proactively address critical or unresolved service requests."
+      },
+      {
+        "title": "Inefficient Decision-Making",
+        "description": "Delayed and incomplete reporting resulted in slower decisions and suboptimal allocation of support resources."
+      }
+    ]
+  },
+  "solution": {
+    "heading": "THE SOLUTION",
+    "subheading": "A multi-channel Power BI analytics platform for IT support excellence:",
+    "images": "solution-image-url",
+    "video": "",
+    "sections": [
+      {
+        "title": "Centralized Power BI Dashboard",
+        "details": [
+          "Developed an automated platform consolidating IT support data from calls, chats, emails, and escalation systems into a single source of truth."
+        ]
+      },
+      {
+        "title": "Ticket Volume & Workload Tracking",
+        "details": [
+          "Enabled real-time monitoring of ticket volumes across all service channels to understand workload distribution and demand trends."
+        ]
+      },
+      {
+        "title": "Resolution Time Analysis",
+        "details": [
+          "Implemented deep-dive metrics into resolution times to identify delays, inefficiencies, and specific opportunities for service improvement."
+        ]
+      },
+      {
+        "title": "Customer Pain Point Identification",
+        "details": [
+          "Highlighted the most frequent customer issues to support root-cause analysis and long-term service quality improvements."
+        ]
+      },
+      {
+        "title": "Escalation & Risk Management",
+        "details": [
+          "Tracked escalation volumes and patterns to identify high-risk issues and improve issue-handling workflows before breaches occurred."
+        ]
+      }
+    ],
+    "summary": "This end-to-end solution transformed fragmented support logs into a real-time performance engine, allowing IT leaders to monitor every service touchpoint from a single screen."
+  },
+  "benefits": {
+    "title": "Benefits",
+    "bullets": [
+      {
+        "title": "Unified Service Visibility",
+        "bullet": "Provided managers with a single, centralized view of IT support performance across all communication channels."
+      },
+      {
+        "title": "Faster Issue Resolution",
+        "bullet": "Enabled quick identification of resolution delays, allowing teams to take corrective actions before customer satisfaction was impacted."
+      },
+      {
+        "title": "Improved Customer Experience",
+        "bullet": "Addressed recurring pain points proactively, reducing repeated complaints and improving overall customer satisfaction levels."
+      },
+      {
+        "title": "Optimized Resource Allocation",
+        "bullet": "Helped management allocate support resources more effectively based on real-time workload and escalation trends."
+      },
+      {
+        "title": "Data-Driven Strategic Decisions",
+        "bullet": "Empowered leadership with actionable insights to improve operational effectiveness and long-term service quality."
+      }
+    ],
+    "outcomes": {
+      "subtext": "Results",
+      "results": [
+        { "title": "Real-Time", "description": "Resolution Tracking" },
+        { "title": "3 Months", "description": "Implementation Time" }
+      ],
+      "comparisonBasis": "Compared to prior manual reporting cycles and fragmented data logs."
+    }
+  }
+},
   {
   Introduction:{
     id: 'cs-002',
   title: 'Profitability & Performance Analytics for Day to Day Hypermarket',
   industry: 'E-Commerce & Retail',
-  category: 'Business Intelligence',
+  category: 'Dashboard',
   overview: 'Day to Day Hypermarket is a rapidly growing e-commerce platform offering electronics, furniture, office supplies, and cosmetics. After two years of strong sales and brand growth, the company shifted focus toward profitability and operational efficiency to ensure sustainable growth while strengthening market position and customer value.',
   impact: '5% Profit Increase in 6 Months',
   image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800&q=80',
@@ -305,7 +311,7 @@ export const caseStudies: CaseStudy[] = [
     id: "cs-003",
   title: "Enterprise Financial Performance & Budget Control Analytics",
   industry: "Corporate Finance & SaaS",
-  category: "Financial Analytics",
+  category: "Dashboard",
   overview: "This project focuses on building an end-to-end financial analytics solution to monitor revenue, expenses, profitability, and budget performance across accounts, vendors, categories, and time periods. The objective was to give leadership a centralized, real-time view of financial health, enabling better cost control, profitability tracking, and strategic decision-making.",
   impact: "5% Improved Budget Control",
   image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
@@ -423,7 +429,7 @@ export const caseStudies: CaseStudy[] = [
     "id": "cs-004",
   "title": "Healthcare Operations & Performance Analytics",
   "industry": "Healthcare Analytics",
-  "category": "Operational Intelligence",
+  "category": "Data Analytics & Visualization",
   "overview": "The U.S. healthcare sector serves millions of patients annually through hospitals and clinics. With growing demand and aging populations increasing operational complexity, this project focused on building a real-time data tracking solution to maintain service quality, control costs, and improve patient outcomes for medical providers.",
   "impact": "Improved Operational Efficiency",
   "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
@@ -541,7 +547,7 @@ export const caseStudies: CaseStudy[] = [
     "id": "cs-005",
   "title": "Hospitality Revenue & Booking Performance Analytics",
   "industry": "Hospitality & Luxury Hotels",
-  "category": "Revenue Management",
+  "category": "Data Analytics & Visualization",
   "overview": "This project focuses on analyzing revenue, bookings, cancellations, and occupancy performance for a luxury hotel operation. The solution provides management with a centralized view of financial and operational KPIs across cities, room classes, and time periods, enabling data-driven decisions to optimize pricing and revenue efficiency.",
   "impact": "10% Revenue Performance Optimization",
   "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
@@ -650,10 +656,10 @@ export const caseStudies: CaseStudy[] = [
 },
 {
   Introduction:{
-    "id": "cs-007",
+    "id": "cs-006",
   "title": "Health Insurance Cost Prediction Using Machine Learning",
   "industry": "Healthcare & Insurance",
-  "category": "Machine Learning & Predictive Analytics",
+  "category": "Machine Learning",
   "overview": "This project focuses on building a machine learning–based application to predict individual health insurance costs based on demographic, lifestyle, and medical attributes. The solution helps users and insurers estimate expected insurance expenses more accurately, supporting better pricing, planning, and risk assessment.",
   "impact": "Cost Prediction Accuracy Improved",
   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
@@ -765,7 +771,7 @@ export const caseStudies: CaseStudy[] = [
     "id": "cs-007",
   "title": "Digital Audience Engagement & Revenue Analytics for Telegraph Media Group",
   "industry": "Media & Digital Publishing",
-  "category": "Data Engineering & Analytics",
+  "category": "Data Analytics & Visualization",
   "overview": "Telegraph Media Group, a leading UK regional media organization, operates over 240 news websites with 40-50 million monthly unique visitors. This project unified fragmented data from 250 million monthly page views into a centralized analytics solution to optimize a hybrid revenue model of advertising and gated paywall subscriptions.",
   "impact": "15% Engagement Growth",
   "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
@@ -878,7 +884,7 @@ export const caseStudies: CaseStudy[] = [
     "id": "cs-008",
   "title": "Supply Chain Service Level & OTIF Analytics for AtliQ Mart",
   "industry": "FMCG & Supply Chain",
-  "category": "Supply Chain Optimization",
+  "category": "Dashboard",
   "overview": "AtliQ Mart, a fast-growing FMCG manufacturer in Gujarat, faced challenges in delivery reliability while planning an expansion into major metropolitan cities. This project established a robust supply chain analytics framework to monitor service levels and ensure operational readiness for large-scale expansion.",
   "impact": "10% OTIF Improvement",
   "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
@@ -991,7 +997,7 @@ export const caseStudies: CaseStudy[] = [
     "id": "cs-09",
   "title": "5G Plan Impact & Customer Behavior Analytics for AtliQo",
   "industry": "Telecommunications",
-  "category": "Customer Analytics & Churn Prediction",
+  "category": "Dashboard",
   "overview": "AtliQo, a leading Indian telecom provider, launched 5G services to drive digital growth. This project involved developing a comprehensive analytics suite to evaluate the post-launch impact on subscriber behavior, revenue performance, and market positioning across urban and rural markets.",
   "impact": "Churn Drivers Identified",
   "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=800&q=80",
