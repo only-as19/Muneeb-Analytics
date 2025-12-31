@@ -15,10 +15,9 @@ const CaseStudy:React.FC = () => {
     const solutionData = caseData?.solution
     const challanges = caseData.problemStatement
     const benefits = caseData.benefits
-    const outcomes = caseData.impact
   return (
     <main>
-    <Title/>
+    <Title caseData={caseData}/>
     {challanges && <Challanges challanges={challanges}/>}
     {solutionData && <Solution solution={solutionData}/>}
     {benefits && <Benefits benefit={benefits}/>}
