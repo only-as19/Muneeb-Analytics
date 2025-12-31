@@ -13,11 +13,12 @@ const CaseStudy:React.FC = () => {
         return <Error />
     }
     const solutionData = caseData?.solution
+    const challanges = caseData.problemStatement
     
   return (
     <main>
     <Title/>
-    <Challanges/>
+    {challanges && <Challanges challanges={challanges}/>}
     {solutionData && <Solution solution={solutionData}/>}
     <Benefits/>
     {caseData && <CTA/>}

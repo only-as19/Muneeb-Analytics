@@ -1,13 +1,13 @@
-import { useParams } from "react-router-dom";
-import { caseStudies } from "../data";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { FaSortDown } from "react-icons/fa6";
 import { useState } from "react";
+import type { ProblemStatement } from "@/pages/Projects/data";
 
-const Challanges = () => {
-  const { caseId } = useParams();
-  const caseData = caseStudies.find((data) => data.id === caseId);
-  const challanges = caseData?.problemStatement;
+interface ChallangesProp {
+  challanges: ProblemStatement;
+}
+
+const Challanges: React.FC<ChallangesProp> = ({ challanges }) => {
   const [openIndex, setOpenIndex] = useState<number>(0); // Start with first item open
 
   return (
@@ -36,7 +36,9 @@ const Challanges = () => {
                 >
                   <Collapsible.Trigger asChild>
                     <div className="group flex justify-between w-full cursor-pointer">
-                      <h2 className="font-bold text-2xl md:text-3xl group-data-[state=open]:text-cyan-500">{data.title}</h2>
+                      <h2 className="font-bold text-2xl md:text-3xl group-data-[state=open]:text-cyan-500">
+                        {data.title}
+                      </h2>
                       <FaSortDown className="md:hidden w-5 h-5 transition-transform flex-shrink-0" />
                     </div>
                   </Collapsible.Trigger>
