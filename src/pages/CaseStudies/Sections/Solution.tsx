@@ -1,4 +1,4 @@
-import { MdSwipeRightAlt } from "react-icons/md";
+import { TiArrowRightThick } from "react-icons/ti";
 import Video from "@/components/Video";
 import type { Solution as SolutionData } from "@/pages/Projects/data";
 
@@ -10,7 +10,7 @@ const Solution: React.FC<SolutionType> = ({ solution }) => {
   return (
     <section className="p-5 min-h-screen flex justify-center items-center bg-secondary text-primary">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">
+        <h1 className="capitalize text-3xl md:text-5xl font-bold text-center">
           {solution?.heading}
         </h1>
         <p className="text-muted-foreground text-center mb-8">
@@ -20,11 +20,11 @@ const Solution: React.FC<SolutionType> = ({ solution }) => {
           <div className="w-full h-full md:order-2">
             {solution?.video && <Video src={solution.video} />}
           </div>
-          <div className="flex flex-col gap-y-3">
+          <div className="grid md:grid-cols-2 md:gap-x-4 gap-y-6">
             {solution?.sections.map((data, i) => (
               <div key={i}>
                 <div className="flex items-center gap-x-4">
-                  <MdSwipeRightAlt className="h-6 w-6" />
+                  <TiArrowRightThick />
                   <h4 className="font-bold text-lg">{data.title}</h4>
                 </div>
                 <ul>

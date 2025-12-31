@@ -13,7 +13,7 @@ const Challanges: React.FC<ChallangesProp> = ({ challanges }) => {
   return (
     <section className="p-5 special-gradiant min-h-screen text-white flex flex-col justify-center items-center">
       <div className="max-w-6xl mx-auto w-full">
-        <h1 className="text-3xl font-bold text-center md:text-5xl">
+        <h1 className="capitalize text-3xl font-bold text-center md:text-5xl">
           {challanges?.heading}
         </h1>
         <p className="text-muted text-center mt-1 mb-8">

@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
     duration:  "3 months"
     },
     problemStatement: {
-      heading: 'THE CHALLENGE',
+      heading: 'The challanges',
       subheading: 'Day to Day Hypermarket faced several difficulties in achieving profitability and operational efficiency:',
       images: Challange,
       problems: [
@@ -112,7 +112,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     solution: {
-      heading: 'THE SOLUTION',
+      heading: 'The Solution',
       subheading: 'How we addressed the challenges:',
       images: Solution,
       video: 'https://ik.imagekit.io/jz7julfyw/project/projectSolution.mp4',
@@ -149,7 +149,7 @@ export const caseStudies: CaseStudy[] = [
       summary: 'A centralized Power BI analytics solution transformed fragmented data into actionable insights and replaced manual reporting with a single source of truth.',
     },
     benefits: {
-      title: 'Benefits',
+      title: 'The Benefits',
       bullets: [
         {
           title: 'Profit Visibility',
@@ -191,7 +191,7 @@ export const caseStudies: CaseStudy[] = [
   duration:"6 months"
   },
   problemStatement: {
-    heading: 'THE CHALLENGE',
+    heading: 'The challanges',
     subheading: 'Day to Day Hypermarket faced several critical challenges in achieving profitability and operational efficiency:',
     images: 'challenge-image-url',
     problems: [
@@ -218,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   solution: {
-    heading: 'THE SOLUTION',
+    heading: 'The Solution',
     subheading: 'How we addressed the challenges:',
     images: 'solution-image-url',
     video: '',
@@ -263,7 +263,7 @@ export const caseStudies: CaseStudy[] = [
     summary: 'A centralized Power BI analytics platform transformed fragmented data into actionable insights, enabling profit-focused decision-making and operational efficiency.',
   },
   benefits: {
-    title: 'Benefits',
+    title: 'The Benefits',
     bullets: [
       {
         title: 'Unified Performance Visibility',
@@ -313,7 +313,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "2.5 months"
   },
   problemStatement: {
-    heading: "THE CHALLENGE",
+    heading: "The challanges",
     "subheading": "The organization faced significant hurdles in maintaining financial discipline and visibility:",
     "images": "challenge-image-url",
     "problems": [
@@ -340,7 +340,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "A comprehensive financial analytics suite designed for real-time oversight:",
     "images": "solution-image-url",
     "video": "",
@@ -385,7 +385,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "An end-to-end financial solution that replaced manual reporting with automated, interactive dashboards for total visibility into the company's fiscal health."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Centralized Financial Control",
@@ -431,7 +431,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "4 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "The healthcare provider faced several critical bottlenecks in managing large-scale patient data and costs:",
     "images": "challenge-image-url",
     "problems": [
@@ -458,7 +458,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "A robust analytics framework designed to unify clinical and operational data:",
     "images": "solution-image-url",
     "video": "",
@@ -503,7 +503,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "By centralizing clinical and financial data into interactive dashboards, the solution enabled healthcare leaders to optimize resource allocation and gain control over rising treatment costs."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Improved Operational Efficiency",
@@ -549,7 +549,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "3 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "Luxury hotel operations faced complexities in managing perishable inventory and fluctuating demand:",
     "images": "challenge-image-url",
     "problems": [
@@ -576,7 +576,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "Implementing a data-driven revenue management suite:",
     "images": "solution-image-url",
     "video": "",
@@ -615,7 +615,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "A specialized hospitality analytics platform that transformed raw booking data into strategic insights for pricing and occupancy optimization."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Improved Revenue Insights",
@@ -661,7 +661,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "2 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "Estimating health insurance premiums is complex due to the highly individual nature of health risks:",
     "images": "challenge-image-url",
     "problems": [
@@ -688,7 +688,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "A machine learning pipeline tailored for predictive healthcare modeling:",
     "images": "solution-image-url",
     "video": "",
@@ -727,7 +727,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "By leveraging machine learning, we replaced manual estimation with a scalable, data-driven application that predicts insurance premiums with high accuracy."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Improved Cost Transparency",
@@ -766,14 +766,14 @@ export const caseStudies: CaseStudy[] = [
   "title": "Digital Audience Engagement & Revenue Analytics for Telegraph Media Group",
   "industry": "Media & Digital Publishing",
   "category": "Data Engineering & Analytics",
-  "overview": "Telegraph Media Group, a leading UK regional media organization, operates over 240 news websites with 40–50 million monthly unique visitors. This project unified fragmented data from 250 million monthly page views into a centralized analytics solution to optimize a hybrid revenue model of advertising and gated paywall subscriptions.",
+  "overview": "Telegraph Media Group, a leading UK regional media organization, operates over 240 news websites with 40-50 million monthly unique visitors. This project unified fragmented data from 250 million monthly page views into a centralized analytics solution to optimize a hybrid revenue model of advertising and gated paywall subscriptions.",
   "impact": "15% Engagement Growth",
   "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
   "slug": "digital-audience-engagement-revenue-analytics-telegraph-media",
   duration: "5 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "Managing high-volume traffic across 240+ sites created significant visibility hurdles:",
     "images": "challenge-image-url",
     "problems": [
@@ -800,7 +800,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "A multi-layered Power BI ecosystem for real-time editorial oversight:",
     "images": "solution-image-url",
     "video": "",
@@ -839,7 +839,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "The solution replaced fragmented spreadsheets with a standardized, real-time analytics suite that unified 240+ sites under a single source of truth."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "70% Reporting Time Savings",
@@ -886,7 +886,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "3 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "Service reliability issues were threatening customer retention and expansion plans:",
     "images": "challenge-image-url",
     "problems": [
@@ -913,7 +913,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "Implementing a multi-dimensional delivery KPI framework:",
     "images": "solution-image-url",
     "video": "",
@@ -952,7 +952,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "The solution provided AtliQ Mart with a real-time 'command center' for supply chain health, shifting the focus from reactive firefighting to proactive service management."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Improved Customer Retention",
@@ -999,7 +999,7 @@ export const caseStudies: CaseStudy[] = [
   duration: "4 months"
   },
   "problemStatement": {
-    "heading": "THE CHALLENGE",
+    "heading": "The challanges",
     "subheading": "Following the 5G rollout, the company faced unexpected shifts in its subscriber base:",
     "images": "challenge-image-url",
     "problems": [
@@ -1026,7 +1026,7 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   "solution": {
-    "heading": "THE SOLUTION",
+    "heading": "The Solution",
     "subheading": "A data-driven diagnostic suite to map the 5G transition:",
     "images": "solution-image-url",
     "video": "",
@@ -1065,7 +1065,7 @@ export const caseStudies: CaseStudy[] = [
     "summary": "The solution transformed complex subscriber data into a clear strategic roadmap, identifying exactly where the 5G rollout caused friction and where it drove value."
   },
   "benefits": {
-    "title": "Benefits",
+    "title": "The Benefits",
     "bullets": [
       {
         "title": "Clear Visibility into Churn",
