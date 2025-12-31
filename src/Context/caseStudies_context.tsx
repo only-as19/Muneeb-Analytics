@@ -16,12 +16,12 @@ function CaseStudiesProvider({ children }: { children: ReactNode }) {
     return [
       "All",
       ...Array.from(
-        new Set(caseStudies.map((caseStudy) => caseStudy.category))
+        new Set(caseStudies.map((caseStudy) => caseStudy.Introduction.category))
       ),
     ];
   };
   const getCaseStudyBySlug = (slug: string) => {
-      return caseStudies.find((data) => data.slug === slug);
+      return caseStudies.find((data) => data.Introduction.slug === slug);
     };
   return (
     <CaseStudiesContext.Provider value={{ caseStudies, getCategories,getCaseStudyBySlug }}>

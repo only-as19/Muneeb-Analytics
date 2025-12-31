@@ -50,8 +50,7 @@ export interface Benefits {
   outcomes: Outcomes;
 }
 
-// Main CaseStudy interface
-export interface CaseStudy {
+export interface Introduction{
   id: string;
   title: string;
   industry: string;
@@ -60,6 +59,12 @@ export interface CaseStudy {
   impact: string;
   image: string;
   slug: string;
+  duration: string;
+}
+
+// Main CaseStudy interface
+export interface CaseStudy {
+  Introduction: Introduction;
   problemStatement?: ProblemStatement;
   solution?: Solution;
   benefits?: Benefits;
@@ -68,7 +73,8 @@ export interface CaseStudy {
 // The case studies data
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'cs-001',
+    Introduction:{
+      id: 'cs-001',
     title: 'Power BI Centralized Analytics for Profitability & Operational Efficiency',
     industry: 'E-commerce',
     category: 'Business Intelligence',
@@ -76,6 +82,8 @@ export const caseStudies: CaseStudy[] = [
     impact: '5% profit increase in 6 months',
     image: Case,
     slug: 'power-bi-centralized-analytics-profitability',
+    duration:  "3 months"
+    },
     problemStatement: {
       heading: 'THE CHALLENGE',
       subheading: 'Day to Day Hypermarket faced several difficulties in achieving profitability and operational efficiency:',
@@ -171,7 +179,8 @@ export const caseStudies: CaseStudy[] = [
     },
   },
   {
-  id: 'cs-003',
+  Introduction:{
+    id: 'cs-002',
   title: 'Profitability & Performance Analytics for Day to Day Hypermarket',
   industry: 'E-Commerce & Retail',
   category: 'Business Intelligence',
@@ -179,6 +188,8 @@ export const caseStudies: CaseStudy[] = [
   impact: '5% Profit Increase in 6 Months',
   image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800&q=80',
   slug: 'profitability-performance-analytics-day-to-day-hypermarket',
+  duration:"6 months"
+  },
   problemStatement: {
     heading: 'THE CHALLENGE',
     subheading: 'Day to Day Hypermarket faced several critical challenges in achieving profitability and operational efficiency:',
@@ -290,16 +301,19 @@ export const caseStudies: CaseStudy[] = [
   },
 },
 {
-  "id": "cs-004",
-  "title": "Enterprise Financial Performance & Budget Control Analytics",
-  "industry": "Corporate Finance & SaaS",
-  "category": "Financial Analytics",
-  "overview": "This project focuses on building an end-to-end financial analytics solution to monitor revenue, expenses, profitability, and budget performance across accounts, vendors, categories, and time periods. The objective was to give leadership a centralized, real-time view of financial health, enabling better cost control, profitability tracking, and strategic decision-making.",
-  "impact": "5% Improved Budget Control",
-  "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
-  "slug": "enterprise-financial-performance-budget-control-analytics",
-  "problemStatement": {
-    "heading": "THE CHALLENGE",
+  Introduction:{
+    id: "cs-003",
+  title: "Enterprise Financial Performance & Budget Control Analytics",
+  industry: "Corporate Finance & SaaS",
+  category: "Financial Analytics",
+  overview: "This project focuses on building an end-to-end financial analytics solution to monitor revenue, expenses, profitability, and budget performance across accounts, vendors, categories, and time periods. The objective was to give leadership a centralized, real-time view of financial health, enabling better cost control, profitability tracking, and strategic decision-making.",
+  impact: "5% Improved Budget Control",
+  image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+  slug: "enterprise-financial-performance-budget-control-analytics",
+  duration: "2.5 months"
+  },
+  problemStatement: {
+    heading: "THE CHALLENGE",
     "subheading": "The organization faced significant hurdles in maintaining financial discipline and visibility:",
     "images": "challenge-image-url",
     "problems": [
@@ -405,7 +419,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-005",
+  Introduction:{
+    "id": "cs-004",
   "title": "Healthcare Operations & Performance Analytics",
   "industry": "Healthcare Analytics",
   "category": "Operational Intelligence",
@@ -413,6 +428,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "Improved Operational Efficiency",
   "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
   "slug": "healthcare-operations-performance-analytics-us-sector",
+  duration: "4 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "The healthcare provider faced several critical bottlenecks in managing large-scale patient data and costs:",
@@ -520,7 +537,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-006",
+  Introduction: {
+    "id": "cs-005",
   "title": "Hospitality Revenue & Booking Performance Analytics",
   "industry": "Hospitality & Luxury Hotels",
   "category": "Revenue Management",
@@ -528,6 +546,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "10% Revenue Performance Optimization",
   "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
   "slug": "hospitality-revenue-booking-performance-analytics-luxury-hotels",
+  duration: "3 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "Luxury hotel operations faced complexities in managing perishable inventory and fluctuating demand:",
@@ -629,7 +649,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-007",
+  Introduction:{
+    "id": "cs-007",
   "title": "Health Insurance Cost Prediction Using Machine Learning",
   "industry": "Healthcare & Insurance",
   "category": "Machine Learning & Predictive Analytics",
@@ -637,6 +658,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "Cost Prediction Accuracy Improved",
   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
   "slug": "health-insurance-cost-prediction-machine-learning",
+  duration: "2 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "Estimating health insurance premiums is complex due to the highly individual nature of health risks:",
@@ -738,7 +761,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-008",
+  Introduction: {
+    "id": "cs-007",
   "title": "Digital Audience Engagement & Revenue Analytics for Telegraph Media Group",
   "industry": "Media & Digital Publishing",
   "category": "Data Engineering & Analytics",
@@ -746,6 +770,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "15% Engagement Growth",
   "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
   "slug": "digital-audience-engagement-revenue-analytics-telegraph-media",
+  duration: "5 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "Managing high-volume traffic across 240+ sites created significant visibility hurdles:",
@@ -848,7 +874,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-009",
+  Introduction: {
+    "id": "cs-008",
   "title": "Supply Chain Service Level & OTIF Analytics for AtliQ Mart",
   "industry": "FMCG & Supply Chain",
   "category": "Supply Chain Optimization",
@@ -856,6 +883,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "10% OTIF Improvement",
   "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
   "slug": "supply-chain-service-level-otif-analytics-atliq-mart",
+  duration: "3 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "Service reliability issues were threatening customer retention and expansion plans:",
@@ -958,7 +987,8 @@ export const caseStudies: CaseStudy[] = [
   }
 },
 {
-  "id": "cs-010",
+  Introduction: {
+    "id": "cs-09",
   "title": "5G Plan Impact & Customer Behavior Analytics for AtliQo",
   "industry": "Telecommunications",
   "category": "Customer Analytics & Churn Prediction",
@@ -966,6 +996,8 @@ export const caseStudies: CaseStudy[] = [
   "impact": "Churn Drivers Identified",
   "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=800&q=80",
   "slug": "5g-plan-impact-customer-behavior-analytics-atliqo",
+  duration: "4 months"
+  },
   "problemStatement": {
     "heading": "THE CHALLENGE",
     "subheading": "Following the 5G rollout, the company faced unexpected shifts in its subscriber base:",
