@@ -1,11 +1,14 @@
-import { caseStudies } from "../data";
-import { useParams } from "react-router";
 import { TiArrowRightThick } from "react-icons/ti";
 import Results from "./results";
-const Benefits = () => {
-  const { caseId } = useParams();
-  const caseData = caseStudies.find((data) => data.id === caseId);
-  const benefit = caseData?.benefits;
+import type { Benefits as BenefitsDataType } from "@/pages/Projects/data";
+
+interface BenefitsProps {
+  benefit: BenefitsDataType;
+}
+
+const Benefits: React.FC<BenefitsProps> = ({ benefit }) => {
+  const outcome = benefit.outcomes 
+
   return (
     <section className=" pb-10 min-h-96 px-5 felx flex-col items-center justify-center text-primary">
       <div className="max-w-6xl mx-auto">
@@ -23,7 +26,7 @@ const Benefits = () => {
             </div>
           ))}
         </div>
-          <Results />
+        <Results outcome={outcome}/>
       </div>
     </section>
   );
