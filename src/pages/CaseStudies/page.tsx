@@ -9,17 +9,18 @@ const CaseStudy:React.FC = () => {
 
     const { slug } = useParams();
     const caseData = slug ? getCaseStudyBySlug(slug) : undefined
-    
     if (!caseData) {
         return <Error />
     }
+    const solutionData = caseData?.solution
+    
   return (
     <main>
     <Title/>
     <Challanges/>
-    <Solution/>
+    {solutionData && <Solution solution={solutionData}/>}
     <Benefits/>
-    <CTA/>
+    {caseData && <CTA/>}
   </main>
   )
   
