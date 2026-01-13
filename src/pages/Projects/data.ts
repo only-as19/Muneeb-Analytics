@@ -1,5 +1,3 @@
-import Case from "@/assets/images/Case.svg";
-import Challange from "@/assets/images/Challange.svg";
 import Solution from "@/assets/images/Solution.svg";
 
 export interface Problem {
@@ -115,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "THE SOLUTION",
     "subheading": "A multi-channel Power BI analytics platform for IT support excellence:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/CustomerServiceProject.mp4?updatedAt=1768325478939",
     "sections": [
       {
         "title": "Centralized Power BI Dashboard",
@@ -227,7 +225,7 @@ export const caseStudies: CaseStudy[] = [
     heading: 'The Solution',
     subheading: 'How we addressed the challenges:',
     images: 'solution-image-url',
-    video: '',
+    video: 'https://ik.imagekit.io/jz7julfyw/project/eCommerce.mp4',
     sections: [
       {
         title: 'Centralized Analytics Platform',
@@ -349,7 +347,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "A comprehensive financial analytics suite designed for real-time oversight:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/Finance.mp4",
     "sections": [
       {
         "title": "Financial Overview Dashboard",
@@ -467,7 +465,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "A robust analytics framework designed to unify clinical and operational data:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/HealthCare.mp4",
     "sections": [
       {
         "title": "Executive Healthcare Dashboard",
@@ -585,7 +583,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "Implementing a data-driven revenue management suite:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/Hotel.mp4",
     "sections": [
       {
         "title": "Revenue Performance Dashboard",
@@ -697,7 +695,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "A machine learning pipeline tailored for predictive healthcare modeling:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/ML.mp4",
     "sections": [
       {
         "title": "Feature-Based Prediction Model",
@@ -809,7 +807,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "A multi-layered Power BI ecosystem for real-time editorial oversight:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/NewsQuest.mp4",
     "sections": [
       {
         "title": "Engagement Snapshot Dashboard",
@@ -922,7 +920,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "Implementing a multi-dimensional delivery KPI framework:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/SupplyChain.mp4",
     "sections": [
       {
         "title": "Delivery KPI Framework",
@@ -1035,7 +1033,7 @@ export const caseStudies: CaseStudy[] = [
     "heading": "The Solution",
     "subheading": "A data-driven diagnostic suite to map the 5G transition:",
     "images": "solution-image-url",
-    "video": "",
+    "video": "https://ik.imagekit.io/jz7julfyw/project/TelecomProject.mp4",
     "sections": [
       {
         "title": "User Analysis Dashboard",

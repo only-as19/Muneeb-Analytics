@@ -5,21 +5,23 @@
   .square-list {
     list-style: square;
   }
-  @keyframes marqueeScroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .marquee-inner {
-    animation: marqueeScroll 25s linear infinite;
+  .marquee-track {
+    display: flex;
+    animation: marqueeScroll 120s linear infinite; /* Increased time for 20+ cards */
   }
 
   .marquee-reverse {
     animation-direction: reverse;
+  }
+
+  @keyframes marqueeScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* This moves exactly one full set of cards out of view */
+      transform: translateX(-50%);
+    }
   }
 }
 

@@ -29,7 +29,7 @@ const TestimonialCard: React.FC<CardProps> = ({ card }) => {
         </p>
       </div>
       <div className="mt-2 flex gap-2 justify-between">
-        <span className="bg-secondary text-xs px-3 py-1.5 rounded-3xl shadow">
+        <span className="bg-secondary text-[10px] px-3 py-1.5 rounded-3xl shadow">
           My role: {card.role}
         </span>
       <div className="text-xs flex items-center gap-1">
