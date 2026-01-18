@@ -74,7 +74,7 @@ export const Services: Service[] = [
     label: "Power BI Dashboards & Reports",
     description:
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
-    img: "https://ik.imagekit.io/pdata3016/Services/Power%20BI%20Dashboard%20&%20report.jpg?updatedAt=1758440250629",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Power%20BI%20Dashboard.png",
     link: "powerbi-dashboards",
     details: {
       hero: {
@@ -247,7 +247,7 @@ export const Services: Service[] = [
     label: "End to End Data Analytics Solutions",
     description:
       "Turn raw, scattered data into strategic business intelligence with our comprehensive end to end analytics solutions. From data strategy and integration to visualization and AI-driven insights, we help you build a scalable, automated, and insight-rich ecosystem that empowers smarter decisions across every department.",
-    img: "https://ik.imagekit.io/pdata3016/Services/End%20to%20End%20Data%20Analytics.jpg?updatedAt=1758440250629",
+    img: "https://ik.imagekit.io/jz7julfyw/project/End%20to%20End%20Data%20Analytics.png",
     link: "end-to-end-analytics",
     details: {
       hero: {
@@ -432,7 +432,7 @@ export const Services: Service[] = [
     label: "Predictive Analytics (Python & Machine Learning)",
     description:
       "Harness Python, statistics, and machine learning to uncover patterns, predict trends, and optimize decision-making. Move from reactive insights to proactive strategy with models tailored to your data and goals.",
-    img: "https://ik.imagekit.io/pdata3016/Services/Predictive%20Analytics.jpg",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Predictive%20Analysis.png",
     link: "predictive-analytics",
     details: {
       hero: {
@@ -612,7 +612,7 @@ export const Services: Service[] = [
     label: "Statistical and Exploratory Data Analysis",
     description:
       "Uncover patterns, relationships, and anomalies within your data through comprehensive statistical and exploratory data analysis. Gain clarity and direction before investing in advanced analytics or predictive modeling.",
-    img: "https://ik.imagekit.io/pdata3016/Services/Statistical%20and%20EDA.jpg",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Statistical%20Analysis.png",
     link: "statistical-analysis",
     details: {
       hero: {
@@ -795,7 +795,7 @@ export const Services: Service[] = [
     label: "Tableau Dashboards & Reports",
     description:
       "Transform your data into real-time, interactive Tableau dashboards that empower smarter, faster decisions across every department.",
-    img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Tableau%20Dashboard.png",
     link: "tableau-dashboards",
     details: {
       hero: {
@@ -969,7 +969,7 @@ export const Services: Service[] = [
     label: "Data Analytics Training",
     description:
       "Equip yourself or your team with practical skills in Power BI, Excel, SQL, Python, and more. Our hands-on training covers everything from data preparation and visualization to advanced analytics, enabling participants to confidently turn raw data into actionable insights and drive smarter business decisions.",
-    img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Tableau%20Dashboard.png",
     link: "data-analytics-training",
     details: {
       hero: {
