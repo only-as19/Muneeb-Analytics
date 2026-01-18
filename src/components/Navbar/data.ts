@@ -85,8 +85,4 @@ export const navLinks: INavLinks[] = [
     link: "/testimonials",
     label: "Testimonials",
   },
-  {
-    link: "/freeDemo",
-    label: "Request a free Demo",
-  },
 ];
