@@ -2,7 +2,7 @@ import * as Yup from "yup"
 
 export const FormValidations = Yup.object({
     name: Yup.string().min(2).max(20).required("Please Enter you name"),
-    number: Yup.number().required("Please Enter YOur number"),
+    number: Yup.number().required("Please Enter Your number"),
     email: Yup.string().email().required("Please Enter your email"),
     service: Yup.string().required("Please select a service"),
     location: Yup.string().required("Please select a location"),

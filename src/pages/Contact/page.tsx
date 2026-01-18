@@ -1,4 +1,4 @@
-import {ContactForm,Info} from "./section"
+import {ContactForm} from "./section"
 import { FAQ } from "@/components"
 import { PageTitle } from "@/components"
 import StrategyCallForm from "./section/ArrangeMeeting"
@@ -14,7 +14,6 @@ const Contact = () => {
       <StrategyCallForm/>
       <ContactForm />
       <FAQ/>
-      <Info/>
     </section>
   )
 }
