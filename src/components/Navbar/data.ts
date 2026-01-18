@@ -38,7 +38,7 @@ export const navLinks: INavLinks[] = [
       },
       {
         id:"3",
-        link: "/corporate-trainings",
+        link: "/data-analytics-training",
         label: "Data analytics Training",
         description:
           "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving.",

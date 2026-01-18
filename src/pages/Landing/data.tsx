@@ -1,4 +1,4 @@
-export { default as hero_img } from "@/assets/images/landing/hero2.png"
+export { default as hero_img } from "@/assets/images/landing/hero2.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
 import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
@@ -199,7 +199,7 @@ export const Services: Service[] = [
           delivery: "7 days",
           revesion: "Unlimited",
           isPopular: false,
-          bg: "bg-scondary",
+          bg: "premium",
         },
         {
           name: "Standard",
@@ -238,21 +238,6 @@ export const Services: Service[] = [
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
-        },
-        {
-          name: "Custom",
-          price: null,
-          description:
-            "Tailored scope, KPIs, data sources, and timelines to match your requirements.",
-          feature: [
-            "Flexible data sources and volumes",
-            "Custom KPIs and advanced modeling as needed",
-            "Scope, delivery, and training defined collaboratively",
-          ],
-          delivery: "As agreed",
-          revesion: "As agreed",
-          isPopular: false,
-          bg: "secondary",
         },
       ],
     },
@@ -400,8 +385,8 @@ export const Services: Service[] = [
           ],
           delivery: "10 days",
           revesion: "Unlimited",
-          isPopular: true,
-          bg: "special-gradiant",
+          isPopular: false,
+          bg: "bg-white",
         },
         {
           name: "Standard",
@@ -418,7 +403,7 @@ export const Services: Service[] = [
           ],
           delivery: "20 days",
           revesion: "Unlimited",
-          isPopular: false,
+          isPopular: true,
           bg: "bg-scondary",
         },
         {
@@ -439,23 +424,6 @@ export const Services: Service[] = [
           isPopular: false,
           bg: "premium",
         },
-        // {
-        //   name: "Custom",
-        //   price: "Contact for Quote",
-        //   description:
-        //     "A fully tailored analytics solution aligned with your unique business goals, infrastructure, and growth strategy.",
-        //   feature: [
-        //     "Custom architecture & data pipeline design",
-        //     "Unlimited data sources and integrations",
-        //     "Tailored dashboards for each department",
-        //     "Dedicated analytics consultant",
-        //     "Full training & long-term support",
-        //   ],
-        //   delivery: "Flexible",
-        //   revesion: "Unlimited",
-        //   isPopular: false,
-        //   bg: "bg-dark",
-        // },
       ],
     },
   },
@@ -598,8 +566,8 @@ export const Services: Service[] = [
           ],
           delivery: "10 days",
           revesion: "Unlimited",
-          isPopular: true,
-          bg: "special-gradiant",
+          isPopular: false,
+          bg: "premium",
         },
         {
           name: "Standard",
@@ -616,7 +584,7 @@ export const Services: Service[] = [
           ],
           delivery: "20 days",
           revesion: "Unlimited",
-          isPopular: false,
+          isPopular: true,
           bg: "bg-scondary",
         },
         {
@@ -636,23 +604,6 @@ export const Services: Service[] = [
           isPopular: false,
           bg: "premium",
         },
-        // {
-        //   name: "Custom",
-        //   price: "Contact for Quote",
-        //   description:
-        //     "A tailored predictive platform or multi-model environment with scalable architecture and UX.",
-        //   feature: [
-        //     "Custom use cases and architecture",
-        //     "Unlimited integrations and data sources",
-        //     "Department-specific apps & dashboards",
-        //     "Dedicated ML consultant",
-        //     "Full training & long-term support",
-        //   ],
-        //   delivery: "Flexible",
-        //   revesion: "Unlimited",
-        //   isPopular: false,
-        //   bg: "bg-dark",
-        // },
       ],
     },
   },
@@ -799,8 +750,8 @@ export const Services: Service[] = [
           ],
           delivery: "7 days",
           revesion: "Unlimited",
-          isPopular: true,
-          bg: "special-gradiant",
+          isPopular: false,
+          bg: "bg-white",
         },
         {
           name: "Standard",
@@ -816,7 +767,7 @@ export const Services: Service[] = [
           ],
           delivery: "14 days",
           revesion: "Unlimited",
-          isPopular: false,
+          isPopular: true,
           bg: "bg-scondary",
         },
         {
@@ -836,218 +787,364 @@ export const Services: Service[] = [
           isPopular: false,
           bg: "premium",
         },
-        // {
-        //   name: "Custom",
-        //   price: "Contact for Quote",
-        //   description:
-        //     "Need deeper statistical modeling or time series analysis? We’ll build a custom EDA solution tailored to your business goals.",
-        //   feature: [
-        //     "Custom statistical analysis or time series modeling",
-        //     "Unlimited datasets and integrations",
-        //     "Tailored dashboards & visualizations",
-        //     "Dedicated data science consultant",
-        //     "Full training & support package",
-        //   ],
-        //   delivery: "Flexible",
-        //   revesion: "Unlimited",
-        //   isPopular: false,
-        //   bg: "bg-dark",
-        // },
       ],
     },
   },
   {
-  id: "5",
-  label: "Tableau Dashboards & Reports",
-  description:
-    "Transform your data into real-time, interactive Tableau dashboards that empower smarter, faster decisions across every department.",
-  img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
-  link: "tableau-dashboards",
-  details: {
-    hero: {
-      title: "Automated Tableau Dashboards & Reports",
-      subtitle: "Unlock Real-Time Business Intelligence",
-      description:
-        "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
+    id: "5",
+    label: "Tableau Dashboards & Reports",
+    description:
+      "Transform your data into real-time, interactive Tableau dashboards that empower smarter, faster decisions across every department.",
+    img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
+    link: "tableau-dashboards",
+    details: {
+      hero: {
+        title: "Automated Tableau Dashboards & Reports",
+        subtitle: "Unlock Real-Time Business Intelligence",
+        description:
+          "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
+      },
+
+      serviceContent: [
+        {
+          title: "What's Included",
+          description:
+            "Our Tableau service covers every step of the analytics journey — from connecting your data sources to automating updates and enabling secure collaboration.",
+          items: [
+            {
+              title: "Automated Data Integration",
+              description:
+                "We connect Tableau seamlessly to your existing data sources such as Excel, SQL databases, cloud platforms, and enterprise systems — keeping your dashboards updated automatically.",
+            },
+            {
+              title: "Data Transformation and Cleaning",
+              description:
+                "Using Tableau Prep and advanced data modeling, we clean and standardize your data to ensure consistent and reliable insights.",
+            },
+            {
+              title: "Interactive Dashboards and Reports",
+              description:
+                "Dashboards feature drill-downs, filters, and intuitive visuals, helping decision-makers explore insights and uncover opportunities quickly.",
+            },
+            {
+              title: "Custom KPIs and Metrics",
+              description:
+                "We design dashboards around KPIs that truly matter — sales performance, financial ratios, HR benchmarks, and marketing ROI — giving every department clarity and focus.",
+            },
+            {
+              title: "Secure Sharing and Collaboration",
+              description:
+                "Using Tableau Server or Tableau Online, your dashboards are securely shared with role-based permissions, enabling teamwork without compromising data security.",
+            },
+          ],
+        },
+        {
+          title: "Business Benefits",
+          description:
+            "Tableau dashboards deliver measurable value by transforming how your organization collects, visualizes, and acts on data.",
+          items: [
+            {
+              title: "Save Time and Resources",
+              description:
+                "Automated reporting eliminates manual work and frees your team to focus on strategy, not spreadsheets.",
+            },
+            {
+              title: "Enhance Decision-Making",
+              description:
+                "Accurate and real-time insights ensure faster, smarter business decisions across all levels.",
+            },
+            {
+              title: "Clarity Across Departments",
+              description:
+                "Every department — from Sales and Finance to HR and Operations — gains clear, accessible metrics in one platform.",
+            },
+            {
+              title: "Improved Accuracy and Reliability",
+              description:
+                "Centralized dashboards eliminate data discrepancies and ensure a single, trusted source of truth.",
+            },
+            {
+              title: "Scalable Solutions",
+              description:
+                "Our Tableau dashboards scale with your business, adapting easily to new data sources and organizational growth.",
+            },
+          ],
+        },
+        {
+          title: "How It Works",
+          description:
+            "Our end-to-end process ensures smooth delivery, automation, and lasting value from your Tableau environment.",
+          items: [
+            {
+              title: "Consultation and Discovery",
+              description:
+                "We start with an in-depth discussion to understand your goals, KPIs, and data challenges to build a solution that fits perfectly.",
+            },
+            {
+              title: "Data Preparation",
+              description:
+                "Our team connects, blends, and structures your data to ensure consistency and analytical readiness.",
+            },
+            {
+              title: "Dashboard Development",
+              description:
+                "We craft interactive, visually compelling dashboards that combine usability and clear storytelling.",
+            },
+            {
+              title: "Automation Setup",
+              description:
+                "We configure automated refresh schedules so your dashboards always present the latest data — hands-free.",
+            },
+            {
+              title: "Delivery and Training",
+              description:
+                "We finalize the dashboards, provide user training, and remain available for ongoing support and optimization.",
+            },
+          ],
+        },
+      ],
+
+      pricing: [
+        {
+          name: "Basic",
+          price: "400",
+          description:
+            "Perfect for individuals or small teams who need a clean, actionable dashboard to track performance and visualize trends.",
+          feature: [
+            "1-2 Data sources (Excel, CSV)",
+            "Basic data cleaning and formatting",
+            "Up to 4 KPIs and 4 charts",
+            "Interactive/animated visuals",
+            "1 interactive page dashboard",
+            "Quick walkthrough or usage guide",
+          ],
+          delivery: "7 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "bg-white",
+        },
+        {
+          name: "Standard",
+          price: "800-1200",
+          description:
+            "Best for growing businesses needing multi-source reporting and department-level insights with automation.",
+          feature: [
+            "2-4 Data sources (Excel, CSV, SQL, APIs)",
+            "Medium complex data cleaning and transformation",
+            "2-3 interactive dashboard pages",
+            "Up to 10 KPIs and 8-10 charts",
+            "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
+            "Automated data refresh setup",
+            "1-on-1 walkthrough or training session",
+          ],
+          delivery: "14 days",
+          revesion: "Unlimited",
+          isPopular: true,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Premium",
+          price: "1500-2000",
+          description:
+            "Designed for enterprises that require advanced KPIs, automation, and cross-department performance dashboards.",
+          feature: [
+            "3-7 Data sources (Excel, CSV, SQL, APIs)",
+            "Complex data cleaning and transformation",
+            "5-6 interactive dashboard pages",
+            "Up to 20 KPIs and 20 charts",
+            "Enterprise-level reporting and automation",
+            "Department-level analysis (Sales, Finance, HR, Marketing, and more)",
+            "1-on-1 walkthrough or training session",
+          ],
+          delivery: "30 days",
+          revesion: "Unlimited",
+          isPopular: false,
+          bg: "premium",
+        },
+      ],
     },
-
-    serviceContent: [
-      {
-        title: "What's Included",
-        description:
-          "Our Tableau service covers every step of the analytics journey — from connecting your data sources to automating updates and enabling secure collaboration.",
-        items: [
-          {
-            title: "Automated Data Integration",
-            description:
-              "We connect Tableau seamlessly to your existing data sources such as Excel, SQL databases, cloud platforms, and enterprise systems — keeping your dashboards updated automatically.",
-          },
-          {
-            title: "Data Transformation and Cleaning",
-            description:
-              "Using Tableau Prep and advanced data modeling, we clean and standardize your data to ensure consistent and reliable insights.",
-          },
-          {
-            title: "Interactive Dashboards and Reports",
-            description:
-              "Dashboards feature drill-downs, filters, and intuitive visuals, helping decision-makers explore insights and uncover opportunities quickly.",
-          },
-          {
-            title: "Custom KPIs and Metrics",
-            description:
-              "We design dashboards around KPIs that truly matter — sales performance, financial ratios, HR benchmarks, and marketing ROI — giving every department clarity and focus.",
-          },
-          {
-            title: "Secure Sharing and Collaboration",
-            description:
-              "Using Tableau Server or Tableau Online, your dashboards are securely shared with role-based permissions, enabling teamwork without compromising data security.",
-          },
-        ],
-      },
-      {
-        title: "Business Benefits",
-        description:
-          "Tableau dashboards deliver measurable value by transforming how your organization collects, visualizes, and acts on data.",
-        items: [
-          {
-            title: "Save Time and Resources",
-            description:
-              "Automated reporting eliminates manual work and frees your team to focus on strategy, not spreadsheets.",
-          },
-          {
-            title: "Enhance Decision-Making",
-            description:
-              "Accurate and real-time insights ensure faster, smarter business decisions across all levels.",
-          },
-          {
-            title: "Clarity Across Departments",
-            description:
-              "Every department — from Sales and Finance to HR and Operations — gains clear, accessible metrics in one platform.",
-          },
-          {
-            title: "Improved Accuracy and Reliability",
-            description:
-              "Centralized dashboards eliminate data discrepancies and ensure a single, trusted source of truth.",
-          },
-          {
-            title: "Scalable Solutions",
-            description:
-              "Our Tableau dashboards scale with your business, adapting easily to new data sources and organizational growth.",
-          },
-        ],
-      },
-      {
-        title: "How It Works",
-        description:
-          "Our end-to-end process ensures smooth delivery, automation, and lasting value from your Tableau environment.",
-        items: [
-          {
-            title: "Consultation and Discovery",
-            description:
-              "We start with an in-depth discussion to understand your goals, KPIs, and data challenges to build a solution that fits perfectly.",
-          },
-          {
-            title: "Data Preparation",
-            description:
-              "Our team connects, blends, and structures your data to ensure consistency and analytical readiness.",
-          },
-          {
-            title: "Dashboard Development",
-            description:
-              "We craft interactive, visually compelling dashboards that combine usability and clear storytelling.",
-          },
-          {
-            title: "Automation Setup",
-            description:
-              "We configure automated refresh schedules so your dashboards always present the latest data — hands-free.",
-          },
-          {
-            title: "Delivery and Training",
-            description:
-              "We finalize the dashboards, provide user training, and remain available for ongoing support and optimization.",
-          },
-        ],
-      },
-    ],
-
-    pricing: [
-      {
-        name: "Basic",
-        price: "400",
-        description:
-          "Perfect for individuals or small teams who need a clean, actionable dashboard to track performance and visualize trends.",
-        feature: [
-          "1–2 Data sources (Excel, CSV)",
-          "Basic data cleaning and formatting",
-          "Up to 4 KPIs and 4 charts",
-          "Interactive/animated visuals",
-          "1 interactive page dashboard",
-          "Quick walkthrough or usage guide",
-        ],
-        delivery: "7 days",
-        revesion: "Unlimited",
-        isPopular: true,
-        bg: "special-gradiant",
-      },
-      {
-        name: "Standard",
-        price: "800–1200",
-        description:
-          "Best for growing businesses needing multi-source reporting and department-level insights with automation.",
-        feature: [
-          "2–4 Data sources (Excel, CSV, SQL, APIs)",
-          "Medium complex data cleaning and transformation",
-          "2–3 interactive dashboard pages",
-          "Up to 10 KPIs and 8–10 charts",
-          "Department-level analysis (Sales, Finance, Marketing, HR, Operations)",
-          "Automated data refresh setup",
-          "1-on-1 walkthrough or training session",
-        ],
-        delivery: "14 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-scondary",
-      },
-      {
-        name: "Premium",
-        price: "1500–2000",
-        description:
-          "Designed for enterprises that require advanced KPIs, automation, and cross-department performance dashboards.",
-        feature: [
-          "3–7 Data sources (Excel, CSV, SQL, APIs)",
-          "Complex data cleaning and transformation",
-          "5–6 interactive dashboard pages",
-          "Up to 20 KPIs and 20 charts",
-          "Enterprise-level reporting and automation",
-          "Department-level analysis (Sales, Finance, HR, Marketing, and more)",
-          "1-on-1 walkthrough or training session",
-        ],
-        delivery: "30 days",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "premium",
-      },
-      {
-        name: "Custom",
-        price: "Contact for Quote",
-        description:
-          "Not sure which package fits your needs? We’ll design a fully customized Tableau solution aligned with your goals and budget.",
-        feature: [
-          "Custom architecture and design",
-          "Unlimited data sources and integrations",
-          "Tailored dashboards and KPIs",
-          "Dedicated support and optimization",
-          "Comprehensive team training",
-        ],
-        delivery: "Flexible",
-        revesion: "Unlimited",
-        isPopular: false,
-        bg: "bg-dark",
-      },
-    ],
   },
-},
+  {
+    id: "6",
+    label: "Data Analytics Training",
+    description:
+      "Equip yourself or your team with practical skills in Power BI, Excel, SQL, Python, and more. Our hands-on training covers everything from data preparation and visualization to advanced analytics, enabling participants to confidently turn raw data into actionable insights and drive smarter business decisions.",
+    img: "https://ik.imagekit.io/pdata3016/Services/Tableau%20Dashboard.jpg",
+    link: "data-analytics-training",
+    details: {
+      hero: {
+        title: "ALearn the Tools That Power Data-Driven Decisions",
+        subtitle: "Unlock Real-Time Business Intelligence",
+        description:
+          "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
+      },
 
+      serviceContent: [
+        {
+          title: "What's Included",
+          description:
+            "Our Data Analytics Training programs are designed to equip individuals and teams with practical skills across the most in-demand tools — from Excel and SQL to Python and Power BI — empowering learners to turn data into actionable insights.",
+          items: [
+            {
+              title: "Foundational Analytics Skills",
+              description:
+                "Learn the core concepts of data analysis, statistics, and visualization to build a strong analytics mindset..",
+            },
+            {
+              title: "Power BI & Excel Mastery",
+              description:
+                "Hands-on training in dashboards, reporting, pivot tables, formulas, and advanced features to analyze and present data effectively.",
+            },
+            {
+              title: "SQL for Data Management",
+              description:
+                "Understand database querying, joins, filtering, and aggregation to extract and manipulate data efficiently.",
+            },
+            {
+              title: "Python for Analytics & Machine Learning",
+              description:
+                "Learn data cleaning, transformation, visualization, and introductory machine learning techniques for practical applications.",
+            },
+            {
+              title: "Real-World Projects",
+              description:
+                "Apply your skills on real datasets with guided exercises and projects to ensure practical, workplace-ready proficiency.",
+            },
+            {
+              title: "Mentoring & Support",
+              description:
+                "Personalized guidance, Q&A sessions, and ongoing support to reinforce learning and ensure confidence in applying skills independently.",
+            },
+          ],
+        },
+        {
+          title: "Business Benefits",
+          description:
+            "Our training is designed to empower individuals and teams to make smarter, data-driven decisions and increase operational efficiency across the organization.",
+          items: [
+            {
+              title: "Upgraded Team Capabilities: ",
+              description:
+                "Equip your staff with high-demand analytics skills for immediate impact.",
+            },
+            {
+              title: "Upgraded Team Capabilities ",
+              description:
+                "Enable employees to analyze and visualize data confidently, leading to timely and informed business decisions.",
+            },
+            {
+              title: "Hands-On Practical Skills: ",
+              description:
+                "Focus on real-world tools and workflows to ensure learning translates directly into actionable results",
+            },
+            {
+              title: "Scalable Knowledge Growth",
+              description:
+                "Build a foundation that allows your team to advance from basic reporting to advanced analytics and predictive modeling.",
+            },
+            {
+              title: "Data-Driven Culture: ",
+              description:
+                "Foster analytical thinking across departments, encouraging evidence-based strategies and insights.",
+            },
+          ],
+        },
+        {
+          title: "How It Works",
+          description:
+            "Our training process ensures a structured, engaging, and practical learning experience, making complex analytics accessible and actionable.",
+          items: [
+            {
+              title: "Consultation & Needs Assessment",
+              description:
+                "Identify your team's skill levels, goals, and training priorities to create a tailored learning roadmap.",
+            },
+            {
+              title: "Structured Curriculum Delivery",
+              description:
+                "Modules covering Excel, SQL, Power BI, Python, and analytics concepts are delivered through interactive sessions and exercises.",
+            },
+            {
+              title: "Hands-On Projects & Exercises",
+              description:
+                "Participants work on real datasets to apply concepts in practical scenarios, reinforcing learning outcomes.",
+            },
+            {
+              title: "Mentoring & Feedback",
+              description:
+                "Continuous guidance, Q&A, and feedback to address challenges and improve understanding.",
+            },
+            {
+              title: "Ongoing Support & Growth",
+              description:
+                "Continued access to resources, mentorship, and advice for scaling skills and applying analytics in the workplace.",
+            },
+          ],
+        },
+      ],
+
+      pricing: [
+        {
+          name: "Basic",
+          price: "400",
+          description:
+            "Perfect for individuals or small teams looking to master Power BI and create optimized, interactive dashboards.",
+          feature: [
+            "Power BI fundamentals to advanced",
+            "Advanced data cleaning & modeling",
+            "DAX formulas & optimization techniques",
+            "Report performance tuning",
+            "Interactive dashboard creation",
+            "Hands-on exercises with 1-3 datasets",
+            "Mentoring and Q&A support",
+          ],
+          delivery: "10 days",
+          revesion: "Online sessions",
+          isPopular: false,
+          bg: "bg-secondary",
+        },
+        {
+          name: "Standard",
+          price: "700",
+          description:
+            "Ideal for mid-size teams wanting practical skills in Power BI + SQL for real-world analytics.",
+          feature: [
+            "All Power BI topics from Basic package",
+            "SQL advanced training: joins, subqueries, window functions, stored procedures, and optimization",
+            "Advanced data cleaning, transformation, and modeling",
+            "DAX formulas & report optimization",
+            "Multi-source, interactive dashboards",
+            "Hands-on exercises with 3-6 datasets",
+            "1-on-1 mentoring and practical project",
+          ],
+          delivery: "20 days",
+          revesion: "Online sessions",
+          isPopular: true,
+          bg: "bg-scondary",
+        },
+        {
+          name: "Premium",
+          price: "1400",
+          description:
+            "Designed for professionals or teams seeking mastery in Power BI, SQL, Excel, and Python, including automation, advanced analytics, and predictive modeling.",
+          feature: [
+            "All topics from Standard package (Power BI + SQL)",
+            "Excel advanced analytics: Pivot Tables, Power Query, Power Pivot, VBA basics, complex formulas, dashboards",
+            "Python for analytics: data cleaning, transformation, visualization, basic predictive modeling",
+            "End-to-end data modeling & workflow automation",
+            "Advanced DAX & report optimization",
+            "Hands-on exercises with 5-10 datasets",
+            "4-6 guided projects",
+            "Personalized 1-on-1 mentoring and ongoing support",
+          ],
+          delivery: "30 days",
+          revesion: "Online sessions",
+          isPopular: false,
+          bg: "premium",
+        },
+      ],
+    },
+  },
 ];
 
 export const statsData: StatItem[] = [
