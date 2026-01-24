@@ -1,11 +1,13 @@
 import { Button } from "@/components";
 import { MainStat } from "../../data/statsData";
 import type { Hero } from "../../data/data";
-
+import { useNavigate } from "react-router-dom";
 interface HeroType {
   heroData: Hero;
 }
 const ServiceHero: React.FC<HeroType> = ({ heroData }) => {
+  const navigate = useNavigate();
+
   return (
     <section className="md:min-h-screen min-h-96 bg-bg-secondary p-5 flex flex-col justify-center items-center ">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-12">
@@ -16,8 +18,21 @@ const ServiceHero: React.FC<HeroType> = ({ heroData }) => {
           <h3 className="text-xl md:text-2xl mb-1">{heroData.subtitle}</h3>
           <p className="text-muted-foreground mb-6">{heroData.description}</p>
           <div className="flex justify-center md:justify-start gap-x-2">
-            <Button label="Pricing List" className="" />
-            <Button label="Pricing List" variant="outline" className="" />
+            <Button 
+            label="Schedule a call"
+             className="cursor-pointer"
+             onClick={() => navigate('/contact#meeting')}
+             />
+            <Button
+              label="Pricing List"
+              variant="outline"
+              onClick={() => {
+                document.getElementById("pricing")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="cursor-pointer"
+            />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-x-2 ">

@@ -11,17 +11,14 @@ interface PricinType {
 const Pricing: React.FC<PricinType> = ({ pricing }) => {
   const [active, setActive] = useState(pricing[0].name);
   return (
-    <section className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
+    <section id="pricing" className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4 md:text-5xl">
-            Transparent Pricing, Tangible Results
+            Transparent Pricing, Real Impact
           </h1>
           <p className="text-muted-foreground">
-            Our pricing is built for growth , simple, flexible, and packed with
-            value. Whether you&apos;re just starting your analytics journey or
-            scaling enterprise-level automation, each plan delivers measurable
-            business impact without hidden costs.
+            Our plans are simple, flexible, and built to grow with your business, delivering measurable analytics results without any hidden costs.
           </p>
         </div>
         <div className="md:hidden">

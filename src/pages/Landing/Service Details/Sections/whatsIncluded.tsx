@@ -12,8 +12,8 @@ const WhatsIncluded: React.FC<contentType> = ({ serviceContent }) => {
     <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
       <div className="flex flex-col gap-y-10 max-w-6xl mx-auto ">
         <div className="text-center md:w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold uppercase mb-2">
-            What We Offer and how we deliver
+          <h1 className="text-3xl capitalize md:text-5xl font-bold mb-2">
+            Our Services & Delivery Approach
           </h1>
           <p className="text-muted-foreground">
             Discover what we provide, the benefits you'll gain, and how we

@@ -621,7 +621,7 @@ export const Services: Service[] = [
           description:
             "For enterprises needing advanced algorithms, automation, and production-ready delivery.",
           feature: [
-            "2-4 predictive models across departments",
+            "2-3 predictive models across departments",
             "Advanced algorithms (Time Series, Ensemble Models)",
             "Automated retraining workflow",
             "Custom front-end with inputs and live visuals",
