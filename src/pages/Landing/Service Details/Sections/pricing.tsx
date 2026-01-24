@@ -1,4 +1,4 @@
-import { Services } from "../../data";
+import { Services } from "../../data/data";
 import { PricingCard, Button } from "@/components";
 import { Clock3, RefreshCcw, Check } from "lucide-react";
 import { useState } from "react";

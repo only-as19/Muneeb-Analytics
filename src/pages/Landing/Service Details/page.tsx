@@ -1,4 +1,4 @@
-import { ServiceHero,WhatsIncluded, Features, Pricing } from "./Sections" 
+import { ServiceHero,WhatsIncluded, Pricing } from "./Sections" 
 import { CTA } from "@/components"
 
 const ServiceDetail = () => {
@@ -6,7 +6,6 @@ const ServiceDetail = () => {
     <div>
         <ServiceHero />
         <WhatsIncluded />
-        <Features/>
         <Pricing />
         <CTA/>
     </div>

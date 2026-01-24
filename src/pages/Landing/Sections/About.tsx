@@ -1,7 +1,7 @@
 import React from "react";
 import Video from "@/components/Video";
-import { statsData } from "../data";
 import { Motion } from "@/Framer";
+import { MainStat } from "../data/statsData";
 const About: React.FC = () => {
   return (
     <section className="px-5 min-h-96 flex-col items-center justify-center text-muted-foreground py-20 special-gradiant">
@@ -44,10 +44,10 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-x-2 ">
-          {statsData.map((stat) => (
+          {MainStat.map((stat) => (
             <div
               key={stat.label}
-              className="px-1 py-4 rounded-sm shadow-primary shadow-xl text-center flex flex-col items-center justify-between gap-y-1 group text-secondary bg-secondary/20"
+              className="px-1 py-4 rounded-sm shadow-primary shadow-xl text-center flex flex-col items-center justify-between gap-y-1 group text-secondary bg-secondary/20 hover:-translate-y-1 duration-300"
             >
               <Motion>
                 <p className="text-3xl font-bold md:text-5xl group-hover:text-primary">

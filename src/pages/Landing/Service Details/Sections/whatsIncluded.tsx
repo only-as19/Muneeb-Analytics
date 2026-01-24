@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Services } from "../../data";
+import { Services } from "../../data/data";
 import { useState } from "react";
 
 const WhatsIncluded = () => {

@@ -1,6 +1,7 @@
 import { Button } from "@/components";
 import { useParams } from "react-router-dom";
-import { Services, statsData } from "../../data";
+import { Services } from "../../data/data";
+import { MainStat } from "../../data/statsData";
 const ServiceHero: React.FC = () => {
   const { serviceId } = useParams();
   const serviceContent = Services.find((service) => service.link === serviceId);
@@ -22,11 +23,11 @@ const ServiceHero: React.FC = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-x-2 ">
-          {statsData.map((stat) => (
+          {MainStat.map((stat) => (
             <div
               key={stat.label}
               className="px-1 py-4 rounded-sm shadow-xl
-              shadow-primary text-center flex flex-col items-center justify-between gap-y-1 group bg-white"
+              shadow-primary text-center flex flex-col items-center justify-between gap-y-1 group bg-white hover:-translate-y-1 duration-300"
             >
               <p className="text-3xl font-bold text-primary md:text-5xl group-hover:text-destructive">
                 {stat.value}

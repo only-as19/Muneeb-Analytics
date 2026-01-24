@@ -1,5 +1,5 @@
 import React from "react";
-import { hero_img } from "../data";
+import { hero_img } from "../data/data";
 import { Button } from "@/components";
 import { useNavigate } from "react-router";
 import { Motion } from "@/Framer";

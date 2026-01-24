@@ -6,7 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { motion } from "motion/react";
 import { Button } from "@/components";
-import { Services } from "../data";
+import { Services } from "../data/data";
 import { ArrowLeft, ArrowRight, Video, TrendingUp } from "lucide-react";
 import { Card, Rating } from "@/components";
 import { Motion } from "@/Framer";

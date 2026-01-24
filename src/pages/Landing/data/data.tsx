@@ -1,23 +1,11 @@
 export { default as hero_img } from "@/assets/images/landing/hero2.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
-import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
-import type { ReactNode } from "react";
-import { boolean } from "yup";
+import { statData } from "./statsData";
+import type {ServiceStat} from "./statsData"
+import { features } from "./features";
+import type { Feature } from "./features";
 
-export type Feature = {
-  metrices: string;
-  metricesLabel: string;
-  title: string;
-  description: string;
-  color: string;
-  icon: ReactNode;
-};
-
-type StatItem = {
-  label: string;
-  value: string | number;
-};
 
 type Hero = {
   title: string;
@@ -58,6 +46,8 @@ interface Details {
   hero: Hero;
   serviceContent: ServiceContentItem[];
   pricing: PricingPlan[];
+  stat: ServiceStat[]
+  features: Feature[]
 }
 
 interface CardInfo {
@@ -69,7 +59,8 @@ interface CardInfo {
   duration: string;
 }
 
-interface Service {
+
+export interface Service {
   label: string;
   description: string;
   cardInfo: CardInfo;
@@ -79,6 +70,8 @@ interface Service {
   details?: Details;
 }
 
+
+
 export const Services: Service[] = [
   {
     id: "1",
@@ -87,8 +80,8 @@ export const Services: Service[] = [
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
     img: "https://ik.imagekit.io/jz7julfyw/project/Power%20BI%20Dashboard.png",
     link: "powerbi-dashboards",
-    cardInfo:{
-      rating : 4.5,
+    cardInfo: {
+      rating: 4.5,
       totalReviews: "90",
       initialPrice: "500",
       isBest: true,
@@ -102,6 +95,8 @@ export const Services: Service[] = [
         description:
           "Turn raw data into powerful insights with fully automated dashboards designed for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a complete view of your organization in real time so you can track performance, uncover opportunities, and make smarter decisions with confidence.",
       },
+      stat: statData["1"],
+      features: features["1"],
       serviceContent: [
         {
           title: "What's Included",
@@ -281,6 +276,9 @@ export const Services: Service[] = [
         description:
           "Transform your organization into a data-driven powerhouse. Our end-to-end analytics services cover every stage of the data lifecycle — from strategy and integration to visualization and AI insights — creating a scalable and automated ecosystem for smarter, faster decisions.",
       },
+
+      stat: statData["2"],
+      features: features["2"],
       serviceContent: [
         {
           title: "What's Included",
@@ -472,6 +470,9 @@ export const Services: Service[] = [
         description:
           "From data preparation and feature engineering to model development, validation, deployment, and an interactive front-end—our predictive analytics services deliver accurate, actionable forecasts that scale with your business.",
       },
+
+      stat: statData["3"],
+      features: features["3"],
       serviceContent: [
         {
           title: "What's Included",
@@ -658,6 +659,9 @@ export const Services: Service[] = [
         description:
           "Every data-driven journey begins with understanding the story behind your numbers. Our Statistical and Exploratory Data Analysis (EDA) service helps organizations uncover hidden insights, relationships, and data quality issues—empowering smarter, evidence-based decisions.",
       },
+
+      stat: statData["4"],
+      features: features["4"],
       serviceContent: [
         {
           title: "What's Included",
@@ -848,6 +852,8 @@ export const Services: Service[] = [
           "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
       },
 
+      stat: statData["5"],
+      features: features["5"],
       serviceContent: [
         {
           title: "What's Included",
@@ -1030,6 +1036,8 @@ export const Services: Service[] = [
           "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
       },
 
+      stat: statData["6"],
+      features: features["6"],
       serviceContent: [
         {
           title: "What's Included",
@@ -1195,67 +1203,5 @@ export const Services: Service[] = [
         },
       ],
     },
-  },
-];
-
-export const statsData: StatItem[] = [
-  { label: "Dashboards Delivered", value: "300+" },
-  { label: "Avg Rating", value: 4.9 },
-  { label: "Satisfied Customers", value: "100+" },
-];
-
-export const features: Feature[] = [
-  {
-    metrices: "14 Days",
-    metricesLabel: "Guarantee",
-    title: "Risk-Free Guarantee",
-    description:
-      "Full refund if you're not satisfied within the first 14 days.",
-    color: "#10b981",
-    icon: <Shield />,
-  },
-  {
-    metrices: "7 Days",
-    metricesLabel: "Setup",
-    title: "1-Week Setup",
-    description:
-      "Rapid Power BI deployment and onboarding tailored to your data sources.",
-    color: "#3b82f6",
-    icon: <Zap />,
-  },
-  {
-    metrices: "99.9%",
-    metricesLabel: "Secure",
-    title: "Enterprise Security",
-    description: "Your dashboards protected with role-based access.",
-    color: "#06b6d4",
-    icon: <Lock />,
-  },
-  {
-    metrices: "∞",
-    metricesLabel: "Revision",
-    title: "Unlimited Revisions",
-    description:
-      "We refine visuals, KPIs, and layouts until your dashboards meet every need.",
-    color: "#10b981",
-    icon: <Target />,
-  },
-  {
-    metrices: "24/7",
-    metricesLabel: "Support",
-    title: "Expert Support",
-    description:
-      "Direct access to a Power BI specialist for guidance and troubleshooting.",
-    color: "#2a6aee",
-    icon: <Phone />,
-  },
-  {
-    metrices: "∞",
-    metricesLabel: "Growth",
-    title: "Scalable Growth",
-    description:
-      "Dashboards designed to expand seamlessly as your business and data evolve.",
-    color: "#0795b6",
-    icon: <TrendingUp />,
   },
 ];
