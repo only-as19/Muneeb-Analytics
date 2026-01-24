@@ -3,6 +3,7 @@ export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
 import { Shield, Zap, Lock, Target, Phone, TrendingUp } from "lucide-react";
 import type { ReactNode } from "react";
+import { boolean } from "yup";
 
 export type Feature = {
   metrices: string;
@@ -59,9 +60,19 @@ interface Details {
   pricing: PricingPlan[];
 }
 
+interface CardInfo {
+  rating: number;
+  totalReviews: string;
+  initialPrice: String;
+  isBest?: boolean;
+  CardSpecial?: string;
+  duration: string;
+}
+
 interface Service {
   label: string;
   description: string;
+  cardInfo: CardInfo;
   link?: string;
   img?: string;
   id: string;
@@ -76,6 +87,14 @@ export const Services: Service[] = [
       "Get instant visibility into every corner of your business, including sales, finance, marketing, HR, supply chain, and operations. Our automated dashboards update in real-time, delivering clear insights that help you monitor performance, spot opportunities, and make smarter decisions with ease.",
     img: "https://ik.imagekit.io/jz7julfyw/project/Power%20BI%20Dashboard.png",
     link: "powerbi-dashboards",
+    cardInfo:{
+      rating : 4.5,
+      totalReviews: "90",
+      initialPrice: "500",
+      isBest: true,
+      CardSpecial: "Best Seller",
+      duration: "10-45",
+    },
     details: {
       hero: {
         title: "Power BI Dashboard & report",
@@ -249,6 +268,12 @@ export const Services: Service[] = [
       "Turn raw, scattered data into strategic business intelligence with our comprehensive end to end analytics solutions. From data strategy and integration to visualization and AI-driven insights, we help you build a scalable, automated, and insight-rich ecosystem that empowers smarter decisions across every department.",
     img: "https://ik.imagekit.io/jz7julfyw/project/End%20to%20End%20Data%20Analytics.png",
     link: "end-to-end-analytics",
+    cardInfo: {
+      rating: 4.9,
+      totalReviews: "40",
+      initialPrice: "800",
+      duration: "10-65",
+    },
     details: {
       hero: {
         title: "End to End Data Analytics Solutions",
@@ -434,6 +459,12 @@ export const Services: Service[] = [
       "Harness Python, statistics, and machine learning to uncover patterns, predict trends, and optimize decision-making. Move from reactive insights to proactive strategy with models tailored to your data and goals.",
     img: "https://ik.imagekit.io/jz7julfyw/project/Predictive%20Analysis.png",
     link: "predictive-analytics",
+    cardInfo: {
+      rating: 4.7,
+      totalReviews: "9",
+      initialPrice: "1000",
+      duration: "30-90",
+    },
     details: {
       hero: {
         title: "Predictive Analytics (Python & Machine Learning)",
@@ -614,6 +645,12 @@ export const Services: Service[] = [
       "Uncover patterns, relationships, and anomalies within your data through comprehensive statistical and exploratory data analysis. Gain clarity and direction before investing in advanced analytics or predictive modeling.",
     img: "https://ik.imagekit.io/jz7julfyw/project/Statistical%20Analysis.png",
     link: "statistical-analysis",
+    cardInfo: {
+      rating: 4.9,
+      totalReviews: "35",
+      initialPrice: "500",
+      duration: "10-45",
+    },
     details: {
       hero: {
         title: "Statistical and Exploratory Data Analysis",
@@ -797,6 +834,12 @@ export const Services: Service[] = [
       "Transform your data into real-time, interactive Tableau dashboards that empower smarter, faster decisions across every department.",
     img: "https://ik.imagekit.io/jz7julfyw/project/Tableau%20Dashboard.png",
     link: "tableau-dashboards",
+    cardInfo: {
+      rating: 4.9,
+      totalReviews: "16",
+      initialPrice: "500",
+      duration: "10-45",
+    },
     details: {
       hero: {
         title: "Automated Tableau Dashboards & Reports",
@@ -968,9 +1011,17 @@ export const Services: Service[] = [
     id: "6",
     label: "Data Analytics Training",
     description:
-      "Equip yourself or your team with practical skills in Power BI, Excel, SQL, Python, and more. Our hands-on training covers everything from data preparation and visualization to advanced analytics, enabling participants to confidently turn raw data into actionable insights and drive smarter business decisions.",
-    img: "https://ik.imagekit.io/jz7julfyw/project/Tableau%20Dashboard.png",
+      "Customized training sessions for teams and professionals in Power BI, SQL, Python, and data-driven problem solving",
+    img: "https://ik.imagekit.io/jz7julfyw/project/Data%20Analytics%20Training.png?updatedAt=1768756017305",
     link: "data-analytics-training",
+    cardInfo: {
+      rating: 4.9,
+      totalReviews: "65",
+      initialPrice: "500",
+      isBest: true,
+      CardSpecial: "Clients Favorite",
+      duration: "20-60",
+    },
     details: {
       hero: {
         title: "ALearn the Tools That Power Data-Driven Decisions",

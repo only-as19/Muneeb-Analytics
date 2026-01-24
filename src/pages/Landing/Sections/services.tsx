@@ -70,26 +70,28 @@ const Service: React.FC = () => {
                   <div className="flex flex-col gap-y-1 mt-1">
                     <div className="flex items-center justify-between">
                       <Motion>
-                        <Rating rating={4.5} star={4.3} size={15} review={40} />
+                        <Rating rating={service.cardInfo.rating} star={service.cardInfo.rating} size={15} review={Number(service.cardInfo.totalReviews)} />
                       </Motion>
-                      <Motion>
-                        <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded">
-                          Top rated
-                        </span>
-                      </Motion>
+                      {Number(service.cardInfo.rating) > 4.6 && (
+                        <Motion>
+                          <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded">
+                            Top Rated
+                          </span>
+                        </Motion>
+                      )}
                     </div>
 
                     <div className="flex justify-between items-center">
                       <Motion>
                         <span className="text-lg font-semibold">
-                          From $400-$800
+                          From ${service.cardInfo.initialPrice}
                         </span>
                       </Motion>
                       <Motion>
                         <p className="text-sm">
                           Duration
                           <span className="block text-xs text-muted-foreground">
-                            7-30 Days
+                            {service.cardInfo.duration} Days
                           </span>
                         </p>
                       </Motion>
@@ -97,11 +99,11 @@ const Service: React.FC = () => {
                     <p className="flex items-center gap-x-2 text-muted-foreground text-sm">
                       <Video size={20} /> Offer video consultaion
                     </p>
-                    <p className="inline-block text-xs mt-2 text-white  ">
+                    {service.cardInfo.isBest && <p className="inline-block text-xs mt-2 text-white  ">
                       <span className="rounded standard px-3 py-1">
-                        Most selled
+                        {service.cardInfo.CardSpecial}
                       </span>
-                    </p>
+                    </p>}
                   </div>
                 </Card>
               </SwiperSlide>
