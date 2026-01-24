@@ -2,12 +2,11 @@ export { default as hero_img } from "@/assets/images/landing/hero2.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
 import { statData } from "./statsData";
-import type {ServiceStat} from "./statsData"
+import type { ServiceStat } from "./statsData";
 import { features } from "./features";
 import type { Feature } from "./features";
 
-
-type Hero = {
+export type Hero = {
   title: string;
   subtitle: string;
   description: string;
@@ -25,7 +24,7 @@ type StepItem = {
 
 type PricingPlanName = "Basic" | "Standard" | "Premium" | "Custom";
 
-interface PricingPlan {
+export interface PricingPlan {
   name: PricingPlanName;
   price: number | string | null;
   description: string;
@@ -36,7 +35,7 @@ interface PricingPlan {
   bg: string;
 }
 
-interface ServiceContentItem {
+export interface ServiceContentItem {
   title: string;
   description: string;
   items: SectionItem[] | StepItem[];
@@ -46,8 +45,8 @@ interface Details {
   hero: Hero;
   serviceContent: ServiceContentItem[];
   pricing: PricingPlan[];
-  stat: ServiceStat[]
-  features: Feature[]
+  stat: ServiceStat[];
+  features: Feature[];
 }
 
 interface CardInfo {
@@ -59,7 +58,6 @@ interface CardInfo {
   duration: string;
 }
 
-
 export interface Service {
   label: string;
   description: string;
@@ -69,8 +67,6 @@ export interface Service {
   id: string;
   details?: Details;
 }
-
-
 
 export const Services: Service[] = [
   {

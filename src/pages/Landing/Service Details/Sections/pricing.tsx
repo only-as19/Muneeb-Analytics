@@ -1,14 +1,15 @@
-import { Services } from "../../data/data";
 import { PricingCard, Button } from "@/components";
 import { Clock3, RefreshCcw, Check } from "lucide-react";
 import { useState } from "react";
-import { useParams } from "react-router";
 
-const Pricing: React.FC = () => {
-  const { serviceId } = useParams();
-  const thisService = Services.find((service) => service.link === serviceId);
-  const pricingData = thisService?.details?.pricing ?? [];
-  const [active, setActive] = useState(pricingData[0].name);
+import type { PricingPlan } from "../../data/data";
+
+interface PricinType {
+  pricing: PricingPlan[];
+}
+
+const Pricing: React.FC<PricinType> = ({ pricing }) => {
+  const [active, setActive] = useState(pricing[0].name);
   return (
     <section className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
       <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
@@ -17,13 +18,17 @@ const Pricing: React.FC = () => {
             Transparent Pricing, Tangible Results
           </h1>
           <p className="text-muted-foreground">
-            Our pricing is built for growth , simple, flexible, and packed with value. Whether you&apos;re just starting your analytics journey or scaling enterprise-level automation, each plan delivers measurable business impact without hidden costs.
+            Our pricing is built for growth , simple, flexible, and packed with
+            value. Whether you&apos;re just starting your analytics journey or
+            scaling enterprise-level automation, each plan delivers measurable
+            business impact without hidden costs.
           </p>
         </div>
         <div className="md:hidden">
           <div className="mb-4 grid grid-cols-3 border-1 border-foreground/20 bg-white text-secondary p-2 rounded-full">
-            {pricingData.map((price) => (
+            {pricing.map((price) => (
               <Button
+                key={price.name}
                 label={price.name}
                 variant="ghost"
                 onClick={() => setActive(price.name)}
@@ -34,7 +39,7 @@ const Pricing: React.FC = () => {
             ))}
           </div>
           <div>
-            {pricingData
+            {pricing
               .filter((p) => p.name === active)
               .map((pricing) => (
                 <PricingCard
@@ -95,7 +100,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
         <div className="hidden md:grid md:grid-cols-3 md:gap-x-3 gap-y-4">
-          {pricingData.map((pricing) => (
+          {pricing.map((pricing) => (
             <PricingCard
               className={`${pricing.bg}`}
               key={pricing.name}
