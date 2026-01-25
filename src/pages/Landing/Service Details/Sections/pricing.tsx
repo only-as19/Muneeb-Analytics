@@ -11,14 +11,19 @@ interface PricinType {
 const Pricing: React.FC<PricinType> = ({ pricing }) => {
   const [active, setActive] = useState(pricing[0].name);
   return (
-    <section id="pricing" className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto">
+    <section
+      id="pricing"
+      className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto"
+    >
       <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4 md:text-5xl">
+          <h1 className="text-3xl text-primary font-bold mb-4 md:text-5xl">
             Transparent Pricing, Real Impact
           </h1>
           <p className="text-muted-foreground">
-            Our plans are simple, flexible, and built to grow with your business, delivering measurable analytics results without any hidden costs.
+            Our plans are simple, flexible, and built to grow with your
+            business, delivering measurable analytics results without any hidden
+            costs.
           </p>
         </div>
         <div className="md:hidden">

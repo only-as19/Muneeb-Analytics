@@ -10,9 +10,11 @@ const ServiceDetail = () => {
   const serviceContent = services?.details?.serviceContent;
   const features = services?.details?.features;
   const pricing = services?.details?.pricing;
+  const image = services?.img
+
   return (
     <div>
-      <ServiceHero heroData={hero!} />
+      <ServiceHero heroData={hero!} image={image!} />
       <WhatsIncluded serviceContent={serviceContent!} />
       <Features features={features!} />
       <Pricing pricing={pricing!} />

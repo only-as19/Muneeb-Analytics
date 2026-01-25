@@ -77,7 +77,7 @@ export const Services: Service[] = [
     img: "https://ik.imagekit.io/jz7julfyw/project/Power%20BI%20Dashboard.png",
     link: "powerbi-dashboards",
     cardInfo: {
-      rating: 4.5,
+      rating: 4.9,
       totalReviews: "90",
       initialPrice: "500",
       isBest: true,
@@ -195,7 +195,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "400",
+          price: "500",
           description:
             "Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
           feature: [
@@ -206,14 +206,14 @@ export const Services: Service[] = [
             "1 interactive dashboard",
             "Quick walkthrough or usage guide",
           ],
-          delivery: "7 days",
+          delivery: "10 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
         },
         {
           name: "Standard",
-          price: "800",
+          price: "1000",
           description:
             "Best for growing businesses that need multi-source reporting and department-level insights with automation",
           feature: [
@@ -225,7 +225,7 @@ export const Services: Service[] = [
             "Automated data refresh setup",
             "1-on-1 walkthrough or training session",
           ],
-          delivery: "14 days",
+          delivery: "25 days",
           revesion: "Unlimited",
           isPopular: true,
           bg: "special-gradiant",
@@ -244,7 +244,7 @@ export const Services: Service[] = [
             "Automated data refresh setup",
             "1-on-1 walkthrough or training session",
           ],
-          delivery: "30 days",
+          delivery: "45 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -263,7 +263,7 @@ export const Services: Service[] = [
       rating: 4.9,
       totalReviews: "40",
       initialPrice: "800",
-      duration: "10-65",
+      duration: "10-60",
     },
     details: {
       hero: {
@@ -420,7 +420,7 @@ export const Services: Service[] = [
             "Predictive trend reports",
             "1-on-1 training session",
           ],
-          delivery: "20 days",
+          delivery: "30 days",
           revesion: "Unlimited",
           isPopular: true,
           bg: "bg-scondary",
@@ -438,7 +438,7 @@ export const Services: Service[] = [
             "Custom KPIs for all departments",
             "Ongoing optimization support",
           ],
-          delivery: "30-45 days",
+          delivery: "60 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -592,7 +592,7 @@ export const Services: Service[] = [
             "Model summary & insights report",
             "Quick usage walkthrough",
           ],
-          delivery: "10 days",
+          delivery: "30 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -610,7 +610,7 @@ export const Services: Service[] = [
             "Evaluation report with charts & metrics",
             "Training session included",
           ],
-          delivery: "20 days",
+          delivery: "60 days",
           revesion: "Unlimited",
           isPopular: true,
           bg: "bg-scondary",
@@ -627,7 +627,7 @@ export const Services: Service[] = [
             "Custom front-end with inputs and live visuals",
             "Detailed docs & ongoing optimization support",
           ],
-          delivery: "30-45 days",
+          delivery: "90 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -785,14 +785,14 @@ export const Services: Service[] = [
             "Summary report in PDF/Word format",
             "Quick walkthrough session",
           ],
-          delivery: "7 days",
+          delivery: "10 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "bg-white",
         },
         {
           name: "Standard",
-          price: "900",
+          price: "1000",
           description:
             "Perfect for businesses seeking deeper statistical analysis and richer data visualization.",
           feature: [
@@ -802,14 +802,14 @@ export const Services: Service[] = [
             "Statistical summary report with insights",
             "Optional presentation session",
           ],
-          delivery: "14 days",
+          delivery: "25 days",
           revesion: "Unlimited",
           isPopular: true,
           bg: "bg-scondary",
         },
         {
           name: "Premium",
-          price: "2000-3000",
+          price: "1500",
           description:
             "Comprehensive EDA for enterprises needing advanced statistical methods and executive reporting.",
           feature: [
@@ -819,7 +819,7 @@ export const Services: Service[] = [
             "Executive-level report with actionable insights",
             "Optional presentation & recommendations meeting",
           ],
-          delivery: "21-30 days",
+          delivery: "45 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -952,7 +952,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "400",
+          price: "500",
           description:
             "Perfect for individuals or small teams who need a clean, actionable dashboard to track performance and visualize trends.",
           feature: [
@@ -963,14 +963,14 @@ export const Services: Service[] = [
             "1 interactive page dashboard",
             "Quick walkthrough or usage guide",
           ],
-          delivery: "7 days",
+          delivery: "10 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "bg-white",
         },
         {
           name: "Standard",
-          price: "800-1200",
+          price: "1000",
           description:
             "Best for growing businesses needing multi-source reporting and department-level insights with automation.",
           feature: [
@@ -982,26 +982,26 @@ export const Services: Service[] = [
             "Automated data refresh setup",
             "1-on-1 walkthrough or training session",
           ],
-          delivery: "14 days",
+          delivery: "25 days",
           revesion: "Unlimited",
           isPopular: true,
           bg: "bg-scondary",
         },
         {
           name: "Premium",
-          price: "1500-2000",
+          price: "1500",
           description:
             "Designed for enterprises that require advanced KPIs, automation, and cross-department performance dashboards.",
           feature: [
             "3-7 Data sources (Excel, CSV, SQL, APIs)",
             "Complex data cleaning and transformation",
-            "5-6 interactive dashboard pages",
+            "4-5 interactive dashboard pages",
             "Up to 20 KPIs and 20 charts",
             "Enterprise-level reporting and automation",
             "Department-level analysis (Sales, Finance, HR, Marketing, and more)",
             "1-on-1 walkthrough or training session",
           ],
-          delivery: "30 days",
+          delivery: "45 days",
           revesion: "Unlimited",
           isPopular: false,
           bg: "premium",
@@ -1026,10 +1026,10 @@ export const Services: Service[] = [
     },
     details: {
       hero: {
-        title: "ALearn the Tools That Power Data-Driven Decisions",
-        subtitle: "Unlock Real-Time Business Intelligence",
+        title: "Learn the Tools That Power Data-Driven Decisions",
+        subtitle: "Data Analytics Training",
         description:
-          "Turn raw data into powerful insights with fully automated dashboards built in Tableau for Sales, Finance, Marketing, HR, Supply Chain, Operations, Customer Service, IT, and Project Management. Gain a 360° view of your organization and make confident, data-driven decisions with ease.",
+          "Equip yourself or your team with practical skills in Power BI, Excel, SQL, Python, and more. Our hands-on training covers everything from data preparation and visualization to advanced analytics, enabling participants to confidently turn raw data into actionable insights and drive smarter business decisions.",
       },
 
       stat: statData["6"],
@@ -1156,7 +1156,7 @@ export const Services: Service[] = [
           delivery: "10 days",
           revesion: "Online sessions",
           isPopular: false,
-          bg: "bg-secondary",
+          bg: "bg-white",
         },
         {
           name: "Standard",
@@ -1192,7 +1192,7 @@ export const Services: Service[] = [
             "4-6 guided projects",
             "Personalized 1-on-1 mentoring and ongoing support",
           ],
-          delivery: "30 days",
+          delivery: "0 days",
           revesion: "Online sessions",
           isPopular: false,
           bg: "premium",

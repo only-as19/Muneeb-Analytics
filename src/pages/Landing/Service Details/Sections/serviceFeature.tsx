@@ -6,7 +6,7 @@ interface featureType{
 
 const ServiceFeature: React.FC<featureType> = ({features}) => {
   return (
-    <section className="p-5 min-h-96 bg-bg-secondary text-primary flex flex-col justify-center items-center">
+    <section className="p-5 min-h-96 text-primary flex flex-col justify-center items-center">
       <div className="max-w-6xl mx-auto grid gap-y-4 md:grid-cols-3 md:gap-x-6 md:gap-y-6">
         {features.map((feature, index) => (
           <div key={index}
