@@ -1,4 +1,4 @@
-export { default as hero_img } from "@/assets/images/landing/hero2.png";
+export { default as hero_img } from "@/assets/images/landing/hero3.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
 import { statData } from "./statsData";
