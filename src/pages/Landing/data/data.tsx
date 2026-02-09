@@ -1,4 +1,4 @@
-export { default as hero_img } from "@/assets/images/landing/hero3.png";
+export { default as hero_img } from "@/assets/images/landing/heroFinal.png";
 export { default as about_video } from "@/assets/images/landing/About.mp4";
 export { default as card_image } from "@/assets/images/landing/CTA/interactive-data-visualization-modern-touchscreen.jpg";
 import { statData } from "./statsData";
@@ -1192,7 +1192,7 @@ export const Services: Service[] = [
             "4-6 guided projects",
             "Personalized 1-on-1 mentoring and ongoing support",
           ],
-          delivery: "0 days",
+          delivery: "60 days",
           revesion: "Online sessions",
           isPopular: false,
           bg: "premium",

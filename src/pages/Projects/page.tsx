@@ -27,7 +27,7 @@ const Project: React.FC = () => {
             selectedCategory={category}
           />
         </div>
-        <div className="p-5 my-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="p-5 mb-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {filteredBlogs.map((Studies) => {
             const study = Studies.Introduction;
             return (

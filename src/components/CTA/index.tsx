@@ -29,10 +29,10 @@ const CTA: React.FC = () => {
           <Motion>
             <div className="flex md:gap-x-3 gap-y-3 flex-col md:flex-row">
               <Button
-                label="Request a free demo"
+                label="Contact Us"
                 customClasses="md:py-5"
                 variant="outline"
-                onClick={() => navigate("/freeDemo")}
+                onClick={() => navigate("/contact")}
               />
               <Button label="Schedule a call" customClasses="md:py-5" />
             </div>

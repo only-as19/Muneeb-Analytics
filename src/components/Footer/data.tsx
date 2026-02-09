@@ -102,12 +102,12 @@ export const footerSection:FooterSection[]=[
 
 export const SocialLinks:socialLinks[]=[
     {
-        link:"",
+        link:"https://www.linkedin.com/in/muhammadmuneebnasir/",
         label:"LinkedIn",
         icon:<SiLinkedin size={25}/>
     },
     {
-      link:"",
+      link:"https://www.fiverr.com/muneebnasir496",
       label:"Fiverr",
       icon:<SiFiverr size={50}/>
     }
@@ -116,7 +116,7 @@ export const SocialLinks:socialLinks[]=[
 
 export const Contacts:socialLinks[]=[
   {
-    link:"12345678910",
+    link:"+92 347-0049650",
     label:"Contact",
     icon:<IoCallSharp size={20}/>
   },

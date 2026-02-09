@@ -4,11 +4,12 @@ interface CategoryType {
   categories: string[];
   setCategory: (cat:string)=> void;
   selectedCategory:string;
+  className?: string;
 }
 
-const Categories: React.FC<CategoryType> = ({ categories, setCategory, selectedCategory }) => {
+const Categories: React.FC<CategoryType> = ({ categories, setCategory, selectedCategory, className }) => {
   return (
-    <div className="flex flex-wrap gap-8 justify-center mb-16 bg-white/80  backdrop-blur-lg rounded-2xl shadow-xl p-6 border border-slate-200">
+    <div className={`${className} flex flex-wrap gap-8 justify-center bg-white/80  backdrop-blur-lg rounded-2xl shadow-xl p-6 border border-slate-200`}>
       {categories.map((category, index) => (
         <Button
           key={index}

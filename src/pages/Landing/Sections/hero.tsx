@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
         </div>
         <Motion>
           <h1 className="text-3xl font-bold text-primary tracking-tight md:text-6xl md:max-w-xl">
-            Turn Your Data Into Decisions
+            Data Analytics Consultant, Business Intelligence Expert
           </h1>
         </Motion>
         <Motion>
@@ -40,9 +40,9 @@ const Hero: React.FC = () => {
         <Motion>
           <div className="flex items-center justify-center space-x-3 md:justify-start">
             <Button
-              label="Request a Free Demo"
+              label="Schedule a Call "
               customClasses="md:py-5"
-              onClick={() => navigate("/freeDemo")}
+              onClick={() => navigate("/contact#meeting")}
             />
             <Button
               label="Contact Us"

@@ -23,6 +23,7 @@ const BlogsList: React.FC = () => {
           categories={categories}
           setCategory={(cat) => setCategory(cat)}
           selectedCategory={category}
+          className="mb-16"
         />
         {filteredBlogs.length === 0 ? (
           <BlogsNotFound />

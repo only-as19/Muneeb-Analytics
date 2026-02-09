@@ -94,9 +94,9 @@ const About: React.FC = () => {
               ))}
               <div className="flex items-center">
                 <Button
-                  className="bg-cyan-500 hover:bg-cyan-400 p-8 rounded-3xl font-bold text-lg animate-bounce"
+                  className="bg-cyan-500 hover:bg-cyan-400 py-8 px- rounded-3xl font-bold text-lg animate-bounce"
                   label="Work With Me"
-                  icon=<FaArrowRight />
+                  icon={<FaArrowRight />}
                 />
               </div>
             </div>
