@@ -3,6 +3,7 @@ import { hero_img } from "../data/data";
 import { Button } from "@/components";
 import { useNavigate } from "react-router";
 import { Motion } from "@/Framer";
+import Typewriter from 'typewriter-effect';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -24,11 +25,21 @@ const Hero: React.FC = () => {
                 Hello, I'm <span className="text-gray-900 font-semibold">Muneeb</span>
               </h1>
         </div>
-        <Motion>
-          <h1 className="text-3xl font-bold text-primary tracking-tight md:text-6xl md:max-w-xl">
-            Data Analytics Consultant, Business Intelligence Expert
-          </h1>
-        </Motion>
+       <div className="text-3xl font-bold text-primary tracking-tight md:text-4xl md:max-w-xl">
+  <Typewriter
+    options={{
+      strings: [
+        "Data Analytics Consultant",
+        "Business Intelligence Expert",
+        "Data Visualization Specialist",
+      ],
+      autoStart: true,
+      loop: true,
+      delay: 80,
+      deleteSpeed: 30,
+    }}
+  />
+</div>
         <Motion>
           <p className="text-muted-foreground text-sm max-w-xl">
             I help businesses unlock insights with interactive dashboards and

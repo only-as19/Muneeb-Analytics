@@ -3,6 +3,7 @@ import { Motion } from "@/Framer";
 import { MainStat } from "../data/statsData";
 import { Button } from "@/components";
 import { FaArrowRight } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const skills = [
   {
@@ -18,6 +19,7 @@ const skills = [
 ];
 
 const About: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <section className="special-gradiant relative min-h-screen flex items-center overflow-hidden py-16 px-6">
       <div className="max-w-6xl mx-auto w-full relative z-10 bg-">
@@ -96,6 +98,7 @@ const About: React.FC = () => {
                 <Button
                   className="bg-cyan-500 hover:bg-cyan-400 py-8 px- rounded-3xl font-bold text-lg animate-bounce"
                   label="Work With Me"
+                  onClick={() => navigate("/contact")}
                   icon={<FaArrowRight />}
                 />
               </div>

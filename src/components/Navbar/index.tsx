@@ -14,12 +14,13 @@ import {
 } from "@/lib";
 import { ListItem, Button, Sheet } from "@/components";
 import { TextAlignEnd, ChevronDown } from "lucide-react";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full shadow-2xl font-roboto">
+    <header className="w-full shadow-2xl font-roboto sticky top-0 z-50 bg-white">
       <div className="px-6 py-5 flex items-center gap-2 justify-between">
         <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
 
@@ -123,12 +124,17 @@ const Navbar = () => {
               )}
             </div>
           </Sheet>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-x-4">
             <Button
               label="Contact Us"
               variant="default"
               onClick={() => navigate("/contact")}
             />
+            <Button
+              variant="secondary"
+              label="Whatsapp"
+              icon={<RiWhatsappFill color="#24CC63" size={40}/>}
+              onClick={() => window.open("https://wa.me/923001234567", "_blank")}/>
           </div>
         </div>
       </div>

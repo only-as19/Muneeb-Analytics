@@ -56,7 +56,7 @@ const Reviews = () => {
                   {review.feedback}
                 </p>
                 <div>
-                  <Link to="#" className="flex items-center gap-x-1 font-bold">
+                  <Link to=" https://www.fiverr.com/muneebnasir496" className="flex items-center gap-x-1 font-bold">
                     Read on <SiFiverr size={40} color="#00b22d" />
                   </Link>
                 </div>

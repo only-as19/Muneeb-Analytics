@@ -21,7 +21,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-y-4 mt-4">
               {Contacts.map(contact=>(
                 <li key={contact.label}>
-                  <a href={`mailto:${contact.link}`}
+                  <a target="_blank" href={contact.action} rel="noopener noreferrer"
                   className="flex gap-x-3 group"
                   >
                     {contact.icon} <span className="group-hover:text-cyan-500">{contact.link}</span>

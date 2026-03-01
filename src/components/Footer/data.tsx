@@ -23,9 +23,17 @@ interface FooterSection{
   links: FooterLink[]
 }
 
+interface Contact{
+    label:string,
+    action:string,
+    icon:ReactNode
+    link: string,
+}
+
 interface socialLinks{
     label:string,
     link:string,
+    action?:string,
     icon:ReactNode
 }
 
@@ -90,11 +98,19 @@ export const footerSection:FooterSection[]=[
       },
       {
         label:"Portfolio",
-        link:"/porfolio"
+        link:"/caseStudy"
       },
       {
         label:"Blogs",
         link:"/blogs"
+      },
+      {
+        label:"Testimonials",
+        link:"/testimonials"
+      },
+      {
+        label:"Contact Us",
+        link:"/contact"
       }
     ]
   }
@@ -114,15 +130,17 @@ export const SocialLinks:socialLinks[]=[
 
 ]
 
-export const Contacts:socialLinks[]=[
+export const Contacts:Contact[]=[
   {
-    link:"+92 347-0049650",
+    link: "tel:+923470049650",
     label:"Contact",
+    action:"tel: +923470049650",
     icon:<IoCallSharp size={20}/>
   },
   {
-    link:"info@muneebanalytics.com",
     label:"Email",
+    link: "info@muneebanalytics.com",
+    action:"mailto:info@muneebanalytics.com",
     icon:<IoMdMail size={20}/>
   }
 ]

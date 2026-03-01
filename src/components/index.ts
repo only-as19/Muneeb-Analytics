@@ -11,6 +11,7 @@ export { default as Card } from "./Card";
 export { default as FAQ } from "./FAQ";
 export { default as PageTitle } from "./PageTitle";
 export { default as Categories } from "./Categories";
+export {default as Typewriter} from "./Typewriter"
 export * from "./SwiperWrapper";
 
 export * from "./ui"

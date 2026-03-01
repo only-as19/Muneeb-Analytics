@@ -63,7 +63,7 @@ const CardMotion: React.FC<MotionProps> = ({ children, className = ""}) => {
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.70 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.3, delay:0.5 }}
       className={`w-full ${className}`}
     >

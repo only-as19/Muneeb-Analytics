@@ -18,13 +18,15 @@ const BlogsList: React.FC = () => {
   console.log(regularBlogs)
   return (
     <div>
-      <div className="p-5 max-w-7xl mx-auto relative -mt-8 z-50 pointer-events-auto">
-        <Categories
+      <div className="p-5 max-w-7xl mx-auto pointer-events-auto">
+        <div className="relative -mt-8 z-40">
+          <Categories
           categories={categories}
           setCategory={(cat) => setCategory(cat)}
           selectedCategory={category}
           className="mb-16"
         />
+        </div>
         {filteredBlogs.length === 0 ? (
           <BlogsNotFound />
         ) : (
