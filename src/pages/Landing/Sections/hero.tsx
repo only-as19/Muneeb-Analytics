@@ -51,9 +51,9 @@ const Hero: React.FC = () => {
         <Motion>
           <div className="flex items-center justify-center space-x-3 md:justify-start">
             <Button
-              label="Schedule a Call "
+              label="Case Studies"
               customClasses="md:py-5"
-              onClick={() => navigate("/contact#meeting")}
+              onClick={() => navigate("/caseStudy")}
             />
             <Button
               label="Contact Us"

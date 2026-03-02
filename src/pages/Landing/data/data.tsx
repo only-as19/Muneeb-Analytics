@@ -79,7 +79,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.9,
       totalReviews: "90",
-      initialPrice: "500",
+        initialPrice: "$500",
       isBest: true,
       CardSpecial: "Best Seller",
       duration: "10-45",
@@ -195,7 +195,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "500",
+          price: "$500",
           description:
             "Perfect for individuals or small teams that need a clean, actionable dashboard to monitor performance, visualize trends, and support everyday decision-making",
           feature: [
@@ -213,7 +213,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "1000",
+          price: "$1000",
           description:
             "Best for growing businesses that need multi-source reporting and department-level insights with automation",
           feature: [
@@ -232,7 +232,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "1500",
+          price: "$1500",
           description:
             "Designed for organizations that require enterprise-level dashboards, advanced KPIs, and cross-department reporting with full automation",
           feature: [
@@ -262,7 +262,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.9,
       totalReviews: "40",
-      initialPrice: "800",
+      initialPrice: "$800",
       duration: "10-60",
     },
     details: {
@@ -392,7 +392,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "800",
+          price: "$800",
           description:
             "Ideal for small teams getting started with analytics automation and streamlined data visualization.",
           feature: [
@@ -409,7 +409,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "1500-2500",
+          price: "$1500-$2500",
           description:
             "Perfect for mid-size businesses needing cross-department analytics, automation, and predictive insights.",
           feature: [
@@ -427,7 +427,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "3000-6000",
+          price: "$3000-$6000",
           description:
             "Built for enterprises requiring advanced analytics, machine learning, and large-scale automation.",
           feature: [
@@ -456,7 +456,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.7,
       totalReviews: "9",
-      initialPrice: "1000",
+      initialPrice: "$1000",
       duration: "30-90",
     },
     details: {
@@ -581,7 +581,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "1000",
+          price: "$1000",
           description:
             "Ideal for small teams exploring a first predictive use case with a simple interface and clear insights.",
           feature: [
@@ -599,7 +599,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "2000-3500",
+          price: "$2000-$3500",
           description:
             "Best for growing businesses needing customized models, richer features, and interactive visualization.",
           feature: [
@@ -617,7 +617,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "4000-6000",
+          price: "$4000-$6000",
           description:
             "For enterprises needing advanced algorithms, automation, and production-ready delivery.",
           feature: [
@@ -645,7 +645,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.9,
       totalReviews: "35",
-      initialPrice: "500",
+      initialPrice: "$500",
       duration: "10-45",
     },
     details: {
@@ -775,7 +775,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "500",
+          price: "$500",
           description:
             "Ideal for startups or small teams exploring their datasets for the first time.",
           feature: [
@@ -792,7 +792,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "1000",
+          price: "$1000",
           description:
             "Perfect for businesses seeking deeper statistical analysis and richer data visualization.",
           feature: [
@@ -809,7 +809,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "1500",
+          price: "$1500",
           description:
             "Comprehensive EDA for enterprises needing advanced statistical methods and executive reporting.",
           feature: [
@@ -837,7 +837,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.9,
       totalReviews: "16",
-      initialPrice: "500",
+      initialPrice: "$500",
       duration: "10-45",
     },
     details: {
@@ -952,7 +952,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "500",
+          price: "$500",
           description:
             "Perfect for individuals or small teams who need a clean, actionable dashboard to track performance and visualize trends.",
           feature: [
@@ -970,7 +970,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "1000",
+          price: "$1000",
           description:
             "Best for growing businesses needing multi-source reporting and department-level insights with automation.",
           feature: [
@@ -989,7 +989,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "1500",
+          price: "$1500",       
           description:
             "Designed for enterprises that require advanced KPIs, automation, and cross-department performance dashboards.",
           feature: [
@@ -1019,7 +1019,7 @@ export const Services: Service[] = [
     cardInfo: {
       rating: 4.9,
       totalReviews: "65",
-      initialPrice: "500",
+      initialPrice: "$500",
       isBest: true,
       CardSpecial: "Clients Favorite",
       duration: "20-60",
@@ -1141,7 +1141,7 @@ export const Services: Service[] = [
       pricing: [
         {
           name: "Basic",
-          price: "400",
+          price: "$400",
           description:
             "Perfect for individuals or small teams looking to master Power BI and create optimized, interactive dashboards.",
           feature: [
@@ -1160,7 +1160,7 @@ export const Services: Service[] = [
         },
         {
           name: "Standard",
-          price: "700",
+          price: "$700",
           description:
             "Ideal for mid-size teams wanting practical skills in Power BI + SQL for real-world analytics.",
           feature: [
@@ -1179,7 +1179,7 @@ export const Services: Service[] = [
         },
         {
           name: "Premium",
-          price: "1400",
+          price: "$1400",
           description:
             "Designed for professionals or teams seeking mastery in Power BI, SQL, Excel, and Python, including automation, advanced analytics, and predictive modeling.",
           feature: [

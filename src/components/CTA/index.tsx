@@ -12,7 +12,7 @@ const CTA: React.FC = () => {
             <img src={cta_img} alt="" className="w-full h-full object-cover" />
           </Motion>
         </div>
-        <div className="mt-4 flex flex-col gap-y-4 ">
+        <div className="mt-4 flex flex-col gap-y-4 px-5 md:p-0">
           <Motion>
             <h2 className="text-primary text-2xl md:text-4xl font-extrabold tracking-tight">
               Empowering Businesses to Turn Data Into Growth
@@ -34,7 +34,9 @@ const CTA: React.FC = () => {
                 variant="outline"
                 onClick={() => navigate("/contact")}
               />
-              <Button label="Schedule a call" customClasses="md:py-5" />
+              <Button label="Schedule a call" customClasses="md:py-5" 
+              onClick={() => navigate("/contact#meeting")}
+              />
             </div>
           </Motion>
         </div>

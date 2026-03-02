@@ -56,9 +56,9 @@ const Reviews = () => {
                   {review.feedback}
                 </p>
                 <div>
-                  <Link to=" https://www.fiverr.com/muneebnasir496" className="flex items-center gap-x-1 font-bold">
+                  <a href="https://www.fiverr.com/muneebnasir496" target="_blank" className="flex items-center gap-x-1 font-bold">
                     Read on <SiFiverr size={40} color="#00b22d" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </SwiperSlide>

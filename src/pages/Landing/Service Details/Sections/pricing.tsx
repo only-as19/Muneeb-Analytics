@@ -68,6 +68,7 @@ const Pricing: React.FC<PricinType> = ({ pricing }) => {
                   footer={{
                     buttonLabel: "Contact",
                     buttonVariant: "default",
+                    link: "/contact",
                   }}
                 >
                   <div className="flex flex-col gap-y-4">
@@ -127,6 +128,7 @@ const Pricing: React.FC<PricinType> = ({ pricing }) => {
               footer={{
                 buttonLabel: "Contact",
                 buttonVariant: "default",
+                link: "/contact",
               }}
             >
               <div className="flex flex-col gap-y-4">

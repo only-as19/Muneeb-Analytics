@@ -11,6 +11,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
+  SheetClose
 } from "@/lib";
 import { ListItem, Button, Sheet } from "@/components";
 import { TextAlignEnd, ChevronDown } from "lucide-react";
@@ -84,45 +85,46 @@ const Navbar = () => {
             }}
           >
             <div className="flex flex-col gap-y-2 p-2">
-              {navLinks.map((item) =>
-                item.children?.length ? (
-                  <Collapsible key={item.label} className="w-full">
-                    <CollapsibleTrigger asChild>
-                      <Button
-                        customClasses="group text-base font-semibold hover:bg-transparent capitalize"
-                        icon={
-                          <span>
-                            <ChevronDown className="transition-transform group-data-[state=open]:rotate-180" />
-                          </span>
-                        }
-                        label={item.label}
-                        variant="ghost"
-                      />
-                    </CollapsibleTrigger>
-
-                    <CollapsibleContent className="mt-1 space-y-1 border-l pl-6">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.link}
-                          className="block py-1 text-sm hover:underline"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </CollapsibleContent>
-                  </Collapsible>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.link}
-                    className="capitalize px-4 py-2 font-semibold text-base"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
-            </div>
+  {navLinks.map((item) =>
+    item.children?.length ? (
+      <Collapsible key={item.label} className="w-full">
+        <CollapsibleTrigger asChild>
+          <Button
+            customClasses="group text-base font-semibold hover:bg-transparent capitalize"
+            icon={
+              <span>
+                <ChevronDown className="transition-transform group-data-[state=open]:rotate-180" />
+              </span>
+            }
+            label={item.label}
+            variant="ghost"
+          />
+        </CollapsibleTrigger>
+        <CollapsibleContent className="mt-1 space-y-1 border-l pl-6">
+          {item.children.map((child) => (
+            <SheetClose asChild key={child.label}>
+              <Link
+                to={child.link}
+                className="block py-1 text-sm hover:underline"
+              >
+                {child.label}
+              </Link>
+            </SheetClose>
+          ))}
+        </CollapsibleContent>
+      </Collapsible>
+    ) : (
+      <SheetClose asChild key={item.label}>
+        <Link
+          to={item.link}
+          className="capitalize px-4 py-2 font-semibold text-base"
+        >
+          {item.label}
+        </Link>
+      </SheetClose>
+    )
+  )}
+</div>
           </Sheet>
           <div className="hidden md:flex items-center gap-x-4">
             <Button
@@ -134,7 +136,7 @@ const Navbar = () => {
               variant="secondary"
               label="Whatsapp"
               icon={<RiWhatsappFill color="#24CC63" size={40}/>}
-              onClick={() => window.open("https://wa.me/923001234567", "_blank")}/>
+              onClick={() => window.open("https://wa.me/923470049650", "_blank")}/>
           </div>
         </div>
       </div>

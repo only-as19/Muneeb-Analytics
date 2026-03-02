@@ -8,6 +8,7 @@ import {
 } from "@/lib";
 import type { ReactNode } from "react";
 import { Button } from "../ui";
+import { useNavigate } from "react-router-dom";
 
 interface cardProps {
   cardHeader: {
@@ -22,6 +23,7 @@ interface cardProps {
   className?: string;
   footer: {
     buttonLabel: string;
+    link: string;
     buttonVariant:
       | "link"
       | "default"
@@ -39,6 +41,7 @@ const Card: React.FC<cardProps> = ({
   className,
   footer,
 }) => {
+  const navigate = useNavigate();
   return (
     <PricingCard className={`${className} ${isPopular && "bg-primary text-secondary md:scale-y-110"} shadow-primary shadow-2xl`}>
       <CardHeader className="gap-y-4">
@@ -46,7 +49,7 @@ const Card: React.FC<cardProps> = ({
           <CardTitle className="text-2xl">{cardHeader.name}</CardTitle>
           {isPopular && <span className=" px-2 py-1 rounded-sm text-sm font-semibold bg-secondary text-foreground shadow-secondary shadow-2xl">Most Popular</span>}
         </div>
-        <h1 className="text-4xl">${cardHeader.price}</h1>
+        <h1 className="text-4xl">{cardHeader.price}</h1>
         <CardDescription className={`${isPopular && "text-secondary/75"}`}>{cardHeader.description}</CardDescription>
         <div className="flex gap-x-6 items-center">
           <span className="flex items-center gap-x-2 font-bold text-sm">{cardHeader.delivery}</span>
@@ -59,6 +62,7 @@ const Card: React.FC<cardProps> = ({
           label={footer.buttonLabel}
            variant={isPopular ? "secondary" : footer.buttonVariant}
           customClasses={`w-full shadow cursor-pointer md:p-3 ${isPopular && "text-foreground"}`}
+          onClick={() => navigate(footer.link)}
         />
       </CardFooter>
     </PricingCard>

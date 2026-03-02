@@ -40,29 +40,29 @@ interface socialLinks{
 
 export const services: Service[] = [
   {
-    link: "/services/end-to-end-analytics",
+    link: "/end-to-end-analytics",
     label: "End-to-End Data Analytics Solutions",
   },
   {
-    link: "/services/powerbi-dashboards",
+    link: "/powerbi-dashboards",
     label: "Power BI Dashboards & Reports",
   },
   {
-    link: "/services/tableau-dashboards",
+    link: "/tableau-dashboards",
     label: "Tableau Dashboards & Reports",
   },
   
   {
-    link: "/services/corporate-trainings",
+    link: "/corporate-trainings",
     label: "Data analytics Training",
   },
 
   {
-    link: "/services/predictive-analytics",
+    link: "/predictive-analytics",
     label: "Predictive Analytics (Python & ML)",
   },
   {
-    link: "/services/statistical-analysis",
+    link: "/statistical-analysis",
     label: "Statistical & Exploratory Data Analysis",
   },
 ];
@@ -132,9 +132,9 @@ export const SocialLinks:socialLinks[]=[
 
 export const Contacts:Contact[]=[
   {
-    link: "tel:+923470049650",
+    link: "923470049650",
     label:"Contact",
-    action:"tel: +923470049650",
+    action:"tel:+923470049650",
     icon:<IoCallSharp size={20}/>
   },
   {
