@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { motion, animate } from "framer-motion"
+import { motion} from "framer-motion"
 
 const texts = [
   "Data Analytics Consultant",
@@ -13,7 +13,6 @@ const TypeWriter = () => {
 
   useEffect(() => {
     const current = texts[textIndex]
-    let controls: any
 
     const runAnimation = async () => {
       // type forward
