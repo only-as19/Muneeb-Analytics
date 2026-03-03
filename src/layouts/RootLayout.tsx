@@ -19,7 +19,7 @@ const RootLayout = () => {
       <Nav />
       <Outlet />
       <Footer />
-      <div>
+      <div className="md:hidden">
         <a href="https://wa.me/923470049650" target="_blank">
           <IoLogoWhatsapp className="text-green-500 fixed bottom-5 right-5 w-14 h-14 z-50 bg-green-200  p-2 rounded-full animate-bounce"/>
         </a>
