@@ -1,7 +1,6 @@
 import { Nav, Footer } from "@/components";
 import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
-import { Button } from "@/lib";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 window.history.scrollRestoration = "manual";

@@ -9,7 +9,6 @@ import {
 import { reviews } from "./data";
 import { SiFiverr } from "react-icons/si";
 import Rating from "../Rating";
-import { Link } from "react-router-dom";
 
 const Reviews = () => {
   return (
