@@ -77,7 +77,7 @@ const Navbar = () => {
               headerTitle: "Muneeb Analytic",
               headerImage: logo,
               showHeaderTitle: false,
-              headerDescription: "Welcome To Muneeb Analytic",
+              headerDescription: "Turn Your Business Data into Clear Growth Decisions",
             }}
             sheetFooter={{
               buttonLabel: "Contact Us",
