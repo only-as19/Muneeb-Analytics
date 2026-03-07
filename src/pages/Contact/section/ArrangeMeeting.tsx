@@ -200,8 +200,8 @@ export default function StrategyCallForm() {
 
           {/* Submit */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:col-span-2">
-            <Button type="submit" label="Request Meeting" />
-            <p className="text-gray-600 text-sm cursor-pointer">
+            <Button type="submit" label="Request Meeting" className="cursor-pointer" />
+            <p className="text-gray-600 text-sm">
               You'll receive a confirmation email with the meeting details or an
               alternative time if needed.
             </p>
