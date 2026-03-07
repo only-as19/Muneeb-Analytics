@@ -1,7 +1,7 @@
 import Case from "@/assets/images/Case.svg";
-import Challange from "@/assets/images/Challange.svg";
+import Challange from "@/assets/images/Challange.png";
 import Solution from "@/assets/images/Solution.svg";
-
+export default Challange;
 // Types
 export interface CaseStudy {
   id: string;

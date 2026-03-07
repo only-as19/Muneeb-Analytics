@@ -132,7 +132,7 @@ export const SocialLinks:socialLinks[]=[
 
 export const Contacts:Contact[]=[
   {
-    link: "923470049650",
+    link: "+923470049650",
     label:"Contact",
     action:"tel:+923470049650",
     icon:<IoCallSharp size={20}/>

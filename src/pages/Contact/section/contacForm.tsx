@@ -2,7 +2,7 @@ import { Button, Input, Select } from "@/components";
 import countriesRaw from "world-countries";
 import { useFormik } from "formik";
 import { FormValidations } from "@/Schema";
-import { sendEmail } from "../EmailJS/emailjs";
+import { sendEmail } from "../EmailJS/contactEmail";
 const ContacForm = () => {
   const initialValues = {
     name: "",
@@ -67,7 +67,6 @@ const ContacForm = () => {
           >
             <div>
               <Input
-              className=""
                 InputType="text"
                 label="Name"
                 placeholder="Enter your name"
@@ -226,7 +225,7 @@ const ContacForm = () => {
              <Button
               type="submit"
               label="Send Email"
-              className=""
+              className="cursor-pointer"
             />
            </div>
           </form>

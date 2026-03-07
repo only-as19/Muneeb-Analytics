@@ -19,8 +19,7 @@ export const sendEmail = async (values: sendEmailProps) => {
   try {
     const autoReplyParams = {
       ...values,
-      company_name: "Muneeb Anakytics",
-      to_mail: "hellohello51981@gmail.com",
+      company_name: "Muneeb Analytics",
     };
     const res = await emailjs.send(serviceId, templateId, autoReplyParams, {
       publicKey,

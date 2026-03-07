@@ -2,7 +2,7 @@ import * as Collapsible from "@radix-ui/react-collapsible";
 import { FaSortDown } from "react-icons/fa6";
 import { useState } from "react";
 import type { ProblemStatement } from "@/pages/Projects/data";
-
+import Challange from "../data";
 interface ChallangesProp {
   challanges: ProblemStatement;
 }
@@ -22,7 +22,7 @@ const Challanges: React.FC<ChallangesProp> = ({ challanges }) => {
 
         <div className="md:grid grid-cols-2 gap-8 items-center w-full">
           <img
-            src={challanges?.images}
+            src={Challange}
             alt={challanges?.heading}
             className="hidden md:block w-110 object-contain"
           />
