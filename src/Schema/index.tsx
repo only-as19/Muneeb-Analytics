@@ -15,5 +15,6 @@ export const MeetingFormValidations = Yup.object({
   preferredDate: Yup.string().required("Please select a preferred date"),
   preferredTime: Yup.string().required("Please select a preferred time"),
   timezone: Yup.string().required("Please select your timezone"),
+  email: Yup.string().email().required("Please enter your email address"),
   description: Yup.string().max(500, "Description cannot be longer than 500 characters"),
 });

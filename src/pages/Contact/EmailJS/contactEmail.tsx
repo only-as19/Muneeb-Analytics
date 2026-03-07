@@ -20,6 +20,7 @@ export const sendEmail = async (values: sendEmailProps) => {
     const autoReplyParams = {
       ...values,
       company_name: "Muneeb Analytics",
+      website_url: "https://muneebanalytics.com",
     };
     const res = await emailjs.send(serviceId, templateId, autoReplyParams, {
       publicKey,

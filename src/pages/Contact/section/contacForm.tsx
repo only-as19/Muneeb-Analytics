@@ -84,7 +84,7 @@ const ContacForm = () => {
               <Input
                 InputType="number"
                 label="Number"
-                placeholder="Enter Your Number"
+                placeholder="Enter your number"
                 isRequired={true}
                 name="number"
                 id="number"
@@ -101,7 +101,7 @@ const ContacForm = () => {
               <Input
                 InputType="email"
                 label="Email Address"
-                placeholder="Enter Your Email"
+                placeholder="Enter your email"
                 isRequired={true}
                 name="email"
                 id="email"
@@ -129,7 +129,7 @@ const ContacForm = () => {
               <Select
                 id="service"
                 label="Services"
-                placeholder="Services You interested"
+                placeholder="Services you are interested in"
                 groupLabel="services"
                 options={[
                   {
@@ -174,7 +174,7 @@ const ContacForm = () => {
             <div>
               <Select
                 label="Location"
-                placeholder="Select Location"
+                placeholder="Select location"
                 groupLabel="All Countries"
                 options={countries}
                 id="location"
@@ -192,7 +192,7 @@ const ContacForm = () => {
               <Input
                 InputType="text"
                 label="Budget"
-                placeholder="What's Your Budget"
+                placeholder="Enter your budget"
                 isRequired={true}
                 name="budget"
                 id="budget"

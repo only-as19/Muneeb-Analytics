@@ -17,6 +17,7 @@ export default function StrategyCallForm() {
     timezone: "",
     description: "",
     tag: "",
+    email: "",
   };
 
   const {
@@ -133,7 +134,6 @@ export default function StrategyCallForm() {
               <p className="text-xs pl-5 text-red-600">{errors.preferredTime}</p>
             )}
           </div>
-
           <div className="md:col-span-2">
             <Select
               id="timezone"
@@ -160,6 +160,22 @@ export default function StrategyCallForm() {
               <p className="text-xs pl-5 text-red-600">{errors.timezone}</p>
             )}
           </div>
+          <div>
+            <Input
+              InputType="email"
+              label="Email Address"
+              isRequired={true}
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {touched.email && errors.email && (
+              <p className="text-xs pl-5 text-red-600">{errors.email}</p>
+            )}
+          </div>
           <div className="flex flex-col gap-y-2 md:col-span-2">
             <label className="font-semibold" htmlFor="description">
               What would you like to cover?
@@ -183,9 +199,9 @@ export default function StrategyCallForm() {
           </div>
 
           {/* Submit */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:col-span-2">
             <Button type="submit" label="Request Meeting" />
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm cursor-pointer">
               You'll receive a confirmation email with the meeting details or an
               alternative time if needed.
             </p>
