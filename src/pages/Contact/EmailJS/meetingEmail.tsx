@@ -26,5 +26,3 @@ export const sendMeetingEmail = async (values: MeetingEmailProps) => {
     return { success: false, error };
   }
 };
-
-console.log(serviceId, meetingTemplateId, publicKey);

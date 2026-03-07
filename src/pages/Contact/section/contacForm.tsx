@@ -47,7 +47,6 @@ const ContacForm = () => {
       actions.resetForm();
     },
   });
-  console.log(errors);
 
   return (
     <section className="min-h-screen p-8 bg-white">
