@@ -3,6 +3,7 @@ import countriesRaw from "world-countries";
 import { useFormik } from "formik";
 import { FormValidations } from "@/Schema";
 import { sendEmail } from "../EmailJS/contactEmail";
+import { toast } from "react-toastify";
 const ContacForm = () => {
   const initialValues = {
     name: "",
@@ -35,16 +36,20 @@ const ContacForm = () => {
     initialValues,
     validationSchema: FormValidations,
     onSubmit: async (values, actions) => {
-      const response = await sendEmail(values);
-      if (response.success) {
-        console.log("Email sent successfully");
-        actions.resetForm();
-      } else {
-        console.error("Failed to send email", response.error);
+      try {
+        const response = await sendEmail(values);
+        if (response.success) {
+          toast.success('Email sent successfully');
+          actions.resetForm();
+        } else {
+          console.error('Failed to send email', response.error);
+        }
+      } catch (error) {
+        toast.error('Something went wrong. Please check your connection.');
+        console.error('Unexpected error:', error);
+      } finally {
+        actions.setSubmitting(false);
       }
-
-      console.log(values);
-      actions.resetForm();
     },
   });
 
