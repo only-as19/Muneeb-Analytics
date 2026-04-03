@@ -13,7 +13,7 @@ const Pricing: React.FC<PricinType> = ({ pricing }) => {
   return (
     <section
       id="pricing"
-      className="px-5 py-20 min-h-screen flex flex-col color-for items-center bg-secondary font-roboto"
+      className="px-5 py-20 min-h-96 flex flex-col color-for items-center bg-secondary font-roboto"
     >
       <div className="max-w-6xl mx-auto flex flex-col gap-y-4 md:gap-y-20">
         <div className="text-center">

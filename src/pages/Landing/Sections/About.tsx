@@ -21,7 +21,7 @@ const skills = [
 const About: React.FC = () => {
   const navigate = useNavigate()
   return (
-    <section className="special-gradiant relative min-h-screen flex items-center overflow-hidden py-16 px-6">
+    <section className="special-gradiant relative min-h-96 flex items-center overflow-hidden py-20 px-6">
       <div className="max-w-6xl mx-auto w-full relative z-10 bg-">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           {/* Left Content */}

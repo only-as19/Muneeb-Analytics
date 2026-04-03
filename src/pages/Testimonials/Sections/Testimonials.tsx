@@ -3,7 +3,7 @@ import { reviews } from "../data";
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="p-5 min-h-screen text-primary bg-secondary flex flex-col justify-center items-center overflow-hidden">
+    <section className="px-5 py-20 min-h-96 text-primary bg-secondary flex flex-col justify-center items-center overflow-hidden">
       <div className="max-w-6xl mx-auto w-full">
         <div className="mb-10">
           <h1 className="text-3xl font-bold text-center md:text-4xl">

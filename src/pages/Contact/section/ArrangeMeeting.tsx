@@ -198,7 +198,6 @@ export default function StrategyCallForm() {
             )}
           </div>
 
-          {/* Submit */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:col-span-2">
             <Button type="submit" label="Request Meeting" className="cursor-pointer" />
             <p className="text-gray-600 text-sm">

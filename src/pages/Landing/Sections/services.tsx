@@ -7,7 +7,7 @@ import { SwiperWrapper, SwiperSlide } from "@/components/SwiperWrapper";
 
 const Service: React.FC = () => {
   return (
-    <motion.section className="relative p-5 min-h-screen flex items-center">
+    <motion.section className="relative p-5 min-h-96 flex py-20 items-center">
       <div className="md:max-w-6xl mx-auto w-full text-primary">
         <div className="mb-8 text-center">
           <Motion>
@@ -62,7 +62,7 @@ const Service: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <Motion>
                       <span className="text-lg font-semibold">
-                        From ${service.cardInfo.initialPrice}
+                        From {service.cardInfo.initialPrice}
                       </span>
                     </Motion>
                     <Motion>

@@ -9,7 +9,7 @@ const WhatsIncluded: React.FC<contentType> = ({ serviceContent }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="p-5 min-h-screen flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
+    <section className="p-5 py-20 min-h-96 flex flex-col justify-center items-center text-primary bg-bg-secondary font-roboto">
       <div className="flex flex-col gap-y-10 max-w-6xl mx-auto ">
         <div className="text-center md:w-4xl mx-auto">
           <h1 className="text-3xl capitalize md:text-5xl font-bold mb-2">

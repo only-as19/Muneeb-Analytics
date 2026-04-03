@@ -4,7 +4,7 @@ import MainVideo from "./Testimonialvideos";
 const TestimonailsVideos: React.FC = () => {
   
   return (
-    <section className="p-5 text-primary min-h-screen flex items-center flex-col justify-center">
+    <section className="px-5 py-20 text-primary min-h-96 flex items-center flex-col justify-center">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center">
           Client Success Stories
