@@ -2,7 +2,7 @@ import { faqItems } from "./data"
 import { ArrowDown } from "lucide-react"
 const FAQ = () => {
   return (
-    <section className="min-h-screen flex-col flex justify-center items-center text-primary p-5 bg-white">
+    <section className="min-h-96 py-20 flex-col flex justify-center items-center text-primary px-5 bg-white">
       <div className="max-w-6xl full mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center">Frequently asked Question</h1>
         <p className="text-muted-foreground text-center md:mt-2 mb-8">Everything you need to know in one place. Still have questions? You're welcome to contact us anytime.</p>

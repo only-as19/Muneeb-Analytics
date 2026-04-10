@@ -59,7 +59,7 @@ export default function StrategyCallForm() {
   return (
     <div
       id='meeting'
-      className='min-h-screen px-4 sm:px-6 lg:px-8 text-primary'
+      className='min-h-96 px-5 py-10  text-primary'
     >
       <div className='max-w-6xl mx-auto bg-white p-8'>
         {/* Header */}
@@ -91,7 +91,7 @@ export default function StrategyCallForm() {
 
         {/* Form */}
         <form
-          className='w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6 p-8'
+          className='w-full grid gap-y-8 md:grid-cols-2 md:gap-x-6'
           onSubmit={handleSubmit}
         >
           {/* Meeting Type */}
