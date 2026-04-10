@@ -21,13 +21,15 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full shadow-2xl font-roboto sticky top-0 z-50 bg-white">
-      <div className="px-6 py-5 flex items-center gap-2 justify-between">
-        <img src={logo} alt="Muneeb Analytics" className=" max-w-26" />
+    <header className='w-full shadow-2xl font-roboto sticky top-0 z-50 bg-white'>
+      <div className='px-6 py-5 flex items-center gap-2 justify-between'>
+        <Link to='/'>
+          <img src={logo} alt='Muneeb Analytics' className=' max-w-26' />
+        </Link>
 
         <NavigationMenu
           viewport={false}
-          className="hidden md:block relative z-50"
+          className='hidden md:block relative z-50'
         >
           <NavigationMenuList>
             {navLinks.map((Item) => (
@@ -39,8 +41,8 @@ const Navbar = () => {
                       <ul
                         className={
                           Item.children.length === 1
-                            ? "grid grid-cols-1 w-3xs p-4 gap-3"
-                            : "grid grid-cols-2 md:w-md lg:w-3xl p-4 gap-3"
+                            ? 'grid grid-cols-1 w-3xs p-4 gap-3'
+                            : 'grid grid-cols-2 md:w-md lg:w-3xl p-4 gap-3'
                         }
                       >
                         {Item.children.map((child) => (
@@ -72,71 +74,75 @@ const Navbar = () => {
         <div>
           <Sheet
             triggerIcon={<TextAlignEnd />}
-            triggerClasses="max-w-24"
+            triggerClasses='max-w-24'
             sheetHeader={{
-              headerTitle: "Muneeb Analytic",
+              headerTitle: 'Muneeb Analytic',
               headerImage: logo,
               showHeaderTitle: false,
-              headerDescription: "Turn Your Business Data into Clear Growth Decisions",
+              headerDescription:
+                'Turn Your Business Data into Clear Growth Decisions',
             }}
             sheetFooter={{
-              buttonLabel: "Contact Us",
-              onClick: ()=> navigate("/contact")
+              buttonLabel: 'Contact Us',
+              onClick: () => navigate('/contact'),
             }}
           >
-            <div className="flex flex-col gap-y-2 p-2">
-  {navLinks.map((item) =>
-    item.children?.length ? (
-      <Collapsible key={item.label} className="w-full">
-        <CollapsibleTrigger asChild>
-          <Button
-            customClasses="group text-base font-semibold hover:bg-transparent capitalize"
-            icon={
-              <span>
-                <ChevronDown className="transition-transform group-data-[state=open]:rotate-180" />
-              </span>
-            }
-            label={item.label}
-            variant="ghost"
-          />
-        </CollapsibleTrigger>
-        <CollapsibleContent className="mt-1 space-y-1 border-l pl-6">
-          {item.children.map((child) => (
-            <SheetClose asChild key={child.label}>
-              <Link
-                to={child.link}
-                className="block py-1 text-sm hover:underline"
-              >
-                {child.label}
-              </Link>
-            </SheetClose>
-          ))}
-        </CollapsibleContent>
-      </Collapsible>
-    ) : (
-      <SheetClose asChild key={item.label}>
-        <Link
-          to={item.link}
-          className="capitalize px-4 py-2 font-semibold text-base"
-        >
-          {item.label}
-        </Link>
-      </SheetClose>
-    )
-  )}
-</div>
+            <div className='flex flex-col gap-y-2 p-2'>
+              {navLinks.map((item) =>
+                item.children?.length ? (
+                  <Collapsible key={item.label} className='w-full'>
+                    <CollapsibleTrigger asChild>
+                      <Button
+                        customClasses='group text-base font-semibold hover:bg-transparent capitalize'
+                        icon={
+                          <span>
+                            <ChevronDown className='transition-transform group-data-[state=open]:rotate-180' />
+                          </span>
+                        }
+                        label={item.label}
+                        variant='ghost'
+                      />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className='mt-1 space-y-1 border-l pl-6'>
+                      {item.children.map((child) => (
+                        <SheetClose asChild key={child.label}>
+                          <Link
+                            to={child.link}
+                            className='block py-1 text-sm hover:underline'
+                          >
+                            {child.label}
+                          </Link>
+                        </SheetClose>
+                      ))}
+                    </CollapsibleContent>
+                  </Collapsible>
+                ) : (
+                  <SheetClose asChild key={item.label}>
+                    <Link
+                      to={item.link}
+                      className='capitalize px-4 py-2 font-semibold text-base'
+                    >
+                      {item.label}
+                    </Link>
+                  </SheetClose>
+                ),
+              )}
+            </div>
           </Sheet>
-          <div className="hidden md:flex items-center gap-x-4">
+          <div className='hidden md:flex items-center gap-x-4'>
             <Button
-              label="Contact Us"
-              variant="default"
-              onClick={() => navigate("/contact")}
+              label='Contact Us'
+              variant='default'
+              onClick={() => navigate('/contact')}
             />
             <Button
-              variant="secondary"
-              label="Whatsapp"
-              icon={<RiWhatsappFill color="#24CC63" size={40}/>}
-              onClick={() => window.open("https://wa.me/923470049650", "_blank")}/>
+              variant='secondary'
+              label='Whatsapp'
+              icon={<RiWhatsappFill color='#24CC63' size={40} />}
+              onClick={() =>
+                window.open('https://wa.me/923470049650', '_blank')
+              }
+            />
           </div>
         </div>
       </div>

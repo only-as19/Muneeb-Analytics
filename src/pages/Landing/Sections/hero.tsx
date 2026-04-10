@@ -8,8 +8,8 @@ import Typewriter from 'typewriter-effect';
 const Hero: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <section className='bg-bg-secondary min-h-96 p-5 flex items-center'>
-      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row md:items-center gap-16">
+    <section className='bg-bg-secondary min-h-96 p-5 flex items-center '>
+      <div className='max-w-6xl mx-auto w-full flex flex-col justify-between md:flex-row md:items-center gap-16'>
         <Motion className='md:order-2'>
           <img
             src={hero_img}
